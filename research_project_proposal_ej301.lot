@@ -1,0 +1,22 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces UK and EEA air quality guidelines\relax }}{17}{table.caption.6}
+\contentsline {table}{\numberline {2.2}{\ignorespaces \unhbox \voidb@x \hbox {List of air quality monitoring devices in the literature}\relax }}{21}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of SBCs\relax }}{25}{table.caption.8}
+\contentsline {table}{\numberline {2.4}{\ignorespaces EU Data Quality Objectives\relax }}{28}{table.caption.9}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces GPIO pin layout and usage\relax }}{38}{table.caption.14}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Comparison of particulate sensors considered\relax }}{39}{table.caption.15}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Cost breakdown of device\relax }}{43}{table.caption.19}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Humidity and temperature factors\relax }}{52}{table.caption.26}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Outlier detection summary using IQR method on the whole sample. The particulate measurements have the highest percentage of outliers. \relax }}{78}{table.caption.52}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Outlier detection summary using median and MAD method on the whole sample. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. \relax }}{80}{table.caption.54}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{83}{table.caption.59}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

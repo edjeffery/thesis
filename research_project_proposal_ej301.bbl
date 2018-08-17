@@ -1,0 +1,868 @@
+\begin{thebibliography}{81}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{Available from: }
+\providecommand{\urldateprefix}{Accessed }
+\providecommand{\selectlanguage}[1]{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
+
+\bibitem[{Abraham and Li(2014)}]{Abraham2014costeffindoor}
+\bibinfo{author}{Abraham, S.} and \bibinfo{author}{Li, X.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{A cost-effective wireless sensor network system for
+  indoor air quality monitoring applications}}.
+\newblock \emph{\bibinfo{journal}{Procedia Computer Science}},
+  \bibinfo{volume}{34}, pp.\bibinfo{pages}{165--171}.
+
+\bibitem[{Adams et~al.(2012)Adams, DeLuca, Corr and
+  Kanaroglou}]{Adams2012hamilton20052010}
+\bibinfo{author}{Adams, M.}, \bibinfo{author}{DeLuca, P.},
+  \bibinfo{author}{Corr, D.} and \bibinfo{author}{Kanaroglou, P.},
+  \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{{Mobile Air Monitoring: Measuring Change in Air
+  Quality in the City of Hamilton, 2005-2010}}.
+\newblock \emph{\bibinfo{journal}{Social Indicators Research}},
+  \bibinfo{volume}{108}(\bibinfo{number}{2}), pp.\bibinfo{pages}{351--364}.
+
+\bibitem[{Alkandari and Moein(2018)}]{alkandari2018airqualityexperimental}
+\bibinfo{author}{Alkandari, A.A.} and \bibinfo{author}{Moein, S.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{{Implementation of Monitoring System for Air Quality
+  using Raspberry Pi: Experimental Study}}.
+\newblock \emph{\bibinfo{journal}{Indonesian Journal of Electrical Engineering
+  and Computer Science}}, \bibinfo{volume}{10}(\bibinfo{number}{1}),
+  pp.\bibinfo{pages}{43--49}.
+
+\bibitem[{Alvear et~al.(2016)Alvear, Zamora, Calafate, Cano and
+  Manzoni}]{Alvear2016ecosensor}
+\bibinfo{author}{Alvear, {\'{O}}.}, \bibinfo{author}{Zamora, W.},
+  \bibinfo{author}{Calafate, C.T.}, \bibinfo{author}{Cano, J.C.} and
+  \bibinfo{author}{Manzoni, P.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{EcoSensor: Monitoring environmental pollution using
+  mobile sensors}}.
+\newblock \emph{\bibinfo{booktitle}{{2016 IEEE 17th International Symposium on
+  A World of Wireless, Mobile and Multimedia Networks}}}, 21--24 June 2016
+  Coimbra. \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
+  pp.\bibinfo{pages}{1--6}.
+
+\bibitem[{Alvear et~al.(2017)Alvear, Zema, Natalizio and
+  Calafate}]{alvear2017uav}
+\bibinfo{author}{Alvear, O.}, \bibinfo{author}{Zema, N.R.},
+  \bibinfo{author}{Natalizio, E.} and \bibinfo{author}{Calafate, C.T.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{Using UAV-based systems to monitor air pollution in
+  areas with poor accessibility}}.
+\newblock \emph{\bibinfo{journal}{Journal of Advanced Transportation}}.
+
+\bibitem[{Andersen et~al.(2012)Andersen, Kr{\o}gholt, Bierre and
+  Tabard}]{anderson2012noxdroid}
+\bibinfo{author}{Andersen, A.}, \bibinfo{author}{Kr{\o}gholt, P.},
+  \bibinfo{author}{Bierre, S.} and \bibinfo{author}{Tabard, A.},
+  \bibinfo{year}{2012}.
+\newblock \emph{\bibinfo{title}{{NoxDroid - A Bicycle Sensor System for Air
+  Pollution Monitoring}}} \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{Copenhagen}: \bibinfo{organization}{IT University
+  Copenhagen}.
+\newblock \urlprefix\url{http://noxdroid.org/} [\urldateprefix{}18/07/2018].
+
+\bibitem[{Anderson, Thundiyil and Stolbach(2012)}]{Anderson2012clearingtheair}
+\bibinfo{author}{Anderson, J.O.}, \bibinfo{author}{Thundiyil, J.G.} and
+  \bibinfo{author}{Stolbach, A.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{{Clearing the Air: A Review of the Effects of
+  Particulate Matter Air Pollution on Human Health}}.
+\newblock \emph{\bibinfo{journal}{Journal of Medical Toxicology}},
+  \bibinfo{volume}{8}(\bibinfo{number}{2}), pp.\bibinfo{pages}{166--175}.
+
+\bibitem[{Apte et~al.(2017)Apte, Messier, Gani, Brauer, Kirchstetter, Lunden,
+  Marshall, Portier, Vermeulen and Hamburg}]{Apte2017googlestreetview}
+\bibinfo{author}{Apte, J.S.}, \bibinfo{author}{Messier, K.P.},
+  \bibinfo{author}{Gani, S.}, \bibinfo{author}{Brauer, M.},
+  \bibinfo{author}{Kirchstetter, T.W.}, \bibinfo{author}{Lunden, M.M.},
+  \bibinfo{author}{Marshall, J.D.}, \bibinfo{author}{Portier, C.J.},
+  \bibinfo{author}{Vermeulen, R.C.} and \bibinfo{author}{Hamburg, S.P.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{High-Resolution Air Pollution Mapping with Google
+  Street View Cars: Exploiting Big Data}}.
+\newblock \emph{\bibinfo{journal}{Environmental Science and Technology}},
+  \bibinfo{volume}{51}(\bibinfo{number}{12}), pp.\bibinfo{pages}{6999--7008}.
+
+\bibitem[{Balasubramaniyan and Manivannan(2016)}]{Balasubramaniyan2016AQMS_RPi}
+\bibinfo{author}{Balasubramaniyan, C.} and \bibinfo{author}{Manivannan, D.},
+  \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{IoT enabled Air Quality Monitoring System (AQMS)
+  using Raspberry Pi}}.
+\newblock \emph{\bibinfo{journal}{Indian Journal of Science and Technology}},
+  \bibinfo{volume}{9}(\bibinfo{number}{39}).
+
+\bibitem[{BANES(2017)}]{BANES2017baqap}
+\bibinfo{author}{BANES}, \bibinfo{year}{2017}.
+\newblock \emph{\bibinfo{title}{{Bath Air Quality Action Plan -- Consultation
+  Draft (final)}}}.
+\newblock \bibinfo{address}{Bath}: \bibinfo{institution}{Bath and North East
+  Somerset Council}.
+
+\bibitem[{Beelen et~al.(2014)Beelen, Raaschou-Nielsen, Stafoggia, Andersen,
+  Weinmayr, Hoffmann, Wolf, Samoli, Fischer, Nieuwenhuijsen, Vineis, Xun,
+  Katsouyanni, Dimakopoulou, Oudin, Forsberg, Modig, Havulinna, Lanki, Turunen,
+  Oftedal, Nystad, Nafstad, {De Faire}, Pedersen, {\"{O}}stenson, Fratiglioni,
+  Penell, Korek, Pershagen, Eriksen, Overvad, Ellermann, Eeftens, Peeters,
+  Meliefste, Wang, Bueno-De-Mesquita, Sugiri, Kr{\"{a}}mer, Heinrich, {De
+  Hoogh}, Key, Peters, Hampel, Concin, Nagel, Ineichen, Schaffner,
+  Probst-Hensch, K{\"{u}}nzli, Schindler, Schikowski, Adam, Phuleria, Vilier,
+  Clavel-Chapelon, Declercq, Grioni, Krogh, Tsai, Ricceri, Sacerdote, Galassi,
+  Migliore, Ranzi, Cesaroni, Badaloni, Forastiere, Tamayo, Amiano, Dorronsoro,
+  Katsoulis, Trichopoulou, Brunekreef and Hoek}]{Beelen2014escapeproject}
+\bibinfo{author}{Beelen, R.}, \bibinfo{author}{Raaschou-Nielsen, O.},
+  \bibinfo{author}{Stafoggia, M.}, \bibinfo{author}{Andersen, Z.J.},
+  \bibinfo{author}{Weinmayr, G.}, \bibinfo{author}{Hoffmann, B.},
+  \bibinfo{author}{Wolf, K.}, \bibinfo{author}{Samoli, E.},
+  \bibinfo{author}{Fischer, P.}, \bibinfo{author}{Nieuwenhuijsen, M.},
+  \bibinfo{author}{Vineis, P.}, \bibinfo{author}{Xun, W.W.},
+  \bibinfo{author}{Katsouyanni, K.}, \bibinfo{author}{Dimakopoulou, K.},
+  \bibinfo{author}{Oudin, A.}, \bibinfo{author}{Forsberg, B.},
+  \bibinfo{author}{Modig, L.}, \bibinfo{author}{Havulinna, A.S.},
+  \bibinfo{author}{Lanki, T.}, \bibinfo{author}{Turunen, A.},
+  \bibinfo{author}{Oftedal, B.}, \bibinfo{author}{Nystad, W.},
+  \bibinfo{author}{Nafstad, P.}, \bibinfo{author}{{De Faire}, U.},
+  \bibinfo{author}{Pedersen, N.L.}, \bibinfo{author}{{\"{O}}stenson, C.G.},
+  \bibinfo{author}{Fratiglioni, L.}, \bibinfo{author}{Penell, J.},
+  \bibinfo{author}{Korek, M.}, \bibinfo{author}{Pershagen, G.},
+  \bibinfo{author}{Eriksen, K.T.}, \bibinfo{author}{Overvad, K.},
+  \bibinfo{author}{Ellermann, T.}, \bibinfo{author}{Eeftens, M.},
+  \bibinfo{author}{Peeters, P.H.}, \bibinfo{author}{Meliefste, K.},
+  \bibinfo{author}{Wang, M.}, \bibinfo{author}{Bueno-De-Mesquita, B.},
+  \bibinfo{author}{Sugiri, D.}, \bibinfo{author}{Kr{\"{a}}mer, U.},
+  \bibinfo{author}{Heinrich, J.}, \bibinfo{author}{{De Hoogh}, K.},
+  \bibinfo{author}{Key, T.}, \bibinfo{author}{Peters, A.},
+  \bibinfo{author}{Hampel, R.}, \bibinfo{author}{Concin, H.},
+  \bibinfo{author}{Nagel, G.}, \bibinfo{author}{Ineichen, A.},
+  \bibinfo{author}{Schaffner, E.}, \bibinfo{author}{Probst-Hensch, N.},
+  \bibinfo{author}{K{\"{u}}nzli, N.}, \bibinfo{author}{Schindler, C.},
+  \bibinfo{author}{Schikowski, T.}, \bibinfo{author}{Adam, M.},
+  \bibinfo{author}{Phuleria, H.}, \bibinfo{author}{Vilier, A.},
+  \bibinfo{author}{Clavel-Chapelon, F.}, \bibinfo{author}{Declercq, C.},
+  \bibinfo{author}{Grioni, S.}, \bibinfo{author}{Krogh, V.},
+  \bibinfo{author}{Tsai, M.Y.}, \bibinfo{author}{Ricceri, F.},
+  \bibinfo{author}{Sacerdote, C.}, \bibinfo{author}{Galassi, C.},
+  \bibinfo{author}{Migliore, E.}, \bibinfo{author}{Ranzi, A.},
+  \bibinfo{author}{Cesaroni, G.}, \bibinfo{author}{Badaloni, C.},
+  \bibinfo{author}{Forastiere, F.}, \bibinfo{author}{Tamayo, I.},
+  \bibinfo{author}{Amiano, P.}, \bibinfo{author}{Dorronsoro, M.},
+  \bibinfo{author}{Katsoulis, M.}, \bibinfo{author}{Trichopoulou, A.},
+  \bibinfo{author}{Brunekreef, B.} and \bibinfo{author}{Hoek, G.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Effects of long-term exposure to air pollution on
+  natural-cause mortality: An analysis of 22 European cohorts within the
+  multicentre ESCAPE project}}.
+\newblock \emph{\bibinfo{journal}{The Lancet}},
+  \bibinfo{volume}{383}(\bibinfo{number}{9919}), pp.\bibinfo{pages}{785--795}.
+
+\bibitem[{Bigazzi and Figliozzi(2014)}]{bigazzi2014reviewintake}
+\bibinfo{author}{Bigazzi, A.Y.} and \bibinfo{author}{Figliozzi, M.A.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Review of urban bicyclists' intake and uptake of
+  traffic-related air pollution}.
+\newblock \emph{\bibinfo{journal}{Transport Reviews}},
+  \bibinfo{volume}{34}(\bibinfo{number}{2}), pp.\bibinfo{pages}{221--245}.
+
+\bibitem[{Boeing(2017)}]{boeing2017osmnx}
+\bibinfo{author}{Boeing, G.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{OSMnx: New methods for acquiring, constructing,
+  analyzing, and visualizing complex street networks}}.
+\newblock \emph{\bibinfo{journal}{Computers, Environment and Urban Systems}},
+  \bibinfo{volume}{65}, pp.\bibinfo{pages}{126--139}.
+
+\bibitem[{Briggs et~al.(1997)Briggs, Collins, Elliott, Fischer, Kingham,
+  Lebret, Pryl, {Van Reeuwijk}, Smallbone and {Van Der
+  Veen}}]{Briggs1997mappingGIS}
+\bibinfo{author}{Briggs, D.J.}, \bibinfo{author}{Collins, S.},
+  \bibinfo{author}{Elliott, P.}, \bibinfo{author}{Fischer, P.},
+  \bibinfo{author}{Kingham, S.}, \bibinfo{author}{Lebret, E.},
+  \bibinfo{author}{Pryl, K.}, \bibinfo{author}{{Van Reeuwijk}, H.},
+  \bibinfo{author}{Smallbone, K.} and \bibinfo{author}{{Van Der Veen}, A.},
+  \bibinfo{year}{1997}.
+\newblock \bibinfo{title}{{Mapping urban air pollution using GIS: A
+  regression-based approach}}.
+\newblock \emph{\bibinfo{journal}{International Journal of Geographical
+  Information Science}}, \bibinfo{volume}{11}(\bibinfo{number}{7}),
+  pp.\bibinfo{pages}{699--718}.
+
+\bibitem[{Broach, Dill and Gliebe(2012)}]{broach2012wherecyclistsride}
+\bibinfo{author}{Broach, J.}, \bibinfo{author}{Dill, J.} and
+  \bibinfo{author}{Gliebe, J.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{Where do cyclists ride? a route choice model
+  developed with revealed preference gps data}.
+\newblock \emph{\bibinfo{journal}{Transportation Research Part A: Policy and
+  Practice}}, \bibinfo{volume}{46}(\bibinfo{number}{10}),
+  pp.\bibinfo{pages}{1730 -- 1740}.
+
+\bibitem[{Brook et~al.(2004)Brook, Franklin, Cascio, Hong, Howard, Lipsett,
+  Luepker, Mittleman, Samet, Smith~Jr. and Tager}]{Brook2004cardiostmnt}
+\bibinfo{author}{Brook, R.}, \bibinfo{author}{Franklin, B.},
+  \bibinfo{author}{Cascio, W.}, \bibinfo{author}{Hong, Y.},
+  \bibinfo{author}{Howard, G.}, \bibinfo{author}{Lipsett, M.},
+  \bibinfo{author}{Luepker, R.}, \bibinfo{author}{Mittleman, M.},
+  \bibinfo{author}{Samet, J.}, \bibinfo{author}{Smith~Jr., S.} and
+  \bibinfo{author}{Tager, I.}, \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{{Air pollution and cardiovascular disease: A
+  statement for healthcare professionals from the expert panel on population
+  and prevention science of the American Heart Association}}.
+\newblock \emph{\bibinfo{journal}{Circulation}},
+  \bibinfo{volume}{109}(\bibinfo{number}{21}), pp.\bibinfo{pages}{2655--2671}.
+
+\bibitem[{Castell et~al.(2017)Castell, Dauge, Schneider, Vogt, Lerner,
+  Fishbain, Broday and Bartonova}]{Castell2017}
+\bibinfo{author}{Castell, N.}, \bibinfo{author}{Dauge, F.R.},
+  \bibinfo{author}{Schneider, P.}, \bibinfo{author}{Vogt, M.},
+  \bibinfo{author}{Lerner, U.}, \bibinfo{author}{Fishbain, B.},
+  \bibinfo{author}{Broday, D.} and \bibinfo{author}{Bartonova, A.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{Can commercial low-cost sensor platforms contribute
+  to air quality monitoring and exposure estimates?}}
+\newblock \emph{\bibinfo{journal}{Environment International}},
+  \bibinfo{volume}{99}, pp.\bibinfo{pages}{293--302}.
+
+\bibitem[{Clements et~al.(2017)Clements, Griswold, RS, Johnston, Herting,
+  Thorson, Collier-Oxandale and Hannigan}]{Clements2017lowcostworkshop}
+\bibinfo{author}{Clements, A.L.}, \bibinfo{author}{Griswold, W.G.},
+  \bibinfo{author}{RS, A.}, \bibinfo{author}{Johnston, J.E.},
+  \bibinfo{author}{Herting, M.M.}, \bibinfo{author}{Thorson, J.},
+  \bibinfo{author}{Collier-Oxandale, A.} and \bibinfo{author}{Hannigan, M.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{Low-Cost Air Quality Monitoring Tools: From Research
+  to Practice (A Workshop Summary)}}.
+\newblock \emph{\bibinfo{journal}{Sensors}},
+  \bibinfo{volume}{17}(\bibinfo{number}{11}), p.\bibinfo{pages}{2478}.
+
+\bibitem[{De~Hartog et~al.(2010)De~Hartog, Boogaard, Nijland and
+  Hoek}]{hartog2010health}
+\bibinfo{author}{De~Hartog, J.J.}, \bibinfo{author}{Boogaard, H.},
+  \bibinfo{author}{Nijland, H.} and \bibinfo{author}{Hoek, G.},
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Do the health benefits of cycling outweigh the
+  risks?}
+\newblock \emph{\bibinfo{journal}{Environmental health perspectives}},
+  \bibinfo{volume}{118}(\bibinfo{number}{8}), p.\bibinfo{pages}{1109}.
+
+\bibitem[{{DEFRA}(2017{\natexlab{a}})}]{govuk2017airquality}
+\bibinfo{author}{{DEFRA}}, \bibinfo{year}{2017}{\natexlab{a}}.
+\newblock \emph{\bibinfo{title}{{Defra National Statistics Release: Air quality
+  statistics in the UK 1987 to 2017}}}.
+\newblock \bibinfo{address}{London}: \bibinfo{institution}{DEFRA},
+  (\bibinfo{number}{ENV02}).
+
+\bibitem[{{DEFRA}(2017{\natexlab{b}})}]{DEFRA2017uknoxplan}
+\bibinfo{author}{{DEFRA}}, \bibinfo{year}{2017}{\natexlab{b}}.
+\newblock \emph{\bibinfo{title}{{UK plan for tackling roadside nitrogen dioxide
+  concentrations}}}.
+\newblock \bibinfo{address}{London}: \bibinfo{institution}{DEFRA}.
+
+\bibitem[{{DEFRA}(2018{\natexlab{a}})}]{defra2018daqi}
+\bibinfo{author}{{DEFRA}}, \bibinfo{year}{2018}{\natexlab{a}}.
+\newblock \emph{\bibinfo{title}{{Daily Air Quality Index}}}
+  \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{London, UK}: \bibinfo{organization}{Department for
+  Environment Food and Rural Affairs}.
+\newblock \urlprefix\url{https://uk-air.defra.gov.uk/air-pollution/daqi}
+  [\urldateprefix{}29/03/2018].
+
+\bibitem[{{DEFRA}(2018{\natexlab{b}})}]{defra2018website}
+\bibinfo{author}{{DEFRA}}, \bibinfo{year}{2018}{\natexlab{b}}.
+\newblock \emph{\bibinfo{title}{{UK-AIR: Air Information Resource}}}
+  \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{London}: \bibinfo{organization}{DEFRA}.
+\newblock \urlprefix\url{https://uk-air.defra.gov.uk/}
+  [\urldateprefix{}28/03/2018].
+
+\bibitem[{Desai and Alex(2017)}]{Desai2017beagleboneblack}
+\bibinfo{author}{Desai, N.S.} and \bibinfo{author}{Alex, J.S.R.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{IoT based air pollution monitoring and predictor
+  system on Beagle bone black}}.
+\newblock In: \bibinfo{editor}{S.R.S. Prabaharan}, ed.
+  \emph{\bibinfo{booktitle}{{2017 International Conference On Nextgen
+  Electronic Technologies: Silicon to Software}}}, 23--25 March 2017 Chennai.
+  \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
+  pp.\bibinfo{pages}{367--370}.
+
+\bibitem[{Devarakonda et~al.(2013)Devarakonda, Sevusu, Liu, Liu, Iftode and
+  Nath}]{Devarakonda2013}
+\bibinfo{author}{Devarakonda, S.}, \bibinfo{author}{Sevusu, P.},
+  \bibinfo{author}{Liu, H.}, \bibinfo{author}{Liu, R.},
+  \bibinfo{author}{Iftode, L.} and \bibinfo{author}{Nath, B.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Real-time air quality monitoring through mobile
+  sensing in metropolitan areas}.
+\newblock In: \bibinfo{editor}{R.L. Grossman} and
+  \bibinfo{editor}{R.~Uthurusamy}, eds. \emph{\bibinfo{booktitle}{{Proceedings
+  of the 19th ACM SIGKDD Conference on Knowledge Discovery and Data Mining}}},
+  11--14 August 2013 Chicago. \bibinfo{address}{New York}:
+  \bibinfo{publisher}{ACM}, pp.\bibinfo{pages}{15--23}.
+
+\bibitem[{Dijkstra(1959)}]{dijkstra1959}
+\bibinfo{author}{Dijkstra, E.W.}, \bibinfo{year}{1959}.
+\newblock \bibinfo{title}{A note on two problems in connexion with graphs}.
+\newblock \emph{\bibinfo{journal}{Numerische mathematik}},
+  \bibinfo{volume}{1}(\bibinfo{number}{1}), pp.\bibinfo{pages}{269--271}.
+
+\bibitem[{Dockery et~al.(1993)Dockery, Pope, xu, Spengler, Ware, Fay, Ferris
+  and Speizer}]{dockery1993_6cityairpoll}
+\bibinfo{author}{Dockery, D.}, \bibinfo{author}{Pope, C.}, \bibinfo{author}{xu,
+  X.}, \bibinfo{author}{Spengler, J.}, \bibinfo{author}{Ware, J.},
+  \bibinfo{author}{Fay, M.}, \bibinfo{author}{Ferris, B.} and
+  \bibinfo{author}{Speizer, F.}, \bibinfo{year}{1993}.
+\newblock \bibinfo{title}{{An Association between Air Pollution and Mortality
+  in Six U.S. Cities}}.
+\newblock \emph{\bibinfo{journal}{New England Journal of Medicine}},
+  \bibinfo{volume}{329}(\bibinfo{number}{24}), pp.\bibinfo{pages}{1753--1759}.
+
+\bibitem[{Ebi and McGregor(2008)}]{Ebi2008ozonePMhealth}
+\bibinfo{author}{Ebi, K.L.} and \bibinfo{author}{McGregor, G.},
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{{Climate change, tropospheric ozone and particulate
+  matter, and health impacts}}.
+\newblock \emph{\bibinfo{journal}{Environmental Health Perspectives}},
+  \bibinfo{volume}{116}(\bibinfo{number}{11}), pp.\bibinfo{pages}{1449--1455}.
+
+\bibitem[{Elen et~al.(2013)Elen, Peters, van Poppel, Bleux, Theunis, Reggente
+  and Standaert}]{Elen2013aeroflex}
+\bibinfo{author}{Elen, B.}, \bibinfo{author}{Peters, J.},
+  \bibinfo{author}{Poppel, M.~van}, \bibinfo{author}{Bleux, N.},
+  \bibinfo{author}{Theunis, J.}, \bibinfo{author}{Reggente, M.} and
+  \bibinfo{author}{Standaert, A.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{The Aeroflex: A bicycle for mobile air quality
+  measurements}}.
+\newblock \emph{\bibinfo{journal}{Sensors}},
+  \bibinfo{volume}{13}(\bibinfo{number}{1}), pp.\bibinfo{pages}{221--240}.
+
+\bibitem[{{European Environment Agency}(2018)}]{eea2018airqualityindex}
+\bibinfo{author}{{European Environment Agency}}, \bibinfo{year}{2018}.
+\newblock \emph{\bibinfo{title}{{European Air Quality Index: current air
+  quality information at your finger tips}}} \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{Copenhagen, Denmark}: \bibinfo{organization}{EEA}.
+\newblock
+  \urlprefix\url{https://www.eea.europa.eu/highlights/european-air-quality-index-current}
+  [\urldateprefix{}29/03/2018].
+
+\bibitem[{{European Parliament}(2008)}]{eudir2008airquality}
+\bibinfo{author}{{European Parliament}}, \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{Directive 2008/50/ec of the {European} {Parliament}
+  and of the {Council} of 21st {May} 2008 on ambient air quality and cleaner
+  air for {Europe}} \bibinfo{titleaddon}{[2008] \emph{OJ} L151/1}.
+
+\bibitem[{Faustini, Rapp and Forastiere(2014)}]{Faustini2014nitrogenmortality}
+\bibinfo{author}{Faustini, A.}, \bibinfo{author}{Rapp, R.} and
+  \bibinfo{author}{Forastiere, F.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Nitrogen dioxide and mortality: Review and
+  meta-analysis of long-term studies}}.
+\newblock \emph{\bibinfo{journal}{European Respiratory Journal}},
+  \bibinfo{volume}{44}(\bibinfo{number}{3}), pp.\bibinfo{pages}{744--753}.
+
+\bibitem[{Ferdoush and Li(2014)}]{Ferdoush2014rasppiandarduino}
+\bibinfo{author}{Ferdoush, S.} and \bibinfo{author}{Li, X.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Wireless sensor network system design using
+  Raspberry Pi and Arduino for environmental monitoring applications}}.
+\newblock \emph{\bibinfo{journal}{Procedia Computer Science}},
+  \bibinfo{volume}{34}, pp.\bibinfo{pages}{103--110}.
+
+\bibitem[{Fuertes et~al.(2016)Fuertes, Carrera, Villacis, Toulkeridis,
+  Galarraga, Torres and Aules}]{Fuertes2016realtime}
+\bibinfo{author}{Fuertes, W.}, \bibinfo{author}{Carrera, D.},
+  \bibinfo{author}{Villacis, C.}, \bibinfo{author}{Toulkeridis, T.},
+  \bibinfo{author}{Galarraga, F.}, \bibinfo{author}{Torres, E.} and
+  \bibinfo{author}{Aules, H.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{Distributed system as internet of things for a new
+  low-cost, air pollution wireless monitoring on real time}}.
+\newblock In: \bibinfo{editor}{S.J. Turner} and \bibinfo{editor}{Y.~Yao}, eds.
+  \emph{\bibinfo{booktitle}{{Proceedings - 2015 IEEE/ACM 19th International
+  Symposium on Distributed Simulation and Real Time Applications, DS-RT
+  2015}}}, 14--16 October 2015 Chengdu. \bibinfo{address}{New York}:
+  \bibinfo{publisher}{ACM}, pp.\bibinfo{pages}{58--67}.
+
+\bibitem[{Garnier(2017)}]{garnier2017mythorreality}
+\bibinfo{author}{Garnier, O.}, \bibinfo{year}{2017}.
+\newblock \emph{\bibinfo{title}{Affordable air quality monitoring ? myth or
+  reality?}}
+\newblock \bibinfo{type}{Dissertation ({B.Sc.})}.
+\newblock \bibinfo{school}{University of Bath, Bath}.
+
+\bibitem[{Google(2017{\natexlab{a}})}]{Google2017EnvReport}
+\bibinfo{author}{Google}, \bibinfo{year}{2017}{\natexlab{a}}.
+\newblock \emph{\bibinfo{title}{{Environmental Report: 2017 progress update}}}.
+\newblock \bibinfo{address}{Mountain View, CA}: \bibinfo{institution}{Google}.
+
+\bibitem[{Google(2017{\natexlab{b}})}]{google2018heatmap}
+\bibinfo{author}{Google}, \bibinfo{year}{2017}{\natexlab{b}}.
+\newblock \emph{\bibinfo{title}{{Maps Javascript API: Heatmaps}}}
+  \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{Mountain View, CA}: \bibinfo{organization}{Google}.
+\newblock
+  \urlprefix\url{https://developers.google.com/maps/documentation/javascript/examples/layer-heatmap}
+  [\urldateprefix{}18/02/2018].
+
+\bibitem[{Guarnieri and Balmes(2014)}]{guarnieri2014outdoorairpollasthma}
+\bibinfo{author}{Guarnieri, M.} and \bibinfo{author}{Balmes, J.R.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Outdoor air pollution and asthma}.
+\newblock \emph{\bibinfo{journal}{The Lancet}},
+  \bibinfo{volume}{383}(\bibinfo{number}{9928}),
+  pp.\bibinfo{pages}{1581--1592}.
+
+\bibitem[{Hagemann et~al.(2014)Hagemann, Corsmeier, Kottmeier, Rinke, Wieser
+  and Vogel}]{Hagemann2014aerotram}
+\bibinfo{author}{Hagemann, R.}, \bibinfo{author}{Corsmeier, U.},
+  \bibinfo{author}{Kottmeier, C.}, \bibinfo{author}{Rinke, R.},
+  \bibinfo{author}{Wieser, A.} and \bibinfo{author}{Vogel, B.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Spatial variability of particle number
+  concentrations and NOx in the Karlsruhe (Germany) area obtained with the
+  mobile laboratory 'AERO-TRAM'}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{94}, pp.\bibinfo{pages}{341--352}.
+
+\bibitem[{Hagler, Thoma and Baldauf(2010)}]{Hagler2010durhamallelectric}
+\bibinfo{author}{Hagler, G.}, \bibinfo{author}{Thoma, E.} and
+  \bibinfo{author}{Baldauf, R.}, \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{High-resolution mobile monitoring of carbon monoxide
+  and ultrafine particle concentrations in a near-road environment}.
+\newblock \emph{\bibinfo{journal}{Journal of the Air and Waste Management
+  Association}}, \bibinfo{volume}{60}(\bibinfo{number}{3}),
+  pp.\bibinfo{pages}{328--336}.
+
+\bibitem[{Hasenfratz et~al.(2015)Hasenfratz, Saukh, Walser, Hueglin, Fierz,
+  Arn, Beutel and Thiele}]{Hasenfratz2015highresmapsTram}
+\bibinfo{author}{Hasenfratz, D.}, \bibinfo{author}{Saukh, O.},
+  \bibinfo{author}{Walser, C.}, \bibinfo{author}{Hueglin, C.},
+  \bibinfo{author}{Fierz, M.}, \bibinfo{author}{Arn, T.},
+  \bibinfo{author}{Beutel, J.} and \bibinfo{author}{Thiele, L.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{{Deriving high-resolution urban air pollution maps
+  using mobile sensor nodes}}.
+\newblock \emph{\bibinfo{journal}{Pervasive and Mobile Computing}},
+  \bibinfo{volume}{16}, pp.\bibinfo{pages}{268--285}.
+
+\bibitem[{Hoang et~al.(2013)Hoang, Strufe, Le, Bui, Pham, Thai, Le and
+  Schweizer}]{Hoang2013hanoihexagons}
+\bibinfo{author}{Hoang, D.}, \bibinfo{author}{Strufe, T.}, \bibinfo{author}{Le,
+  Q.}, \bibinfo{author}{Bui, P.}, \bibinfo{author}{Pham, T.},
+  \bibinfo{author}{Thai, N.}, \bibinfo{author}{Le, T.} and
+  \bibinfo{author}{Schweizer, I.}, \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{{Processing and visualizing traffic pollution data in
+  Hanoi City from a wireless sensor network}}.
+\newblock In: \bibinfo{editor}{D.~Turgut} and \bibinfo{editor}{N.~Aschenbruck},
+  eds. \emph{\bibinfo{booktitle}{{38th Annual IEEE Conference on Local Computer
+  Networks - Workshops}}}, 21--24 October 2013 Sydney.
+  \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
+  pp.\bibinfo{pages}{48--55}.
+
+\bibitem[{Hoek et~al.(2008)Hoek, Beelen, de~Hoogh, Vienneau, Gulliver, Fischer
+  and Briggs}]{Hoek2008LUR}
+\bibinfo{author}{Hoek, G.}, \bibinfo{author}{Beelen, R.},
+  \bibinfo{author}{Hoogh, K.~de}, \bibinfo{author}{Vienneau, D.},
+  \bibinfo{author}{Gulliver, J.}, \bibinfo{author}{Fischer, P.} and
+  \bibinfo{author}{Briggs, D.}, \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{{A review of land-use regression models to assess
+  spatial variation of outdoor air pollution}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{42}(\bibinfo{number}{33}), pp.\bibinfo{pages}{7561--7578}.
+
+\bibitem[{Hui(2011)}]{hui2011energyharvestingbicycle}
+\bibinfo{author}{Hui, M.}, \bibinfo{year}{2011}.
+\newblock \emph{\bibinfo{title}{Energy harvesting bicycle}}.
+\newblock \bibinfo{type}{Dissertation ({B.Sc.})}.
+\newblock \bibinfo{school}{California Polytechnic State University,
+  California}.
+
+\bibitem[{Ibrahim et~al.(2015)Ibrahim, Elgamri, Babiker and
+  Mohamed}]{ibrahim2015IOTenvmon}
+\bibinfo{author}{Ibrahim, M.}, \bibinfo{author}{Elgamri, A.},
+  \bibinfo{author}{Babiker, S.} and \bibinfo{author}{Mohamed, A.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{{Internet of Things based Smart Environmental
+  Monitoring using the Raspberry-Pi Computer}}.
+\newblock \emph{\bibinfo{booktitle}{{The Fifth International Conference on
+  Digital Information Processing and Communications}}}, 7--9 October 2015
+  Sierre. \bibinfo{organization}{IEEE}, \bibinfo{address}{Sierre, Switzerland}:
+  \bibinfo{publisher}{IEEE}, pp.\bibinfo{pages}{159--164}.
+
+\bibitem[{Jabbar et~al.(2017)Jabbar, Aicardi, Grasso and
+  Piras}]{Jabbar2017bikefossarchitecture}
+\bibinfo{author}{Jabbar, A.A.}, \bibinfo{author}{Aicardi, I.},
+  \bibinfo{author}{Grasso, N.} and \bibinfo{author}{Piras, M.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Urban data collection using a bike mobile system with
+  a foss architecture}.
+\newblock \emph{\bibinfo{journal}{International Archives of the Photogrammetry,
+  Remote Sensing and Spatial Information Sciences - ISPRS Archives}},
+  \bibinfo{volume}{42}(\bibinfo{number}{4}), pp.\bibinfo{pages}{3--9}.
+
+\bibitem[{Jerrett et~al.(2005)Jerrett, Arain, Kanaroglou, Beckerman, Potoglou,
+  Sahsuvaroglu, Morrison and Giovis}]{Jerrett2005evalmapmodels}
+\bibinfo{author}{Jerrett, M.}, \bibinfo{author}{Arain, A.},
+  \bibinfo{author}{Kanaroglou, P.}, \bibinfo{author}{Beckerman, B.},
+  \bibinfo{author}{Potoglou, D.}, \bibinfo{author}{Sahsuvaroglu, T.},
+  \bibinfo{author}{Morrison, J.} and \bibinfo{author}{Giovis, C.},
+  \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{{A review and evaluation of intraurban air pollution
+  exposure models}}.
+\newblock \emph{\bibinfo{journal}{{Journal of Exposure Analysis and
+  Environmental Epidemiology}}}, \bibinfo{volume}{15}(\bibinfo{number}{2}),
+  pp.\bibinfo{pages}{185--204}.
+
+\bibitem[{Jerrett et~al.(2008)Jerrett, Shankardass, Berhane, Gauderman,
+  K{\"u}nzli, Avol, Gilliland, Lurmann, Molitor, Molitor
+  et~al.}]{jerrett2008childasthma}
+\bibinfo{author}{Jerrett, M.}, \bibinfo{author}{Shankardass, K.},
+  \bibinfo{author}{Berhane, K.}, \bibinfo{author}{Gauderman, W.J.},
+  \bibinfo{author}{K{\"u}nzli, N.}, \bibinfo{author}{Avol, E.},
+  \bibinfo{author}{Gilliland, F.}, \bibinfo{author}{Lurmann, F.},
+  \bibinfo{author}{Molitor, J.N.}, \bibinfo{author}{Molitor, J.T.} et~al.,
+  \bibinfo{year}{2008}.
+\newblock \bibinfo{title}{Traffic-related air pollution and asthma onset in
+  children: a prospective cohort study with individual exposure measurement}.
+\newblock \emph{\bibinfo{journal}{Environmental Health Perspectives}},
+  \bibinfo{volume}{116}(\bibinfo{number}{10}), p.\bibinfo{pages}{1433}.
+
+\bibitem[{Kanaroglou et~al.(2005)Kanaroglou, Jerrett, Morrison, Beckerman,
+  Arain, Gilbert and Brook}]{Kanaroglou2005location}
+\bibinfo{author}{Kanaroglou, P.S.}, \bibinfo{author}{Jerrett, M.},
+  \bibinfo{author}{Morrison, J.}, \bibinfo{author}{Beckerman, B.},
+  \bibinfo{author}{Arain, M.A.}, \bibinfo{author}{Gilbert, N.L.} and
+  \bibinfo{author}{Brook, J.R.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{{Establishing an air pollution monitoring network for
+  intra-urban population exposure assessment: A location-allocation approach}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{39}(\bibinfo{number}{13}), pp.\bibinfo{pages}{2399--2409}.
+
+\bibitem[{Kuhlbusch et~al.(2014)Kuhlbusch, Quincey, Fuller, Kelly, Mudway,
+  Viana, Querol, Alastuey, Katsouyanni, Weijers, Borowiak, Gehrig, Hueglin,
+  Bruckmann, Favez, Sciare, Hoffmann, EspenYttri, Torseth, Sager, Asbach and
+  Quass}]{Kuhlbusch2014futureEUair}
+\bibinfo{author}{Kuhlbusch, T.A.}, \bibinfo{author}{Quincey, P.},
+  \bibinfo{author}{Fuller, G.W.}, \bibinfo{author}{Kelly, F.},
+  \bibinfo{author}{Mudway, I.}, \bibinfo{author}{Viana, M.},
+  \bibinfo{author}{Querol, X.}, \bibinfo{author}{Alastuey, A.},
+  \bibinfo{author}{Katsouyanni, K.}, \bibinfo{author}{Weijers, E.},
+  \bibinfo{author}{Borowiak, A.}, \bibinfo{author}{Gehrig, R.},
+  \bibinfo{author}{Hueglin, C.}, \bibinfo{author}{Bruckmann, P.},
+  \bibinfo{author}{Favez, O.}, \bibinfo{author}{Sciare, J.},
+  \bibinfo{author}{Hoffmann, B.}, \bibinfo{author}{EspenYttri, K.},
+  \bibinfo{author}{Torseth, K.}, \bibinfo{author}{Sager, U.},
+  \bibinfo{author}{Asbach, C.} and \bibinfo{author}{Quass, U.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{New Directions: The future of European urban air
+  quality monitoring}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{87}, pp.\bibinfo{pages}{258--260}.
+
+\bibitem[{Lee et~al.(2014)Lee, Jo, Kim and Stephen}]{Lee2014arduinorestful}
+\bibinfo{author}{Lee, S.}, \bibinfo{author}{Jo, J.}, \bibinfo{author}{Kim, Y.}
+  and \bibinfo{author}{Stephen, H.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{A Framework for Environmental Monitoring with
+  Arduino-Based Sensors Using Restful Web Service}}.
+\newblock \emph{\bibinfo{booktitle}{{2014 IEEE International Conference on
+  Services Computing}}}, 27 June--2 July 2014 Anchorage.
+  \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
+  pp.\bibinfo{pages}{275--282}.
+
+\bibitem[{Min, Forys and Schmid(2014)}]{Min2014airfeedbeagle}
+\bibinfo{author}{Min, K.T.}, \bibinfo{author}{Forys, A.} and
+  \bibinfo{author}{Schmid, T.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Demonstration abstract: AirFeed - Indoor real time
+  interactive air quality monitoring system}}.
+\newblock In: \bibinfo{editor}{A.~Wolisz}, ed. \emph{\bibinfo{booktitle}{{IPSN
+  2014 - Proceedings of the 13th International Symposium on Information
+  Processing in Sensor Networks}}}, 15--17 April 2014 Berlin.
+  \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
+  pp.\bibinfo{pages}{325--326}.
+
+\bibitem[{{Office for National Statistics}(2011)}]{ons2011census}
+\bibinfo{author}{{Office for National Statistics}}, \bibinfo{year}{2011}.
+\newblock \emph{\bibinfo{title}{{2011 Census aggregate data}}}
+  \bibinfo{titleaddon}{[Online]}.
+\newblock \bibinfo{address}{London}: \bibinfo{organization}{Office for National
+  Statistics}.
+\newblock \urlprefix\url{https://www.ons.gov.uk/census/2011census}
+  [\urldateprefix{}19/07/2018].
+
+\bibitem[{Peters et~al.(2013)Peters, Theunis, Van~Poppel and
+  Berghmans}]{Peters2013cycleruns}
+\bibinfo{author}{Peters, J.}, \bibinfo{author}{Theunis, J.},
+  \bibinfo{author}{Van~Poppel, M.} and \bibinfo{author}{Berghmans, P.},
+  \bibinfo{year}{2013}.
+\newblock \bibinfo{title}{Monitoring pm10 and ultrafine particles in urban
+  environments using mobile measurements}.
+\newblock \emph{\bibinfo{journal}{Aerosol and Air Quality Research}},
+  \bibinfo{volume}{13}(\bibinfo{number}{2}), pp.\bibinfo{pages}{509--522}.
+
+\bibitem[{Piedrahita et~al.(2014)Piedrahita, Xiang, Masson, Ortega, Collier,
+  Jiang, Li, Dick, Lv, Hannigan and Shang}]{Piedrahita2014quantexposuremtrng}
+\bibinfo{author}{Piedrahita, R.}, \bibinfo{author}{Xiang, Y.},
+  \bibinfo{author}{Masson, N.}, \bibinfo{author}{Ortega, J.},
+  \bibinfo{author}{Collier, A.}, \bibinfo{author}{Jiang, Y.},
+  \bibinfo{author}{Li, K.}, \bibinfo{author}{Dick, R.P.}, \bibinfo{author}{Lv,
+  Q.}, \bibinfo{author}{Hannigan, M.} and \bibinfo{author}{Shang, L.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{The next generation of low-cost personal air quality
+  sensors for quantitative exposure monitoring}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Measurement Techniques}},
+  \bibinfo{volume}{7}(\bibinfo{number}{10}), pp.\bibinfo{pages}{3325--3336}.
+
+\bibitem[{Pope et~al.(2002)Pope, Burnett, Thun, Calle, Krewski, Ito and
+  Thurston}]{pope2002lungcancercardiomortality}
+\bibinfo{author}{Pope, C.A.}, \bibinfo{author}{Burnett, R.T.},
+  \bibinfo{author}{Thun, M.J.}, \bibinfo{author}{Calle, E.E.},
+  \bibinfo{author}{Krewski, D.}, \bibinfo{author}{Ito, K.} and
+  \bibinfo{author}{Thurston, G.D.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Lung cancer, cardiopulmonary mortality, and long-term
+  exposure to fine particulate air pollution}.
+\newblock \emph{\bibinfo{journal}{JAMA}},
+  \bibinfo{volume}{287}(\bibinfo{number}{9}), pp.\bibinfo{pages}{1132--1141}.
+
+\bibitem[{Pope et~al.(1995)Pope, Thun, Namboodiri, Dockery, Evans, Speizer,
+  Heath et~al.}]{pope1995particulate}
+\bibinfo{author}{Pope, C.A.}, \bibinfo{author}{Thun, M.J.},
+  \bibinfo{author}{Namboodiri, M.M.}, \bibinfo{author}{Dockery, D.W.},
+  \bibinfo{author}{Evans, J.S.}, \bibinfo{author}{Speizer, F.E.},
+  \bibinfo{author}{Heath, C.W.} et~al., \bibinfo{year}{1995}.
+\newblock \bibinfo{title}{Particulate air pollution as a predictor of mortality
+  in a prospective study of us adults}.
+\newblock \emph{\bibinfo{journal}{American Journal of Respiratory and Critical
+  Care Medicine}}, \bibinfo{volume}{151}(\bibinfo{number}{3}),
+  pp.\bibinfo{pages}{669--674}.
+
+\bibitem[{Rahman et~al.(2017)Rahman, Rahman, Afrin, Hong, Tsai, Uddin,
+  Venkatasubramanian and Hsu}]{Rahman2017adaptivesensingRPi}
+\bibinfo{author}{Rahman, M.}, \bibinfo{author}{Rahman, A.},
+  \bibinfo{author}{Afrin, A.}, \bibinfo{author}{Hong, H.J.},
+  \bibinfo{author}{Tsai, P.H.}, \bibinfo{author}{Uddin, M.},
+  \bibinfo{author}{Venkatasubramanian, N.} and \bibinfo{author}{Hsu, C.H.},
+  \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{Adaptive sensing using internet-of-things with
+  constrained communications}.
+\newblock In: \bibinfo{editor}{A.~Dubey} and \bibinfo{editor}{M.~García-Valls},
+  eds. \emph{\bibinfo{booktitle}{{Proceedings of the 16th Workshop on Adaptive
+  and Reflective Middleware, ARM 2017}}}, 11--15 December 2017 Las Vegas.
+  \bibinfo{address}{New York}: \bibinfo{publisher}{ACM},
+  pp.\bibinfo{pages}{6--12}.
+
+\bibitem[{Ramos, Wolterbeek and Almeida(2016)}]{Ramos2016inhaleddose}
+\bibinfo{author}{Ramos, C.A.}, \bibinfo{author}{Wolterbeek, H.T.} and
+  \bibinfo{author}{Almeida, S.M.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{Air pollutant exposure and inhaled dose during urban
+  commuting: a comparison between cycling and motorized modes}.
+\newblock \emph{\bibinfo{journal}{Air Quality, Atmosphere {\&} Health}},
+  \bibinfo{volume}{9}(\bibinfo{number}{8}), pp.\bibinfo{pages}{867--879}.
+
+\bibitem[{Re, Peri and Vassallo(2014)}]{2014busairqualityVSN}
+\bibinfo{author}{Re, G.L.}, \bibinfo{author}{Peri, D.} and
+  \bibinfo{author}{Vassallo, S.D.}, \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{{Urban Air Quality Monitoring Using Vehicular Sensor
+  Networks}}.
+\newblock In: \bibinfo{editor}{S.~Gaglio} and \bibinfo{editor}{G.L. Re}, eds.
+  \emph{\bibinfo{booktitle}{Advances onto the {I}nternet of {T}hings}},
+  \bibinfo{address}{New York, US}: \bibinfo{publisher}{Springer}, vol.
+  \bibinfo{volume}{260}, pp.\bibinfo{pages}{311--323}.
+
+\bibitem[{Rousseeuw and Croux(1993)}]{rousseeuw1993alternatives}
+\bibinfo{author}{Rousseeuw, P.J.} and \bibinfo{author}{Croux, C.},
+  \bibinfo{year}{1993}.
+\newblock \bibinfo{title}{Alternatives to the median absolute deviation}.
+\newblock \emph{\bibinfo{journal}{Journal of the American Statistical
+  association}}, \bibinfo{volume}{88}(\bibinfo{number}{424}),
+  pp.\bibinfo{pages}{1273--1283}.
+
+\bibitem[{Schepers et~al.(2015)Schepers, Fishman, Beelen, Heinen, Wijnen and
+  Parkin}]{schepers2015bikepaths}
+\bibinfo{author}{Schepers, P.}, \bibinfo{author}{Fishman, E.},
+  \bibinfo{author}{Beelen, R.}, \bibinfo{author}{Heinen, E.},
+  \bibinfo{author}{Wijnen, W.} and \bibinfo{author}{Parkin, J.},
+  \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{The mortality impact of bicycle paths and lanes
+  related to physical activity, air pollution exposure and road safety}.
+\newblock \emph{\bibinfo{journal}{Journal of Transport \& Health}},
+  \bibinfo{volume}{2}(\bibinfo{number}{4}), pp.\bibinfo{pages}{460--473}.
+
+\bibitem[{Sharker and Karimi(2014)}]{sharker2014exposureroutes}
+\bibinfo{author}{Sharker, M.H.} and \bibinfo{author}{Karimi, H.A.},
+  \bibinfo{year}{2014}.
+\newblock \bibinfo{title}{Computing least air pollution exposure routes}.
+\newblock \emph{\bibinfo{journal}{International Journal of Geographical
+  Information Science}}, \bibinfo{volume}{28}(\bibinfo{number}{2}),
+  pp.\bibinfo{pages}{343--362}.
+
+\bibitem[{Skov-Petersen et~al.(2018)Skov-Petersen, Barkow, Lundhede and
+  Jacobsen}]{skov_petersen2018cyclingpreferences}
+\bibinfo{author}{Skov-Petersen, H.}, \bibinfo{author}{Barkow, B.},
+  \bibinfo{author}{Lundhede, T.} and \bibinfo{author}{Jacobsen, J.B.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{How do cyclists make their way? - a gps-based
+  revealed preference study in copenhagen}.
+\newblock \emph{\bibinfo{journal}{International Journal of Geographical
+  Information Science}}, \bibinfo{volume}{32}(\bibinfo{number}{7}),
+  pp.\bibinfo{pages}{1469--1484}.
+
+\bibitem[{Smallbone(2012)}]{smallbone2012customerinsight}
+\bibinfo{author}{Smallbone, K.}, \bibinfo{year}{2012}.
+\newblock \emph{\bibinfo{title}{{Individuals interpretation of air quality
+  information: customer insight and awareness study}}}.
+\newblock \bibinfo{address}{Brighton}: \bibinfo{institution}{University of
+  Brighton}, (\bibinfo{number}{719}).
+
+\bibitem[{Spinelle et~al.(2015)Spinelle, Gerboles, Villani, Aleixandre and
+  Bonavitacola}]{Spinelle2015fieldcalibrationa}
+\bibinfo{author}{Spinelle, L.}, \bibinfo{author}{Gerboles, M.},
+  \bibinfo{author}{Villani, M.}, \bibinfo{author}{Aleixandre, M.} and
+  \bibinfo{author}{Bonavitacola, F.}, \bibinfo{year}{2015}.
+\newblock \bibinfo{title}{{Field calibration of a cluster of low-cost available
+  sensors for air quality monitoring. Part A: Ozone and nitrogen dioxide}}.
+\newblock \emph{\bibinfo{journal}{Sensors and Actuators, B: Chemical}},
+  \bibinfo{volume}{215}, pp.\bibinfo{pages}{249--257}.
+
+\bibitem[{Spinelle et~al.(2017)Spinelle, Gerboles, Villani, Aleixandre and
+  Bonavitacola}]{Spinelle2017fieldcalibrationb}
+\bibinfo{author}{Spinelle, L.}, \bibinfo{author}{Gerboles, M.},
+  \bibinfo{author}{Villani, M.G.}, \bibinfo{author}{Aleixandre, M.} and
+  \bibinfo{author}{Bonavitacola, F.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{{Field calibration of a cluster of low-cost
+  commercially available sensors for air quality monitoring. Part B: NO, CO and
+  CO2}}.
+\newblock \emph{\bibinfo{journal}{Sensors and Actuators, B: Chemical}},
+  \bibinfo{volume}{238}, pp.\bibinfo{pages}{706--715}.
+
+\bibitem[{Sun et~al.(2016)Sun, Wong, Wei, Ye, Huang, Yang, Westerdahl, Louie,
+  Luk and Ning}]{sun2016HKmarathonML}
+\bibinfo{author}{Sun, L.}, \bibinfo{author}{Wong, K.C.}, \bibinfo{author}{Wei,
+  P.}, \bibinfo{author}{Ye, S.}, \bibinfo{author}{Huang, H.},
+  \bibinfo{author}{Yang, F.}, \bibinfo{author}{Westerdahl, D.},
+  \bibinfo{author}{Louie, P.K.}, \bibinfo{author}{Luk, C.W.} and
+  \bibinfo{author}{Ning, Z.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{Development and application of a next generation air
+  sensor network for the Hong Kong marathon 2015 air quality monitoring}}.
+\newblock \emph{\bibinfo{journal}{Sensors}},
+  \bibinfo{volume}{16}(\bibinfo{number}{2}), p.\bibinfo{pages}{211}.
+
+\bibitem[{Thorpe(2017)}]{thorpe2017RPimesh}
+\bibinfo{author}{Thorpe, M.R.}, \bibinfo{year}{2017}.
+\newblock \emph{\bibinfo{title}{Improving low cost sensing with ad-hoc mesh
+  networks and machine learning}}.
+\newblock \bibinfo{type}{Thesis ({M.Sc.})}.
+\newblock \bibinfo{school}{University of Bath, Bath}.
+
+\bibitem[{Tukey(1977)}]{tukey1977iqr}
+\bibinfo{author}{Tukey, J.W.}, \bibinfo{year}{1977}.
+\newblock \emph{\bibinfo{title}{Exploratory data analysis}}.
+\newblock \bibinfo{edition}{2nd} ed. \bibinfo{address}{Boston}:
+  \bibinfo{publisher}{Addison-Wesley}.
+
+\bibitem[{Turner et~al.(2016)Turner, Jerrett, Pope, Krewski, Gapstur, Diver,
+  Beckerman, Marshall, Su, Crouse and Burnett}]{Turner2016ozonemortality}
+\bibinfo{author}{Turner, M.C.}, \bibinfo{author}{Jerrett, M.},
+  \bibinfo{author}{Pope, C.A.}, \bibinfo{author}{Krewski, D.},
+  \bibinfo{author}{Gapstur, S.M.}, \bibinfo{author}{Diver, W.R.},
+  \bibinfo{author}{Beckerman, B.S.}, \bibinfo{author}{Marshall, J.D.},
+  \bibinfo{author}{Su, J.}, \bibinfo{author}{Crouse, D.L.} and
+  \bibinfo{author}{Burnett, R.T.}, \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{{Long-Term Ozone Exposure and Mortality in a Large
+  Prospective Study}}.
+\newblock \emph{\bibinfo{journal}{{American Journal of Respiratory and Critical
+  Care Medicine}}}, \bibinfo{volume}{193}(\bibinfo{number}{10}),
+  pp.\bibinfo{pages}{1134--1142}.
+
+\bibitem[{Uva et~al.(2009)Uva, Falcone, McClellan and
+  Ostapowicz}]{uva2009preliminary}
+\bibinfo{author}{Uva, M.}, \bibinfo{author}{Falcone, R.},
+  \bibinfo{author}{McClellan, A.} and \bibinfo{author}{Ostapowicz, E.},
+  \bibinfo{year}{2009}.
+\newblock \emph{\bibinfo{title}{{Preliminary Screening System for Ambient Air
+  Quality in Southeast Philadelphia}}}.
+\newblock \bibinfo{address}{Philadelphia}: \bibinfo{institution}{Drexel
+  University}, (\bibinfo{number}{ECE-19}).
+
+\bibitem[{Wallace et~al.(2009)Wallace, Corr, Deluca, Kanaroglou and
+  McCarry}]{Wallace2009mobilehamilton}
+\bibinfo{author}{Wallace, J.}, \bibinfo{author}{Corr, D.},
+  \bibinfo{author}{Deluca, P.}, \bibinfo{author}{Kanaroglou, P.} and
+  \bibinfo{author}{McCarry, B.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{{Mobile monitoring of air pollution in cities: The
+  case of Hamilton, Ontario, Canada}}.
+\newblock \emph{\bibinfo{journal}{Journal of Environmental Monitoring}},
+  \bibinfo{volume}{11}(\bibinfo{number}{5}), pp.\bibinfo{pages}{998--1003}.
+
+\bibitem[{Weijers et~al.(2004)Weijers, Khlystov, Kos and
+  Erisman}]{Weijers2004movingmeasurementunit}
+\bibinfo{author}{Weijers, E.}, \bibinfo{author}{Khlystov, A.},
+  \bibinfo{author}{Kos, G.} and \bibinfo{author}{Erisman, J.},
+  \bibinfo{year}{2004}.
+\newblock \bibinfo{title}{{Variability of particulate matter concentrations
+  along roads and motorways determined by a moving measurement unit}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{38}(\bibinfo{number}{19}), pp.\bibinfo{pages}{2993--3002}.
+
+\bibitem[{Westerdahl et~al.(2005)Westerdahl, Fruin, Sax, Fine and
+  Sioutas}]{Westerdahl2005losangeles}
+\bibinfo{author}{Westerdahl, D.}, \bibinfo{author}{Fruin, S.},
+  \bibinfo{author}{Sax, T.}, \bibinfo{author}{Fine, P.} and
+  \bibinfo{author}{Sioutas, C.}, \bibinfo{year}{2005}.
+\newblock \bibinfo{title}{{Mobile platform measurements of ultrafine particles
+  and associated pollutant concentrations on freeways and residential streets
+  in Los Angeles}}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{39}(\bibinfo{number}{20}), pp.\bibinfo{pages}{3597--3610}.
+
+\bibitem[{WHO(2002)}]{WHO2002ambientmonitoring}
+\bibinfo{author}{WHO}, \bibinfo{year}{2002}.
+\newblock \emph{\bibinfo{title}{{Monitoring ambient air quality for health
+  impact assessment}}}.
+\newblock \bibinfo{address}{Geneva}: \bibinfo{institution}{World Health
+  Organisation}.
+
+\bibitem[{WHO(2016)}]{WHO2016ambient}
+\bibinfo{author}{WHO}, \bibinfo{year}{2016}.
+\newblock \emph{\bibinfo{title}{{Ambient air pollution: A global assessment of
+  exposure and burden of disease}}}.
+\newblock \bibinfo{address}{Geneva}: \bibinfo{institution}{World Health
+  Organisation}.
+
+\bibitem[{Wong, Chua and Li(2009)}]{Wong2009envmonitoringtemporal}
+\bibinfo{author}{Wong, K.J.}, \bibinfo{author}{Chua, C.C.} and
+  \bibinfo{author}{Li, Q.}, \bibinfo{year}{2009}.
+\newblock \bibinfo{title}{{Environmental Monitoring Using Wireless Vehicular
+  Sensor Networks}}.
+\newblock In: \bibinfo{editor}{Y.~Zhang}, \bibinfo{editor}{Z.~Niu} and
+  \bibinfo{editor}{L.~Cuthbert}, eds. \emph{\bibinfo{booktitle}{{5th
+  International Conference on Wireless Communications, Networking and Mobile
+  Computing}}}, 24--26 September 2009 Beijing. \bibinfo{address}{Washington}:
+  \bibinfo{publisher}{IEEE}, pp.\bibinfo{pages}{1--4}.
+
+\bibitem[{Yang, Yeo and Priya(2012)}]{Yang2012weaving}
+\bibinfo{author}{Yang, Y.}, \bibinfo{author}{Yeo, J.} and
+  \bibinfo{author}{Priya, S.}, \bibinfo{year}{2012}.
+\newblock \bibinfo{title}{{Harvesting energy from the counterbalancing
+  (Weaving) movement in bicycle riding}}.
+\newblock \emph{\bibinfo{journal}{Sensors}},
+  \bibinfo{volume}{12}(\bibinfo{number}{8}), pp.\bibinfo{pages}{10248--10258}.
+
+\bibitem[{Zimmerman et~al.(2018)Zimmerman, Presto, Kumar, Gu, Hauryliuk,
+  Robinson, Robinson and Subramanian}]{zimmerman2018machinelearning}
+\bibinfo{author}{Zimmerman, N.}, \bibinfo{author}{Presto, A.A.},
+  \bibinfo{author}{Kumar, S.P.}, \bibinfo{author}{Gu, J.},
+  \bibinfo{author}{Hauryliuk, A.}, \bibinfo{author}{Robinson, E.S.},
+  \bibinfo{author}{Robinson, A.L.} and \bibinfo{author}{Subramanian, R.},
+  \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{A machine learning calibration model using random
+  forests to improve sensor performance for lower-cost air quality monitoring}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Measurement Techniques}},
+  \bibinfo{volume}{11}(\bibinfo{number}{1}), p.\bibinfo{pages}{291}.
+
+\bibitem[{van Zoest, Stein and Hoek(2018)}]{vanZoest2018outlierdetection}
+\bibinfo{author}{Zoest, V.M.~van}, \bibinfo{author}{Stein, A.} and
+  \bibinfo{author}{Hoek, G.}, \bibinfo{year}{2018}.
+\newblock \bibinfo{title}{Outlier detection in urban air quality sensor
+  networks}.
+\newblock \emph{\bibinfo{journal}{Water, Air, {\&} Soil Pollution}},
+  \bibinfo{volume}{229}(\bibinfo{number}{4}), p.\bibinfo{pages}{111}.
+
+\end{thebibliography}

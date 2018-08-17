@@ -1,0 +1,45 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{16}{figure.caption.5}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{20}{figure.caption.7}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{31}{figure.caption.10}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{32}{figure.caption.11}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{32}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device\relax }}{37}{figure.caption.13}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.\relax }}{41}{figure.caption.16}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard\relax }}{42}{figure.caption.17}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing\relax }}{43}{figure.caption.18}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow\relax }}{45}{figure.caption.20}
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code\relax }}{47}{figure.caption.21}
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application using R Shiny\relax }}{49}{figure.caption.25}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4-1}{\ignorespaces A single master and a single slave on a Serial Peripheral Interface (SPI) bus.\relax }}{52}{figure.caption.27}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces Typical Serial Device Communication and Example Digital Output Codes for Specific Analog Input Voltages [REF]\relax }}{53}{figure.caption.28}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors\relax }}{54}{figure.caption.29}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces Potentiometers}}{55}{figure.caption.30}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves\relax }}{56}{figure.caption.31}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch (in red) on Mikro Pi 3 Click Shield HAT\relax }}{56}{figure.caption.32}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol\relax }}{57}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath\relax }}{61}{figure.caption.34}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid.\relax }}{65}{figure.caption.35}
+\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area \citep {BANES2017baqap} with shaded cycling route.\relax }}{65}{figure.caption.36}
+\contentsline {figure}{\numberline {5-4}{\ignorespaces Potential positions for device on bicycle.\relax }}{67}{figure.caption.37}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces Road network around fixed monitoring stations.\relax }}{69}{figure.caption.39}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route around Guildhall fixed monitoring station.\relax }}{69}{figure.caption.41}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route outside of Bath City FC football stadium.\relax }}{71}{figure.caption.45}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces Graph produced using \texttt {osmnx} for Bath.\relax }}{73}{figure.caption.47}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces Example of selecting k-nearest air quality measurements for two roads (k = 5).\relax }}{75}{figure.caption.48}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI {17}{\celsius }; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.\relax }}{77}{figure.caption.49}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) has the most outliers; (b) has outliers at the top-end; (c) has outliers at high and low values; (d) has 4 outliers; (e) has outliers at high and low values.\relax }}{79}{figure.caption.50}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the red lines) can be considered outliers.\relax }}{80}{figure.caption.56}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.\relax }}{82}{figure.caption.57}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.\relax }}{83}{figure.caption.58}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500\nobreakspace {}m. There are then diminishing number of routes as the delta increases.\relax }}{84}{figure.caption.60}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
