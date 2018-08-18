@@ -28,8 +28,8 @@
 \nomenclatureentry{aLED@[{LED}]\begingroup Light emitting diode\nomeqref {3.1}|nompageref}{42}
 \nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hypertext Transfer Protocol\nomeqref {3.1}|nompageref}{46}
 \nomenclatureentry{aFTP@[{FTP}]\begingroup File Transfer Protocol\nomeqref {3.1}|nompageref}{47}
-\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{47}
-\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{47}
+\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{48}
+\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{48}
 \nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {3.1}|nompageref}{48}
 \nomenclatureentry{aLPO@[{LPO}]\begingroup Low Pulse Occupancy\nomeqref {4.0}|nompageref}{51}
 \nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {4.7}|nompageref}{53}

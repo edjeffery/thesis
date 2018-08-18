@@ -728,7 +728,7 @@ A DHT22 temperature and humidity sensor adds climate monitoring capabilities to 
 
 The Mikro Pi 3 Click Shield, which holds the ozone and general air quality sensors, uses a 40-pin GPIO connector to interface with the RPi, although not all of the pins are used (see Table \ref{gpio}). Therefore, in order to attach the particulate sensor, the temperature and humidity sensor and the LED to one RPi, a solution is needed that enables other connections to the GPIO pins.
 
-The chosen solution is a GPIO expansion board (see Figure \ref{fig: gpio_expander}), which provides 4 additional 40-pin GPIO connectors. Figure \ref{fig: two_on_one} shows how the multiple connections are made. The particulate sensor has a digital output and so can be connected directly to the GPIO pins with the use of a voltage divider made out of a $2.2k\Omega$ and $3.3k\Omega$ resistor. The temperature and humidity sensor and LED also have digital outputs, meaning they are connected directly to the GPIO pins as well. These connections to the GPIO expansion board are made more robust through the use a custom-built circuit board. A protoboard has a GPIO connector soldered to its underside, which enables it to connect to the GPIO expansion board. Single lines of GPIO pins are also soldered on, along with the relevant resistors discussed previously. Female-to-female jumper cables connect the sensors and the LED to these GPIO pins. Figure \ref{protoboard} shows the soldered protoboard.
+The chosen solution is a GPIO expansion board (see Figure \ref{fig: gpio_expander}), which provides 4 additional 40-pin GPIO connectors. Figure \ref{fig: two_on_one} shows how the multiple connections are made. The particulate sensor has a digital output and so can be connected directly to the GPIO pins with the use of a voltage divider made out of a $2.2k\Omega$ and $3.3k\Omega$ resistor. The temperature and humidity sensor and LED also have digital outputs, meaning they are connected directly to the GPIO pins as well. These connections to the GPIO expansion board are made more robust through the use a custom-built circuit board. A protoboard has a GPIO connector soldered to its underside, which enables it to connect to the GPIO expansion board. Single lines of GPIO pins are also soldered on, along with the relevant resistors discussed previously. Female-to-female jumper cables connect the sensors and the LED to these GPIO pins. Figure \ref{protoboard} shows the final soldered protoboard.
 
 \begin{figure}
 \centering
@@ -765,7 +765,7 @@ The chosen solution is a GPIO expansion board (see Figure \ref{fig: gpio_expande
 
 \subsection{Power}
 
-The power to the device was supplied by a 10000mAh lithium-ion battery. We measured the current draw of the whole device using an ammeter, dissecting a USB cable and attaching clips to the voltage common collector (VCC) wire. This test setup is shown in Figure \ref{fig: ammeter}, with the dissected cable shown in Figure \ref{fig: usb_cable}. The ammeter reported current values between 748mA and 754mA. Therefore, the device could run for approximately 13 hours on a fully-charged battery. Equation \ref{eqn: time} is only an estimate because batteries typically have non-linear discharge due to factors such as temperature and age of battery.
+The power to the device is supplied by a 10000mAh lithium-ion battery. The current draw of the whole device can be measured using an ammeter, dissecting a USB cable and attaching clips to the voltage common collector (VCC) wire, commonly known as the `power' wire. This test setup is shown in Figure \ref{fig: ammeter}, with the dissected cable shown in Figure \ref{fig: usb_cable}. The ammeter reported current values between 748mA and 754mA. Therefore, the device can run for approximately 13 hours on a fully-charged battery. It must be noted that Equation \ref{eqn: time} is only an estimate because batteries typically have non-linear discharge due to factors such as temperature and age of battery.
 \begin{equation} \label{eqn: time}
 t = \frac{10000mAh}{750mA} = 13.\dot{3} \; hours
 \end{equation}
@@ -792,13 +792,13 @@ t = \frac{10000mAh}{750mA} = 13.\dot{3} \; hours
 
 \subsection{Case}
 
-The case is a modified version of a triangular bag that fits to the frame of a bicycle. It has three velcro straps that secure the bag to the bicycle's frame. The inside of the bag is lined with a flexible plastic, thus helping to make the device water-resistant. Holes were cut into the side of the bag to expose the air quality sensors to the air, to allow the GPS module to have a clear view of satellites in the sky and to display a system-status LED to the user.
+The case is a modified version of a triangular bag that fits to the frame of a bicycle. It has three velcro straps that secure the bag to the bicycle's frame. The inside of the bag is lined with a flexible plastic, thus helping to make the device water-resistant. There are holes cut into the side of the bag to: (a) expose the air quality sensors to the air, (b) to allow the GPS module to have a clear view of satellites in the sky, and (c) to display a system-status LED to the user.
 
 \nomenclature{LED}{Light emitting diode}
 
 \subsection{Cost}
 
-One of the main aims of this project was to create a low-cost device. In total, the cost was \textsterling 152.63. A breakdown is shown in Table \ref{costs}.
+One of the main aims of this project is to create a low-cost device. In total, the cost of a complete air quality monitoring device is \textsterling 152.63. A breakdown is shown in Table \ref{costs}.
 
 \begin{table}[!tbp]
   \centering
@@ -828,9 +828,9 @@ Given the device uses the mobile phone's cellular network to upload the measurem
 
 The software for this air quality monitoring device covers a number of different areas.
 \begin{enumerate}
-\item Software that runs on the Raspberry Pi to collect and send the sensor data
-\item Server-side software that receives the data and inserts it into a database
-\item Web application that displays the data to the public
+\item Software that runs on the Raspberry Pi to collect and send the sensor data (Section \ref{rpi_software})
+\item Server-side software that receives the data and inserts it into a database (Section \ref{server_software})
+\item Web application that displays the data to the public (Section \ref{web_application})
 \end{enumerate}
 
 \begin{figure}[!tb]
@@ -843,20 +843,20 @@ The software for this air quality monitoring device covers a number of different
 
 \subsection{Raspberry Pi software} \label{rpi_software}
 
-The main requirement of the software on the Raspberry Pi was to read the data from the sensors periodically and then send this data to a specified server. The basis for this software came from analysing code from the ENLITEN project [REF], a previous study that the University of Bath was involved in, as well as from \cite{thorpe2017RPimesh}.
+The main requirement of the software on the Raspberry Pi is to read the data from the sensors periodically and then send this data to a specified server. The basis for this software came from analysing code from the ENLITEN project [REF], a previous study that the University of Bath was involved in, as well as from \cite{thorpe2017RPimesh}.
 
-Although \cite{thorpe2017RPimesh} used the same particulate sensor, the study used a Grove Pi HAT, which was based around an Arduino and the software only allowed for measurements every 30 seconds. We worked with the manufacturer Grove to reduce this, but encountered numerous problems with re-flashing the Grove Pi with altered firmware. To overcome this, we instead attached the sensor to the GPIO pins and used the \texttt{pigpio} library, which provides control of the RPi's GPIO. Furthermore, we used the \texttt{spidev} library for communicating with the MQ131 and MQ135 sensors (more specifically, their ADC chips). \texttt{spidev} is a python module for interfacing with SPI devices via the spidev linux kernel driver. One problem we experienced was reading from all of the sensors simultaneously, because the continual nature of reading from the particulate sensor (measuring how long the signal was low for in a given time period) was `blocking' the main thread. As a resolution, we created two threads: one for reading the particulate sensor and a second for the rest of the sensing functionality. This avoided any blocking and the sensor measurements were saved to variables in the relevant thread objects. Every 10 seconds, these variables were read by the main program and saved to a CSV file. Once the CSV file had 6 lines of data, corresponding to 1 minute, we started a new file.
+Although \cite{thorpe2017RPimesh} used the same particulate sensor, the study used a Grove Pi HAT, which was based around an Arduino and the software only allowed for measurements every 30 seconds. We worked with the manufacturer Grove to reduce this, but encountered numerous problems with re-flashing the Grove Pi with altered firmware. To overcome this, we instead attach the sensor to the GPIO pins and use the \texttt{pigpio} python module, which provides control of the RPi's GPIO. Furthermore, we use the \texttt{spidev} library for communicating with the MQ131 and MQ135 sensors (more specifically, their ADC chips). \texttt{spidev} is a python module for interfacing with SPI devices via the \texttt{spidev} linux kernel driver. A problem can arise when attempting to read from all of the sensors simultaneously, because the continual nature of reading from the particulate sensor (measuring how long the signal was low -- i.e. 0 -- for in a given time period) `blocks' the main thread. As a resolution, the software implements two threads: (i) reading the particulate sensor and operating the LED, and (ii) operating the rest of the sensing functionality. This avoids any blocking and the sensor measurements are saved to variables in the relevant thread objects, which can then simply be accessed from the object. Every 10 seconds, these variables are read by the main program and saved to a CSV file. Once the CSV file has 6 lines of data, corresponding to 1 minute of time, the software creates a new file.
 
-To avoid manual intervention by the user, the \texttt{/etc/rc.local} (`rc' stands for `run-control') was edited to include a start service command, shown below. We tested using \texttt{cron}, but found it difficult to get working on reboot.
-
+To avoid manual intervention by the user, the \texttt{/etc/rc.local} (`rc' stands for `run-control') is edited to include a start service command, shown below. An alternative, \texttt{cron}, is available to run scheduled jobs, but was found to be more difficult to get working on a reboot trigger.
 \begin{lstlisting}
 sleep 30 && sudo -H -u pi python /home/pi/filename.py &
 \end{lstlisting}
 % \caption{rc.local file addition for automatically running the python script on boot.}
 
-For sending the data, we saved an Android phone's WiFi hotspot details in the Raspberry Pi's \texttt{wpa-supplicant.conf} file, which meant it would automatically connect when it detected the WiFi network. An example config file is shown in Appendix XXX. We then used the \texttt{requests} python module for sending the CSV file via HTTP post requests over the RPi's WiFi connection.
+%For sending the data, 
+To provide an auto-connect feature for the WiFi, the Android phone's WiFi hotspot details are saved in the Raspberry Pi's \texttt{wpa-supplicant.conf} file, which means it automatically connects when it detects the WiFi network. An example config file is shown in Appendix XXX. The \texttt{requests} python module is then used to send the CSV file via HTTP post requests over the RPi's WiFi connection.
 
-These two requirements satisfied the basic functionality of the RPi software. However, for robustness, the software stored un-sent data on the RPi until it could be sent again. For example, if the WiFi connection failed, then the files were stored in a separate directory and then all sent when the connection was restored. In addition, the software detected potentially erroneous measurements (i.e. a zero reading) and alerted the user by flashing a red LED. This was achieved through the use of the \texttt{RPi-GPIO} library. 
+These two requirements satisfiy the basic functionality of the RPi software. However, for robustness, the software stores un-sent data on the RPi until it can be sent again. For example, if the WiFi connection fails, then the files are stored in a separate directory and then iteratively sent when the connection is restored. In addition, the software detects potentially erroneous measurements (e.g. a zero reading) and alerts the user by flashing a red LED. This functionality was achieved through the use of the \texttt{RPi-GPIO} library. 
 
 % Include hashing??
 
@@ -873,24 +873,24 @@ Figure \ref{code_flow} visualises this whole process, as well as the insertion i
 
 \subsubsection{GPS}
 
-Initially, we developed an Android application that merged readings from the RPi with GPS data because the RPi does not have built-in GPS abilities. The application was created using Android Studio for Mac OSX. The RPi connected to the Android phone via Bluetooth, and used \texttt{ObexFTP} to send data files from the RPi to the phone. The Android application was watching a particular directory for new files and upon receipt would match up timestamps in the file with GPS-timestamp pairs stored on the phone, before HTTP posting the file to the server. However, this was a far from ideal situation and introduced tight coupling between the RPi and the phone. It was realised after the development of this application that USB GPS modules were available that could plug directly into the RPi.
+Geo-location functionality is provided by a USB GPS module, specifically a GlobalSat BU-353S3 USB GPS Receiver. This plugs directly into one of the RPi's USB ports and appears as the device \texttt{ttyUSB0}. The GPSD protocol, which is built on top of JSON, is used to communicate with the GPS receiver. Responses from the GPS receiver are JavaScript Object Notation (JSON) objects. The \texttt{gpsd-py3} python module is used to interface with the GPSD protocol, parsing the JSON to output longitude and latitude coordinates, as well as other useful information such as horizontal speed and altitude. 
+
+Moreover, the RPi is configured to use the GPS receiver as a Network Time Protocol (NTP) time server. This involves the use of the NTP daemon. Installation instructions are detailed in Appendix XXX. By enabling this, the RPi syncs its internal clock with an accurate source -- the GPS satellites. This overcomes the issue of the Raspberry Pi having no real time clock, which otherwise can lead to inaccurate timing when recording measurements because the RPi is oblivious to time lapsed since the previous shutdown.
+
+Initially, the project was going to develop an Android application that merged readings from the RPi with GPS data, because the RPi does not have a built-in GPS receiver. The application was created using Android Studio for Mac OSX. The application works by connecting the RPi to the Android phone via Bluetooth, and then uses \texttt{ObexFTP} to send the CSV files from the RPi to the phone. The application then watches a particular directory for new files and upon receipt matches up timestamps in the CSV file with GPS-timestamp pairs stored on the phone, before HTTP posting the file to the server. However, this was a far from ideal solution and introduced tight coupling between the RPi and the phone. Once it was realised that a USB GPS module was available, the Android application was shelved.
 
 \nomenclature{FTP}{File Transfer Protocol}
 
-Although not used in the final version of the device, this development shows that it is possible for the device to connect via Bluetooth and to share the internet connection of another device via Bluetooth Tethering. It also demonstrates the ability to still collect GPS location data when the Raspberry Pi does not have GPS itself and no GPS module is available.
-
-The GPSD protocol, which is built on top of JSON, was used to communicate with the GPS receiver. Responses from the GPS receiver are JSON objects. The \texttt{gpsd-py3} module is a Python module that interfaces with the GPSD protocol, parsing the JSON to output longitude and latitude coordinates, as well as other useful information such as speed and altitude. 
-
-Moreover, the RPi was configured to use the GPS receiver as a Network Time Protocol (NTP) time server. This involves the use of the NTP daemon. Installation instructions are detailed in the Appendix. By enabling this, the RPi could sync its internal clock with an accurate source -- the GPS satellites. This overcomes the issue of the Raspberry Pi having no real time clock, which can lead to inaccurate timing when recording measurements.
+Although not used in the final version of the device, this development shows that it is possible for the same functionality to be achieved using Bluetooth. It also demonstrates the ability to still collect GPS location data when the Raspberry Pi does not have GPS itself and no GPS module is available. Since the cost of the GPS module is \textsterling 30.99, this alternative solution can be used in an even lower cost version of the device.
 
 % Add installation instructions to the Appendix.
 
 \nomenclature{JSON}{JavaScript Object Notation}
 \nomenclature{NTP}{Network Time Protocol}
 
-\subsection{Server-side software and database}
+\subsection{Server-side software and database} \label{server_software}
 
-In order to connect the air quality monitoring device and the database, we set up a client-server architecture. We used a RESTful API to receive files and then inputted the file's data into a database.
+In order to connect the air quality monitoring device and the database, a client-server architecture is used. A RESTful API receives the CSV files, parses them and then inputs the file's data into a database.
 
 \subsubsection{RESTful API}
 
@@ -900,23 +900,23 @@ A RESTful API written in PHP receives the HTTP posted CSV file, then parses the 
 
 \subsubsection{Database}
 
-The University of Bath provides a database hosting service to members of the university. The database software is MySQL version 5.7.16 Community Server. A database was created for this project that contained two main tables: (i) a table that stored the air quality data, and (ii) a table that stored system monitoring information. We were able to just use one table for storing the measurements as there were not enough rows to cause performance issues. The system monitoring table allowed us to identify if and when an error occurred in the data flow.
+The University of Bath provides a database hosting service to members of the university. The database software is MySQL version 5.7.16 Community Server. One of these databases is used in this project, containing two main tables: (i) a table that stores the air quality data, and (ii) a table that stores system monitoring information. We are able to only use one table for storing the measurements as the number of rows is low enough to not cause performance issues. The system monitoring table allows identification if and when an error occurs in the data flow.
 
-% Describe tables here
+% Describe tables here %%%%%%%
 
-\subsection{Web application}
+\subsection{Web application} \label{web_application}
 
-The web application was developed using R Shiny version 1.1.0. An example page from the web application is shown in Figure \ref{web_app}.
+The web application is written in R and uses R Shiny version 1.1.0 to provide the web framework. An example page from the web application is shown in Figure \ref{rshiny}.
 
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=1\textwidth]{web_app}
 \caption{Web application using R Shiny}
-\label{web_app}
+\label{rshiny}
 \end{figure}
+% UPDATE IMAGE
 
-The web page's main requirement was to display the information in easily accessible and understandable manner so that any member of the public would be able to analyse the pollution in their area. It predominantly displays the pollution maps of Bath and line graphs for the time series of data. On the left-hand side of the page is a menu bar that allows the user to select their chosen time period, with the graphs dynamically updating as the selection changes. In addition, there is a dynamic table that displays all of the raw data, with a button for downloading the dataset as a CSV file.
-
+The web page's main requirement is to display the information in an easily accessible and understandable manner, so that any member of the public is able to analyse the pollution in their area. It predominantly displays the pollution maps of Bath and line graphs for the time series of data. On the left-hand side of the page is a menu bar that allows the user to select their chosen time period, with the graphs dynamically updating as the selection changes. In addition, there is a dynamic table that displays all of the raw data, with a button for downloading the dataset as a CSV file.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -940,7 +940,7 @@ This chapter details how these processes were created for each of the sensors us
 
 \section{Particulate sensor}
 
-The output of the Shinyei PPD42NS particulate sensor is a digital pulse. To infer the measured concentration, a value called the Low Pulse Occupancy (LPO) time is calculated. This is the percentage of time over a fixed period that the digital output of the sensor is 'low' (i.e. 0). The LPO can then be used to calculate the estimated number of particles per 0.01 cubic feet using the following equation, which was obtained by digitising the data sheet calibration curve:
+The output of the Shinyei PPD42NS particulate sensor is a digital pulse. To infer the measured concentration, a value called the Low Pulse Occupancy (LPO) time is calculated. This is the percentage of time over a fixed period that the digital output of the sensor is 'low' (i.e. 0). The LPO can then be used to calculate the estimated number of particles per 0.01 cubic feet using the following equation, which is obtained by digitising the data sheet calibration curve:
 \nomenclature{LPO}{Low Pulse Occupancy}
 \begin{equation}
 \label{LPOtoCF}
@@ -965,7 +965,7 @@ The mass $m$ of a particle is its density multiplied by its volume:
 m = d \times v = 0.589 \times 10^{-6} \mu g
 \end{equation}
 
-Therefore, the mass of particles per cubic foot can be calculated by multiplying the mass of a particle $m$ by the number of particles per cubic foot $y$. It is then a simple conversion from cubic feet to cubic metres, by multiplying by a factor of $3531.5$.
+Therefore, the mass of particles per cubic foot is calculated by multiplying the mass of a particle $m$ by the number of particles per cubic foot $y$. It is then a simple conversion from cubic feet to cubic metres by multiplying by a factor of $3531.5$.
 \begin{equation}
 \mu g/m^3 = y \cdot m \cdot 3531.5
 \end{equation}
@@ -998,7 +998,7 @@ Table \ref{humtemp} shows the values of $H$ and $C$ in normal conditions.
 
 \section{Ozone sensor} \label{mq131_calibration}
 
-The output of the MQ131 ozone sensor is a raw analog signal that represents voltage, with the voltage proportional to the quantity of the gas being sensed. Given that the RPi cannot read an analog signal (digital only), an ADC chip was included on the Mikro sensor board. The ADC used was an MCP3551, which is a single-channel 22-bit ADC chip. The communication between the RPi and this ADC is via a serial communication. More specifically, a Serial Peripheral Interface (SPI). This is a synchronous serial communication interface consisting of an SPI master and SPI slave relationship, detailed in Figure \ref{spi}.
+The output of the MQ131 ozone sensor is a raw analog signal that represents voltage, with the voltage proportional to the quantity of the gas being sensed. Given that the RPi cannot read an analog signal (digital only), an ADC chip is included on the MikroElektronika sensor board. The ADC is an MCP3551, which is a single-channel 22-bit ADC chip. The communication between the RPi and this ADC is via a serial communication. More specifically, a Serial Peripheral Interface (SPI). This is a synchronous serial communication interface consisting of an SPI master and SPI slave relationship, which is visualised in Figure \ref{spi}.
 
 \begin{figure}[!tb]
 \centering
@@ -1019,13 +1019,13 @@ Each data word is made up of 24 bits (3 bytes): 22 bits of conversion data and 2
 \label{mcp3551}
 \end{figure}
 
-Once the RPi has read the ADC value, this value can then be converted to a decimal value using a binary-to-decimal conversion. The output voltage of the sensor is a value between 0 and 5V. Since the range of decimal values is \SI{-2097152} to \SI{2097151}, the decimal value $d$ needs to be converted to a fraction and then multiplied by 5V to get the voltage output value $V_{IN}$.
+Once the RPi has read the ADC value, this value is then converted to a decimal value using a binary-to-decimal conversion. The output voltage of the sensor is a value between 0 and 5V. Since the range of decimal values is \SI{-2097152} to \SI{2097151}, the decimal value $d$ needs to be converted to a fraction and then multiplied by 5V to get the voltage output value $V_{IN}$.
 \begin{equation}
 V_{IN} = \frac{d + 2097152}{4194304} \cdot V_{REF}, \hspace{5mm} V_{REF} = 5V
 \end{equation}
 
 Using the calibration curves on the MQ131 sensor data sheet (Figure \ref{mq131_curve}), it is possible to calculate an approximate ozone reading in $\mu g/m^3$. The first part of the calculation is based on the circuit structure, shown in Figure \ref{circuit}.
-% Insert circuit diagram here
+
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.6\textwidth]{circuit}
@@ -1033,7 +1033,7 @@ Using the calibration curves on the MQ131 sensor data sheet (Figure \ref{mq131_c
 \label{circuit}
 \end{figure}
 
-First, we had to work out the resistance of the sensor in clean air (R\textsubscript{0}). Since no controlled ozone environment was available for calibration of the sensor, we assumed that the indoor air was clean and contained minimal ozone. To achieve this, we set the sensor's potentiometer to its minimum ($0\Omega$) and recorded the output voltage $V_L$. We then also set the potentiometer to its maximum ($10k\Omega$) and recorded the output voltage $V_H$. Figure \ref{potentiometer} shows the potentiometer of both the MQ131 and MQ135 sensors. Once the output voltage at these two points was recorded, it was possible to calculate R\textsubscript{0} by using the following equation:
+First, the resistance of the sensor in clean air (R\textsubscript{0}) is needed. Unfortunately, there are no controlled ozone environments available at the university for calibrating the sensor. Therefore, we assume that the indoor air was clean and contained minimal ozone. To calculate R\textsubscript{0}, set the sensor's potentiometer to its minimum resistance ($0\Omega$) and record the output voltage $V_L$. Then, also set the potentiometer to its maximum resistance ($10k\Omega$) and record the output voltage $V_H$. Figure \ref{potentiometer} shows the potentiometer of both the MQ131 and MQ135 sensors. Once the output voltage at these two points has been recorded, it is possible to calculate R\textsubscript{0} by using the following equation:
 \begin{equation}
 V_{OUT} = V_{IN} \cdot \frac{R_L}{R_0 + R_L}, \qquad V_{IN} = 5V
 \end{equation}
@@ -1041,11 +1041,11 @@ which can be rearranged to
 \begin{equation}
 R_0 = (\frac{V_{IN}}{V_{OUT}} - 1) \cdot R_L
 \end{equation}
-In fact, we have two equations since we have two different pairs of $R_L$ and $V_{OUT}$.
+In fact, there are two equations since we have two different pairs of $R_L$ and $V_{OUT}$.
 \begin{equation}
 R_0 = (\frac{5}{4.934} - 1) \cdot 10100 = 135.103 , \quad R_0 = (\frac{5}{2.015} - 1) \cdot 100 = 148.139
 \end{equation}
-Theoretically, these calculated $R_0$ values should be the same, but here we take the average as they differ slightly.
+Theoretically, these calculated $R_0$ values should be the same, but here we take the average as they differ slightly (likely due to their low cost).
 \begin{equation}
 \therefore R_0 = \frac{135.103 + 148.139}{2} = 141.6
 \end{equation}
@@ -1066,7 +1066,7 @@ Then in any environment, it is possible to calculate $R_S$:
 \begin{equation}
 R_S = (\frac{V_{IN}}{V_{OUT}} - 1) \cdot R_L
 \end{equation}
-This enables the calculation of the ratio R\textsubscript{S}/R\textsubscript{0}, which can be inputted into the calibration curve (Figure \ref{mq131_curve}) to output an approximate ozone reading in $\mu g/m^3$. We digitised the calibration curve to obtain $(x, y)$ pairs and then used power regression to obtain the final equation:
+This enables the calculation of the ratio R\textsubscript{S}/R\textsubscript{0}, which can be inputted into the calibration curve (Figure \ref{mq131_curve}) to output an approximate ozone reading in $\mu g/m^3$. We digitise the calibration curve to obtain $(x, y)$ pairs and then use power regression to obtain the final equation:
 \begin{equation}
 O_3 (ppb) = (0.0541 \frac{R_S}{R_0}) ^ {(-\frac{1}{0.917})}
 \end{equation}
@@ -1093,7 +1093,7 @@ O_3 (ppb) = (0.0541 \frac{R_S}{R_0}) ^ {(-\frac{1}{0.917})}
 
 The MQ135 air quality sensor also outputs a raw analog signal that represents voltage. To avoid repetition, only the differences in the ADC chip used are explained here, with the rest of the process following that described above for the MCP3551 chip.
 
-The Air Quality Click from Mikro did not contain a dedicated ADC chip, unlike the Ozone Click. Therefore, a Mikro Pi 3 Click Shield HAT was used, which provided a GPIO/ADC switch so the relevant option could be selected. The switch for the Ozone Click was set to GPIO since it has an in-built ADC, whilst the switch for the Air Quality Click was set to ADC, thus routing the sensor's output through the ADC (see Figure \ref{fig:switch}). The Pi 3 Click Shield uses an MCP3204, which is a 4-channel 12-bit ADC chip. As with the MCP3551, the communication with the RPi uses SPI and each data word is made up of 3 bytes. Initiating communication is also achieved by bringing the $\overline{CS}$ low. However, they differ in their data transfer protocol. The RPi (SPI master) must first send configuration bits to the MCP3204: 5 leading zeroes, a start bit (1) and then 4 configuration bits. The ADC then samples the analog signal for 1 clock cycle, before responding with 1 null bit and then the data over the next 12 bits, MSB first.
+The Air Quality Click from MikroElektronika did not contain a dedicated ADC chip, unlike the Ozone Click. Therefore, a Mikro Pi 3 Click Shield HAT is used, which provides a GPIO/ADC switch so the relevant option can be selected. The switch for the Ozone Click is set to GPIO since it has an in-built ADC, whilst the switch for the Air Quality Click is set to ADC, thus routing the sensor's output through the ADC (see Figure \ref{fig:switch}). The Pi 3 Click Shield uses an MCP3204, which is a 4-channel 12-bit ADC chip. As with the MCP3551, the communication with the RPi uses SPI and each data word is made up of 3 bytes. Initiating communication is also achieved by bringing the $\overline{CS}$ low. However, they differ in their data transfer protocol. The RPi (SPI master) must first send configuration bits to the MCP3204: 5 leading zeroes, a start bit (1) and then 4 configuration bits. The ADC then samples the analog signal for 1 clock cycle, before responding with 1 null bit and then the data over the next 12 bits, MSB first.
 
 \begin{figure}[!tb]
 \centering
@@ -1107,11 +1107,12 @@ These 12 bits allow for a range of digital values between 0 and 4095. Again, the
 V_{IN} = \frac{d}{4096} \cdot V_{REF}, \hspace{5mm} V_{REF} = 5V
 \end{equation}
 
-A similar calibration process was attempted, but using the calibration curve in Figure \ref{mq135_curve} instead. However, it was noticed that no form of NOx was detailed on this graph, despite the sensor description detailing it was sensitive to NOx when it was originally purchased. As an alternative, a carbon monoxide calibration was attempted from the voltage reading, although this appeared to be inaccurate. Upon further research, it was found that the MQ135 sensor is actually sensitive to a number of different gases that indicate poor air quality, including ammonia, nitrogen oxides, benzene, smoke, carbon monoxide and carbon dioxide. However, it is impossible to isolate any of these gases from the signal without further equipment. Therefore, much of the analysis herein for this sensor focuses on the raw voltage output and only voltage delta can be analysed with no precise NOx relation. Essentially, the voltage acts as a `basket' measure of air quality.
+A similar calibration process can be attempted, but using the calibration curve in Figure \ref{mq135_curve} instead. However, this graph does not detail NOx on any of the calibration curves, despite the sensor description detailing it is sensitive to NOx. Upon further research, it was found that the MQ135 sensor is actually sensitive to a number of different gases that indicate poor air quality, including ammonia, nitrogen oxides, benzene, smoke, carbon monoxide and carbon dioxide. However, it is impossible to isolate any of these gases from the signal without further equipment. Therefore, much of the analysis herein for this sensor focuses on the raw voltage output and only the voltage delta can be analysed, with no precise NOx relation. Essentially, the voltage acts as a `basket' measure of air quality.
+% As an alternative, we attempt a carbon monoxide calibration from the voltage reading. However, this appears to be inaccurate.
 
 \section{Temperature and humidity sensor}
 
-The output of the DHT22/RHT03 temperature and humidity sensor is a digital signal. The sensor uses a single-bus for communication, where the sensor is the slave and the computer is the master. Each data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum. The humidity and temperature readings are split into two parts: the first byte is the integer part and the second byte provides the fractional part. To read from the DHT22, the RPi must send a read command (pull low for $18\mu s$, pull high for $20-40\mu s$) and then the sensor replies with an acknowledgement (pull low for $80\mu s$, pull high for $80\mu s$). The data transfer then follows, with $50\mu s$ low for a 0 and $70\mu s$ high for a 1. The data is sent MSB first. Binary-to-decimal conversion is used to convert the binary values to temperature readings in Celsius and humidity values as a percentage.
+The output of the DHT22/RHT03 temperature and humidity sensor is a digital signal. The sensor uses a single-bus for communication, where the sensor is the slave and the computer is the master. Each data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum. The humidity and temperature readings are split into two parts: the first byte is the integer part and the second byte provides the fractional part. To read from the DHT22, the RPi must send a read command (pull low for $18\mu s$, pull high for $20-40\mu s$) and then the sensor replies with an acknowledgement (pull low for $80\mu s$, pull high for $80\mu s$). The data transfer then follows, with $50\mu s$ low for a 0 and $70\mu s$ high for a 1. The data is sent MSB first. Binary-to-decimal conversion is used to convert the binary values to temperature readings in Celsius and humidity values in percentage form.
 
 \begin{figure}[!tb]
 \centering
@@ -1124,15 +1125,15 @@ The output of the DHT22/RHT03 temperature and humidity sensor is a digital signa
 
 One of the shortcomings of our calibration process for the Shinyei PPD42 particulate sensor is that it assumes particle shape and size. It could be possible to use pulse-width modulation (PWM) to record the size of particles that pass in front of the sensor's detection beam, although this may be inaccurate due to the sensor's inability to isolate individual particles. Despite the increase in cost, other particle detection methods, such as gravimetric measurement, may provide more precise measurement of particulate concentrations.
 
-Furthermore, we unfortunately did not have access to known concentrations of ozone gas and so could not measure the output voltage of the MQ131 sensor at specific concentrations of ozone. As a result, we could not plot points to create our own calibration curve. Instead, we had to use the data sheet's calibration curve, which may be inaccurate.
+Furthermore, there are no known concentrations of ozone gas available at the university, meaning we cannot measure the output voltage of the MQ131 sensor at specific concentrations of ozone. As a result, we cannot plot points at different concentrations to create our own calibration curve. Instead, we are forced to use the data sheet's calibration curve, which may be inaccurate.
 
-Similarly for the MQ135, we did not have access to known concentrations of NOx in the sensor's detection range. We did manage to test the sensor output using 500~ppm NOx gas in the university's Automotive Research Group laboratory. However, this concentration is far greater the normal range of NOx found in the atmosphere and so overwhelmed the sensor. Moreover, the aforementioned issue relating to the sensor's cross-sensitivities meant we could not calibrate the voltage to a specific concentration of a single gas. This meant the device could not pin-point locations of high NOx, but nonetheless was still useful to identifying poor general air quality.
+Similarly for the MQ135, we do not have access to known concentrations of NOx in the sensor's detection range. We did manage to test the sensor output using 500~ppm NOx gas in the university's Automotive Research Group laboratory. However, this concentration is far greater the normal range of NOx found in the atmosphere and so overwhelmed the sensor. Moreover, the aforementioned issue relating to the sensor's cross-sensitivities means we cannot calibrate the voltage to a specific concentration of a single gas. This means the device cannot identify locations of high NOx, but nonetheless is still useful in identifying poor general air quality.
 
 \nomenclature{ppm}{Parts-per-million}
 
-Moreover, because these sensors are low-cost, they have cross-sensitivities with other atmospheric gases that can potentially cause unwanted changes in sensor output. However, without the correct testing equipment and more expensive sensors that only have very minimal cross-sensitivities, it was not possible to correct for these effects in the given time frame. This is unfortunately a common issue when using low-cost sensors, hence their price.
+Moreover, because these sensors are low-cost, they have cross-sensitivities with other atmospheric gases that can potentially cause unwanted changes in sensor output. However, without the correct testing equipment or more expensive sensors that only have very minimal cross-sensitivities, it is not possible to correct for these effects in the time frame of this project. This is unfortunately a common issue when using low-cost sensors, hence their price.
 
-It is also worth noting that the data sheets for these sensors indicate that their outputs can drift over time, which has also been found by previous studies [REF]. Our data collection period was 2 weeks, which is too short to notice a change as they typically occur over bi-annual or annual periods of time. However, this effect should be tested and accounted for if the device were to be used for longer periods of time.
+It is also worth noting that the data sheets for these sensors indicate that their outputs can drift over time, which has also been found by previous studies [REF]. Our data collection period is 2 weeks, which is too short to notice a change as they typically occur over bi-annual or annual periods of time. However, this effect should be tested and accounted for if the device is to be used for longer periods of time.
 
 
 %\section{Calibration}
@@ -1160,9 +1161,9 @@ We begin by restating our three main research questions. Then, we provide the ra
 
 \section{Research questions}
 
-As Chapter \ref{chap: related_work} concluded, there are a number of gaps in the current literature surrounding air quality monitoring devices. Using these gaps, we have narrowed the focus of this study into answering three main research questions. These are as follows:
+As Chapter \ref{chap: related_work} concluded, there are a number of gaps in the current literature surrounding air quality monitoring devices. Using these gaps, we narrow the focus of this study into answering three main research questions. These are as follows:
 \begin{enumerate}
-\item Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?
+\item Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device? (Section \ref{meth:q1})
 %
 % Position on bike
 % Waterproof
@@ -1170,10 +1171,10 @@ As Chapter \ref{chap: related_work} concluded, there are a number of gaps in the
 % Air flow
 % Low-cost sensors
 %
-\item Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?
+\item Can such a device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations? (Section \ref{meth:q2})
 % Locus data
 % Event-based data
-\item How can these air quality monitoring devices be applied for public benefit?
+\item How can these air quality monitoring devices be applied for public benefit? (Section \ref{meth:q3})
 % 
 \end{enumerate}
 
@@ -1184,11 +1185,11 @@ By attempting to answer these questions, we will advance the literature in bicyc
 
 \section{Location} \label{location}
 
-Given this project was undertaken at the University of Bath, the data collection was carried out in the city of Bath, UK. In addition to the proximity to the university, the city was also chosen for its traffic and pollution problem, which has led to the creation of the Bath Air Quality Action Plan \citep{BANES2017baqap}. This plan, created by the Bath and North East Somerset (BANES) council, sets out how an improvement in the air quality in Bath will be achieved between 2017 and 2022. This document is a requirement from the government, following BANES being identified by the government as 1 of 23 local authorities `with persistent exceedances required to undertake local action to consider the best option to achieve statutory NO\textsubscript{2} limit values within the shortest possible time' \citep{DEFRA2017uknoxplan}. By collecting air pollution data in Bath, this project will help the council better understand pollution in Bath, compare the mobile measurements against their current fixed monitoring stations and potentially identifying previously unknown problem pollution areas.
+Given this project is being conducted at the University of Bath, we carry out the data collection in the city of Bath, UK. In addition to the proximity to the university, the city is also chosen for its traffic and pollution problem, which has led to the creation of the Bath Air Quality Action Plan \citep{BANES2017baqap}. This plan, created by the Bath and North East Somerset (BANES) council, sets out how an improvement in the air quality in Bath will be achieved between 2017 and 2022. This document is a requirement from the government, following BANES being identified by the government as 1 of 23 local authorities `with persistent exceedances required to undertake local action to consider the best option to achieve statutory NO\textsubscript{2} limit values within the shortest possible time' \citep{DEFRA2017uknoxplan}. By collecting air pollution data in Bath, the outputs of this project could help the council better understand pollution in Bath by comparing the council's own fixed monitoring stations with the mobile measurements from this project. This may also identify previously unknown problem pollution areas.
 
 \nomenclature{BANES}{Bath and North East Somerset Council}
 
-Furthermore, Bath is geographically interesting because of its position surrounded by steep hills. These hills act as a channel for  wind coming from the west and could potentially direct air pollution into Bath, as well as trapping it in the city. Figure \ref{bath_elevation} shows an elevation raster map of Bath, with the colouring and shading indicating the terrain and altitude.
+Furthermore, Bath is geographically interesting because of its position surrounded by steep hills. These hills act as a channel for wind coming from the west and could potentially direct air pollution into Bath, as well as trapping it in the city. Figure \ref{bath_elevation} shows an elevation raster map of Bath, with the colouring and shading indicating the terrain and altitude.
 
 \begin{figure}[!htb]
 \centering
@@ -1199,7 +1200,7 @@ Furthermore, Bath is geographically interesting because of its position surround
 
 \section{Data cleaning and data validation}
 
-Whilst ideally our sensors would not output anomalous readings, it is almost inevitable given their low cost. Therefore, it is prudent to detail our approach to cleaning the data outputted by these sensors, especially for future reproducibility.
+Whilst ideally our sensors will not output anomalous readings, it is almost inevitable given their low cost. Therefore, it is prudent to detail our approach to cleaning the data outputted by these sensors, especially for future reproducibility.
 
 Data cleaning is the process of transforming raw data into consistent data that can be analysed. The operations carried out influence the statistical properties of the data, meaning they should be conducted with caution and in a reproducible manner.
 
@@ -1218,17 +1219,17 @@ Values that fall outside this range are unlikely to be from the underlying distr
 
 However, the mean and standard deviation are not robust to outliers (i.e. the addition of one large erroneous value can disproportionately influence these values). Given we are using low-cost sensors that are more prone to errors than industry-grade sensors, a robust detection method is needed. As a simple check for the presence of outliers, one can examine the distribution of values using a histogram. If some bars are spaced considerably far away from the majority of values, this can indicate outliers are present.
 
-In order to more precisely identify which measurements are outliers in our data, we used a two-part approach. In each case, we applied the method and if one or more of these methods reported a reading to be an outlier, it was discarded from the sample.
+In order to more precisely identify which measurements are outliers in our data, we use a two-part approach. In each case, we apply the outlier detection method and if one or more of these methods reports a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
 \begin{enumerate}
 \item Inter-quartile range (IQR)
 \item Median and Median Absolute Deviation (MAD)
 \end{enumerate}
 
-These outlier detection techniques were then used to create a type of band pass filter in which data outside a calculated range were filtered out.
+%These outlier detection techniques are then used to create a type of band pass filter in which data outside a calculated range are filtered out.
 
 \subsection{IQR} \label{iqr}
 
-The IQR was created by \cite{tukey1977iqr} and provides a measure of statistical dispersion. It is calculated as the difference between the 25th and 75th percentiles. Coupled with the 25th and 75th percentiles ($Q_1$ and $Q_3$, respectively), it can be used to define an outlier detection rule. Values outside the range shown in Equation \ref{eqn:iqr} are considered outliers.
+The IQR was created by \cite{tukey1977iqr} and provides a measure of statistical dispersion. It is defined as the difference between the 25th and 75th percentiles. Coupled with the 25th and 75th percentiles ($Q_1$ and $Q_3$, respectively), it can be used to define an outlier detection rule. Values outside the range shown in Equation \ref{eqn:iqr} are considered outliers.
 \begin{equation} \label{eqn:iqr}
 [ Q_1 - 1.5 \times IQR, \quad Q_3 + 1.5 \times IQR]
 \end{equation}
@@ -1286,11 +1287,11 @@ Equation \ref{eqn:sn} is very similar to Equation \ref{eqn:mad}, except that the
 
 \subsection{Time series}
 
-Since our dataset is a collection of time series, the outlier detection should also take this into account. There are two ways we incorporated this into our methodology.
+Since our dataset is a collection of time series, the outlier detection should also take this into account. There are two ways we incorporate this into our methodology.
 
-Firstly, the outlier detection techniques detailed above were also run using moving averages. The dataset was separated into distinct collection runs (e.g. 2018-08-12 AM) and the moving average outlier detection was run on each of these. The reasoning for using a moving average was to account for any trends in the pollution data. For example, if, on a main road, the pollution level was much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
+Firstly, the outlier detection techniques detailed above are also run using moving averages. The dataset is separated into distinct collection runs (e.g. 2018-08-12 AM) and the moving average outlier detection is run on each of these. The reasoning for using a moving average is to account for any trends in the pollution data. For example, if, on a main road, the pollution level is much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
 
-The second way we accounted for the time series nature was using a similar method to \cite{vanZoest2018outlierdetection}. The authors appear to be one of the first to create a method for identifying outliers in spatial-temporal air quality data. Their method consists of separating the data into spatial and temporal divisions. For example, urban traffic and urban background (spatial), and weekdays/weekends and traffic times (temporal). The reason for this was that air quality can depend highly on the local area and the time of day, so outlier detection must take these divisions into account. As a result, the spatio-temporal variability in pollution concentrations is maintained. Our data cannot be split easily into spatial categories as we have focused on a small city, but we did separate the data into 4 temporal categories. The first split was for a weekday or weekend. The rationale behind this was traffic is highly likely to be higher during the week when people are commuting to and from work. The second split was for the first half of the day (AM) and the second half of the day (PM). When combined, these gave four categories:
+The second way we account for the time series nature is by using a similar method to \cite{vanZoest2018outlierdetection}. The authors appear to be one of the first to create a method for identifying outliers in spatio-temporal air quality data. Their method consists of separating the data into spatial and temporal divisions. For example, urban traffic and urban background (spatial), and weekdays/weekends and traffic times (temporal). The reason for this was that air quality can depend highly on the local area and the time of day, so outlier detection must take these divisions into account. As a result, the spatio-temporal variability in pollution concentrations is maintained. Our data cannot be split easily into spatial categories as we focus on a small city, but we can separate the data into 4 temporal categories. The first split is for a weekday or weekend, the rationale being that traffic is highly likely to be higher during the week when people are commuting to and from work. The second split is for the first half of the day (AM) and the second half of the day (PM). When combined, these separations produce four categories:
 \begin{enumerate}
 \item Weekday AM
 \item Weekday PM
@@ -1307,7 +1308,7 @@ The second way we accounted for the time series nature was using a similar metho
 
 It is also sagacious to have a process in place to identify and correct geo-spatial outliers i.e. anomalous locations of measurements. The GPS module is relatively low-cost and if it loses a strong signal from the satellites then the locations may be anomalous. Plotting these values on a map could lead to inaccurate conclusions being drawn.
 
-The geo-spatial outliers were corrected by extrapolating from the closest known prior location. We calculated the bearing and estimated the corrected location by moving along that bearing by the average distance travelled every 10 seconds on the bicycle. Whilst this method makes some strong assumptions, the average distance travelled is only 49.7 metres, which means any deviation from the actual route will be minimal.
+The geo-spatial outliers are corrected by extrapolating from the closest known prior location. We calculate the bearing and estimate the corrected location by moving along that bearing by the average distance travelled every 10 seconds on the bicycle. Whilst this method makes some strong assumptions, the average distance travelled is only 49.7 metres, which means any deviation from the actual route will be minimal.
 
 %\subsection{Comparison to fixed monitoring stations}
 %
@@ -1315,13 +1316,13 @@ The geo-spatial outliers were corrected by extrapolating from the closest known 
 
 
 
-\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
+\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?} \label{meth:q1}
 
 In order to answer this research question, we need to analyse three distinct parts. Firstly, we need to collect data along a consistent route for a suitable period of time that includes varying conditions. By analysing the sensor outputs under these different conditions, we can test whether the device can identifying trends/differences in air pollution. Secondly, different positions of the device on a bicycle need to be considered. Finally, the optimal method of inducing air flow over/into the air quality sensors needs to be analysed.
 
 \subsection{Route selection} \label{route_selection}
 
-The route was selected based upon the current fixed air quality monitoring stations in Bath, so that measurements obtained by this project could be compared to the official council measurements. The locations of these stations are displayed and labelled in Figure \ref{cycling_route}.
+The selected route is based upon the current fixed air quality monitoring stations in Bath, so that measurements obtained by this project can be compared to the official council measurements. The locations of these stations are displayed and labelled in Figure \ref{cycling_route}.
 
 %The chosen route for this project travels along a main road, featuring two large junctions which are prone to traffic. It then travels up a large hill. By increasing the elevation, it will be possible to test whether the air quality improves at higher altitudes. Bath is surrounded by hills, which may lead to a layer of cloud forming above Bath, thereby trapping low quality air. \cite{Hasenfratz2015highresmapsTram} found that this effect is prevalent in winter in Zurich, Switzerland. Unfortunately, this project is being conducted throughout the summer and so this effect may not be experienced. 
 
@@ -1330,7 +1331,7 @@ The route was selected based upon the current fixed air quality monitoring stati
 \begin{figure}[!tb]
   \centering
   \includegraphics[width=0.7\linewidth]{cycling_route}
-  \caption{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid.}
+  \caption{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.}
   \label{cycling_route}
 \end{figure}
 
@@ -1351,7 +1352,7 @@ The route was selected based upon the current fixed air quality monitoring stati
 
 The cycling route passes by all of these stations, and attempts to follow the main roads where possible as these likely have the highest levels of pollution. This route has been overlaid on the above figure, with the resulting map shown in Figure \ref{cycling_route}.
 
-Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is shown in Figure \ref{aqma}. Again, the cycling route almost completely falls within this area, thus strengthening our rationale behind the route's choice.
+Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is shown in Figure \ref{aqma}. Again, the chosen cycling route almost completely falls within this area, thus strengthening our rationale behind the route's choice.
 
 \begin{figure}[!tb]
 \centering
@@ -1387,9 +1388,11 @@ Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is sh
 
 \subsection{Data collection}
 
-A bicycle was ridden with the air quality monitoring device attached around a pre-determined route, detailed in Section \ref{route_selection}. The route was cycled in both directions in order to test whether there were any differences in pollution depending on direction of travel. This led to minor differences in the route due to certain one-way streets in Bath. The bicycle was ridden at a relatively constant speed in order to distribute measurements regularly in spatial terms.
+To collect data, we ride a bicycle with the air quality monitoring device attached around a pre-determined route, detailed in Section \ref{route_selection}. The route is traversed in both directions in order to test whether there are any differences in pollution depending on direction of travel and to help identify anomalous measurements. This leads to minor differences in the route due to certain one-way streets in Bath. We ride the bicycle at a relatively constant speed in order to distribute measurements regularly in spatial terms.
 
-Data was collected across 3 weeks in July and August, from Monday 23rd July to Tuesday 14th August. The route was cycled both in the morning and afternoon. The morning run was to coincide with the morning rush hour and the evening run was to coincide with the evening rush hour. These times were deemed to have the highest pollution levels across the day. 3 weeks was also deemed long enough to allow for weather variations, which allowed us to analyse the effect of weather on the measurements. Over \num{10000} observations were collected across these 3 weeks of data collection, with an average of \num{450} observations collected each day.
+Data is collected across 3 weeks in July and August, from Monday 23rd July to Tuesday 14th August. The route is cycled both in the morning and afternoon. The morning run is to coincide with the morning rush hour and the evening run is to coincide with the evening rush hour. These times are deemed to have the highest pollution levels across the day. 3 weeks is also deemed long enough to allow for weather variations, which allows us to analyse the effect of weather on the measurements.
+
+%Over \num{10000} observations were collected across these 3 weeks of data collection, with an average of \num{450} observations collected each day.
 
 %Prior to this, a number of test collection runs were carried out. This allowed for checking whether the device worked correctly and whether the measurements taken by the sensors were realistic. One of the first tests outside was conducted whilst walking (Figure \ref{fig:walking_test}), before the device was strapped to the handlebars and tested on the bicycle (Figure \ref{fig:handlebars}). % Maybe move this section to chapter 3.
 
@@ -1426,25 +1429,25 @@ Data was collected across 3 weeks in July and August, from Monday 23rd July to T
 
 \subsection{Pollution mapping}
 
-With the pollution data collected along the route detailed in Section \ref{route_selection}, we created pollution maps that showed how pollution varied along the route on average, at different times of day and different times of the week. To achieve this, we used hexagonal shapes based upon \cite{Hoang2013hanoihexagons}. Each hexagon's colour is an average of all values that fall inside it's boundaries. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme.
+With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route on average, at different times of day and at different times of the week. To achieve this, we overlay hexagonal shapes on a map based upon the method used by \cite{Hoang2013hanoihexagons}. Each hexagon's colour is an average of all values that fall inside it's boundaries. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme.
 
 \subsection{Positioning on bicycle} \label{position_testing}
 
-In order to identify which position on a bicycle is optimal for an air quality monitoring device, we need to test the device attached to different positions. We identified three potential positions on a bicycle, shown in Figure \ref{bicycle_positions}. Position 1 is situated above the front wheel, thus avoiding any particles thrown up by the wheel. In addition, it is the most suitable position for the user to view the device and allows the user to notice when the system-status LED is flashing. Position 2 is situated directly below the rider and could potentially be impacted by particles thrown up by the front wheel. It is also not as visible to the user. On the other hand, this may provide good protection from the elements and help to make the device robust. Finally, Position 3 is the least visible, but is situated lowest on the bicycle frame and, thus, provides a different testing environment for the sensor.
+In order to identify which position on a bicycle is optimal for an air quality monitoring device, we need to test the device attached to different positions. We identify three potential positions on a bicycle, shown in Figure \ref{bicycle_positions}. Position 1 is situated above the front wheel, thus avoiding any particles thrown up by the wheel. In addition, it is the most suitable position for the user to view the device and allows the user to notice when the system-status LED is flashing. Position 2 is situated directly below the rider and could potentially be impacted by particles thrown up by the front wheel. It is also not as visible to the user. On the other hand, this position may provide good protection from the elements and help to make the device robust. Finally, Position 3 is the least visible, but is situated lowest on the bicycle frame and, thus, provides a different testing environment for the sensor.
 
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/bicycle_positions}
-\caption{Potential positions for device on bicycle.}
+\caption{Potential positions for device on bicycle. (1) above the front wheel; (2) directly below the rider; (3) on the seat stays.}
 \label{bicycle_positions}
 \end{figure}
 
-We will cycle with the device attached in each position in turn along the same stretch of road. The results will then be compared to ascertain whether the position of the device makes a difference. We will compare variability of measurements and the mean values.
+We cycle with the device attached in each position in turn along the same stretch of road. The results are then compared to ascertain whether the position of the device makes a difference. We compare variability of measurements and the mean values.
 
 
 \subsection{Air flow testing}
 
-As Section \ref{air_flow} detailed, air flow can affect the sensor measurements. In particular, light-scattering particulate monitoring, which the Shinyei PPD42 sensor uses, relies on sufficient air flow to pass particles through a beam of light. As a result, our air flow testing focuses on the particulate sensor. We propose three different air flow systems for this device:
+As Section \ref{air_flow} detailed, air flow can affect the sensor measurements. In particular, a light-scattering particulate detecting technique, which the Shinyei PPD42 sensor uses, relies on sufficient air flow to pass particles through a beam of light. As a result, our air flow testing focuses on the particulate sensor. We propose three different air flow systems for this device:
 
 \begin{enumerate}
 \item Sensor exposed directly to air -- air flow will come naturally from motion of bicycle
@@ -1454,13 +1457,13 @@ As Section \ref{air_flow} detailed, air flow can affect the sensor measurements.
 
 Similarly to the position testing in Section \ref{position_testing}, we will cycle with the device attached along the same stretch of road, changing the air flow system each time. The results will be compared to see which air flow system provides the lowest variability in measurements.
 
-\section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}
+\section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}  \label{meth:q2}
 
-In order to answer this research question, we firstly need to demonstrate how the device can collect measurements across a greater area compared to a fixed monitoring station, whilst not sacrificing temporal resolution. By collecting measurements across a larger area, it is possible to generate a more detailed view of pollution in an area, thus improving spatial resolution. Secondly, we need to demonstrate how improved temporal resolution is possible without sacrificing spatial resolution. 
+In order to answer this research question, we firstly need to demonstrate how the device can collect measurements across a greater area compared to a fixed monitoring station, whilst not sacrificing temporal resolution (Section \ref{sec:locus}). By collecting measurements across a larger area, it is possible to generate a more detailed view of pollution in an area, thus improving spatial resolution. Secondly, we need to demonstrate how improved temporal resolution is possible without sacrificing spatial resolution (Section \ref{sec:event}). 
 
-\subsection{Locus around fixed monitoring station}
+\subsection{Locus around fixed monitoring station} \label{sec:locus}
 
-A fixed monitoring station can only take measurements at exactly one location. Whilst they do typically use high-quality, expensive monitoring equipment that offers higher accuracy and reliability, they have poor spatial resolution. Our bicycle-based air quality monitoring device is portable and so can take measurements at varying locations with ease. To demonstrate this improvement in spatial resolution, we selected a suitable location and data collection method and then analysed the results.
+A fixed monitoring station can only take measurements in exactly one location. Whilst they do typically use high-quality, expensive monitoring equipment that offers higher accuracy and reliability, they have poor spatial resolution. Our bicycle-based air quality monitoring device is portable and so can take measurements at varying locations with ease. To demonstrate this improvement in spatial resolution, we need a suitable location and data collection method. 
 
 \subsubsection{Location}
 
@@ -1495,7 +1498,7 @@ As Section \ref{route_selection} details, there are three fixed air quality moni
 
 \subsubsection{Data collection}
 
-For the data collection, we drew a circular locus around the monitoring site with a radius of 350~m and created a route that covered as much of the locus as possible in the time frame allowed. One difficulty here was that Bath has a relatively high number of one-way streets, which meant the route was constrained by these. The Bath Guildhall station reports NOx readings every 15 minutes, meaning our route was chosen so that it took approximately 15 minutes to cycle around, finishing back at the origin each time. The selected route is shown in Figure \ref{fig: locus_route}. By undertaking this part of the experiment, we will be able to compare our readings against the readings reported by the high-quality fixed monitoring station, as well as demonstrate an improved spatial resolution without sacrificing temporal resolution.
+For the data collection, a circular locus is drawn around the monitoring site with a radius of 350~m and a route created that covers as much of the locus as possible in the time frame allowed. One difficulty here is that Bath has a relatively high number of one-way streets, which means the route is constrained by these. The Bath Guildhall station reports NOx readings every 15 minutes, meaning our route is chosen so that it takes approximately 15 minutes to cycle around, finishing back at the origin each time. The selected route is shown in Figure \ref{fig: locus_route}. By undertaking this part of the experiment, we are be able to compare our readings against the readings reported by the high-quality fixed monitoring station, as well as demonstrate an improved spatial resolution without sacrificing temporal resolution.
 
 \begin{figure}[!tb]
 \centering
@@ -1506,22 +1509,22 @@ For the data collection, we drew a circular locus around the monitoring site wit
 
 \subsubsection{Demonstrating higher spatial resolution}
 
-The collected data was used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements were first plotted as points on a map to demonstrate how a larger area can be monitored. We then used Kriging/IDW interpolation to generate an even higher resolution pollution map.
+The collected data is used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements are first plotted as points on a map to demonstrate how a larger area can be monitored. We then use Kriging/IDW interpolation to generate an even higher resolution pollution map. The results from these are detailed in Section \ref{q2_results} in the next chapter.
 
 
-\subsection{Event route}
+\subsection{Event route} \label{sec:event}
 
-One novel application of a mobile air quality monitoring device is that it can quickly be deployed to monitor the air quality around an event's location. For example, it could be deployed to a large sporting event that significantly impacts the traffic in an area in order to analyse the effect of that event on the air quality. An extensive literature search did not discover any previous studies that have applied portable air quality monitoring to specific events. Therefore, we believe we are the first to study this application.
+One novel application of a mobile air quality monitoring device is that it can quickly be deployed to monitor the air quality around an event's location. For example, it can be deployed to a large sporting event that significantly impacts the traffic in an area in order to analyse the effect of that event on the air quality. An extensive literature search did not discover any previous studies that have applied portable air quality monitoring to specific events. Therefore, we believe we are the first to study this application.
 
 \subsubsection{Location}
 
-We identified a football match in Bath, with a ground capacity of approximately 8000 people, as a sizeable event likely to draw a large crowd and significantly increase traffic in the city. We did consider a Bath Rugby match, which would have likely drawn a larger crowd. However, the rugby stadium is situated nearby the railway station and does not have its own carpark, meaning a large proportion of the spectators would likely travel via train, which is unlikely to impact the pollution in Bath significantly. The football stadium is situated in the west of Bath, away from the railway station, and has its own car park. We believe this event is more likely to cause a significant change in pollution. 
+A football match in Bath, with a ground capacity of approximately 8000 people, is a sizeable event likely to draw a large crowd and significantly increase traffic in the city. We did consider a Bath Rugby match, which would have likely drawn a larger crowd. However, the rugby stadium is situated nearby the railway station and does not have its own carpark, meaning a large proportion of the spectators would likely travel via train, which is unlikely to impact the pollution in Bath significantly. The football stadium is situated in the west of Bath, away from the railway station, and has its own car park. We believe this event is more likely to cause a significant change in pollution. 
 
 \subsubsection{Data collection}
 
 For the data collection, we chose a straight route along the high street, which is situated just outside of the football stadium and car park. People travelling by car to the game will either have to park in the car park, or on the road the stadium. Therefore, this chosen route should experience the greatest increase in traffic from the event compared to other roads in the area.
 
-To test the event-based capabilities of the device, we will cycle along the route before, during and after the sporting event, thus allowing comparison of air quality across these three distinct time periods. In each time period, we will cycle continuously back and forth along the route, which should take approximately 2 minutes in each direction.
+To test the event-based capabilities of the device, we collect air quality measurements from along the route before, during and after the sporting event, thus allowing comparison of air quality across these three distinct time periods. Due to short length of the route, we walk with the device instead of cycling. In each time period, we continuously walk back and forth along the route, which takes approximately 5 minutes in each direction.
 
 \begin{figure}[!tb]
 \centering
@@ -1532,10 +1535,10 @@ To test the event-based capabilities of the device, we will cycle along the rout
 
 \subsubsection{Demonstrating higher temporal resolution}
 
-The data should provide a pollution level along the route for every 5 minute interval, which we can then use to show how the pollution changes over the whole time period. In order to demonstrate the high temporal resolution, 
+The data provides a pollution level along the route for every 5 minute interval, which we then use to show how the pollution changes over the whole time period. This more granular picture of air quality over time demonstrates the improved temporal resolution that this device can offer, as well as proving its use in monitoring events whilst maintaining portability. The results of this are shown in Section \ref{q2_results} in the next chapter.
 
 
-\section{Question 3: How can these air quality monitoring devices be applied for public benefit?}
+\section{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{meth:q3}
 
 There are a variety of route planning services offered by companies. For example, Google Maps, Waze, Citymapper and TomTom. These services take a number of different factors into account in order to calculate the optimal route from origin to destination. Such factors include distance, journey time, traffic and fuel consumption. However, as a result of the negative health impacts of pollution detailed in Section \ref{healthimpact}, the public have become increasingly concerned about air pollution and wish to minimise their exposure to pollution \citep{hartog2010health}.
 % Wan et  al.,(2009)
@@ -1553,23 +1556,24 @@ To create such an application, complete pollution data is needed for an area. We
 % Per km^2 - compare to other cities?
 % 
 
-Bath's roads have a total length of 52.8~km. Given the resource constraints of this project, it was deemed infeasible to collect pollution data across the whole city whilst only using one cyclist. Moreover, collecting any more than one time period of data would be even more difficult. Consequently, we simulated the pollution data across Bath so that we had values to apply in the routing algorithm. We sectioned the city into a raster of 100 by 100 cells, assigning a pollution value to each cell.
+Bath's roads have a total length of 52.8~km, as calculated by the \texttt{osmnx} python module using OpenStreetMap data (see Section \ref{network_graph} for further discussion of this module). Given the resource constraints of this project, it is infeasible to collect pollution data across the whole city whilst only using one cyclist. Moreover, collecting any more than one time period of data would be even more difficult. Consequently, we simulate the pollution data across Bath. We section the city into a raster of 100 by 100 cells, assigning a pollution value to each cell.
 
-However, whilst this simulation of data is sufficient for this project, we wanted to understand how commuting cyclists could be used in a city to collect the pollution data that could then be fed into the routing algorithm. The foremost question here is how many cyclists would be needed to generate sufficient coverage of a city. To test this, we generated random origin and destination pairs, plotting the shortest route between the two points. From these random routes, we can calculate the percentage of a road network covered. This was calculated for number of cyclists $n=1$ up to $n=500$.
+However, whilst this simulation of data is sufficient for this project, we want to understand how commuting cyclists could be used in a city to collect the pollution data, which could then be fed into the routing algorithm. The foremost question here is how many cyclists are needed to generate sufficient coverage of a city. To test this, we generate random origin and destination pairs, plotting the shortest route between the two points. From these random routes, we calculate the percentage of a road network covered. This is calculated for number of cyclists $n=1$ up to $n=500$.
 
-Using the most recent census data \citep{ons2011census}, the urban area of Bath had a population of $94782$ and 1.9\% of the population cycled to work. This means there are an estimated $94782 \times 1.9\% = 1801$ people that commute via bicycle in Bath. Clearly, not all of these commutes will be within the boundaries of our test area, so testing up to $n=500$ is not an unreasonable figure.
+Using the most recent census data \citep{ons2011census}, the urban area of Bath has a population of $94782$ and 1.9\% of the population cycle to work. This means there are an estimated $94782 \times 1.9\% = 1801$ people that commute via bicycle in Bath every day. Clearly, not all of these commutes will be within the boundaries of our test area, so testing up to $n=500$ is not an unreasonable figure.
+% Provide information about boundaries
 
-In order to minimise the number of trivial routes, we introduced a minimum commute distance of 500~m. This avoids the origin and destination being extremely close to each other.
+In order to minimise the number of trivial routes, we introduce a minimum commute distance of 500~m. This avoids the origin and destination being extremely close to each other.
 
 The calculated coverage percentages are then plotted on a graph to visualise how the coverage of the city changes with the number of commuting cyclists.
 
 %\subsection{Health-optimal routing}
 
-\subsection{Road network graph}
+\subsection{Road network graph} \label{network_graph}
 
-To create a graph that represented the road network in Bath, we used the python module \texttt{osmnx} \citep{boeing2017osmnx}, which uses data from OpenStreetMap. It is possible to specify the mode of transport when creating the graph, with the choices being walking, cycling and driving. We chose driving, despite the data being collected on a bicycle. The reason for this was that cycling commuters prefer to use bike paths \citep{skov_petersen2018cyclingpreferences, broach2012wherecyclistsride}, of which there are few in Bath, meaning cyclists will typically cycle on the roads.
+To create a graph that represents the road network in Bath, we use the python module \texttt{osmnx} \citep{boeing2017osmnx}, which uses data from OpenStreetMap. It is possible to specify the mode of transport when creating the graph, with the choices being walking, cycling and driving. We chose driving, despite the data being collected on a bicycle. The reason for this was that cycling commuters prefer to use bike paths \citep{skov_petersen2018cyclingpreferences, broach2012wherecyclistsride}, of which there are few in Bath, meaning cyclists will typically cycle on the roads.
 
-We represented Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consisting of a set of vertices $V$, a set of edges $E$ and two sets of edge weights $W_d$ and $W_p$. We herein refer to vertices as `nodes'. Each node $v_i \in V$ represents an intersection between two or more roads, or a dead-end. Each edge $e_j \in E$ represents a road between two nodes and is associated with weights $w_{j, d} \in W_d$ and $w_{j, p} \in W_p$, where $w_{j, d} = d_j$ is the length of the edge and $w_{j, p}$ is a weight generated by our cost function. The graph generated by \texttt{osmnx} for Bath is shown in Figure \ref{fig:network_graph}.
+We represent Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consisting of a set of vertices $V$, a set of edges $E$ and two sets of edge weights $W_d$ and $W_p$. We herein refer to vertices as `nodes'. Each node $v_i \in V$ represents an intersection between two or more roads, or a dead-end. Each edge $e_j \in E$ represents a road between two nodes and is associated with weights $w_{j, d} \in W_d$ and $w_{j, p} \in W_p$, where $w_{j, d} = d_j$ is the length of the edge and $w_{j, p}$ is a weight generated by our cost function. The graph generated by \texttt{osmnx} for Bath is shown in Figure \ref{fig:network_graph}.
 
 \begin{figure}[!tb]
 \centering
@@ -1580,7 +1584,7 @@ We represented Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consist
 
 We make two assumptions here. Firstly, we assume that the length of a road $w_{j, d}$ is proportional to the time it takes to traverse the edge $e_j$ from $n_i$ to $n_{i+1}$. Secondly, we assume that a longer travel time and/or an increase in altitude along an edge $e_j$ leads to an increased inhalation of pollution. Despite there being exercise-related health benefits of cycling, the physical nature means cyclists breathe deeper and more frequently, thus increasing the amount of pollutants inhaled \citep{bigazzi2014reviewintake, Ramos2016inhaleddose}. This can offset the health benefits of the exercise, meaning cyclists have an incentive to travel along less-polluted streets.
 
-We then combined these assumptions with three variables we believed would affect the health impact of travelling along a road. The distance of the road, from our assumption, clearly impacts how long an individual is exposed to the pollution, so we include the product of the length and the pollution level. This product was used as a cost function by \cite{Hasenfratz2015highresmapsTram}, which is shown in Equation \ref{eqn:hasenfratz}. The routes generated by this cost function decreased pollution exposure by 7.1\% on average.
+We then combine these assumptions with three variables we believe will affect the health impact of travelling along a road. The distance of the road, from our previous assumption, clearly impacts how long an individual is exposed to the pollution, so we include the product of the length and the pollution level. This product was used as a cost function by \cite{Hasenfratz2015highresmapsTram}, which is shown in Equation \ref{eqn:hasenfratz}. The routes generated by this cost function decreased pollution exposure by 7.1\% on average.
 \begin{equation} \label{eqn:hasenfratz}
 w_{p, j} = \sum_{k=1}^{n} d_{j, k} \cdot c_k
 \end{equation}
@@ -1595,7 +1599,7 @@ w_{p, j} = (1 + g_j) \cdot (d_j \cdot p_j + type_j)
 
 %In order to assign the relevant pollution value to each edge for input into the cost function, we first grouped the pollution data into a raster of X by X cells, with the cell's value representing the average of the pollution readings that fall inside the cell's spatial boundaries. We then identified which cell each edge $e_j$ intersected and used the cell's value as the pollution level for that edge. This method is visualised in Figure \ref{health_optimal_cell}.
 
-Since data collection for this application was deemed infeasible within the project's constraints, the data was generated by sampling points from a distribution. The distribution of pollution measurements in the main route dataset was used to make the values as realistic as possible.
+Since data collection for this application is deemed infeasible within the project's constraints, the data is generated by sampling points from a distribution. The distribution of pollution measurements in the main route dataset was used to make these values as realistic as possible.
 
 In order to assign the relevant pollution value to each edge for input into the cost function, we calculated the centre point along each road and used the k-nearest neighbours (KNN) algorithm to find the closest k values (we used $k=5$). The KNN algorithm implemented Haversine distance to account for the curvature of the earth's surface. We then averaged these values for each road. This method is visualised in Figure \ref{fig:knn}. Whilst using only the centre of each road may be a strong simplification, many of the roads are not straight and so are separated into multiple segments by \texttt{osmnx}, meaning the centre points are still representative of their road segments.
 
@@ -1624,7 +1628,7 @@ The aforementioned minimum commute distance was also implemented here to avoid s
 
 \subsection{Comparing routes}
 
-Once the required number of `health-optimal' and shortest route pairs had been generated, we compared these routes to analyse the percentage decrease in pollution exposure and the percentage increase in distance.
+Once the required number of `health-optimal' and shortest route pairs has been generated, we compare these routes to analyse the percentage decrease in pollution exposure and the percentage increase in distance. The results of this are detailed in Section \ref{q3_results} in the following chapter.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1639,7 +1643,7 @@ Using the methodology detailed in Chapter \ref{chap: methodology}, this chapter 
 
 The chapter is structured in the order of the research questions, detailing the results obtained in each case.
 
-\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
+\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?} \label{q1_results}
 
 Across the data collection period, \num{9877} measurements were collected.
 
@@ -1827,7 +1831,7 @@ Since the route in each of the three data collection periods was consistent, the
 % Maybe change title to something related to 'delay'
 
 
-\section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}
+\section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?} \label{q2_results}
 
 \subsection{Bath Guildhall locus}
 % Spatial
@@ -1840,7 +1844,7 @@ Since the route in each of the three data collection periods was consistent, the
 \num{1044} measurements were collected for the Bath City FC football match.
 
 
-\section{Question 3: How can these air quality monitoring devices be applied for public benefit?}
+\section{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{q3_results}
 
 Having shown that this air quality monitoring device can measure air pollution to a satisfactory level and can improve spatio-temporal resolution, we now demonstrate how it can be used to reduce the public's exposure to air pollution.
 

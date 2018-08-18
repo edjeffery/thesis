@@ -45,7 +45,7 @@
 \contentsline {section}{\numberline {3.2}Software}{45}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Raspberry Pi software}{45}{subsection.3.2.1}
 \contentsline {subsubsection}{GPS}{46}{section*.22}
-\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{47}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{48}{subsection.3.2.2}
 \contentsline {subsubsection}{RESTful API}{48}{section*.23}
 \contentsline {subsubsection}{Database}{48}{section*.24}
 \contentsline {subsection}{\numberline {3.2.3}Web application}{48}{subsection.3.2.3}
@@ -62,26 +62,26 @@
 \contentsline {subsection}{\numberline {5.3.1}IQR}{62}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Median and MAD}{62}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Time series}{63}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Geo-spatial outliers}{64}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Geo-spatial outliers}{63}{subsection.5.3.4}
 \contentsline {section}{\numberline {5.4}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{64}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1}Route selection}{64}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Data collection}{66}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Data collection}{65}{subsection.5.4.2}
 \contentsline {subsection}{\numberline {5.4.3}Pollution mapping}{66}{subsection.5.4.3}
 \contentsline {subsection}{\numberline {5.4.4}Positioning on bicycle}{66}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Air flow testing}{67}{subsection.5.4.5}
-\contentsline {section}{\numberline {5.5}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{68}{section.5.5}
+\contentsline {subsection}{\numberline {5.4.5}Air flow testing}{66}{subsection.5.4.5}
+\contentsline {section}{\numberline {5.5}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{67}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1}Locus around fixed monitoring station}{68}{subsection.5.5.1}
 \contentsline {subsubsection}{Location}{68}{section*.38}
 \contentsline {subsubsection}{Data collection}{68}{section*.40}
-\contentsline {subsubsection}{Demonstrating higher spatial resolution}{70}{section*.42}
-\contentsline {subsection}{\numberline {5.5.2}Event route}{70}{subsection.5.5.2}
+\contentsline {subsubsection}{Demonstrating higher spatial resolution}{68}{section*.42}
+\contentsline {subsection}{\numberline {5.5.2}Event route}{69}{subsection.5.5.2}
 \contentsline {subsubsection}{Location}{70}{section*.43}
 \contentsline {subsubsection}{Data collection}{70}{section*.44}
-\contentsline {subsubsection}{Demonstrating higher temporal resolution}{71}{section*.46}
+\contentsline {subsubsection}{Demonstrating higher temporal resolution}{70}{section*.46}
 \contentsline {section}{\numberline {5.6}Question 3: How can these air quality monitoring devices be applied for public benefit?}{71}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Using commuting cyclists to collect pollution data}{72}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.1}Using commuting cyclists to collect pollution data}{71}{subsection.5.6.1}
 \contentsline {subsection}{\numberline {5.6.2}Road network graph}{72}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Search algorithm}{75}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.3}Search algorithm}{74}{subsection.5.6.3}
 \contentsline {subsection}{\numberline {5.6.4}Comparing routes}{75}{subsection.5.6.4}
 \contentsline {chapter}{\numberline {6}Results}{76}{chapter.6}
 \contentsline {section}{\numberline {6.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{76}{section.6.1}
