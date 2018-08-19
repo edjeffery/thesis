@@ -600,7 +600,7 @@ This section details how the device is constructed. An image of the final device
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{device}
-\caption{Finished device}
+\caption{Picture of the finished device. (a) shows the outside view, whereas (b) shows inside the case.}
 % Update with new image once temp/hum sensor attached
 \label{device}
 \end{figure}
@@ -626,7 +626,7 @@ GPIO stands for General Purpose Input/Output and provides a standardised interfa
 
 \begin{table}[!tb]
   \centering
-  \caption{GPIO pin layout and usage}
+  \caption{GPIO pin layout and usage for the 40 GPIO pins on the Raspberry Pi. Of these 40, 17 are directly used by the sensors in the device.}
   \label{gpio}
   \begin{tabular}{ l l l }
   \toprule
@@ -689,7 +689,7 @@ A number of different low-cost particulate sensors are considered for this proje
 
 \begin{table}[!tbp]
   \centering
-  \caption{Comparison of particulate sensors considered}
+  \caption{Comparison of different particulate sensors considered. All of these sensors use a light-scattering technique for detecting particles. The Shinyei PPD42 sensor is the cheapest, with joint-smallest minimum particle detection size.}
   \label{particulatesensors}
   \begin{tabular}{ l l l l}
   \toprule
@@ -743,13 +743,13 @@ The chosen solution is a GPIO expansion board (see Figure \ref{fig: gpio_expande
   \caption{Two HATs connected to GPIO expansion board.}
   \label{fig: two_on_one}
 \end{subfigure}
-\caption{Solution to sensor attachment problem.}
+\caption{Solution to sensor attachment problem. (a) The GPIO expansion board provides 4 rows of 40-pin GPIO connections. (b) 2 HATs are connected to the RPi via the expansion board, which enables our device to have increased sensing capabilities.}
 \end{figure}
 
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{images/protoboard}
-\caption{Soldered protoboard}
+\caption{Soldered protoboard. This custom circuit board enables the connection of the sensors with digital outputs (Shinyei PPD42 and DHT22, as well as the LED) to the RPi.}
 \label{protoboard}
 \end{figure}
 
@@ -778,7 +778,7 @@ t = \frac{10000mAh}{750mA} = 13.\dot{3} \; hours
 \centering
 \begin{subfigure}[b]{0.4\textwidth}
   \includegraphics[width=\textwidth]{images/ammeter}
-  \caption{Ammeter}
+  \caption{Connection to ammeter.}
   \label{fig: ammeter}
 \end{subfigure}
 \hfill
@@ -787,7 +787,7 @@ t = \frac{10000mAh}{750mA} = 13.\dot{3} \; hours
   \caption{Dissected USB cable with VCC wire exposed.}
   \label{fig: usb_cable}
 \end{subfigure}
-\caption{Power consumption testing}
+\caption{Power consumption testing. (a) shows the test setup with a connection to an ammeter, and (b) shows how a USB cable is dissected to enable sampling of the current drawn.}
 \end{figure}
 
 \subsection{Case}
@@ -802,7 +802,7 @@ One of the main aims of this project is to create a low-cost device. In total, t
 
 \begin{table}[!tbp]
   \centering
-  \caption{Cost breakdown of device}
+  \caption{Cost breakdown of device. The overall cost of the device is relatively low at only \textsterling 152.63, which satisfies this project's objective of making a low-cost air quality monitoring device.}
   \label{costs}
   \begin{tabular}{ l S[table-format=3.2] }
   \toprule
@@ -836,7 +836,7 @@ The software for this air quality monitoring device covers a number of different
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/design}
-\caption{Data flow}
+\caption{Data flow. The device attached to the bicycle sends data to a database using the phone's internet connection, which is then displayed on a webpage.}
 \label{design}
 % Update drawing
 \end{figure}
@@ -867,7 +867,7 @@ Figure \ref{code_flow} visualises this whole process, as well as the insertion i
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/code_flow}
-\caption{Flow diagram of system code}
+\caption{Flow diagram of system code.}
 \label{code_flow}
 \end{figure}
 
@@ -910,8 +910,8 @@ The web application is written in R and uses R Shiny version 1.1.0 to provide th
 
 \begin{figure}[!tb]
 \centering
-\includegraphics[width=1\textwidth]{web_app}
-\caption{Web application using R Shiny}
+\includegraphics[width=1\textwidth]{images/web_app}
+\caption{Web application using R Shiny. The menu on the left-hand side allows the user to select the time period and pollutant, as well as whether outliers should be included in the graphs or not. There are 4 tabs to the webpage, which each display a variety of graphs and tables to the user.}
 \label{rshiny}
 \end{figure}
 % UPDATE IMAGE
@@ -1003,7 +1003,7 @@ The output of the MQ131 ozone sensor is a raw analog signal that represents volt
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.8\textwidth]{spi_master_slave}
-\caption{A single master and a single slave on a Serial Peripheral Interface (SPI) bus.}
+\caption{SPI master-slave design. This visually depicts the relationship between a single master and a single slave on a Serial Peripheral Interface (SPI) bus. (SCLK = Serial Clock, MOSI = Master Output Slave Input, MISO = Master Input Slave Output, SS = Slave Select.)}
 \label{spi}
 \end{figure}
 
@@ -1015,7 +1015,7 @@ Each data word is made up of 24 bits (3 bytes): 22 bits of conversion data and 2
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1\textwidth]{mcp3551}
-\caption{Typical Serial Device Communication and Example Digital Output Codes for Specific Analog Input Voltages [REF]}
+\caption{Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication. [REF]}
 \label{mcp3551}
 \end{figure}
 
@@ -1024,16 +1024,14 @@ Once the RPi has read the ADC value, this value is then converted to a decimal v
 V_{IN} = \frac{d + 2097152}{4194304} \cdot V_{REF}, \hspace{5mm} V_{REF} = 5V
 \end{equation}
 
-Using the calibration curves on the MQ131 sensor data sheet (Figure \ref{mq131_curve}), it is possible to calculate an approximate ozone reading in $\mu g/m^3$. The first part of the calculation is based on the circuit structure, shown in Figure \ref{circuit}.
-
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.6\textwidth]{circuit}
-\caption{Circuit diagram for MQ-series sensors}
+\caption{Circuit diagram for MQ-series sensors. This shows how the sensor uses $R_S$ and $R_L$ to make a voltage divider. [EDIT]}
 \label{circuit}
 \end{figure}
 
-First, the resistance of the sensor in clean air (R\textsubscript{0}) is needed. Unfortunately, there are no controlled ozone environments available at the university for calibrating the sensor. Therefore, we assume that the indoor air was clean and contained minimal ozone. To calculate R\textsubscript{0}, set the sensor's potentiometer to its minimum resistance ($0\Omega$) and record the output voltage $V_L$. Then, also set the potentiometer to its maximum resistance ($10k\Omega$) and record the output voltage $V_H$. Figure \ref{potentiometer} shows the potentiometer of both the MQ131 and MQ135 sensors. Once the output voltage at these two points has been recorded, it is possible to calculate R\textsubscript{0} by using the following equation:
+Using the calibration curves on the MQ131 sensor data sheet (Figure \ref{mq131_curve}), it is possible to calculate an approximate ozone reading in $\mu g/m^3$. The first part of the calculation is based on the circuit structure (Figure \ref{circuit}) and requires the resistance of the sensor (R\textsubscript{S}) in clean air (R\textsubscript{0}). Unfortunately, there are no controlled ozone environments available at the university for calibrating the sensor. Therefore, we assume that the indoor air was clean and contained minimal ozone. To calculate R\textsubscript{0}, set the sensor's potentiometer to its minimum resistance ($0\Omega$) and record the output voltage $V_L$. Then, also set the potentiometer to its maximum resistance ($10k\Omega$) and record the output voltage $V_H$. Figure \ref{potentiometer} shows the potentiometer of both the MQ131 and MQ135 sensors. Once the output voltage at these two points has been recorded, it is possible to calculate R\textsubscript{0} by using the following equation:
 \begin{equation}
 V_{OUT} = V_{IN} \cdot \frac{R_L}{R_0 + R_L}, \qquad V_{IN} = 5V
 \end{equation}
@@ -1053,7 +1051,7 @@ Theoretically, these calculated $R_0$ values should be the same, but here we tak
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{potentiometer}
-\caption[Potentiometers]{Left: blue potentiometer of ozone click (MQ131). Right: blue potentiometer of air quality click (MQ135).}
+\caption[MikroElektronika potentiometers]{MikroElektronika click board potentiometers. (L) blue potentiometer of ozone click (MQ131); (R) blue potentiometer of air quality click (MQ135).}
 \label{potentiometer}
 \end{figure}
 
@@ -1075,17 +1073,16 @@ O_3 (ppb) = (0.0541 \frac{R_S}{R_0}) ^ {(-\frac{1}{0.917})}
 \centering
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{ozone_data_sheet}
-  \caption{Calibration curve from MQ131 data sheet.}
+  \caption{MQ131.}
   \label{mq131_curve}
 \end{subfigure}
 \hfill
 \begin{subfigure}[b]{0.45\textwidth}
   \includegraphics[width=\textwidth]{mq135_data_sheet}
-  \caption{Calibration curve from MQ135 data sheet.}
+  \caption{MQ135.}
   \label{mq135_curve}
 \end{subfigure}
-
-\caption{Calibration curves}
+\caption{Calibration curves from sensor data sheets. (a) shows the calibration curve for the MQ131 sensor, with ozone being the light blue line, and (b) shows the calibration curve for the MQ135 sensor, with a number of different sensitivities.}
 \end{figure}
 
 
@@ -1098,7 +1095,7 @@ The Air Quality Click from MikroElektronika did not contain a dedicated ADC chip
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{images/gpio_adc_switch}
-\caption{GPIO/ADC switch (in red) on Mikro Pi 3 Click Shield HAT}
+\caption{GPIO/ADC switch. The switch is highlighted in red on the Mikro Pi 3 Click Shield HAT. This switch enables the signal to either be sent directly to the GPIO pins or directed to the ADC first.}
 \label{fig:switch}
 \end{figure}
 
@@ -1117,7 +1114,7 @@ The output of the DHT22/RHT03 temperature and humidity sensor is a digital signa
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=1\textwidth]{images/dht22_data}
-\caption{DHT22 communication protocol}
+\caption{DHT22 communication protocol. The data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum.}
 \label{dht22_data}
 \end{figure}
 
@@ -1194,7 +1191,7 @@ Furthermore, Bath is geographically interesting because of its position surround
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/bath_elevation_large}
-\caption{Elevation raster of Bath}
+\caption{Elevation raster of Bath. This image shows how Bath is surrounded by steep hills to the north, east and south, which act as a funnel for wind and, therefore, air pollution into Bath.}
 \label{bath_elevation}
 \end{figure}
 
@@ -1221,8 +1218,8 @@ However, the mean and standard deviation are not robust to outliers (i.e. the ad
 
 In order to more precisely identify which measurements are outliers in our data, we use a two-part approach. In each case, we apply the outlier detection method and if one or more of these methods reports a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
 \begin{enumerate}
-\item Inter-quartile range (IQR)
-\item Median and Median Absolute Deviation (MAD)
+\item Inter-quartile range (IQR) (Section \ref{iqr})
+\item Median and Median Absolute Deviation (MAD) (Section \ref{mad})
 \end{enumerate}
 
 %These outlier detection techniques are then used to create a type of band pass filter in which data outside a calculated range are filtered out.
@@ -1438,7 +1435,7 @@ In order to identify which position on a bicycle is optimal for an air quality m
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/bicycle_positions}
-\caption{Potential positions for device on bicycle. (1) above the front wheel; (2) directly below the rider; (3) on the seat stays.}
+\caption{Potential positions for device on bicycle. (1) is above the front wheel, (2) is directly below the rider, and (3) is on the seat stays.}
 \label{bicycle_positions}
 \end{figure}
 
@@ -1474,25 +1471,25 @@ As Section \ref{route_selection} details, there are three fixed air quality moni
     \begin{minipage}{.9\linewidth}
             \begin{subfigure}[t]{.5\linewidth}
                 \includegraphics[width=\textwidth]{images/windsor_bridge}
-                \caption{Windsor Bridge location}
+                \caption{Windsor Bridge}
                 \label{fig: windsor_bridge}
             \end{subfigure} \hspace{5mm}
             \begin{subfigure}[t]{.5\linewidth}
             	\includegraphics[width=\textwidth]{images/london_road}
-            	\caption{London Road location}
+            	\caption{London Road}
             	\label{fig: london_road}
 	   \end{subfigure}
         \end{minipage}
     \begin{minipage}{.9\linewidth}
-        \vspace{5mm}
+        \vspace{4mm}
     	\centering
         \begin{subfigure}[t]{.5\linewidth}
             \includegraphics[width=\textwidth]{images/guildhall}
-            \caption{Guildhall location}
+            \caption{Guildhall}
             \label{fig: guildhall}
         \end{subfigure}
     \end{minipage}
-    \caption{Road network around fixed monitoring stations.}
+    \caption{Road network around fixed monitoring stations. (a) is surrounded by industrial estates and a river, with few suitable roads. (b) is sided by a river and a steep hill, so the number of suitable roads is also limited. (c) is next to the river, but there are numerous roads around the site and on the opposite side of the river.}
 \end{figure}
 
 
@@ -1503,7 +1500,7 @@ For the data collection, a circular locus is drawn around the monitoring site wi
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/locus_route}
-\caption{Locus-based route around Guildhall fixed monitoring station.}
+\caption{Locus-based route around Guildhall fixed monitoring station. This route covers a sufficiently large area around the site in order to demonstrate improved spatial resolution, whilst maintaining the temporal resolution of measurements (each lap takes 15 minutes).}
 \label{fig: locus_route}
 \end{figure}
 
@@ -1529,7 +1526,7 @@ To test the event-based capabilities of the device, we collect air quality measu
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/bath_fc_route}
-\caption{Event-based route outside of Bath City FC football stadium.}
+\caption{Event-based route outside of Bath City FC football stadium. The route traverses the high street back and forth, which is likely to experience the greatest increase in traffic compared to other roads in the vicinity.}
 \label{fig: bath_fc_route}
 \end{figure}
 
@@ -1578,7 +1575,7 @@ We represent Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consistin
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/network_graph}
-\caption{Graph produced using \texttt{osmnx} for Bath.}
+\caption{Graph produced using \texttt{osmnx} for Bath, UK. Each edge of the graph (grey line) represents a road segment and each node (blue dot) represents a function or road-end.}
 \label{fig:network_graph}
 \end{figure}
 
@@ -1761,7 +1758,7 @@ The results of performing this outlier detection method are shown in Table \ref{
   PM10 & 9877 & 25.18 & 43.83 & 121.65 & 0.00 & 1110 & 11.24 \\
   O\textsubscript{3} & 9877 & 25.21 & 5.60 & 36.45 & 14.06 & 142 & 1.44 \\
   General AQ & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
-    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0.}} \\
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
   \end{tabular}
     \caption{Outlier detection summary using IQR method on the whole sample. The particulate measurements have the highest percentage of outliers. }
   \label{tab:iqr_outliers}
@@ -1780,7 +1777,7 @@ The median and MAD outlier detection method was also implemented. Outliers were 
   PM10 & 9877 & 25.18 & 25.36 & 101.25 & 0.00 & 1318 & 13.34 \\
   O\textsubscript{3} & 9877 & 25.21 & 4.16 & 37.69 & 12.74 & 105 & 1.06 \\
   General AQ & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
-    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0.}} \\
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
   \end{tabular}
     \caption{Outlier detection summary using median and MAD method on the whole sample. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. }
   \label{tab:mad_outliers}
