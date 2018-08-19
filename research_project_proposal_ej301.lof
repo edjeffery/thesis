@@ -1,43 +1,43 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{17}{figure.caption.5}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{21}{figure.caption.7}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{32}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{33}{figure.caption.11}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{33}{figure.caption.12}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{16}{figure.caption.5}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{20}{figure.caption.7}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{31}{figure.caption.10}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{32}{figure.caption.11}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{32}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Picture of the finished device. (a) shows the outside view, whereas (b) shows inside the case.\relax }}{38}{figure.caption.13}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem. (a) The GPIO expansion board provides 4 rows of 40-pin GPIO connections. (b) 2 HATs are connected to the RPi via the expansion board, which enables our device to have increased sensing capabilities.\relax }}{43}{figure.caption.16}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard. This custom circuit board enables the connection of the sensors with digital outputs (Shinyei PPD42 and DHT22, as well as the LED) to the RPi.\relax }}{43}{figure.caption.17}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing. (a) shows the test setup with a connection to an ammeter, and (b) shows how a USB cable is dissected to enable sampling of the current drawn.\relax }}{44}{figure.caption.18}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow. The device attached to the bicycle sends data to a database using the phone's internet connection, which is then displayed on a webpage.\relax }}{46}{figure.caption.20}
-\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.\relax }}{48}{figure.caption.21}
-\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application using R Shiny. The menu on the left-hand side allows the user to select the time period and pollutant, as well as whether outliers should be included in the graphs or not. There are 4 tabs to the webpage, which each display a variety of graphs and tables to the user.\relax }}{50}{figure.caption.25}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{37}{figure.caption.13}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{42}{figure.caption.16}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{42}{figure.caption.17}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{43}{figure.caption.18}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{45}{figure.caption.20}
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{47}{figure.caption.21}
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{49}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design. This visually depicts the relationship between a single master and a single slave on a Serial Peripheral Interface (SPI) bus. (SCLK = Serial Clock, MOSI = Master Output Slave Input, MISO = Master Input Slave Output, SS = Slave Select.)\relax }}{53}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication. [REF]\relax }}{54}{figure.caption.28}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors. This shows how the sensor uses $R_S$ and $R_L$ to make a voltage divider. [EDIT]\relax }}{55}{figure.caption.29}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{56}{figure.caption.30}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves from sensor data sheets. (a) shows the calibration curve for the MQ131 sensor, with ozone being the light blue line, and (b) shows the calibration curve for the MQ135 sensor, with a number of different sensitivities.\relax }}{57}{figure.caption.31}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch. The switch is highlighted in red on the Mikro Pi 3 Click Shield HAT. This switch enables the signal to either be sent directly to the GPIO pins or directed to the ADC first.\relax }}{57}{figure.caption.32}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol. The data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum.\relax }}{58}{figure.caption.33}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{52}{figure.caption.27}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{53}{figure.caption.28}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{54}{figure.caption.29}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{55}{figure.caption.30}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{56}{figure.caption.31}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{56}{figure.caption.32}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{57}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath. This image shows how Bath is surrounded by steep hills to the north, east and south, which act as a funnel for wind and, therefore, air pollution into Bath.\relax }}{62}{figure.caption.34}
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.\relax }}{66}{figure.caption.35}
-\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area \citep {BANES2017baqap} with shaded cycling route.\relax }}{66}{figure.caption.36}
-\contentsline {figure}{\numberline {5-4}{\ignorespaces Potential positions for device on bicycle. (1) is above the front wheel, (2) is directly below the rider, and (3) is on the seat stays.\relax }}{68}{figure.caption.37}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces Road network around fixed monitoring stations. (a) is surrounded by industrial estates and a river, with few suitable roads. (b) is sided by a river and a steep hill, so the number of suitable roads is also limited. (c) is next to the river, but there are numerous roads around the site and on the opposite side of the river.\relax }}{70}{figure.caption.39}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route around Guildhall fixed monitoring station. This route covers a sufficiently large area around the site in order to demonstrate improved spatial resolution, whilst maintaining the temporal resolution of measurements (each lap takes 15 minutes).\relax }}{70}{figure.caption.41}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route outside of Bath City FC football stadium. The route traverses the high street back and forth, which is likely to experience the greatest increase in traffic compared to other roads in the vicinity.\relax }}{72}{figure.caption.45}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces Graph produced using \texttt {osmnx} for Bath, UK. Each edge of the graph (grey line) represents a road segment and each node (blue dot) represents a function or road-end.\relax }}{74}{figure.caption.47}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces Example of selecting k-nearest air quality measurements for two roads (k = 5).\relax }}{76}{figure.caption.48}
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{61}{figure.caption.34}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{65}{figure.caption.35}
+\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{65}{figure.caption.36}
+\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{67}{figure.caption.37}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces Analysis of fixed monitoring station locations.}}{69}{figure.caption.39}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route.}}{69}{figure.caption.41}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route.}}{71}{figure.caption.45}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces \texttt {osmnx} graph for Bath.}}{73}{figure.caption.47}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces K-nearest neighbours.}}{75}{figure.caption.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI {17}{\celsius }; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.\relax }}{78}{figure.caption.49}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) has the most outliers; (b) has outliers at the top-end; (c) has outliers at high and low values; (d) has 4 outliers; (e) has outliers at high and low values.\relax }}{80}{figure.caption.50}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the red lines) can be considered outliers.\relax }}{81}{figure.caption.56}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.\relax }}{83}{figure.caption.57}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.\relax }}{84}{figure.caption.58}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500\nobreakspace {}m. There are then diminishing number of routes as the delta increases.\relax }}{85}{figure.caption.60}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Sensor measurement histograms.}}{77}{figure.caption.49}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's boxplots.}}{79}{figure.caption.50}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude waveforms.}}{81}{figure.caption.56}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Cyclist coverage.}}{82}{figure.caption.57}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Example routes.}}{84}{figure.caption.58}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Changes in exposure and route length.}}{85}{figure.caption.60}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

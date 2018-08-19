@@ -58,7 +58,7 @@
 
 % Front matter
 %\title{\vspace{-1cm}AirBike: a low-cost urban cycling air quality monitoring system using Raspberry Pi computers and machine learning}
-\title{\vspace{-1cm}A low-cost bicycle-based air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
+\title{\vspace{-1.5cm}A low-cost bicycle-based air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
 \author{Edward Jeffery}
 \degree{Master of Science}
 \department{Department of Computer Science} \degreemonthyear{October 2018}
@@ -76,6 +76,8 @@ Air pollution is a major health problem, causing millions of deaths each year, a
 I would like to thank my research project supervisor, Dr. Julian Padget, for his guidance and assistance throughout this project and during the course. 
  
 I would also like to thank my parents, David and Melanie Jeffery, and my girlfriend, Isabel Cairns, for their ongoing support throughout the writing of this thesis.
+
+Martin Fullick (Department of Physics) was a great help with the 3D printing and soldering. His knowledge was invaluable.
 
 Thank you to my trusty bicycle, which only suffered 3 punctures throughout the whole project, despite the hundreds of potholes that litter Bath's roads.
 
@@ -450,7 +452,7 @@ Calibration of sensors is key to ensuring that accurate and reliable measurement
 
 In 2008, the \cite{eudir2008airquality} issued a directive on ambient air quality and cleaner air in Europe, in which it laid out a set of Data Quality Objectives (DQOs) that specify the maximum level of acceptable uncertainty in air quality measurements. These are detailed in Table \ref{dataqualityobjectives}. If low-cost sensors are to be a viable for meaningful air quality monitoring, their measurements will need to meet or surpass these DQOs.
 
-\nomenclature{Data Quality Objective}{DQO}
+\nomenclature{DQO}{Data Quality Objective}
 
 \begin{table}[!htbp]
   \centering
@@ -600,7 +602,7 @@ This section details how the device is constructed. An image of the final device
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{device}
-\caption{Picture of the finished device. (a) shows the outside view, whereas (b) shows inside the case.}
+\caption[Finished device.]{Picture of the finished device. (a) shows the outside view, whereas (b) shows inside the case.}
 % Update with new image once temp/hum sensor attached
 \label{device}
 \end{figure}
@@ -743,13 +745,13 @@ The chosen solution is a GPIO expansion board (see Figure \ref{fig: gpio_expande
   \caption{Two HATs connected to GPIO expansion board.}
   \label{fig: two_on_one}
 \end{subfigure}
-\caption{Solution to sensor attachment problem. (a) The GPIO expansion board provides 4 rows of 40-pin GPIO connections. (b) 2 HATs are connected to the RPi via the expansion board, which enables our device to have increased sensing capabilities.}
+\caption[Solution to sensor attachment problem.]{Solution to sensor attachment problem. (a) The GPIO expansion board provides 4 rows of 40-pin GPIO connections. (b) 2 HATs are connected to the RPi via the expansion board, which enables our device to have increased sensing capabilities.}
 \end{figure}
 
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{images/protoboard}
-\caption{Soldered protoboard. This custom circuit board enables the connection of the sensors with digital outputs (Shinyei PPD42 and DHT22, as well as the LED) to the RPi.}
+\caption[Soldered protoboard.]{Soldered protoboard. This custom circuit board enables the connection of the sensors with digital outputs (Shinyei PPD42 and DHT22, as well as the LED) to the RPi.}
 \label{protoboard}
 \end{figure}
 
@@ -787,7 +789,7 @@ t = \frac{10000mAh}{750mA} = 13.\dot{3} \; hours
   \caption{Dissected USB cable with VCC wire exposed.}
   \label{fig: usb_cable}
 \end{subfigure}
-\caption{Power consumption testing. (a) shows the test setup with a connection to an ammeter, and (b) shows how a USB cable is dissected to enable sampling of the current drawn.}
+\caption[Power consumption testing.]{Power consumption testing. (a) shows the test setup with a connection to an ammeter, and (b) shows how a USB cable is dissected to enable sampling of the current drawn.}
 \end{figure}
 
 \subsection{Case}
@@ -836,7 +838,7 @@ The software for this air quality monitoring device covers a number of different
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/design}
-\caption{Data flow. The device attached to the bicycle sends data to a database using the phone's internet connection, which is then displayed on a webpage.}
+\caption[Data flow.]{Data flow. The device attached to the bicycle sends data to a database using the phone's internet connection, which is then displayed on a webpage.}
 \label{design}
 % Update drawing
 \end{figure}
@@ -867,7 +869,7 @@ Figure \ref{code_flow} visualises this whole process, as well as the insertion i
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/code_flow}
-\caption{Flow diagram of system code.}
+\caption[Flow diagram of system code.]{Flow diagram of system code.}
 \label{code_flow}
 \end{figure}
 
@@ -911,7 +913,7 @@ The web application is written in R and uses R Shiny version 1.1.0 to provide th
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=1\textwidth]{images/web_app}
-\caption{Web application using R Shiny. The menu on the left-hand side allows the user to select the time period and pollutant, as well as whether outliers should be included in the graphs or not. There are 4 tabs to the webpage, which each display a variety of graphs and tables to the user.}
+\caption[Web application.]{Web application using R Shiny. The menu on the left-hand side allows the user to select the time period and pollutant, as well as whether outliers should be included in the graphs or not. There are 4 tabs to the webpage, which each display a variety of graphs and tables to the user.}
 \label{rshiny}
 \end{figure}
 % UPDATE IMAGE
@@ -1003,7 +1005,7 @@ The output of the MQ131 ozone sensor is a raw analog signal that represents volt
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.8\textwidth]{spi_master_slave}
-\caption{SPI master-slave design. This visually depicts the relationship between a single master and a single slave on a Serial Peripheral Interface (SPI) bus. (SCLK = Serial Clock, MOSI = Master Output Slave Input, MISO = Master Input Slave Output, SS = Slave Select.)}
+\caption[SPI master-slave design.]{SPI master-slave design. This visually depicts the relationship between a single master and a single slave on a Serial Peripheral Interface (SPI) bus. (SCLK = Serial Clock, MOSI = Master Output Slave Input, MISO = Master Input Slave Output, SS = Slave Select.)}
 \label{spi}
 \end{figure}
 
@@ -1015,7 +1017,7 @@ Each data word is made up of 24 bits (3 bytes): 22 bits of conversion data and 2
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1\textwidth]{mcp3551}
-\caption{Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication. [REF]}
+\caption[MCP3551 output codes.]{Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication. [REF]}
 \label{mcp3551}
 \end{figure}
 
@@ -1027,7 +1029,7 @@ V_{IN} = \frac{d + 2097152}{4194304} \cdot V_{REF}, \hspace{5mm} V_{REF} = 5V
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.6\textwidth]{circuit}
-\caption{Circuit diagram for MQ-series sensors. This shows how the sensor uses $R_S$ and $R_L$ to make a voltage divider. [EDIT]}
+\caption[Circuit diagram for MQ-series sensors.]{Circuit diagram for MQ-series sensors. This shows how the sensor uses $R_S$ and $R_L$ to make a voltage divider. [EDIT]}
 \label{circuit}
 \end{figure}
 
@@ -1082,7 +1084,7 @@ O_3 (ppb) = (0.0541 \frac{R_S}{R_0}) ^ {(-\frac{1}{0.917})}
   \caption{MQ135.}
   \label{mq135_curve}
 \end{subfigure}
-\caption{Calibration curves from sensor data sheets. (a) shows the calibration curve for the MQ131 sensor, with ozone being the light blue line, and (b) shows the calibration curve for the MQ135 sensor, with a number of different sensitivities.}
+\caption[Calibration curves.]{Calibration curves from sensor data sheets. (a) shows the calibration curve for the MQ131 sensor, with ozone being the light blue line, and (b) shows the calibration curve for the MQ135 sensor, with a number of different sensitivities.}
 \end{figure}
 
 
@@ -1095,7 +1097,7 @@ The Air Quality Click from MikroElektronika did not contain a dedicated ADC chip
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{images/gpio_adc_switch}
-\caption{GPIO/ADC switch. The switch is highlighted in red on the Mikro Pi 3 Click Shield HAT. This switch enables the signal to either be sent directly to the GPIO pins or directed to the ADC first.}
+\caption[GPIO/ADC switch.]{GPIO/ADC switch. The switch is highlighted in red on the Mikro Pi 3 Click Shield HAT. This switch enables the signal to either be sent directly to the GPIO pins or directed to the ADC first.}
 \label{fig:switch}
 \end{figure}
 
@@ -1114,7 +1116,7 @@ The output of the DHT22/RHT03 temperature and humidity sensor is a digital signa
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=1\textwidth]{images/dht22_data}
-\caption{DHT22 communication protocol. The data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum.}
+\caption[DHT22 communication protocol.]{DHT22 communication protocol. The data word is made up of 40 bits: 16 bits for the humidity reading, 16 bits for the temperature reading and the final 8 bits as a check-sum.}
 \label{dht22_data}
 \end{figure}
 
@@ -1191,7 +1193,7 @@ Furthermore, Bath is geographically interesting because of its position surround
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.9\textwidth]{images/bath_elevation_large}
-\caption{Elevation raster of Bath. This image shows how Bath is surrounded by steep hills to the north, east and south, which act as a funnel for wind and, therefore, air pollution into Bath.}
+\caption[Elevation raster of Bath.]{Elevation raster of Bath. This image shows how Bath is surrounded by steep hills to the north, east and south, which act as a funnel for wind and, therefore, air pollution into Bath.}
 \label{bath_elevation}
 \end{figure}
 
@@ -1328,7 +1330,7 @@ The selected route is based upon the current fixed air quality monitoring statio
 \begin{figure}[!tb]
   \centering
   \includegraphics[width=0.7\linewidth]{cycling_route}
-  \caption{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.}
+  \caption[Cycling route.]{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.}
   \label{cycling_route}
 \end{figure}
 
@@ -1354,7 +1356,7 @@ Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is sh
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=1\textwidth]{shaded_route}
-\caption{Bath Air Quality Management Area \citep{BANES2017baqap} with shaded cycling route.}
+\caption[Bath Air Quality Management Area.]{Bath Air Quality Management Area \citep{BANES2017baqap} with shaded cycling route.}
 \label{aqma}
 \end{figure}
 
@@ -1435,7 +1437,7 @@ In order to identify which position on a bicycle is optimal for an air quality m
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/bicycle_positions}
-\caption{Potential positions for device on bicycle. (1) is above the front wheel, (2) is directly below the rider, and (3) is on the seat stays.}
+\caption[Device positions on bicycle.]{Potential positions for device on bicycle. (1) is above the front wheel, (2) is directly below the rider, and (3) is on the seat stays.}
 \label{bicycle_positions}
 \end{figure}
 
@@ -1489,7 +1491,7 @@ As Section \ref{route_selection} details, there are three fixed air quality moni
             \label{fig: guildhall}
         \end{subfigure}
     \end{minipage}
-    \caption{Road network around fixed monitoring stations. (a) is surrounded by industrial estates and a river, with few suitable roads. (b) is sided by a river and a steep hill, so the number of suitable roads is also limited. (c) is next to the river, but there are numerous roads around the site and on the opposite side of the river.}
+    \caption[Analysis of fixed monitoring station locations.]{Road network around fixed monitoring stations. (a) is surrounded by industrial estates and a river, with few suitable roads. (b) is sided by a river and a steep hill, so the number of suitable roads is also limited. (c) is next to the river, but there are numerous roads around the site and on the opposite side of the river.}
 \end{figure}
 
 
@@ -1500,7 +1502,7 @@ For the data collection, a circular locus is drawn around the monitoring site wi
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/locus_route}
-\caption{Locus-based route around Guildhall fixed monitoring station. This route covers a sufficiently large area around the site in order to demonstrate improved spatial resolution, whilst maintaining the temporal resolution of measurements (each lap takes 15 minutes).}
+\caption[Locus-based route.]{Locus-based route around Guildhall fixed monitoring station. This route covers a sufficiently large area around the site in order to demonstrate improved spatial resolution, whilst maintaining the temporal resolution of measurements (each lap takes 15 minutes).}
 \label{fig: locus_route}
 \end{figure}
 
@@ -1526,7 +1528,7 @@ To test the event-based capabilities of the device, we collect air quality measu
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/bath_fc_route}
-\caption{Event-based route outside of Bath City FC football stadium. The route traverses the high street back and forth, which is likely to experience the greatest increase in traffic compared to other roads in the vicinity.}
+\caption[Event-based route.]{Event-based route outside of Bath City FC football stadium. The route traverses the high street back and forth, which is likely to experience the greatest increase in traffic compared to other roads in the vicinity.}
 \label{fig: bath_fc_route}
 \end{figure}
 
@@ -1575,7 +1577,7 @@ We represent Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consistin
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.6\textwidth]{images/network_graph}
-\caption{Graph produced using \texttt{osmnx} for Bath, UK. Each edge of the graph (grey line) represents a road segment and each node (blue dot) represents a function or road-end.}
+\caption[\texttt{osmnx} graph for Bath.]{Graph produced using \texttt{osmnx} for Bath, UK. Each edge of the graph (grey line) represents a road segment and each node (blue dot) represents a function or road-end.}
 \label{fig:network_graph}
 \end{figure}
 
@@ -1611,7 +1613,7 @@ In order to assign the relevant pollution value to each edge for input into the 
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.4\textwidth]{images/knn}
-\caption{Example of selecting k-nearest air quality measurements for two roads (k = 5).}
+\caption[K-nearest neighbours.]{Example of selecting k-nearest air quality measurements for two roads (k = 5).}
 \label{fig:knn}
 \end{figure}
 
@@ -1632,17 +1634,16 @@ Once the required number of `health-optimal' and shortest route pairs has been g
 %%%%%%%%							RESULTS						      		       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Statistical analysis ++++
 
 \chapter{Results} \label{chap: results}
 % THIS IS WHAT IT SHOWS
 
-Using the methodology detailed in Chapter \ref{chap: methodology}, this chapter presents the results obtained from the air quality monitoring device.
-
-The chapter is structured in the order of the research questions, detailing the results obtained in each case.
+Using the methodology detailed in Chapter \ref{chap: methodology}, this chapter presents the results obtained from the air quality monitoring device. The chapter is structured in the order that the research questions were detailed in the methodology. In each case, we detail the the results obtained and the statistical significance, if relevant.
 
 \section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?} \label{q1_results}
 
-Across the data collection period, \num{9877} measurements were collected.
+Across the data collection period, \num{9877} measurements were collected along the chosen cycling route. 
 
 \subsection{Data quality}
 
@@ -1685,7 +1686,7 @@ We first conducted exploratory data analysis to understand the quality of data c
             \label{fig:humidity_histogram}
         \end{subfigure}
     \end{minipage}
-    \caption{Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI{17}{\celsius}; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.}
+    \caption[Sensor measurement histograms.]{Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI{17}{\celsius}; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.}
 \end{figure}
 
 As can be seen in Figure \ref{fig:pm_histogram}, the distribution of PM measurements is positively skewed and it appears that the measurements contain a large number of outliers. The majority of the values are distributed between 0 and 200, with a number of other values spread out to over \num{1500}. Therefore, this warrants further investigation.
@@ -1732,7 +1733,7 @@ The measurements from the DHT22 temperature and humidity sensor do not follow a 
             \label{fig:humidity_boxplot}
         \end{subfigure}
     \end{minipage}
-    \caption{Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) has the most outliers; (b) has outliers at the top-end; (c) has outliers at high and low values; (d) has 4 outliers; (e) has outliers at high and low values.}
+    \caption[Tukey's boxplots.]{Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) has the most outliers; (b) has outliers at the top-end; (c) has outliers at high and low values; (d) has 4 outliers; (e) has outliers at high and low values.}
     \label{tukey_boxplots}
 \end{figure}
 % Remove x-axis labels
@@ -1748,16 +1749,18 @@ The measurements from the DHT22 temperature and humidity sensor do not follow a 
 
 Our first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{tukey_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have some outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
 
-The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It was also performed on a per-group basis, with the group being the day of the week.
+The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.24\%) compared to the ozone (1.44\%) and general air quality measurements (1.97\%). The upper bound of 121.65 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ [REF]. The reason behind this high percentage of outliers is uncertain, but it may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. [EXPAND]
+
+This method was also implemented on a per-group basis, with the group being the day of the week. These results are shown in Table X. 
 
 \begin{table}[!tbp]
   \centering
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 & 9877 & 25.18 & 43.83 & 121.65 & 0.00 & 1110 & 11.24 \\
-  O\textsubscript{3} & 9877 & 25.21 & 5.60 & 36.45 & 14.06 & 142 & 1.44 \\
-  General AQ & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
+  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 43.83 & 121.65 & 0.00 & 1110 & 11.24 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 9877 & 25.21 & 5.60 & 36.45 & 14.06 & 142 & 1.44 \\
+  General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
   \end{tabular}
     \caption{Outlier detection summary using IQR method on the whole sample. The particulate measurements have the highest percentage of outliers. }
@@ -1767,7 +1770,9 @@ The results of performing this outlier detection method are shown in Table \ref{
 
 \subsubsection{Median and MAD}
 
-The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median. The results of this method are detailed in Table \ref{tab:mad_outliers}.
+The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
+
+The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 13.34\% of the measurements being considered outliers. Overall, the values are similar to those found by the IQR method, which indicates the robustness of these methods.
 
 \begin{table}[!tbp]
   \centering
@@ -1804,7 +1809,7 @@ Since the route in each of the three data collection periods was consistent, the
             	\label{fig:wave_latitudes}
 	   \end{subfigure}
         \end{minipage}
-    \caption{Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the red lines) can be considered outliers.}
+    \caption[Longitude and latitude waveforms.]{Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the red lines) can be considered outliers.}
     \label{fig:waves}
 \end{figure}
 
@@ -1820,6 +1825,8 @@ Since the route in each of the three data collection periods was consistent, the
 % Direction of travel
 
 \subsection{Positioning on bicycle}
+
+\subsection{Air flow}
 
 \subsection{Robustness}
 % Weather, vibration, power
@@ -1855,7 +1862,7 @@ As expected, the commuter simulations show an increase in coverage of the city a
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.7\textwidth]{images/coverage}
-\caption{Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.}
+\caption[Cyclist coverage.]{Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.}
 \label{fig:coverage}
 \end{figure}
 
@@ -1893,7 +1900,7 @@ Furthermore, these findings must be taken with caution. If more people began to 
             \label{fig:route_max}
         \end{subfigure}
     \end{minipage}
-    \caption{Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.}
+    \caption[Example routes.]{Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.}
     \label{fig:origdestpairs}
 \end{figure}
 
@@ -1927,7 +1934,7 @@ Furthermore, these findings must be taken with caution. If more people began to 
             	\label{fig:length_increases}
 	   \end{subfigure}
     \end{minipage}
-    \caption{Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500~m. There are then diminishing number of routes as the delta increases.}
+    \caption[Changes in exposure and route length.]{Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500~m. There are then diminishing number of routes as the delta increases.}
     \label{fig:cumulatives}
 \end{figure}
 
@@ -1981,6 +1988,13 @@ One of the main restrictions faced during this project was the availability of o
 Broken ozone and humidity sensors half-way through data collection.
 
 Flat tyres
+
+
+\section{Additional application post-project completion}
+
+In collaboration with the University of Bath's Department of Mathematical Sciences, this air quality monitoring device is being tested in the capital of Mongolia, Ulaanbaatar. The research team are in the process of creating a project proposal and will use the device to demonstrate a physical application that can collect data for use in mathematical pollution modelling. The air quality in Ulaanbaatar is extremely poor, mainly due to households burning low-quality coal for heating in the cold climate.
+
+Some adjustments were made to the device to enable this application. Firstly, the triangular bicycle bag was replaced with a plastic container and fans fitted into the walls of the container to induce air flow over the sensors. This makes the device relatively waterproof as the sensors are no longer directly exposed to the environment. Secondly, we replaced the MQ135 sensor with the dedicated NO\textsubscript{2} sensor that was recently released by MikroElektronika. This should enable accurate NO\textsubscript{2} measurements. Thirdly, we secured all sensors physically inside the container, thereby avoiding power disruption issues from vibrations and making the device more robust.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
