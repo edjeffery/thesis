@@ -17,7 +17,7 @@
 \usepackage{booktabs}
 
 % PDF pages
-\usepackage{pdfpages}
+\usepackage{pdfpages} 
 
 \usepackage{graphicx}
 \usepackage{subcaption}
@@ -1288,7 +1288,7 @@ Equation \ref{eqn:sn} is very similar to Equation \ref{eqn:mad}, except that the
 
 Since our dataset is a collection of time series, the outlier detection should also take this into account. There are two ways we incorporate this into our methodology.
 
-Firstly, the outlier detection techniques detailed above are also run using moving averages. The dataset is separated into distinct collection runs (e.g. 2018-08-12 AM) and the moving average outlier detection is run on each of these. The reasoning for using a moving average is to account for any trends in the pollution data. For example, if, on a main road, the pollution level is much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
+Firstly, the outlier detection techniques detailed above are also run using moving averages. The dataset is separated into distinct collection runs (e.g. YYYY-MM-DD AM) and the moving average outlier detection is run on each of these. The reasoning for using a moving average is to account for any trends in the pollution data. For example, if, on a main road, the pollution level is much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
 
 The second way we account for the time series nature is by using a similar method to \cite{vanZoest2018outlierdetection}. The authors appear to be one of the first to create a method for identifying outliers in spatio-temporal air quality data. Their method consists of separating the data into spatial and temporal divisions. For example, urban traffic and urban background (spatial), and weekdays/weekends and traffic times (temporal). The reason for this was that air quality can depend highly on the local area and the time of day, so outlier detection must take these divisions into account. As a result, the spatio-temporal variability in pollution concentrations is maintained. Our data cannot be split easily into spatial categories as we focus on a small city, but we can separate the data into 4 temporal categories. The first split is for a weekday or weekend, the rationale being that traffic is highly likely to be higher during the week when people are commuting to and from work. The second split is for the first half of the day (AM) and the second half of the day (PM). When combined, these separations produce four categories:
 \begin{enumerate}
@@ -1650,7 +1650,9 @@ Across the data collection period, \num{9877} measurements were collected along 
 Firstly, it must be mentioned that half-way through the data collection the MQ131 and DHT22 sensor broke due to moisture exposure. The MQ131 sensor was replaced and calibrated using the same method as detailed in Section \ref{mq131_calibration}. The DHT22 sensor was also replaced, although it required no calibration. The readings from the period during which these sensors were broken were discarded.
 % Maybe also exclude all other measurements from those days.
 
-We first conducted exploratory data analysis to understand the quality of data collected. This identified potential outliers, which were then excluded from our investigation.
+We first conduct exploratory data analysis to understand the quality of data collected and identify where potential outliers may lie. We then implement robust outlier detection methods to identify outliers, are then excluded from our investigation.
+
+\subsubsection{Exploratory analysis}
 
 \begin{figure}[!tbp]
     \centering
@@ -1749,22 +1751,20 @@ The measurements from the DHT22 temperature and humidity sensor do not follow a 
 
 Our first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{tukey_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have some outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
 
-The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.24\%) compared to the ozone (1.44\%) and general air quality measurements (1.97\%). The upper bound of 121.65 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ [REF]. The reason behind this high percentage of outliers is uncertain, but it may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. [EXPAND]
-
-This method was also implemented on a per-group basis, with the group being the day of the week. These results are shown in Table X. 
+The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.24\%) compared to the ozone (1.79\%) and general air quality measurements (1.97\%). The upper bound of 121.65 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ [REF]. The reason behind this high percentage of outliers is uncertain, but it may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. [EXPAND] It must be noted that the sample size $N$ for the ozone measurements is lower than for the other two pollutants due to the aforementioned breakage and replacement of the MQ131 midway through data collection. The percentage of outliers is similar to that for the general air quality measurements, so this exclusion does not appear to have detrimentally impacted the analysis from a statistical perspective.
 
 \begin{table}[!tbp]
   \centering
+  \caption{Outlier detection summary using IQR method on the whole dataset. The particulate measurements have the highest percentage of outliers. }
+  \label{tab:iqr_outliers}
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
   PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 43.83 & 121.65 & 0.00 & 1110 & 11.24 \\
-  O\textsubscript{3} $(\mu g/m^3)$ & 9877 & 25.21 & 5.60 & 36.45 & 14.06 & 142 & 1.44 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 11.17 & 72.74 & 28.06 & 142 & 1.79 \\
   General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
   \end{tabular}
-    \caption{Outlier detection summary using IQR method on the whole sample. The particulate measurements have the highest percentage of outliers. }
-  \label{tab:iqr_outliers}
 \end{table}
 % Should I include all 3 collection periods together for this analysis or just route data?
 
@@ -1774,26 +1774,118 @@ The median and MAD outlier detection method was also implemented. Outliers were 
 
 The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 13.34\% of the measurements being considered outliers. Overall, the values are similar to those found by the IQR method, which indicates the robustness of these methods.
 
+% Also try using Sn???
+% Moving average and time periods
+
 \begin{table}[!tbp]
   \centering
+  \caption{Outlier detection summary using median and MAD method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. }
+  \label{tab:mad_outliers}
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {MAD} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 & 9877 & 25.18 & 25.36 & 101.25 & 0.00 & 1318 & 13.34 \\
-  O\textsubscript{3} & 9877 & 25.21 & 4.16 & 37.69 & 12.74 & 105 & 1.06 \\
-  General AQ & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
+  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 25.36 & 101.25 & 0.00 & 1318 & 13.34 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.30 & 75.21 & 25.42 & 105 & 1.33 \\
+  General AQ (V) & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
   \end{tabular}
-    \caption{Outlier detection summary using median and MAD method on the whole sample. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. }
-  \label{tab:mad_outliers}
 \end{table}
 % Should I include all 3 collection periods together for this analysis or just route data?
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower than the MAD method. }
+  \label{tab:mad_outliers}
+  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  Gas/particulate & N & {Median} & {S\textsubscript{n}} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 25.80 & 102.57 & 0.00 & 1308 & 13.24 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.46 & 75.69 & 24.94 & 97 & 1.22 \\
+  General AQ (V) & 9877 & 1.17 & 0.17 & 1.67 & 0.67 & 121 & 1.23 \\ \bottomrule
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+  \end{tabular}
+\end{table}
+
+\subsubsection{Per time period group}
+
+The above methods are also implemented on a per-group basis, with the group being the day of the week. These results are shown in Table \ref{tab:outliers_time_period}. In the interest of clarity, the tables are simplified to only show the main figures. The full tables can be found in Appendix XXX. The results show that, on average, running the outlier detection on a per-group basis leads to an increased number of measurements identified as outliers. The reason for this could be... Although the number of outliers rose when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually fell. [NOT SURE HOW TO INTERPRET] It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping. [REASONING]
+
+%\begin{table}[!tbp]
+%  \centering
+%  \caption{Total number of outliers when running each method by time period grouping.}
+%  \label{tab:outliers_time_period}
+%  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+%  \toprule
+%  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}}\\ \midrule
+%  PM10 $(\mu g/m^3)$			& 1046	& 1350	& 1434 \\
+%  O\textsubscript{3} $(\mu g/m^3)$	& 97		& 192	& 187 \\
+%  General AQ (V)				& 170	& 179	& 213 \\ \bottomrule
+%  \end{tabular}
+%\end{table}
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
+  \label{tab:outliers_time_period}
+  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} \\
+  \cmidrule(lr){2-5}
+  \cmidrule(lr){6-9}
+  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+  PM10			& 1110	& 1318	& 1308	& 1245	& 1046	& 1350	& 1434	& 1277 \\
+  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 97		& 192	& 187	& 159 \\
+  General AQ		& 195	& 139	& 121	& 152	& 170	& 179	& 213	& 187 \\ \midrule
+  Total			& 1447	& 1562	& 1526	& 1512	& 1313	& 1721	& 1834	& 1623\\\bottomrule
+  \end{tabular}
+\end{table}
+% Might have to change these to percentages due to varying sample sizes.
+
+\subsubsection{Moving average}
+
+The outlier detection methods are also applied using moving averages, to account for the time series nature of the data. The results are shown in Table \ref{tab:outliers_moving_avg}. The results show that the number of outliers for PM10 does not change dramatically, but the figure does change dramatically for O\textsubscript{3} and General AQ measurements, with the number of outliers increasing by approximately a factor of 3.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Outliers when running each method using moving average and per collection run.}
+  \label{tab:outliers_moving_avg}
+  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  {} & \multicolumn{4}{c}{Moving average}  \\
+  \cmidrule(lr){2-5}
+  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+  PM10			& 1184	& 1053	& 1024	& 1087	\\
+  O\textsubscript{3}	& 612	& 502	& 463	& 526	\\
+  General AQ		& 674	& 406	& 342	& 474	\\ \midrule
+  Total			& 2470	& 1961	& 1829	& 2087	\\ \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{landscape}
+\begin{table}[!tbp]
+  \centering
+  \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
+  \label{tab:outliers_time_period}
+  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} & \multicolumn{4}{c}{Moving average} \\
+  \cmidrule(lr){2-5}
+  \cmidrule(lr){6-9}
+  \cmidrule(lr){10-13}
+  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+  PM10			& 1110	& 1318	& 1308	& 1245	& 1046	& 1350	& 1434	& 1277	& 1184	& 1053	& 1024	& 1087	\\
+  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 97		& 192	& 187	& 159	& 612	& 502	& 463	& 526	\\
+  General AQ		& 195	& 139	& 121	& 152	& 170	& 179	& 213	& 187 	& 674	& 406	& 342	& 474	\\ \midrule
+  Total			& 1447	& 1562	& 1526	& 1512	& 1313	& 1721	& 1834	& 1623	& 2470	& 1961	& 1829	& 2087	\\ \bottomrule
+  \end{tabular}
+\end{table}
+\end{landscape}
 
 \subsubsection{Geo-spatial outliers}
 
 There were a small number of geo-spatial outliers, which were corrected using the method detailed in Section \ref{gps_outliers}.
 
-Since the route in each of the three data collection periods was consistent, the longitude and latitude measurements created waveform-like patterns. These were useful in identifying outliers as they clearly showed when the value exceeded the usual minimums and maximums (represented by red horizontal lines). For example, Figure \ref{fig:waves} shows the longitude and latitude time series from the event-based collection period. Figure \ref{fig:wave_longitudes} has erratic longitude measurements until 18:45, before settling into a consistent pattern. Figure \ref{fig:wave_latitudes} has a slightly longer period of inconsistent latitude measurements and the values are clearly erroneous as they stretch far away from the peaks of the pattern.
+Since the routes in each of the three data collection periods are consistent, the longitude and latitude measurements create waveform-like patterns. These are useful in identifying outliers as they clearly show when the value exceeds the usual minimums and maximums (represented by red horizontal lines). For example, Figure \ref{fig:waves} shows the longitude and latitude time series from the event-based collection period. Figure \ref{fig:wave_longitudes} has erratic longitude measurements until 18:45, before settling into a consistent pattern. Figure \ref{fig:wave_latitudes} has a slightly longer period of inconsistent latitude measurements and the values are clearly erroneous as they stretch far away from the peaks of the pattern.
 
 \begin{figure}[!tb]
     \centering
@@ -1809,9 +1901,16 @@ Since the route in each of the three data collection periods was consistent, the
             	\label{fig:wave_latitudes}
 	   \end{subfigure}
         \end{minipage}
-    \caption[Longitude and latitude waveforms.]{Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the red lines) can be considered outliers.}
+    \caption[Longitude and latitude waveforms.]{Longitude and latitude data creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the horizontal red lines) or that appear irregular can be considered outliers.}
     \label{fig:waves}
 \end{figure}
+
+\subsubsection{Summary}
+
+The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, ... These values are then discarded.
+
+Regarding the geo-spatial outliers, these have been corrected as best possible. Where they still remain erroneous, these measurements have been discarded from any geo-spatial analysis. However, the geo-spatial measurement being an outlier does not affect the pollution sensor measurements, so these remain for the other analyses.
+
 
 \subsection{Maps}
 % High resolution maps

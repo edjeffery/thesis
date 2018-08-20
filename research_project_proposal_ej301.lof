@@ -1,43 +1,43 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{16}{figure.caption.5}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{20}{figure.caption.7}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{31}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{32}{figure.caption.11}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{32}{figure.caption.12}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{17}{figure.caption.5}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{21}{figure.caption.7}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{32}{figure.caption.10}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{33}{figure.caption.11}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{33}{figure.caption.12}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{37}{figure.caption.13}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{42}{figure.caption.16}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{42}{figure.caption.17}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{43}{figure.caption.18}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{45}{figure.caption.20}
-\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{47}{figure.caption.21}
-\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{49}{figure.caption.25}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{38}{figure.caption.13}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{43}{figure.caption.16}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{43}{figure.caption.17}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{44}{figure.caption.18}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{46}{figure.caption.20}
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{48}{figure.caption.21}
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{50}{figure.caption.25}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{52}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{53}{figure.caption.28}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{54}{figure.caption.29}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{55}{figure.caption.30}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{56}{figure.caption.31}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{56}{figure.caption.32}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{57}{figure.caption.33}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{53}{figure.caption.27}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{54}{figure.caption.28}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{55}{figure.caption.29}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{56}{figure.caption.30}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{57}{figure.caption.31}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{57}{figure.caption.32}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{58}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{61}{figure.caption.34}
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{65}{figure.caption.35}
-\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{65}{figure.caption.36}
-\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{67}{figure.caption.37}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces Analysis of fixed monitoring station locations.}}{69}{figure.caption.39}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route.}}{69}{figure.caption.41}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route.}}{71}{figure.caption.45}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces \texttt {osmnx} graph for Bath.}}{73}{figure.caption.47}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces K-nearest neighbours.}}{75}{figure.caption.48}
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{62}{figure.caption.34}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{66}{figure.caption.35}
+\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{66}{figure.caption.36}
+\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{68}{figure.caption.37}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces Analysis of fixed monitoring station locations.}}{70}{figure.caption.39}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route.}}{70}{figure.caption.41}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route.}}{72}{figure.caption.45}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces \texttt {osmnx} graph for Bath.}}{74}{figure.caption.47}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces K-nearest neighbours.}}{76}{figure.caption.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Sensor measurement histograms.}}{77}{figure.caption.49}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's boxplots.}}{79}{figure.caption.50}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude waveforms.}}{81}{figure.caption.56}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Cyclist coverage.}}{82}{figure.caption.57}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Example routes.}}{84}{figure.caption.58}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Changes in exposure and route length.}}{85}{figure.caption.60}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Sensor measurement histograms.}}{78}{figure.caption.50}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's boxplots.}}{80}{figure.caption.51}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude waveforms.}}{85}{figure.caption.63}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Cyclist coverage.}}{87}{figure.caption.65}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Example routes.}}{88}{figure.caption.66}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Changes in exposure and route length.}}{89}{figure.caption.68}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
