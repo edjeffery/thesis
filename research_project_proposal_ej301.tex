@@ -272,7 +272,7 @@ Another interesting study was conducted by \cite{Apte2017googlestreetview} using
 Looking at the air quality monitoring literature as a whole, a number of areas remain unaddressed. Firstly, no study measure all of pollutants detailed in Section \ref{airqualitymeasures} that form UK and EU legislation. Whilst this may be because it is difficult to fit that number of sensors into one device, if mobile air quality monitoring in the future is to be a viable option in the UK, this needs to be addressed. Secondly, the capabilities of using a sole Raspberry Pi device for air quality monitoring purposes needs further investigation as it is often used in conjunction with another computer (see Table \ref{listofprevdevices}). Thirdly, only three of the studies detailed in Table \ref{listofprevdevices} used bicycles, which are ubiquitous, non-polluting vehicles that would appear to be an ideal candidate vehicle for mobile air quality monitoring. Finally, in all of these three cases, the air quality monitoring device appeared bulky and cumbersome (see Figure \ref{aeroflex} for an example). Therefore, it would be interesting to see if all of the sensing capabilities could be incorporated into a small device.
 
 \begin{landscape}
-  \small
+  \footnotesize
 \begin{longtable}{ p{0.4\textwidth} p{0.3\textwidth} p{0.4\textwidth} p{0.2\textwidth} }
   \caption{\mbox{List of air quality monitoring devices in the literature}}
   \vspace{-0.4cm}
@@ -365,7 +365,7 @@ The device itself is almost twice the price of the second-most expensive SBC in 
 
 \begin{table}[!htbp]
   %\centering
-  \small
+  \footnotesize
   \caption{Comparison of SBCs}
   \label{sbccomparisontable}
   \begin{tabular}{ l p{0.175\textwidth} p{0.15\textwidth} l p{0.08\textwidth} p{0.06\textwidth} p{0.1\textwidth}}
@@ -628,6 +628,7 @@ GPIO stands for General Purpose Input/Output and provides a standardised interfa
 
 \begin{table}[!tb]
   \centering
+  \small
   \caption{GPIO pin layout and usage for the 40 GPIO pins on the Raspberry Pi. Of these 40, 17 are directly used by the sensors in the device.}
   \label{gpio}
   \begin{tabular}{ l l l }
@@ -849,7 +850,7 @@ The main requirement of the software on the Raspberry Pi is to read the data fro
 
 Although \cite{thorpe2017RPimesh} used the same particulate sensor, the study used a Grove Pi HAT, which was based around an Arduino and the software only allowed for measurements every 30 seconds. We worked with the manufacturer Grove to reduce this, but encountered numerous problems with re-flashing the Grove Pi with altered firmware. To overcome this, we instead attach the sensor to the GPIO pins and use the \texttt{pigpio} python module, which provides control of the RPi's GPIO. Furthermore, we use the \texttt{spidev} library for communicating with the MQ131 and MQ135 sensors (more specifically, their ADC chips). \texttt{spidev} is a python module for interfacing with SPI devices via the \texttt{spidev} linux kernel driver. A problem can arise when attempting to read from all of the sensors simultaneously, because the continual nature of reading from the particulate sensor (measuring how long the signal was low -- i.e. 0 -- for in a given time period) `blocks' the main thread. As a resolution, the software implements two threads: (i) reading the particulate sensor and operating the LED, and (ii) operating the rest of the sensing functionality. This avoids any blocking and the sensor measurements are saved to variables in the relevant thread objects, which can then simply be accessed from the object. Every 10 seconds, these variables are read by the main program and saved to a CSV file. Once the CSV file has 6 lines of data, corresponding to 1 minute of time, the software creates a new file.
 
-To avoid manual intervention by the user, the \texttt{/etc/rc.local} (`rc' stands for `run-control') is edited to include a start service command, shown below. An alternative, \texttt{cron}, is available to run scheduled jobs, but was found to be more difficult to get working on a reboot trigger.
+To avoid manual intervention by the user, the \texttt{/etc/rc.local} (`rc' stands for `run-control') is edited to include a start service command, shown below. This automatically runs the program when the Raspberry Pi boots. An alternative, \texttt{cron}, is available to run scheduled jobs, but was found to be more difficult to get working on a reboot trigger.
 \begin{lstlisting}
 sleep 30 && sudo -H -u pi python /home/pi/filename.py &
 \end{lstlisting}

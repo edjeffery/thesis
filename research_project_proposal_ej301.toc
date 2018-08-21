@@ -1,130 +1,130 @@
 \contentsline {chapter}{\numberline {1}Introduction}{12}{chapter.1}
-\contentsline {chapter}{\numberline {2}Related work}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Air pollution}{15}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Health impact of air pollution}{16}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}The need for monitoring air pollution}{16}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Measures of air quality}{17}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Nitrogen oxides}{18}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Ozone}{18}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Particulates}{19}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Monitoring urban air quality}{19}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Previous monitoring devices}{19}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Spatial variability}{23}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Spatial resolution}{23}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Temporal resolution}{24}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Comparison of single-board computers}{24}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Raspberry Pi (RPi)}{24}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Arduino}{25}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}BeagleBone}{26}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Comparison}{26}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Power}{27}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Raspberry Pi power requirements}{27}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Power sources}{27}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Use of low-cost sensors}{28}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Calibration of sensors}{29}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Air flow}{30}{subsection.2.6.2}
-\contentsline {section}{\numberline {2.7}Mapping air pollution}{31}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Estimation techniques}{31}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Mapping visualisations}{32}{subsection.2.7.2}
-\contentsline {section}{\numberline {2.8}Health-optimal route planning}{34}{section.2.8}
-\contentsline {section}{\numberline {2.9}Data quality monitoring}{34}{section.2.9}
-\contentsline {section}{\numberline {2.10}Summary}{35}{section.2.10}
-\contentsline {chapter}{\numberline {3}System design and implementation}{37}{chapter.3}
-\contentsline {section}{\numberline {3.1}Physical device}{37}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Technical details}{37}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Raspberry Pi}{38}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}GPIO}{39}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Particulate sensor}{39}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Ozone sensor}{40}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}NOx sensor}{41}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Temperature and humidity sensor}{41}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {3.1.8}HAT}{42}{subsection.3.1.8}
-\contentsline {subsection}{\numberline {3.1.9}Power}{42}{subsection.3.1.9}
-\contentsline {subsection}{\numberline {3.1.10}Case}{45}{subsection.3.1.10}
-\contentsline {subsection}{\numberline {3.1.11}Cost}{45}{subsection.3.1.11}
-\contentsline {section}{\numberline {3.2}Software}{46}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Raspberry Pi software}{46}{subsection.3.2.1}
-\contentsline {subsubsection}{GPS}{47}{section*.22}
-\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{49}{subsection.3.2.2}
-\contentsline {subsubsection}{RESTful API}{49}{section*.23}
-\contentsline {subsubsection}{Database}{49}{section*.24}
-\contentsline {subsection}{\numberline {3.2.3}Web application}{49}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Output conversion and calibration}{51}{chapter.4}
-\contentsline {section}{\numberline {4.1}Particulate sensor}{51}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ozone sensor}{53}{section.4.2}
-\contentsline {section}{\numberline {4.3}General air quality sensor}{56}{section.4.3}
-\contentsline {section}{\numberline {4.4}Temperature and humidity sensor}{58}{section.4.4}
-\contentsline {section}{\numberline {4.5}Limitations}{59}{section.4.5}
-\contentsline {chapter}{\numberline {5}Methodology}{60}{chapter.5}
-\contentsline {section}{\numberline {5.1}Research questions}{60}{section.5.1}
-\contentsline {section}{\numberline {5.2}Location}{61}{section.5.2}
-\contentsline {section}{\numberline {5.3}Data cleaning and data validation}{61}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}IQR}{63}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Median and MAD}{63}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Time series}{64}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Geo-spatial outliers}{64}{subsection.5.3.4}
-\contentsline {section}{\numberline {5.4}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{65}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Route selection}{65}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Data collection}{65}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Pollution mapping}{67}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Positioning on bicycle}{67}{subsection.5.4.4}
-\contentsline {subsection}{\numberline {5.4.5}Air flow testing}{67}{subsection.5.4.5}
-\contentsline {section}{\numberline {5.5}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{68}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1}Locus around fixed monitoring station}{69}{subsection.5.5.1}
-\contentsline {subsubsection}{Location}{69}{section*.38}
-\contentsline {subsubsection}{Data collection}{69}{section*.40}
-\contentsline {subsubsection}{Demonstrating higher spatial resolution}{69}{section*.42}
-\contentsline {subsection}{\numberline {5.5.2}Event route}{71}{subsection.5.5.2}
-\contentsline {subsubsection}{Location}{71}{section*.43}
-\contentsline {subsubsection}{Data collection}{71}{section*.44}
-\contentsline {subsubsection}{Demonstrating higher temporal resolution}{71}{section*.46}
-\contentsline {section}{\numberline {5.6}Question 3: How can these air quality monitoring devices be applied for public benefit?}{72}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Using commuting cyclists to collect pollution data}{73}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Road network graph}{73}{subsection.5.6.2}
-\contentsline {subsection}{\numberline {5.6.3}Search algorithm}{76}{subsection.5.6.3}
-\contentsline {subsection}{\numberline {5.6.4}Comparing routes}{76}{subsection.5.6.4}
-\contentsline {chapter}{\numberline {6}Results}{77}{chapter.6}
-\contentsline {section}{\numberline {6.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{77}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Data quality}{77}{subsection.6.1.1}
-\contentsline {subsubsection}{Exploratory analysis}{78}{section*.49}
-\contentsline {subsubsection}{IQR}{78}{section*.52}
-\contentsline {subsubsection}{Median and MAD}{81}{section*.54}
-\contentsline {subsubsection}{Per time period group}{82}{section*.57}
-\contentsline {subsubsection}{Moving average}{82}{section*.59}
-\contentsline {subsubsection}{Geo-spatial outliers}{85}{section*.62}
-\contentsline {subsubsection}{Summary}{85}{section*.64}
-\contentsline {subsection}{\numberline {6.1.2}Maps}{86}{subsection.6.1.2}
-\contentsline {subsection}{\numberline {6.1.3}Pattern analysis}{86}{subsection.6.1.3}
-\contentsline {subsection}{\numberline {6.1.4}Positioning on bicycle}{86}{subsection.6.1.4}
-\contentsline {subsection}{\numberline {6.1.5}Air flow}{86}{subsection.6.1.5}
-\contentsline {subsection}{\numberline {6.1.6}Robustness}{86}{subsection.6.1.6}
-\contentsline {subsection}{\numberline {6.1.7}Real-time}{86}{subsection.6.1.7}
-\contentsline {section}{\numberline {6.2}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{86}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{86}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Bath football event}{86}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Question 3: How can these air quality monitoring devices be applied for public benefit?}{86}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Coverage}{87}{subsection.6.3.1}
-\contentsline {subsection}{\numberline {6.3.2}Comparison of shortest and health-optimal routes}{87}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Health benefit}{89}{subsection.6.3.3}
-\contentsline {chapter}{\numberline {7}Discussion}{90}{chapter.7}
-\contentsline {section}{\numberline {7.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{90}{section.7.1}
-\contentsline {section}{\numberline {7.2}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{90}{section.7.2}
-\contentsline {section}{\numberline {7.3}Question 3: How can these air quality monitoring devices be applied for public benefit?}{90}{section.7.3}
-\contentsline {section}{\numberline {7.4}Limitations}{90}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Public preferences}{90}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Timing of project}{90}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Resource constraints}{91}{subsection.7.4.3}
-\contentsline {subsection}{\numberline {7.4.4}Equipment breakages}{91}{subsection.7.4.4}
-\contentsline {section}{\numberline {7.5}Additional application post-project completion}{91}{section.7.5}
-\contentsline {chapter}{\numberline {8}Conclusion}{92}{chapter.8}
-\contentsline {section}{\numberline {8.1}Conclusions}{92}{section.8.1}
-\contentsline {section}{\numberline {8.2}Future work}{92}{section.8.2}
-\contentsline {chapter}{Bibliography}{94}{section.8.2}
-\contentsline {chapter}{Appendix}{103}{chapter*.70}
-\contentsline {chapter}{\numberline {A}Installation instructions}{103}{appendix.A}
-\contentsline {section}{\numberline {A.1}GPS}{103}{section.A.1}
-\contentsline {chapter}{\numberline {B}Code}{104}{appendix.B}
-\contentsline {section}{\numberline {B.1}PHP API}{104}{section.B.1}
-\contentsline {chapter}{\numberline {C}Data analysis code}{108}{appendix.C}
-\contentsline {section}{\numberline {C.1}Data structuring}{108}{section.C.1}
-\contentsline {section}{\numberline {C.2}Learning}{108}{section.C.2}
+\contentsline {chapter}{\numberline {2}Related work}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Air pollution}{17}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Health impact of air pollution}{17}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}The need for monitoring air pollution}{18}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Measures of air quality}{19}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Nitrogen oxides}{20}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Ozone}{20}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Particulates}{20}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Monitoring urban air quality}{21}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Previous monitoring devices}{21}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Spatial variability}{26}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Spatial resolution}{26}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Temporal resolution}{27}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Comparison of single-board computers}{27}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Raspberry Pi (RPi)}{28}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Arduino}{29}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}BeagleBone}{29}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Comparison}{30}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Power}{31}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Raspberry Pi power requirements}{31}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Power sources}{31}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Use of low-cost sensors}{32}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Calibration of sensors}{33}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Air flow}{35}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Mapping air pollution}{35}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Estimation techniques}{35}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Mapping visualisations}{36}{subsection.2.7.2}
+\contentsline {section}{\numberline {2.8}Health-optimal route planning}{38}{section.2.8}
+\contentsline {section}{\numberline {2.9}Data quality monitoring}{39}{section.2.9}
+\contentsline {section}{\numberline {2.10}Summary}{40}{section.2.10}
+\contentsline {chapter}{\numberline {3}System design and implementation}{42}{chapter.3}
+\contentsline {section}{\numberline {3.1}Physical device}{42}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Technical details}{43}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Raspberry Pi}{44}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}GPIO}{44}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Particulate sensor}{44}{subsection.3.1.4}
+\contentsline {subsection}{\numberline {3.1.5}Ozone sensor}{46}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}NOx sensor}{47}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Temperature and humidity sensor}{47}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}HAT}{47}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Power}{49}{subsection.3.1.9}
+\contentsline {subsection}{\numberline {3.1.10}Case}{51}{subsection.3.1.10}
+\contentsline {subsection}{\numberline {3.1.11}Cost}{51}{subsection.3.1.11}
+\contentsline {section}{\numberline {3.2}Software}{52}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Raspberry Pi software}{52}{subsection.3.2.1}
+\contentsline {subsubsection}{GPS}{54}{section*.22}
+\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{55}{subsection.3.2.2}
+\contentsline {subsubsection}{RESTful API}{55}{section*.23}
+\contentsline {subsubsection}{Database}{56}{section*.24}
+\contentsline {subsection}{\numberline {3.2.3}Web application}{56}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Output conversion and calibration}{58}{chapter.4}
+\contentsline {section}{\numberline {4.1}Particulate sensor}{58}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ozone sensor}{60}{section.4.2}
+\contentsline {section}{\numberline {4.3}General air quality sensor}{64}{section.4.3}
+\contentsline {section}{\numberline {4.4}Temperature and humidity sensor}{66}{section.4.4}
+\contentsline {section}{\numberline {4.5}Limitations}{67}{section.4.5}
+\contentsline {chapter}{\numberline {5}Methodology}{69}{chapter.5}
+\contentsline {section}{\numberline {5.1}Research questions}{69}{section.5.1}
+\contentsline {section}{\numberline {5.2}Location}{70}{section.5.2}
+\contentsline {section}{\numberline {5.3}Data cleaning and data validation}{71}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}IQR}{72}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Median and MAD}{72}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Time series}{73}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Geo-spatial outliers}{74}{subsection.5.3.4}
+\contentsline {section}{\numberline {5.4}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{75}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Route selection}{75}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Data collection}{76}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Pollution mapping}{77}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Positioning on bicycle}{77}{subsection.5.4.4}
+\contentsline {subsection}{\numberline {5.4.5}Air flow testing}{78}{subsection.5.4.5}
+\contentsline {section}{\numberline {5.5}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{79}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1}Locus around fixed monitoring station}{79}{subsection.5.5.1}
+\contentsline {subsubsection}{Location}{79}{section*.38}
+\contentsline {subsubsection}{Data collection}{80}{section*.40}
+\contentsline {subsubsection}{Demonstrating higher spatial resolution}{81}{section*.42}
+\contentsline {subsection}{\numberline {5.5.2}Event route}{81}{subsection.5.5.2}
+\contentsline {subsubsection}{Location}{82}{section*.43}
+\contentsline {subsubsection}{Data collection}{82}{section*.44}
+\contentsline {subsubsection}{Demonstrating higher temporal resolution}{82}{section*.46}
+\contentsline {section}{\numberline {5.6}Question 3: How can these air quality monitoring devices be applied for public benefit?}{83}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Using commuting cyclists to collect pollution data}{84}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Road network graph}{84}{subsection.5.6.2}
+\contentsline {subsection}{\numberline {5.6.3}Search algorithm}{88}{subsection.5.6.3}
+\contentsline {subsection}{\numberline {5.6.4}Comparing routes}{88}{subsection.5.6.4}
+\contentsline {chapter}{\numberline {6}Results}{89}{chapter.6}
+\contentsline {section}{\numberline {6.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{89}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Data quality}{89}{subsection.6.1.1}
+\contentsline {subsubsection}{Exploratory analysis}{90}{section*.49}
+\contentsline {subsubsection}{IQR}{90}{section*.52}
+\contentsline {subsubsection}{Median and MAD}{92}{section*.54}
+\contentsline {subsubsection}{Per time period group}{92}{section*.57}
+\contentsline {subsubsection}{Moving average}{93}{section*.59}
+\contentsline {subsubsection}{Geo-spatial outliers}{97}{section*.62}
+\contentsline {subsubsection}{Summary}{97}{section*.64}
+\contentsline {subsection}{\numberline {6.1.2}Maps}{98}{subsection.6.1.2}
+\contentsline {subsection}{\numberline {6.1.3}Pattern analysis}{98}{subsection.6.1.3}
+\contentsline {subsection}{\numberline {6.1.4}Positioning on bicycle}{98}{subsection.6.1.4}
+\contentsline {subsection}{\numberline {6.1.5}Air flow}{98}{subsection.6.1.5}
+\contentsline {subsection}{\numberline {6.1.6}Robustness}{98}{subsection.6.1.6}
+\contentsline {subsection}{\numberline {6.1.7}Real-time}{98}{subsection.6.1.7}
+\contentsline {section}{\numberline {6.2}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{98}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{98}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Bath football event}{99}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Question 3: How can these air quality monitoring devices be applied for public benefit?}{99}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Coverage}{99}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Comparison of shortest and health-optimal routes}{99}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Health benefit}{100}{subsection.6.3.3}
+\contentsline {chapter}{\numberline {7}Discussion}{103}{chapter.7}
+\contentsline {section}{\numberline {7.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{103}{section.7.1}
+\contentsline {section}{\numberline {7.2}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{103}{section.7.2}
+\contentsline {section}{\numberline {7.3}Question 3: How can these air quality monitoring devices be applied for public benefit?}{103}{section.7.3}
+\contentsline {section}{\numberline {7.4}Limitations}{103}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Public preferences}{103}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Timing of project}{104}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Resource constraints}{104}{subsection.7.4.3}
+\contentsline {subsection}{\numberline {7.4.4}Equipment breakages}{104}{subsection.7.4.4}
+\contentsline {section}{\numberline {7.5}Additional application post-project completion}{104}{section.7.5}
+\contentsline {chapter}{\numberline {8}Conclusion}{106}{chapter.8}
+\contentsline {section}{\numberline {8.1}Conclusions}{106}{section.8.1}
+\contentsline {section}{\numberline {8.2}Future work}{106}{section.8.2}
+\contentsline {chapter}{Bibliography}{108}{section.8.2}
+\contentsline {chapter}{Appendix}{118}{chapter*.70}
+\contentsline {chapter}{\numberline {A}Installation instructions}{118}{appendix.A}
+\contentsline {section}{\numberline {A.1}GPS}{118}{section.A.1}
+\contentsline {chapter}{\numberline {B}Code}{119}{appendix.B}
+\contentsline {section}{\numberline {B.1}PHP API}{119}{section.B.1}
+\contentsline {chapter}{\numberline {C}Data analysis code}{123}{appendix.C}
+\contentsline {section}{\numberline {C.1}Data structuring}{123}{section.C.1}
+\contentsline {section}{\numberline {C.2}Learning}{123}{section.C.2}
