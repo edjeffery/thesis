@@ -1647,10 +1647,10 @@ Across the data collection period, \num{9877} measurements were collected along 
 
 \subsection{Data quality}
 
-Firstly, it must be mentioned that half-way through the data collection the MQ131 and DHT22 sensor broke due to moisture exposure. The MQ131 sensor was replaced and calibrated using the same method as detailed in Section \ref{mq131_calibration}. The DHT22 sensor was also replaced, although it required no calibration. The readings from the period during which these sensors were broken were discarded.
+Firstly, it must be mentioned that half-way through the data collection the MQ131 and DHT22 sensor broke due to moisture exposure. The MQ131 sensor was replaced and calibrated using the same method as detailed in Section \ref{mq131_calibration}. The DHT22 sensor was also replaced, although it required no calibration. The readings from the period during which these sensors were broken were discarded. Furthermore, the particulate sensor occasionally outputs a zero reading, but a zero concentration of particulates is extremely unlikely. Therefore, we also treat these measurements as errors and exclude them prior to conducting the outlier detection so they do not skew the detection ranges.
 % Maybe also exclude all other measurements from those days.
 
-We first conduct exploratory data analysis to understand the quality of data collected and identify where potential outliers may lie. We then implement robust outlier detection methods to identify outliers, are then excluded from our investigation.
+We first conduct exploratory data analysis to understand the quality of data collected and identify where potential outliers may lie. We then implement robust outlier detection methods to identify outliers, which are then excluded from our investigation.
 
 \subsubsection{Exploratory analysis}
 
@@ -1760,7 +1760,7 @@ The results of performing this outlier detection method are shown in Table \ref{
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 43.83 & 121.65 & 0.00 & 1110 & 11.24 \\
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 45.50 & 128.64 & 0.00 & 1068 & 11.75 \\
   O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 11.17 & 72.74 & 28.06 & 142 & 1.79 \\
   General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
@@ -1784,7 +1784,7 @@ The results of this method are detailed in Table \ref{tab:mad_outliers}. Once ag
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {MAD} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 25.36 & 101.25 & 0.00 & 1318 & 13.34 \\
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.38 & 104.26 & 0.00 & 1285 & 14.14 \\
   O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.30 & 75.21 & 25.42 & 105 & 1.33 \\
   General AQ (V) & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
@@ -1799,7 +1799,7 @@ The results of this method are detailed in Table \ref{tab:mad_outliers}. Once ag
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
   Gas/particulate & N & {Median} & {S\textsubscript{n}} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9877 & 25.18 & 25.80 & 102.57 & 0.00 & 1308 & 13.24 \\
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.22 & 103.80 & 0.00 & 1288 & 14.17 \\
   O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.46 & 75.69 & 24.94 & 97 & 1.22 \\
   General AQ (V) & 9877 & 1.17 & 0.17 & 1.67 & 0.67 & 121 & 1.23 \\ \bottomrule
     \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
@@ -1808,7 +1808,7 @@ The results of this method are detailed in Table \ref{tab:mad_outliers}. Once ag
 
 \subsubsection{Per time period group}
 
-The above methods are also implemented on a per-group basis, with the group being the day of the week. These results are shown in Table \ref{tab:outliers_time_period}. In the interest of clarity, the tables are simplified to only show the main figures. The full tables can be found in Appendix XXX. The results show that, on average, running the outlier detection on a per-group basis leads to an increased number of measurements identified as outliers. The reason for this could be... Although the number of outliers rose when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually fell. [NOT SURE HOW TO INTERPRET] It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping. [REASONING]
+The above methods are also implemented on a per-group basis, with the group being the day of the week. These results are shown in Table \ref{tab:outliers_time_period}. In the interest of clarity, the tables are simplified to only show the main figures. The full tables can be found in Appendix XXX. The results show that, on average, running the outlier detection on a per-group basis leads to a slightly decreased number of measurements identified as outliers. The reason for this could be... Although the number of outliers rose when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually fell. [NOT SURE HOW TO INTERPRET] It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping. [REASONING]
 
 %\begin{table}[!tbp]
 %  \centering
@@ -1833,10 +1833,10 @@ The above methods are also implemented on a per-group basis, with the group bein
   \cmidrule(lr){2-5}
   \cmidrule(lr){6-9}
   Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
-  PM10			& 1110	& 1318	& 1308	& 1245	& 1046	& 1350	& 1434	& 1277 \\
-  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 97		& 192	& 187	& 159 \\
-  General AQ		& 195	& 139	& 121	& 152	& 170	& 179	& 213	& 187 \\ \midrule
-  Total			& 1447	& 1562	& 1526	& 1512	& 1313	& 1721	& 1834	& 1623\\\bottomrule
+  PM10			& 1068	& 1285	& 1288	& 1214	& 1026	& 1298	& 1304	& 1209 \\
+  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 136	& 89		& 93		& 106 \\
+  General AQ		& 195	& 139	& 121	& 152	& 201	& 152	& 141	& 165 \\ \midrule
+  Total			& 1405	& 1529	& 1506	& 1480	& 1363	& 1539	& 1538	& 1480\\\bottomrule
   \end{tabular}
 \end{table}
 % Might have to change these to percentages due to varying sample sizes.
@@ -1854,10 +1854,10 @@ The outlier detection methods are also applied using moving averages, to account
   {} & \multicolumn{4}{c}{Moving average}  \\
   \cmidrule(lr){2-5}
   Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
-  PM10			& 1184	& 1053	& 1024	& 1087	\\
+  PM10			& 980	& 800	& 769	& 850	\\
   O\textsubscript{3}	& 612	& 502	& 463	& 526	\\
   General AQ		& 674	& 406	& 342	& 474	\\ \midrule
-  Total			& 2470	& 1961	& 1829	& 2087	\\ \bottomrule
+  Total			& 2266	& 1708	& 1574	& 1850	\\ \bottomrule
   \end{tabular}
 \end{table}
 
@@ -1907,7 +1907,25 @@ Since the routes in each of the three data collection periods are consistent, th
 
 \subsubsection{Summary}
 
-The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, ... These values are then discarded.
+The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, ... These values are then discarded. The changes in dataset sizes are shown in Table \ref{tab:size_change}.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Dataset size changes.}
+  \label{tab:size_change}
+  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=5] S[table-format=5] S[table-format=5] }
+  \toprule
+   {} & {Initial} & \multicolumn{2}{c}{Errors removed} & \multicolumn{2}{c}{Outliers removed} \\
+  \cmidrule(lr){2-2}
+  \cmidrule(lr){3-4}
+  \cmidrule(lr){5-6}
+  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} \\ \midrule
+  PM10			& 9877	& 9089	& 788	& 8570	& 519	\\
+  O\textsubscript{3}	& 9877	& 7920	& 1957	& 7784	& 136	\\
+  General AQ		& 9877	& 9877	& 0		& 9676	& 201	\\ \midrule
+  Total			& 29631	& 26886	& 2745	& 26030	& 856	\\ \bottomrule
+  \end{tabular}
+\end{table}
 
 Regarding the geo-spatial outliers, these have been corrected as best possible. Where they still remain erroneous, these measurements have been discarded from any geo-spatial analysis. However, the geo-spatial measurement being an outlier does not affect the pollution sensor measurements, so these remain for the other analyses.
 

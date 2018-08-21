@@ -86,8 +86,8 @@
 \contentsline {chapter}{\numberline {6}Results}{77}{chapter.6}
 \contentsline {section}{\numberline {6.1}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{77}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Data quality}{77}{subsection.6.1.1}
-\contentsline {subsubsection}{Exploratory analysis}{77}{section*.49}
-\contentsline {subsubsection}{IQR}{79}{section*.52}
+\contentsline {subsubsection}{Exploratory analysis}{78}{section*.49}
+\contentsline {subsubsection}{IQR}{78}{section*.52}
 \contentsline {subsubsection}{Median and MAD}{81}{section*.54}
 \contentsline {subsubsection}{Per time period group}{82}{section*.57}
 \contentsline {subsubsection}{Moving average}{82}{section*.59}
@@ -103,7 +103,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{86}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Bath football event}{86}{subsection.6.2.2}
 \contentsline {section}{\numberline {6.3}Question 3: How can these air quality monitoring devices be applied for public benefit?}{86}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Coverage}{86}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Coverage}{87}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Comparison of shortest and health-optimal routes}{87}{subsection.6.3.2}
 \contentsline {subsection}{\numberline {6.3.3}Health benefit}{89}{subsection.6.3.3}
 \contentsline {chapter}{\numberline {7}Discussion}{90}{chapter.7}
@@ -120,7 +120,7 @@
 \contentsline {section}{\numberline {8.1}Conclusions}{92}{section.8.1}
 \contentsline {section}{\numberline {8.2}Future work}{92}{section.8.2}
 \contentsline {chapter}{Bibliography}{94}{section.8.2}
-\contentsline {chapter}{Appendix}{103}{chapter*.69}
+\contentsline {chapter}{Appendix}{103}{chapter*.70}
 \contentsline {chapter}{\numberline {A}Installation instructions}{103}{appendix.A}
 \contentsline {section}{\numberline {A.1}GPS}{103}{section.A.1}
 \contentsline {chapter}{\numberline {B}Code}{104}{appendix.B}
