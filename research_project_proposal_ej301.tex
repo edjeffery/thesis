@@ -58,7 +58,7 @@
 
 % Front matter
 %\title{\vspace{-1cm}AirBike: a low-cost urban cycling air quality monitoring system using Raspberry Pi computers and machine learning}
-\title{\vspace{-1.5cm}A low-cost bicycle-based air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
+\title{\vspace{0cm}A low-cost bicycle-based air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
 \author{Edward Jeffery}
 \degree{Master of Science}
 \department{Department of Computer Science} \degreemonthyear{October 2018}
@@ -1219,10 +1219,11 @@ Values that fall outside this range are unlikely to be from the underlying distr
 
 However, the mean and standard deviation are not robust to outliers (i.e. the addition of one large erroneous value can disproportionately influence these values). Given we are using low-cost sensors that are more prone to errors than industry-grade sensors, a robust detection method is needed. As a simple check for the presence of outliers, one can examine the distribution of values using a histogram. If some bars are spaced considerably far away from the majority of values, this can indicate outliers are present.
 
-In order to more precisely identify which measurements are outliers in our data, we use a two-part approach. In each case, we apply the outlier detection method and if one or more of these methods reports a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
+In order to more precisely identify which measurements are outliers in our data, we use a three-part approach. In each case, we apply the outlier detection method and if all of these methods report a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
 \begin{enumerate}
 \item Inter-quartile range (IQR) (Section \ref{iqr})
 \item Median and Median Absolute Deviation (MAD) (Section \ref{mad})
+\item S\textsubscript{n} (Section \ref{sn})
 \end{enumerate}
 
 %These outlier detection techniques are then used to create a type of band pass filter in which data outside a calculated range are filtered out.
@@ -1254,7 +1255,9 @@ for each $x_i$ and flagging those $x_i$ which exceed a certain cutoff (typically
 
 %However, the MAD does have drawbacks. Firstly, the MAD takes a symmetric view on dispersion, meaning it can perform poorly on asymmetric distributions (i.e. skewed). Secondly, it has low Gaussian efficiency (approximately 37\%). % potentially remove Gaussian efficiency
 
-However, the MAD takes a symmetric view on dispersion, meaning it can perform poorly on asymmetric distributions (i.e. skewed). \cite{rousseeuw1993alternatives} suggested an alternative estimator, $S_n$.
+\subsection{S\textsubscript{n}} \label{sn}
+
+The MAD takes a symmetric view on dispersion, meaning it can perform poorly on asymmetric distributions (i.e. skewed). \cite{rousseeuw1993alternatives} suggested an alternative estimator, $S_n$.
 \begin{equation} \label{eqn:sn}
 S_n = c \cdot M_i ( M_j | x_i - x_j | )
 \end{equation}
@@ -1285,7 +1288,7 @@ Equation \ref{eqn:sn} is very similar to Equation \ref{eqn:mad}, except that the
 %\label{pm_histogram}
 %\end{figure}
 
-\subsection{Time series}
+\subsection{Time series} \label{time_series_incorp}
 
 Since our dataset is a collection of time series, the outlier detection should also take this into account. There are two ways we incorporate this into our methodology.
 
@@ -1457,6 +1460,10 @@ As Section \ref{air_flow} detailed, air flow can affect the sensor measurements.
 
 Similarly to the position testing in Section \ref{position_testing}, we will cycle with the device attached along the same stretch of road, changing the air flow system each time. The results will be compared to see which air flow system provides the lowest variability in measurements.
 
+\subsection{Robustness}
+% To do
+
+
 \section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}  \label{meth:q2}
 
 In order to answer this research question, we firstly need to demonstrate how the device can collect measurements across a greater area compared to a fixed monitoring station, whilst not sacrificing temporal resolution (Section \ref{sec:locus}). By collecting measurements across a larger area, it is possible to generate a more detailed view of pollution in an area, thus improving spatial resolution. Secondly, we need to demonstrate how improved temporal resolution is possible without sacrificing spatial resolution (Section \ref{sec:event}). 
@@ -1571,7 +1578,7 @@ The calculated coverage percentages are then plotted on a graph to visualise how
 
 \subsection{Road network graph} \label{network_graph}
 
-To create a graph that represents the road network in Bath, we use the python module \texttt{osmnx} \citep{boeing2017osmnx}, which uses data from OpenStreetMap. It is possible to specify the mode of transport when creating the graph, with the choices being walking, cycling and driving. We chose driving, despite the data being collected on a bicycle. The reason for this was that cycling commuters prefer to use bike paths \citep{skov_petersen2018cyclingpreferences, broach2012wherecyclistsride}, of which there are few in Bath, meaning cyclists will typically cycle on the roads.
+To create a graph that represents the road network in Bath, we use the python module \texttt{osmnx} \citep{boeing2017osmnx}, which uses data from OpenStreetMap. It is possible to specify the mode of transport when creating the graph, with the choices being walking, cycling and driving. We chose driving, despite the data being collected on a bicycle. The reason for this was that cycling commuters prefer to use bike paths \citep{broach2012wherecyclistsride, skov_petersen2018cyclingpreferences}, of which there are few in Bath, meaning cyclists will typically cycle on the roads.
 
 We represent Bath as a \textit{directed} graph $G = (V, E, W_d, W_p)$, consisting of a set of vertices $V$, a set of edges $E$ and two sets of edge weights $W_d$ and $W_p$. We herein refer to vertices as `nodes'. Each node $v_i \in V$ represents an intersection between two or more roads, or a dead-end. Each edge $e_j \in E$ represents a road between two nodes and is associated with weights $w_{j, d} \in W_d$ and $w_{j, p} \in W_p$, where $w_{j, d} = d_j$ is the length of the edge and $w_{j, p}$ is a weight generated by our cost function. The graph generated by \texttt{osmnx} for Bath is shown in Figure \ref{fig:network_graph}.
 
@@ -1828,12 +1835,12 @@ The above methods are also implemented on a per-group basis, with the group bein
   \centering
   \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
   \label{tab:outliers_time_period}
-  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
   \toprule
   {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} \\
   \cmidrule(lr){2-5}
   \cmidrule(lr){6-9}
-  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+  Gas/particulate & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} \\ \midrule
   PM10			& 1068	& 1285	& 1288	& 1214	& 1026	& 1298	& 1304	& 1209 \\
   O\textsubscript{3}	& 142	& 105	& 97		& 115	& 136	& 89		& 93		& 106 \\
   General AQ		& 195	& 139	& 121	& 152	& 201	& 152	& 141	& 165 \\ \midrule
@@ -1850,11 +1857,11 @@ The outlier detection methods are also applied using moving averages, to account
   \centering
   \caption{Outliers when running each method using moving average and per collection run.}
   \label{tab:outliers_moving_avg}
-  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
   \toprule
   {} & \multicolumn{4}{c}{Moving average}  \\
   \cmidrule(lr){2-5}
-  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+  Gas/particulate & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} \\ \midrule
   PM10			& 980	& 800	& 769	& 850	\\
   O\textsubscript{3}	& 612	& 502	& 463	& 526	\\
   General AQ		& 674	& 406	& 342	& 474	\\ \midrule
@@ -1865,6 +1872,7 @@ The outlier detection methods are also applied using moving averages, to account
 \begin{landscape}
 \begin{table}[!tbp]
   \centering
+  \small
   \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
   \label{tab:outliers_time_period}
   \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
@@ -1908,7 +1916,45 @@ Since the routes in each of the three data collection periods are consistent, th
 
 \subsubsection{Summary}
 
-The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, ... These values are then discarded. The changes in dataset sizes are shown in Table \ref{tab:size_change}.
+The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
+
+\begin{figure}[!tbp]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/pm_histogram_clean}
+                \caption{Shinyei PPD42}
+                \label{fig:pm_histogram_clean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/ozone_histogram_clean}
+            	\caption{MQ131}
+            	\label{fig:ozone_histogram_clean}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/mq135_histogram_clean}
+                \caption{MQ135}
+                \label{fig:mq135_histogram_clean}
+            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/temp_histogram}
+%            	\caption{DHT22 temperature}
+%            	\label{fig:temp_histogram}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%    	\centering
+%        \begin{subfigure}[t]{.5\linewidth}
+%            \includegraphics[width=\textwidth]{images/humidity_histogram}
+%            \caption{DHT22 humidity}
+%            \label{fig:humidity_histogram}
+%        \end{subfigure}
+    \end{minipage}
+    \caption[Sensor measurement histograms with cleaned data.]{Histograms depicting the distribution of pollution sensor measurements with cleaned data. (a) shows a slight positive skew; (b) and (c) have approximately normal distributions.}
+    \label{fig:histograms_clean}
+\end{figure}
 
 \begin{table}[!tbp]
   \centering
@@ -1921,7 +1967,7 @@ The use of moving averages when applying these methods results in too many measu
   \cmidrule(lr){3-4}
   \cmidrule(lr){5-6}
   Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} \\ \midrule
-  PM10			& 9877	& 9089	& 788	& 8570	& 519	\\
+  PM10			& 9877	& 9089	& 788	& 8063	& 1026	\\
   O\textsubscript{3}	& 9877	& 7920	& 1957	& 7784	& 136	\\
   General AQ		& 9877	& 9877	& 0		& 9676	& 201	\\ \midrule
   Total			& 29631	& 26886	& 2745	& 26030	& 856	\\ \bottomrule
@@ -1936,21 +1982,137 @@ Regarding the geo-spatial outliers, these have been corrected as best possible. 
 % Hotspots?
 % Land-use regression (LUR) modelling ?
 
+Using the cleaned dataset, pollution levels along the route can be mapped. Figure \ref{fig:route_pollution_maps} shows pollution maps for each of the pollutants. Each pollutant has two maps: the first uses the mean of all measurements inside each tile's boundaries to colour the tile and the second uses the maximum. By analysing the colours of the tiles in these maps, it is possible to identify high pollution areas in Bath.
+
+Figure \ref{fig:pm10_map_median} has a high level of pollution in the north west corner of the route. This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. For the average ozone levels in Figure \ref{fig:o3_map_median}, the worst pollution is along the road in the south west part of the route. This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). Figure \ref{fig:o3_map_max} does not show much variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge. This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Figure \ref{fig:mq135_map_median} does not have any identifiable problem areas for general air quality, with any high points being sparsely dotted around the route. Taking the maximum measurements in each tile, the majority of the route has experienced a high measurement from the general air quality sensor.
+
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/pm10_map_median}
+                \caption{PM10 (median)}
+                \label{fig:pm10_map_median}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/pm10_map_max}
+            	\caption{PM10 (max)}
+            	\label{fig:pm10_map_max}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/o3_map_median}
+                \caption{O\textsubscript{3} (median)}
+                \label{fig:o3_map_median}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/o3_map_max}
+            	\caption{O\textsubscript{3} (max)}
+            	\label{fig:o3_map_max}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/mq135_map_median}
+                \caption{General AQ (median)}
+                \label{fig:mq135_map_median}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/mq135_map_max}
+            	\caption{General AQ (max)}
+            	\label{fig:mq135_map_max}
+	   \end{subfigure}
+        \end{minipage}
+    \caption[Air quality pollution maps of the route.]{Air quality pollution maps of the route.}
+    \label{fig:route_pollution_maps}
+\end{figure}
+
+
 \subsection{Pattern analysis}
 % Any differences between days of week?
 % Week vs weekend
 % Morning vs afternoon
 % Direction of travel
 
+In this section, the focus is on any patterns that can be identified in the data collected by the air quality monitoring device.
+
+Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant by the day of the week. As Figure \ref{fig:dow_pm10} shows, the average pollution level increases throughout the week, from a low on Monday to a high on Sunday. There is no identifiable pattern in Figure \ref{fig:dow_o3} for O\textsubscript{3} or Figure \ref{fig:dow_mq135} for general air quality.
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/dow_pm10}
+                \caption{PM10}
+                \label{fig:dow_pm10}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/dow_o3}
+            	\caption{O\textsubscript{3}}
+            	\label{fig:dow_o3}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+    	\centering
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/dow_mq135}
+                \caption{General AQ}
+                \label{fig:dow_mq135}
+            \end{subfigure}
+        \end{minipage}
+    \caption[Pollution by day of the week.]{Pollution by day of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \label{fig:dow_bars}
+\end{figure}
+
+Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by the week period, as initially detailed in Section \ref{time_series_incorp}. For PM10 and O\textsubscript{3}, the AM measurements are on average higher or equal to the PM measurements. This relationship does not hold for the general air quality measurements, which have a higher average for Weekend PM compared to Weekend AM.
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/week_period_pm10}
+                \caption{PM10}
+                \label{fig:week_period_pm10}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/week_period_o3}
+            	\caption{O\textsubscript{3}}
+            	\label{fig:week_period_o3}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+    	\centering
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/week_period_mq135}
+                \caption{General AQ}
+                \label{fig:week_period_mq135}
+            \end{subfigure}
+        \end{minipage}
+    \caption[Pollution by period of the week.]{Pollution by period of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \label{fig:week_period_bars}
+\end{figure}
+
+
 \subsection{Positioning on bicycle}
 
-\subsection{Air flow}
+Figure \ref{fig:bike_positions_pm10} displays the results from testing the air quality monitoring device in different locations on the bicycle. The results are displayed for PM10 only as the O\textsubscript{3} and general air quality measurements show no significant difference in pattern.
+
+Position 1 and Position 2 have relatively larger spikes in their measurements compared to the baseline of approximately 20-25$\mu g/m^3$. Position 3 appears to be the most stable position, with lower variation in the measurements compared to the other two positions. 
+
+[MOVE TO DISCUSSION] Given this was carried out over a short time period and along the same quiet stretch of road, it was not expected that the environmental conditions would change significantly over the collection period. Therefore, the results should be relatively constant. However, the figure shows that Position 1 and Position 2 have relatively large spikes in their measurements. These positions are underneath the rider and on the seat stay (refer to Figure \ref{} for images of these positions) and were identified as positions that could potentially be impacted by particulate matter thrown up by the wheels.
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.7\textwidth]{images/bike_positions_annotated}
+\caption[Bike position testing.]{Bike position testing. The device was attached in 3 different positions on the bike. Positions 1 and 2 have large spikes in their measurements, whereas position 3 is relatively stable.}
+\label{fig:bike_positions_pm10}
+\end{figure}
+
+%\subsection{Air flow}
 
 \subsection{Robustness}
 % Weather, vibration, power
-
-\subsection{Real-time}
-% Maybe change title to something related to 'delay'
 
 
 \section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?} \label{q2_results}
@@ -1958,12 +2120,93 @@ Regarding the geo-spatial outliers, these have been corrected as best possible. 
 \subsection{Bath Guildhall locus}
 % Spatial
 
-\num{1452} measurements were collected across a busy Friday afternoon.
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/locus_pm10_mean}
+                \caption{PM10 (mean)}
+                \label{fig:locus_pm10_mean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/locus_pm10_max}
+            	\caption{PM10 (max)}
+            	\label{fig:locus_pm10_max}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/locus_o3_mean}
+                \caption{O\textsubscript{3} (mean)}
+                \label{fig:locus_o3_mean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/locus_o3_max}
+            	\caption{O\textsubscript{3} (max)}
+            	\label{fig:locus_o3_max}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/locus_mq135_mean}
+                \caption{General AQ (mean)}
+                \label{fig:locus_mq135_mean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/locus_mq135_max}
+            	\caption{General AQ (max)}
+            	\label{fig:locus_mq135_max}
+	   \end{subfigure}
+        \end{minipage}
+    \caption[Pollution maps of locus route.]{Pollution maps of locus route. (a) and (b) show PM10; (c) and (d) show O\textsubscript{3}; (e) and (f) show general air quality.}
+    \label{fig:locus_maps}
+\end{figure}
+
+Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. Using the same outlier detection and removal technique detailed in Section X, the dataset was cleaned. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods were run on the dataset as a whole. This led to XXX outliers identified and removed.
+
+Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants.
 
 \subsection{Bath football event}
 % Temporal
 
-\num{1044} measurements were collected for the Bath City FC football match.
+\num{1044} measurements were collected for the Bath City FC football match. As with the locus dataset, the data was cleaned by running the outlier detection methods on the dataset as a whole. X outliers were detected and removed.
+
+Figure \ref{fig:event_heatmap_pm10} visualises the PM10 pollution along the route over time. The vertical lines represent key time intervals: the first line marks the start of the football match and the second marks the end. This heatmap shows a relatively high level of pollution prior to the match
+
+Furthermore, each vertical column of this graph represents a complete one-way traversal of the route outside the football match, taking approximately 7 minutes each time. This demonstrates that the device can satisfactorily measure pollution across a small spatial area with an improved time resolution compared to one of the fixed air quality monitoring stations in Bath (7 minutes compared to 15 minutes). If the device were to be moved less, then the temporal resolution could be increased further, up to a maximum temporal resolution of 10 seconds (the time interval between taking sensor measurements) if the device were stationary.
+
+%\begin{figure}[!tb]
+%\centering
+%\includegraphics[width=0.8\textwidth]{images/event_heatmap_pm10}
+%\caption[PM10 heatmap of football match event.]{PM10 heatmap of the football match. Each column represents a complete one-way traversal of the route outside the football match, taking approximately 7 minutes each time.}
+%\label{fig:event_heatmap_pm10}
+%\end{figure}
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/event_heatmap_pm10}
+                \caption{PM10}
+                \label{fig:event_heatmap_pm10}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/event_heatmap_o3}
+            	\caption{O\textsubscript{3}}
+            	\label{fig:event_heatmap_o3}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+    	\centering
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/event_heatmap_mq135}
+                \caption{General AQ}
+                \label{fig:event_heatmap_mq135}
+            \end{subfigure}
+        \end{minipage}
+    \caption[Heatmaps of event pollution.]{Heatmaps of event pollution. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \label{fig:event_heatmaps}
+\end{figure}
 
 
 \section{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{q3_results}

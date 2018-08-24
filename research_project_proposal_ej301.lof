@@ -23,21 +23,28 @@
 \contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{66}{figure.caption.33}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{71}{figure.caption.34}
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{75}{figure.caption.35}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{76}{figure.caption.35}
 \contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{76}{figure.caption.36}
 \contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{78}{figure.caption.37}
 \contentsline {figure}{\numberline {5-5}{\ignorespaces Analysis of fixed monitoring station locations.}}{80}{figure.caption.39}
 \contentsline {figure}{\numberline {5-6}{\ignorespaces Locus-based route.}}{81}{figure.caption.41}
 \contentsline {figure}{\numberline {5-7}{\ignorespaces Event-based route.}}{83}{figure.caption.45}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces \texttt {osmnx} graph for Bath.}}{85}{figure.caption.47}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces K-nearest neighbours.}}{87}{figure.caption.48}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces \texttt {osmnx} graph for Bath.}}{86}{figure.caption.47}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces K-nearest neighbours.}}{88}{figure.caption.48}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6-1}{\ignorespaces Sensor measurement histograms.}}{91}{figure.caption.50}
 \contentsline {figure}{\numberline {6-2}{\ignorespaces Tukey's boxplots.}}{95}{figure.caption.51}
 \contentsline {figure}{\numberline {6-3}{\ignorespaces Longitude and latitude waveforms.}}{97}{figure.caption.63}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Cyclist coverage.}}{100}{figure.caption.66}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Example routes.}}{101}{figure.caption.67}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Changes in exposure and route length.}}{102}{figure.caption.69}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Sensor measurement histograms with cleaned data.}}{98}{figure.caption.65}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Air quality pollution maps of the route.}}{100}{figure.caption.67}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Pollution by day of the week.}}{101}{figure.caption.68}
+\contentsline {figure}{\numberline {6-7}{\ignorespaces Pollution by period of the week.}}{102}{figure.caption.69}
+\contentsline {figure}{\numberline {6-8}{\ignorespaces Bike position testing.}}{103}{figure.caption.70}
+\contentsline {figure}{\numberline {6-9}{\ignorespaces Pollution maps of locus route.}}{105}{figure.caption.71}
+\contentsline {figure}{\numberline {6-10}{\ignorespaces Heatmaps of event pollution.}}{106}{figure.caption.72}
+\contentsline {figure}{\numberline {6-11}{\ignorespaces Cyclist coverage.}}{107}{figure.caption.73}
+\contentsline {figure}{\numberline {6-12}{\ignorespaces Example routes.}}{108}{figure.caption.74}
+\contentsline {figure}{\numberline {6-13}{\ignorespaces Changes in exposure and route length.}}{109}{figure.caption.76}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
