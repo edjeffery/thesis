@@ -12,14 +12,13 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Humidity and temperature factors\relax }}{60}{table.caption.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Outlier detection summary using IQR method on the whole dataset. The particulate measurements have the highest percentage of outliers. \relax }}{92}{table.caption.53}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. \relax }}{93}{table.caption.55}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower than the MAD method. \relax }}{93}{table.caption.56}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.\relax }}{94}{table.caption.58}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Outliers when running each method using moving average and per collection run.\relax }}{94}{table.caption.60}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.\relax }}{96}{table.caption.61}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Dataset size changes.\relax }}{99}{table.caption.66}
-\contentsline {table}{\numberline {6.8}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{109}{table.caption.75}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Summary statistics by device position on bicycle.\relax }}{92}{table.caption.50}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Outlier detection summary using IQR method on the whole dataset. The particulate measurements have the highest percentage of outliers. \relax }}{96}{table.caption.55}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. \relax }}{96}{table.caption.57}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower than the MAD method. \relax }}{97}{table.caption.59}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.\relax }}{99}{table.caption.62}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Dataset size changes.\relax }}{102}{table.caption.67}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{110}{table.caption.75}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

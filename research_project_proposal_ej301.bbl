@@ -1,4 +1,4 @@
-\begin{thebibliography}{81}
+\begin{thebibliography}{82}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{Available from: }
@@ -234,6 +234,11 @@
   to Practice (A Workshop Summary)}}.
 \newblock \emph{\bibinfo{journal}{Sensors}},
   \bibinfo{volume}{17}(\bibinfo{number}{11}), p.\bibinfo{pages}{2478}.
+
+\bibitem[{Courthold(07/08/2018)}]{courthold2018max}
+\bibinfo{author}{Courthold, N.}, \bibinfo{year}{07/08/2018}.
+\newblock \emph{\bibinfo{title}{Air quality monitoring in bath}}.
+\newblock \bibinfo{note}{Email to E. Jeffery}.
 
 \bibitem[{De~Hartog et~al.(2010)De~Hartog, Boogaard, Nijland and
   Hoek}]{hartog2010health}
