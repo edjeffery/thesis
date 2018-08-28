@@ -19,28 +19,28 @@
 \BOOKMARK [1][-]{section.4.3}{General air quality sensor}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.4}{Temperature and humidity sensor}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.5}{Limitations}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Methodology}{}% 22
-\BOOKMARK [1][-]{section.5.1}{Research questions}{chapter.5}% 23
-\BOOKMARK [1][-]{section.5.2}{Location}{chapter.5}% 24
-\BOOKMARK [1][-]{section.5.3}{Data cleaning and data validation}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.4}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.5}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.6}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{chapter.5}% 28
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 29
-\BOOKMARK [1][-]{section.6.1}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{chapter.6}% 30
-\BOOKMARK [1][-]{section.6.2}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{chapter.6}% 31
-\BOOKMARK [1][-]{section.6.3}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{chapter.6}% 32
-\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 33
-\BOOKMARK [1][-]{section.7.1}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{chapter.7}% 34
-\BOOKMARK [1][-]{section.7.2}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{chapter.7}% 35
-\BOOKMARK [1][-]{section.7.3}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{chapter.7}% 36
-\BOOKMARK [1][-]{section.7.4}{Limitations}{chapter.7}% 37
-\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 38
-\BOOKMARK [1][-]{section.8.1}{Conclusions}{chapter.8}% 39
-\BOOKMARK [1][-]{section.8.2}{Future work}{chapter.8}% 40
-\BOOKMARK [1][-]{section.8.3}{Additional application post-project completion}{chapter.8}% 41
-\BOOKMARK [0][-]{figure.caption.88}{Bibliography}{}% 42
-\BOOKMARK [0][-]{chapter*.89}{Appendix}{}% 43
+\BOOKMARK [0][-]{chapter.5}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{}% 22
+\BOOKMARK [1][-]{section.5.1}{Methodology}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.2}{Results}{chapter.5}% 24
+\BOOKMARK [1][-]{section.5.3}{Discussion}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.6}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{}% 26
+\BOOKMARK [1][-]{section.6.1}{Methodology}{chapter.6}% 27
+\BOOKMARK [1][-]{section.6.2}{Results}{chapter.6}% 28
+\BOOKMARK [0][-]{chapter.7}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{}% 29
+\BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 30
+\BOOKMARK [1][-]{section.7.2}{Results and analysis}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 32
+\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 33
+\BOOKMARK [1][-]{section.8.1}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{chapter.8}% 34
+\BOOKMARK [1][-]{section.8.2}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.3}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.4}{Limitations}{chapter.8}% 37
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 38
+\BOOKMARK [1][-]{section.9.1}{Conclusions}{chapter.9}% 39
+\BOOKMARK [1][-]{section.9.2}{Future work}{chapter.9}% 40
+\BOOKMARK [1][-]{section.9.3}{Additional application post-project completion}{chapter.9}% 41
+\BOOKMARK [0][-]{figure.caption.92}{Bibliography}{}% 42
+\BOOKMARK [0][-]{chapter*.93}{Appendix}{}% 43
 \BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 44
 \BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 45
 \BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 46
