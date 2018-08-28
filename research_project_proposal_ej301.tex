@@ -1349,41 +1349,119 @@ We first conduct exploratory data analysis to understand the quality of data col
 \subsubsection{Exploratory analysis}
 
 \begin{figure}[!tbp]
-    \centering
+    %\centering
+    %PM
     \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
+        \centering
+            \begin{subfigure}[t]{.4\linewidth}
                 \includegraphics[width=\textwidth]{images/pm_histogram}
                 \caption{Shinyei PPD42}
                 \label{fig:pm_histogram}
             \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/ozone_histogram}
-            	\caption{MQ131}
-            	\label{fig:ozone_histogram}
+            \hfill
+            \begin{subfigure}[t]{.4\linewidth}
+            	\includegraphics[width=\textwidth]{images/pm_boxplot}
+            	\caption{Shinyei PPD42}
+            	\label{fig:pm_boxplot}
 	   \end{subfigure}
         \end{minipage}
+    % MQ131
     \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
+    \vspace{0pt}
+            \begin{subfigure}[t]{.4\linewidth}
+                \includegraphics[width=\textwidth]{images/ozone_histogram}
+                \caption{MQ131}
+                \label{fig:ozone_histogram}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[t]{.4\linewidth}
+            	\includegraphics[width=\textwidth]{images/ozone_boxplot}
+            	\caption{MQ131}
+            	\label{fig:ozone_boxplot}
+	   \end{subfigure}
+        \end{minipage}
+    % MQ135
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.4\linewidth}
                 \includegraphics[width=\textwidth]{images/mq135_histogram}
                 \caption{MQ135}
                 \label{fig:mq135_histogram}
             \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/temp_histogram}
-            	\caption{DHT22 temperature}
-            	\label{fig:temp_histogram}
+            \hfill
+            \begin{subfigure}[t]{.4\linewidth}
+            	\includegraphics[width=\textwidth]{images/mq135_boxplot}
+            	\caption{MQ135}
+            	\label{fig:mq135_boxplot}
 	   \end{subfigure}
         \end{minipage}
+    % Temp
     \begin{minipage}{1\linewidth}
-    	\centering
-        \begin{subfigure}[t]{.5\linewidth}
-            \includegraphics[width=\textwidth]{images/humidity_histogram}
-            \caption{DHT22 humidity}
-            \label{fig:humidity_histogram}
-        \end{subfigure}
-    \end{minipage}
-    \caption[Sensor measurement histograms.]{Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI{17}{\celsius}; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.}
+            \begin{subfigure}[t]{.4\linewidth}
+                \includegraphics[width=\textwidth]{images/temp_histogram}
+                \caption{DHT22 temperature}
+                \label{fig:temp_histogram}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[t]{.4\linewidth}
+            	\includegraphics[width=\textwidth]{images/temp_boxplot}
+            	\caption{DHT22 temperature}
+            	\label{fig:temp_boxplot}
+	   \end{subfigure}
+        \end{minipage}
+    % Humidity
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.4\linewidth}
+                \includegraphics[width=\textwidth]{images/humidity_histogram}
+                \caption{DHT22 humidity}
+                \label{fig:humidity_histogram}
+            \end{subfigure}
+            \hfill
+            \begin{subfigure}[t]{.4\linewidth}
+            	\includegraphics[width=\textwidth]{images/humidity_boxplot}
+            	\caption{DHT22 humidity}
+            	\label{fig:humidity_boxplot}
+	   \end{subfigure}
+        \end{minipage}
+    \caption[Sensor measurement histograms and boxplots.]{Histograms and Tukey boxplots depicting the distribution of pollution sensor measurements.}
+    \label{fig:histograms_and_boxplots}
 \end{figure}
+
+%\begin{figure}[!tbp]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/pm_histogram}
+%                \caption{Shinyei PPD42}
+%                \label{fig:pm_histogram}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/ozone_histogram}
+%            	\caption{MQ131}
+%            	\label{fig:ozone_histogram}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/mq135_histogram}
+%                \caption{MQ135}
+%                \label{fig:mq135_histogram}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/temp_histogram}
+%            	\caption{DHT22 temperature}
+%            	\label{fig:temp_histogram}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%    	\centering
+%        \begin{subfigure}[t]{.5\linewidth}
+%            \includegraphics[width=\textwidth]{images/humidity_histogram}
+%            \caption{DHT22 humidity}
+%            \label{fig:humidity_histogram}
+%        \end{subfigure}
+%    \end{minipage}
+%    \caption[Sensor measurement histograms.]{Histograms depicting the distribution of pollution sensor measurements. (a) shows a positive skew, with a number of extreme values; (b) and (c) have approximately normal distributions; (d) has a slight positive skew, with low frequencies of values below \SI{17}{\celsius}; (e) also has low frequency values below 25\% humidity, with a more varied distribution of values compared to the other histograms.}
+%\end{figure}
 
 As Figure \ref{fig:pm_histogram} shows, the distribution of PM10 measurements is positively skewed and it appears that the measurements contain a large number of outliers. The majority of the values are distributed between 0 and 200, with a number of other values spread out to over \num{1500}. Within the frequent observations, the positive skew indicates that lower measurements tend to be more common than higher measurements. Compared to the other histograms, the PM10 measurements from the Shinyei PPD42 particulate sensor have the largest range of values and, consequently, potentially the largest proportion of outliers.
 
@@ -1391,55 +1469,58 @@ Figures \ref{fig:ozone_histogram} and \ref{fig:mq135_histogram} show approximate
 
 The measurements from the DHT22 temperature and humidity sensor do not follow a normal distribution as closely. The temperature measurements (Figure \ref{fig:temp_histogram}) have a slight positive skew, with a range of low frequency values below \SI{17}{\celsius}. Likewise, the humidity measurements (Figure \ref{fig:humidity_histogram}) have a number of low frequency values below 25\% humidity, suggesting a number of outliers are present. These are noticeable by the sudden drop in frequency to the left-hand side of the distribution. Overall, the distribution of humidity measurements is more erratic, with a number of peaks in the distribution across a larger range.
 
-\begin{figure}[!htbp]
-    \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/pm_boxplot}
-                \caption{Shinyei PPD42}
-                \label{fig:pm_boxplot}
-            \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/ozone_boxplot}
-            	\caption{MQ131}
-            	\label{fig:mq131_boxplot}
-	   \end{subfigure}
-        \end{minipage}
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/mq135_boxplot}
-                \caption{MQ135}
-                \label{fig:pm_boxplot}
-            \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/temp_boxplot}
-            	\caption{DHT22 temperature}
-            	\label{fig:temp_boxplot}
-	   \end{subfigure}
-        \end{minipage}
-    \begin{minipage}{1\linewidth}
-    	\centering
-        \begin{subfigure}[t]{.5\linewidth}
-            \includegraphics[width=\textwidth]{images/humidity_boxplot}
-            \caption{DHT22 humidity}
-            \label{fig:humidity_boxplot}
-        \end{subfigure}
-    \end{minipage}
-    \caption[Tukey's boxplots.]{Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) displays a highly skewed distribution with a large number of outliers at the high-end of the distribution; (b) and (c) have similar distributions with a number of outliers at the high-end; (d) only has a small number of outliers at low values and is otherwise evenly distributed; (e) also has an even distribution with a small number of outliers at both high and low values.}
-    \label{tukey_boxplots}
-\end{figure}
+%\begin{figure}[!htbp]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/pm_boxplot}
+%                \caption{Shinyei PPD42}
+%                \label{fig:pm_boxplot}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/ozone_boxplot}
+%            	\caption{MQ131}
+%            	\label{fig:mq131_boxplot}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/mq135_boxplot}
+%                \caption{MQ135}
+%                \label{fig:pm_boxplot}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/temp_boxplot}
+%            	\caption{DHT22 temperature}
+%            	\label{fig:temp_boxplot}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%    	\centering
+%        \begin{subfigure}[t]{.5\linewidth}
+%            \includegraphics[width=\textwidth]{images/humidity_boxplot}
+%            \caption{DHT22 humidity}
+%            \label{fig:humidity_boxplot}
+%        \end{subfigure}
+%    \end{minipage}
+%    \caption[Tukey's boxplots.]{Tukey's box-plot of sensor measurements. The `whiskers' represent the outlier boundaries. (a) displays a highly skewed distribution with a large number of outliers at the high-end of the distribution; (b) and (c) have similar distributions with a number of outliers at the high-end; (d) only has a small number of outliers at low values and is otherwise evenly distributed; (e) also has an even distribution with a small number of outliers at both high and low values.}
+%    \label{tukey_boxplots}
+%\end{figure}
 
-\subsubsection{IQR}
+\subsubsection{Outlier detection methods}
 
-The first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{tukey_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have a non-zero number of outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
+The first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{fig:histograms_and_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have a non-zero number of outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
 
 The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.75\%) compared to the ozone (1.79\%) and general air quality measurements (1.97\%). The upper bound of 128.64 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}. The MQ131 sensor has the lowest percentage of outliers when using the IQR detection method. It must be noted that the sample size $N$ for the ozone measurements is considerably lower than for the other two pollutants due to the aforementioned breakage and replacement of the MQ131 sensor midway through data collection. However, the percentage of outliers is similar to that for the general air quality measurements, so this exclusion does not appear to have detrimentally impacted the analysis from a statistical perspective.
 
-% Discussion:  The reason behind this high percentage of outliers from the Shinyei PPD42 sensor is uncertain, but it may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. [EXPAND]
+The second outlier detection method is the median and MAD method. Outliers were identified as any measurements which were more than 3 times the MAD away from the median. The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+
+The third method uses the median and S\textsubscript{n} and the results are shown in Table \ref{tab:mad_outliers}. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+
 
 \begin{table}[!tbp]
   \centering
-  \caption{Outlier detection summary using IQR method on the whole dataset. The particulate measurements have the highest percentage of outliers. }
+  \caption{Outlier detection summary using IQR method on the whole dataset.}
   \label{tab:iqr_outliers}
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
@@ -1452,15 +1533,15 @@ The results of performing this outlier detection method are shown in Table \ref{
 \end{table}
 % Include temp and humidity as well?
 
-\subsubsection{Median and MAD}
-
-The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
-
-The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+%\subsubsection{Median and MAD}
+%
+%The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
+%
+%The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
 
 \begin{table}[!tbp]
   \centering
-  \caption{Outlier detection summary using median and MAD method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower for the ozone and general air quality measurements. }
+  \caption{Outlier detection summary using median and MAD method on the whole dataset.}
   \label{tab:mad_outliers}
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
@@ -1472,13 +1553,13 @@ The results of this method are detailed in Table \ref{tab:mad_outliers}. Once ag
   \end{tabular}
 \end{table}
 
-\subsubsection{S\textsubscript{n}}
-
-Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method of outlier detection. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+%\subsubsection{S\textsubscript{n}}
+%
+%Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method of outlier detection. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
 
 \begin{table}[!tbp]
   \centering
-  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower than the MAD method. }
+  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset.}
   \label{tab:mad_outliers}
   \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
   \toprule
@@ -1494,43 +1575,9 @@ Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method o
 
 The above methods are also implemented on a per-group basis, with the group being the week period (Week AM, Week PM, Weekend AM, Weekend PM). These results are shown in column 2 of Table \ref{tab:all_outliers}. In the interest of clarity, the table is simplified to only show the main figures. The results show that, on average, running the outlier detection on a per-group basis leads to a slightly decreased number of measurements identified as outliers. Although the number of outliers rises when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually falls. It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping.
 
-%\begin{table}[!tbp]
-%  \centering
-%  \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
-%  \label{tab:outliers_time_period}
-%  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
-%  \toprule
-%  {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} \\
-%  \cmidrule(lr){2-5}
-%  \cmidrule(lr){6-9}
-%  Gas/particulate & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} \\ \midrule
-%  PM10			& 1068	& 1285	& 1288	& 1214	& 1026	& 1298	& 1304	& 1209 \\
-%  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 136	& 89		& 93		& 106 \\
-%  General AQ		& 195	& 139	& 121	& 152	& 201	& 152	& 141	& 165 \\ \midrule
-%  Total			& 1405	& 1529	& 1506	& 1480	& 1363	& 1539	& 1538	& 1480\\\bottomrule
-%  \end{tabular}
-%\end{table}
-% Might have to change these to percentages due to varying sample sizes.
-
 \subsubsection{Moving average}
 
 The outlier detection methods are also applied using moving averages, to account for the time series nature of the data. The results are shown in column 3 of Table \ref{tab:all_outliers}. The results show that the number of outliers for PM10 reduces considerably, but the figure increases for O\textsubscript{3} and General AQ measurements, with the number of outliers increasing by approximately a factor of 3.
-
-%\begin{table}[!tbp]
-%  \centering
-%  \caption{Outliers when running each method using moving average and per collection run.}
-%  \label{tab:outliers_moving_avg}
-%  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
-%  \toprule
-%  {} & \multicolumn{4}{c}{Moving average}  \\
-%  \cmidrule(lr){2-5}
-%  Gas/particulate & \multicolumn{1}{c}{IQR} & \multicolumn{1}{c}{MAD} & \multicolumn{1}{c}{S\textsubscript{n}} & \multicolumn{1}{c}{Avg.} \\ \midrule
-%  PM10			& 980	& 800	& 769	& 850	\\
-%  O\textsubscript{3}	& 612	& 502	& 463	& 526	\\
-%  General AQ		& 674	& 406	& 342	& 474	\\ \midrule
-%  Total			& 2266	& 1708	& 1574	& 1850	\\ \bottomrule
-%  \end{tabular}
-%\end{table}
 
 \begin{landscape}
 \begin{table}[!tbp]
@@ -1579,7 +1626,7 @@ Since the routes in each of the three data collection periods are consistent, th
 
 \subsubsection{Outlier summary}
 
-The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. We think it is beneficial to separate the dataset into time period groupings, however. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
+The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
 
 \begin{figure}[!tbp]
     \centering
@@ -1623,18 +1670,17 @@ The use of moving averages when applying these methods results in too many measu
   \centering
   \caption{Dataset size changes.}
   \label{tab:size_change}
-  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=4] S[table-format=5] S[table-format=4] S[table-format=4]}
+  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=4] S[table-format=2.1] S[table-format=5] S[table-format=4] S[table-format=2.1]}
   \toprule
-   {} & {Initial} & \multicolumn{2}{c}{Errors removed} & \multicolumn{2}{c}{Outliers removed} & \multicolumn{1}{c}{Total} \\
+   {} & {Initial} & \multicolumn{3}{c}{Errors removed} & \multicolumn{3}{c}{Outliers removed} \\
   \cmidrule(lr){2-2}
-  \cmidrule(lr){3-4}
-  \cmidrule(lr){5-6}
-  \cmidrule(lr){7-7}
-  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Change} & \multicolumn{1}{c}{Change} \\ \midrule
-  PM10			& 9877	& 9089	& 788	& 8063	& 1026	& 1814 \\
-  O\textsubscript{3}	& 9877	& 7920	& 1957	& 7784	& 136	& 2093 \\
-  General AQ		& 9877	& 9877	& 0		& 9676	& 201	& 201 \\ \midrule
-  Total			& 29631	& 26886	& 2745	& 26030	& 856	& 4108 \\ \bottomrule
+  \cmidrule(lr){3-5}
+  \cmidrule(lr){6-8}
+  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%}  \\ \midrule
+  PM10			& 9877	& 9089	& 788	& 8.0		& 8063	& 1026	& 11.3 \\
+  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 7784	& 136	& 1.7 \\
+  General AQ		& 9877	& 9877	& 0		& 0.0		& 9676	& 201	& 2.0 \\ \midrule
+  Total			& 29631	& 26886	& 2745	& 9.3		& 26030	& 856	& 3.2 \\ \bottomrule
   \end{tabular}
 \end{table}
 
@@ -1920,17 +1966,30 @@ One issue encountered during the data collection was sensors breaking due to exp
 A second issue was the device losing power. It is thought that severe vibrations, caused by something such as riding over a pothole in the road, led to the micro-USB cable from the external battery to the RPi losing its connection. The numerous parts of the device were not secured in the triangular bicycle bag, which may have led to this issue occurring.
 
 \section{Discussion}
+% Dialogue between my results and other people's findings
+
+\subsection{Positioning on bicycle}
 
 The results from testing the device in different positions on the bicycle indicated that placing the device under the headtube at the front of the bike is the optimal position. This is because the variation in measurements is lowest, with no extreme peaks. There is clearly variation in the measurements taken in each position, even though no change environmental changes occurred during the data collection (temperature and humidity measurements experienced no significant change). This suggests there is a factor affecting the sensor measurements. One suggestion is that this is being caused by particulate matter from the road being discarded into the air by the wheels. This is supported by the fact that the ozone and general air quality measurements were not affected (wheels cannot `throw' gases into the air). The elevation of the device is much below human head height, so these measurements may not correspond to the air quality that humans experience. Therefore, the positioning is important because otherwise the measurements could be artificially inflated. However, this testing was not extensive as doing so would require much more time and could be considered a small project itself. As a result, further testing may be warranted. For example, bicycle mud guards would prevent any particulate matter being thrown up by the wheels, so these could be used to help identify the cause.
 
-Overall, the outlier detection results indicate that detecting and removing or correcting outliers is an important step in the process of collecting air quality data, particularly when using low-cost sensors. The results indicate that the Shinyei PPD42 particulate sensor is the most prone to outliers compared to the other sensors on the device. The reason for this may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. Although the bicycle generates air flow as it moves, it is not a consistent flow rate, which could impact the number of particles detected by the light-scattering technique. For example, if the air flow stops then a particle could be suspended in front of the light beam for an extended period of time, artificially inflating the measurement. Consequently, using a particulate sensor with an built-in fan could regulate the air flow and help to avoid this issue. Therefore, it is suggested that a different low-cost particulate sensor be used in future iterations of the device.
+There does not appear to be any previous research on this topic, potentially because there are very few bicycle-based air quality monitoring devices. Therefore, there is, unfortunately, no other findings to compare these results against.
+
+\subsection{Data quality}
+
+Overall, the outlier detection results indicate that detecting and removing or correcting outliers is an important step in the process of collecting air quality data, particularly when using low-cost sensors. The results indicate that the Shinyei PPD42 particulate sensor is the most prone to outliers compared to the other sensors on the device, with 11.3\% of measurements labelled as outliers. The reason for this may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. Although the bicycle generates air flow as it moves, it is not a consistent flow rate, which could impact the number of particles detected by the light-scattering technique. For example, if the air flow stops then a particle could be suspended in front of the light beam for an extended period of time, artificially inflating the measurement. Consequently, using a particulate sensor with an built-in fan could regulate the air flow and help to avoid this issue. Therefore, it is suggested that a different low-cost particulate sensor be used in future iterations of the device.
 % Test whether outliers correlated with speed
 
-The outlier results also show that running the outlier detection methods per-temporal group ... Using moving averages significantly affects the number of outliers detected. One explanation for this is if there are a high proportion of outliers in a given time period, the moving average will be greatly impacted when it moves over that time period, thus not identifying extreme values as outliers because a large proportion of the group's values are also extreme.
+The percentage of outliers for O\textsubscript{3} and general air quality were much lower, at 1.7\% and 2.0\%, respectively. In comparison, \cite{vanZoest2018outlierdetection} used the same spatio-temporal separation method and found an outlier rate of 0.1-0.5\% of outliers in measurements from a network of low-cost NO\textsubscript{2} sensor, which is lower than found in this study. However, the sensors were not mobile, but instead attached to lamp-posts. This suggests that fixed air quality monitoring devices may output fewer outliers. Moreover, \cite{Hagler2010durhamallelectric} found 2.7\% of carbon monoxide and particulate measurements to be outliers from an electric vehicle-based air quality monitoring device. This is slightly higher than the outlier rates found in this study for ozone and general air quality, but much lower than the particulate outlier rate.
+
+The outlier results also show that running the outlier detection methods per-temporal group does not change the number of outliers detected drastically. Using moving averages significantly affects the number of outliers detected. One explanation for this is if there are a high proportion of outliers in a given time period, the moving average will be greatly impacted when it moves over that time period, thus not identifying extreme values as outliers because a large proportion of the group's values are also extreme.
 
 Furthermore, it is clear that the geo-spatial measurements can occasionally be erroneous, which leads to points appearing on the map in incorrect positions. Often, this occurs towards the beginning of a collection period when the GPS connection is not as stable. In this project, a retrospective detection and correction technique was applied, but this could be advanced by using a real-time method. 
 
-The pollution maps
+\subsection{Maps}
+
+The pollution maps generated using measurements collected by this device clearly demonstrate that the device can detect variations in air pollution. 
+
+Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles, but the number of tiles can be increased to further increase the spatial resolution of these maps.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

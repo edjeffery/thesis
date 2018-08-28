@@ -27,31 +27,30 @@
 \contentsline {figure}{\numberline {5-3}{\ignorespaces Cycling route.}}{76}{figure.caption.40}
 \contentsline {figure}{\numberline {5-4}{\ignorespaces Bath Air Quality Management Area.}}{77}{figure.caption.41}
 \contentsline {figure}{\numberline {5-5}{\ignorespaces Bike position testing.}}{79}{figure.caption.42}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces Sensor measurement histograms.}}{81}{figure.caption.45}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces Tukey's boxplots.}}{83}{figure.caption.46}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces Longitude and latitude waveforms.}}{87}{figure.caption.57}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces Sensor measurement histograms with cleaned data.}}{88}{figure.caption.59}
-\contentsline {figure}{\numberline {5-10}{\ignorespaces Air quality pollution maps of the route.}}{90}{figure.caption.61}
-\contentsline {figure}{\numberline {5-11}{\ignorespaces Pollution by day of the week.}}{92}{figure.caption.63}
-\contentsline {figure}{\numberline {5-12}{\ignorespaces Pollution by AM/PM and period of the week.}}{93}{figure.caption.65}
-\contentsline {figure}{\numberline {5-13}{\ignorespaces Relationship between speed and sensor measurements.}}{94}{figure.caption.67}
-\contentsline {figure}{\numberline {5-14}{\ignorespaces Relationship between altitude and sensor measurements.}}{94}{figure.caption.70}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Sensor measurement histograms and boxplots.}}{81}{figure.caption.45}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Longitude and latitude waveforms.}}{86}{figure.caption.54}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{87}{figure.caption.56}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{89}{figure.caption.58}
+\contentsline {figure}{\numberline {5-10}{\ignorespaces Pollution by day of the week.}}{91}{figure.caption.60}
+\contentsline {figure}{\numberline {5-11}{\ignorespaces Pollution by AM/PM and period of the week.}}{92}{figure.caption.62}
+\contentsline {figure}{\numberline {5-12}{\ignorespaces Relationship between speed and sensor measurements.}}{93}{figure.caption.64}
+\contentsline {figure}{\numberline {5-13}{\ignorespaces Relationship between altitude and sensor measurements.}}{93}{figure.caption.67}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{100}{figure.caption.75}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{101}{figure.caption.77}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{102}{figure.caption.81}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{104}{figure.caption.83}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{105}{figure.caption.84}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{106}{figure.caption.85}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{100}{figure.caption.72}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{101}{figure.caption.74}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{102}{figure.caption.78}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{104}{figure.caption.80}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{105}{figure.caption.81}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{106}{figure.caption.82}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{110}{figure.caption.86}
-\contentsline {figure}{\numberline {7-2}{\ignorespaces K-nearest neighbours.}}{112}{figure.caption.87}
-\contentsline {figure}{\numberline {7-3}{\ignorespaces Cyclist coverage.}}{113}{figure.caption.88}
-\contentsline {figure}{\numberline {7-4}{\ignorespaces Example routes.}}{115}{figure.caption.89}
-\contentsline {figure}{\numberline {7-5}{\ignorespaces Changes in exposure and route length.}}{116}{figure.caption.91}
+\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{110}{figure.caption.83}
+\contentsline {figure}{\numberline {7-2}{\ignorespaces K-nearest neighbours.}}{112}{figure.caption.84}
+\contentsline {figure}{\numberline {7-3}{\ignorespaces Cyclist coverage.}}{113}{figure.caption.85}
+\contentsline {figure}{\numberline {7-4}{\ignorespaces Example routes.}}{115}{figure.caption.86}
+\contentsline {figure}{\numberline {7-5}{\ignorespaces Changes in exposure and route length.}}{116}{figure.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{122}{figure.caption.92}
+\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{122}{figure.caption.89}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

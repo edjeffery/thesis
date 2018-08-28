@@ -74,33 +74,34 @@
 \contentsline {subsection}{\numberline {5.2.1}Positioning on bicycle}{78}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Data quality}{79}{subsection.5.2.2}
 \contentsline {subsubsection}{Exploratory analysis}{80}{section*.44}
-\contentsline {subsubsection}{IQR}{82}{section*.47}
-\contentsline {subsubsection}{Median and MAD}{84}{section*.49}
-\contentsline {subsubsection}{S\textsubscript {n}}{84}{section*.51}
-\contentsline {subsubsection}{Per time period group}{85}{section*.53}
-\contentsline {subsubsection}{Moving average}{85}{section*.54}
-\contentsline {subsubsection}{Geo-spatial outliers}{87}{section*.56}
-\contentsline {subsubsection}{Outlier summary}{87}{section*.58}
-\contentsline {subsection}{\numberline {5.2.3}Maps}{89}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Pattern analysis}{91}{subsection.5.2.4}
-\contentsline {subsubsection}{Day of the week}{91}{section*.62}
-\contentsline {subsubsection}{Morning vs. Evening}{91}{section*.64}
-\contentsline {subsubsection}{Speed of the bicycle}{91}{section*.66}
-\contentsline {subsubsection}{Altitude}{93}{section*.69}
-\contentsline {subsubsection}{Temperature}{94}{section*.72}
-\contentsline {subsubsection}{Humidity}{95}{section*.73}
-\contentsline {subsection}{\numberline {5.2.5}Robustness}{95}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Discussion}{95}{section.5.3}
+\contentsline {subsubsection}{Outlier detection methods}{82}{section*.46}
+\contentsline {subsubsection}{Per time period group}{83}{section*.50}
+\contentsline {subsubsection}{Moving average}{84}{section*.51}
+\contentsline {subsubsection}{Geo-spatial outliers}{86}{section*.53}
+\contentsline {subsubsection}{Outlier summary}{86}{section*.55}
+\contentsline {subsection}{\numberline {5.2.3}Maps}{88}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pattern analysis}{90}{subsection.5.2.4}
+\contentsline {subsubsection}{Day of the week}{90}{section*.59}
+\contentsline {subsubsection}{Morning vs. Evening}{90}{section*.61}
+\contentsline {subsubsection}{Speed of the bicycle}{90}{section*.63}
+\contentsline {subsubsection}{Altitude}{92}{section*.66}
+\contentsline {subsubsection}{Temperature}{93}{section*.69}
+\contentsline {subsubsection}{Humidity}{94}{section*.70}
+\contentsline {subsection}{\numberline {5.2.5}Robustness}{94}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Discussion}{94}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Positioning on bicycle}{94}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Data quality}{95}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Maps}{96}{subsection.5.3.3}
 \contentsline {chapter}{\numberline {6}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{98}{chapter.6}
 \contentsline {section}{\numberline {6.1}Methodology}{98}{section.6.1}
 \contentsline {subsection}{\numberline {6.1.1}Locus around fixed monitoring station}{99}{subsection.6.1.1}
-\contentsline {subsubsection}{Location}{99}{section*.74}
-\contentsline {subsubsection}{Data collection}{99}{section*.76}
-\contentsline {subsubsection}{Demonstrating higher spatial resolution}{100}{section*.78}
+\contentsline {subsubsection}{Location}{99}{section*.71}
+\contentsline {subsubsection}{Data collection}{99}{section*.73}
+\contentsline {subsubsection}{Demonstrating higher spatial resolution}{100}{section*.75}
 \contentsline {subsection}{\numberline {6.1.2}Event route}{101}{subsection.6.1.2}
-\contentsline {subsubsection}{Location}{101}{section*.79}
-\contentsline {subsubsection}{Data collection}{102}{section*.80}
-\contentsline {subsubsection}{Demonstrating higher temporal resolution}{102}{section*.82}
+\contentsline {subsubsection}{Location}{101}{section*.76}
+\contentsline {subsubsection}{Data collection}{102}{section*.77}
+\contentsline {subsubsection}{Demonstrating higher temporal resolution}{102}{section*.79}
 \contentsline {section}{\numberline {6.2}Results}{103}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{103}{subsection.6.2.1}
 \contentsline {subsection}{\numberline {6.2.2}Bath football event}{104}{subsection.6.2.2}
@@ -128,8 +129,8 @@
 \contentsline {section}{\numberline {9.1}Conclusions}{120}{section.9.1}
 \contentsline {section}{\numberline {9.2}Future work}{120}{section.9.2}
 \contentsline {section}{\numberline {9.3}Additional application post-project completion}{121}{section.9.3}
-\contentsline {chapter}{Bibliography}{123}{figure.caption.92}
-\contentsline {chapter}{Appendix}{133}{chapter*.93}
+\contentsline {chapter}{Bibliography}{123}{figure.caption.89}
+\contentsline {chapter}{Appendix}{133}{chapter*.90}
 \contentsline {chapter}{\numberline {A}Installation instructions}{133}{appendix.A}
 \contentsline {section}{\numberline {A.1}GPS}{133}{section.A.1}
 \contentsline {section}{\numberline {A.2}NTP}{134}{section.A.2}
