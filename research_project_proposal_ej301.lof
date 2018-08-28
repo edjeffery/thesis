@@ -38,16 +38,19 @@
 \contentsline {figure}{\numberline {6-4}{\ignorespaces Longitude and latitude waveforms.}}{100}{figure.caption.64}
 \contentsline {figure}{\numberline {6-5}{\ignorespaces Sensor measurement histograms with cleaned data.}}{101}{figure.caption.66}
 \contentsline {figure}{\numberline {6-6}{\ignorespaces Air quality pollution maps of the route.}}{103}{figure.caption.68}
-\contentsline {figure}{\numberline {6-7}{\ignorespaces Pollution by day of the week.}}{104}{figure.caption.69}
-\contentsline {figure}{\numberline {6-8}{\ignorespaces Pollution by period of the week.}}{105}{figure.caption.70}
-\contentsline {figure}{\numberline {6-9}{\ignorespaces Pollution maps of locus route.}}{107}{figure.caption.71}
-\contentsline {figure}{\numberline {6-10}{\ignorespaces Heatmaps of event pollution.}}{109}{figure.caption.72}
-\contentsline {figure}{\numberline {6-11}{\ignorespaces Cyclist coverage.}}{110}{figure.caption.73}
-\contentsline {figure}{\numberline {6-12}{\ignorespaces Example routes.}}{111}{figure.caption.74}
-\contentsline {figure}{\numberline {6-13}{\ignorespaces Changes in exposure and route length.}}{112}{figure.caption.76}
+\contentsline {figure}{\numberline {6-7}{\ignorespaces Pollution by day of the week.}}{104}{figure.caption.70}
+\contentsline {figure}{\numberline {6-8}{\ignorespaces Pollution by AM/PM and period of the week.}}{105}{figure.caption.72}
+\contentsline {figure}{\numberline {6-9}{\ignorespaces Relationship between speed and sensor measurements.}}{106}{figure.caption.74}
+\contentsline {figure}{\numberline {6-10}{\ignorespaces Relationship between altitude and sensor measurements.}}{107}{figure.caption.77}
+\contentsline {figure}{\numberline {6-11}{\ignorespaces Pollution maps of locus route.}}{109}{figure.caption.81}
+\contentsline {figure}{\numberline {6-12}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{110}{figure.caption.82}
+\contentsline {figure}{\numberline {6-13}{\ignorespaces Heatmaps of event pollution.}}{112}{figure.caption.83}
+\contentsline {figure}{\numberline {6-14}{\ignorespaces Cyclist coverage.}}{113}{figure.caption.84}
+\contentsline {figure}{\numberline {6-15}{\ignorespaces Example routes.}}{114}{figure.caption.85}
+\contentsline {figure}{\numberline {6-16}{\ignorespaces Changes in exposure and route length.}}{115}{figure.caption.87}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8-1}{\ignorespaces Cyclist coverage.}}{118}{figure.caption.77}
+\contentsline {figure}{\numberline {8-1}{\ignorespaces Cyclist coverage.}}{121}{figure.caption.88}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

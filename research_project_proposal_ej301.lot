@@ -18,7 +18,9 @@
 \contentsline {table}{\numberline {6.4}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset. The outlier percentage is higher for particulates compared to using the IQR method, but lower than the MAD method. \relax }}{97}{table.caption.59}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.\relax }}{99}{table.caption.62}
 \contentsline {table}{\numberline {6.6}{\ignorespaces Dataset size changes.\relax }}{102}{table.caption.67}
-\contentsline {table}{\numberline {6.7}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{110}{table.caption.75}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Effect of speed on pollution measurements.\relax }}{106}{table.caption.75}
+\contentsline {table}{\numberline {6.8}{\ignorespaces Effect of altitude on pollution measurements.\relax }}{107}{table.caption.78}
+\contentsline {table}{\numberline {6.9}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{115}{table.caption.86}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

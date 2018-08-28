@@ -1448,17 +1448,17 @@ In order to identify which position on a bicycle is optimal for an air quality m
 We cycle with the device attached in each position in turn along the same stretch of road. This testing is also carried out across a short time period in order to minimise the effect of changes in the environmental conditions. The results are then compared to ascertain whether the position of the device makes a difference, analysing whether any major spikes occur in the data, which could indicate that the device is being impacted by particulate matter thrown up by the wheels.
 
 
-\subsection{Air flow testing}
-
-As Section \ref{air_flow} detailed, air flow can affect the sensor measurements. In particular, a light-scattering particulate detecting technique, which the Shinyei PPD42 sensor uses, relies on sufficient air flow to pass particles through a beam of light. As a result, our air flow testing focuses on the particulate sensor. We propose three different air flow systems for this device:
-
-\begin{enumerate}
-\item Sensor exposed directly to air -- air flow will come naturally from motion of bicycle
-\item Fan directs air at the sensor
-\item 3D printed funnel directs air flow into the sensor
-\end{enumerate}
-
-Similarly to the position testing in Section \ref{position_testing}, we will cycle with the device attached along the same stretch of road, changing the air flow system each time. The results will be compared to see which air flow system provides the lowest variability in measurements.
+%\subsection{Air flow testing}
+%
+%As Section \ref{air_flow} detailed, air flow can affect the sensor measurements. In particular, a light-scattering particulate detecting technique, which the Shinyei PPD42 sensor uses, relies on sufficient air flow to pass particles through a beam of light. As a result, our air flow testing focuses on the particulate sensor. We propose three different air flow systems for this device:
+%
+%\begin{enumerate}
+%\item Sensor exposed directly to air -- air flow will come naturally from motion of bicycle
+%\item Fan directs air at the sensor
+%\item 3D printed funnel directs air flow into the sensor
+%\end{enumerate}
+%
+%Similarly to the position testing in Section \ref{position_testing}, we will cycle with the device attached along the same stretch of road, changing the air flow system each time. The results will be compared to see which air flow system provides the lowest variability in measurements.
 
 \subsection{Robustness}
 
@@ -1668,7 +1668,7 @@ Overall, the figure shows varying levels of PM10 across the three positions. Pos
 \label{fig:bike_positions_pm10}
 \end{figure}
 
-Table \ref{tab:summary_positions} displays the mean and standard deviation for each of the three positions. Position 2 has the highest mean and the highest standard deviation, whereas Position 1 has the lowest mean and standard deviation.
+Table \ref{tab:summary_positions} displays the mean and standard deviation for each of the three positions. Position 2 has the highest mean and the highest standard deviation, whereas Position 1 has the lowest mean and standard deviation. In addition, all three positions have similar minimums, but Position 2 by far has the largest maximum.
 
 \begin{table}[!tbp]
   \centering
@@ -2045,19 +2045,21 @@ Figure \ref{fig:pm10_map_median} has a high level of pollution in the north west
 % Morning vs afternoon
 % Direction of travel
 
-In this section, any patterns that can be identified in the data collected by the air quality monitoring device are displayed.
+The pollution maps display how the results vary spatially. We now present how the results differ temporally and in relation to other factors (speed of the bicycle, altitude, temperature and humidity). Any such patterns that can be identified in the data collected by the air quality monitoring device are displayed.
+
+\subsubsection{Day of the week}
 
 Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant by the day of the week. As Figure \ref{fig:dow_pm10} shows, the average pollution level increases throughout the week, from a low on Monday of 20$\mu g/m^3$ to a high on Sunday of over 30 $\mu g/m^3$. There is no identifiable pattern in Figure \ref{fig:dow_o3} for O\textsubscript{3} or Figure \ref{fig:dow_mq135} for general air quality.
 
-\begin{figure}[!tb]
+\begin{figure}[!htbp]
     \centering
     \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
                 \includegraphics[width=\textwidth]{images/dow_pm10}
                 \caption{PM10}
                 \label{fig:dow_pm10}
             \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
             	\includegraphics[width=\textwidth]{images/dow_o3}
             	\caption{O\textsubscript{3}}
             	\label{fig:dow_o3}
@@ -2065,7 +2067,7 @@ Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant b
         \end{minipage}
     \begin{minipage}{1\linewidth}
     	\centering
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
                 \includegraphics[width=\textwidth]{images/dow_mq135}
                 \caption{General AQ}
                 \label{fig:dow_mq135}
@@ -2075,17 +2077,19 @@ Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant b
     \label{fig:dow_bars}
 \end{figure}
 
-Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by the week period, as initially detailed in Section \ref{time_series_incorp}. For PM10 and O\textsubscript{3}, the AM measurements are on average higher or equal to the PM measurements. This relationship does not hold for the general air quality measurements, which have a higher average for Weekend PM compared to Weekend AM.
+\subsubsection{Morning vs. Evening}
+
+Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by AM/PM and the week period (week/weekend), as initially detailed in Section \ref{time_series_incorp}. For PM10, the measurements from the morning collection runs (AM) are on average higher than the measurements from the evening collection runs (PM). This holds for both the week and weekend periods. Similarly, this relationship also occurs with the O\textsubscript{3} measurements, although the difference is very slight with the week period. However, this relationship does not completely hold for the general air quality measurements since the weekend PM period has a higher average compared to the weekend AM period.
 
 \begin{figure}[!tb]
     \centering
     \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
                 \includegraphics[width=\textwidth]{images/week_period_pm10}
                 \caption{PM10}
                 \label{fig:week_period_pm10}
             \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
             	\includegraphics[width=\textwidth]{images/week_period_o3}
             	\caption{O\textsubscript{3}}
             	\label{fig:week_period_o3}
@@ -2093,31 +2097,200 @@ Figure \ref{fig:week_period_bars} shows the median pollution levels for each pol
         \end{minipage}
     \begin{minipage}{1\linewidth}
     	\centering
-            \begin{subfigure}[t]{.5\linewidth}
+            \begin{subfigure}[t]{.45\linewidth}
                 \includegraphics[width=\textwidth]{images/week_period_mq135}
                 \caption{General AQ}
                 \label{fig:week_period_mq135}
             \end{subfigure}
         \end{minipage}
-    \caption[Pollution by period of the week.]{Pollution by period of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \caption[Pollution by AM/PM and period of the week.]{Pollution by AM/PM and period of the week. Each bar represents the median pollution level for that time period.}
     \label{fig:week_period_bars}
 \end{figure}
 
+%\begin{figure}[!tb]
+%    \centering
+%    \minipage{0.32\textwidth}
+%      \includegraphics[width=\linewidth]{images/week_period_pm10}
+%      \caption{PM10}
+%      \label{fig:week_period_pm10}
+%    \endminipage\hfill
+%    \minipage{0.32\textwidth}
+%      \includegraphics[width=\linewidth]{images/week_period_o3}
+%      \caption{O\textsubscript{3}}
+%      \label{fig:week_period_o3}
+%    \endminipage\hfill
+%    \minipage{0.32\textwidth}
+%      \includegraphics[width=\linewidth]{images/week_period_mq135}
+%      \caption{MQ135}
+%      \label{fig:week_period_mq135}
+%    \endminipage
+%    \caption[Pollution by period of the week.]{Pollution by period of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+%    \label{fig:week_period_bars}
+%\end{figure}
+
 % Morning vs Evening maps as well
 
-%\subsection{Air flow}
+\subsubsection{Speed of the bicycle}
+
+Figure \ref{fig:speed} shows the effect of the bicycle's speed on the sensor measurements. This is accompanied by a regression table in Table \ref{tab:speed}, which details the results of regressing each pollutant's measurements on corresponding speed measurements. A higher speed is associated with a higher PM10 reading. More specifically, every additional 1~m/s increase in speed leads to a 1.31~$\mu g/m^3$ increase in PM10 pollution, on average. On the other hand, a higher speed is associated with a lower O\textsubscript{3} reading, with a coefficient of -0.30~$\mu g/m^3$. Similarly, the general air quality measurement decreases by an average of 0.007~V for a unit increase in speed. These three findings are all statistically significant at the 1\% level. Overall, there is a wide dispersion of measurements for each of the sensors, which leads to low R\textsuperscript{2} values.
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.32\linewidth}
+                \includegraphics[width=\textwidth]{images/speed_pm}
+                \caption{PM10}
+                \label{fig:speed_pm10}
+            \end{subfigure}
+            \begin{subfigure}[t]{.32\linewidth}
+            	\includegraphics[width=\textwidth]{images/speed_o3}
+            	\caption{O\textsubscript{3}}
+            	\label{fig:speed_o3}
+	        \end{subfigure}
+            \begin{subfigure}[t]{.32\linewidth}
+                \includegraphics[width=\textwidth]{images/speed_mq135}
+                \caption{General AQ}
+                \label{fig:speed_mq135}
+            \end{subfigure}
+        \end{minipage}
+    \caption[Relationship between speed and sensor measurements.]{Relationship between speed and sensor measurements.}
+    \label{fig:speed}
+\end{figure}
+
+%\begin{figure}[!tb]
+%    \centering
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/speed_pm}
+%      \caption{PM10}
+%      \label{fig:speed_pm}
+%    \endminipage\hfill
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/speed_o3}
+%      \caption{O\textsubscript{3}}
+%      \label{fig:speed_o3}
+%    \endminipage\hfill
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/speed_mq135}
+%      \caption{MQ135}
+%      \label{fig:speed_mq135}
+%    \endminipage
+%    \caption[Effect of speed on sensor measurements.]{Effect of speed on sensor measurements.}
+%    \label{fig:speed}
+%\end{figure}
+
+\begin{table}[!tb]
+\centering
+\caption{Effect of speed on pollution measurements.}
+\label{tab:speed}
+\begin{tabular}{c c c c}
+\toprule
+Variable & PM10 & Ozone & General AQ \\ 
+\midrule
+speed	& 1.305***		& -0.296***	& -0.007*** \\
+		& (0.11)		& (0.03)		& (0.001)   \\
+constant	& 27.995***	& 51.926***	& 1.199*** \\
+		& (0.64)		& (0.20)		& (0.004)   \\ \midrule
+ N		& 8063 		& 7784   		& 9676   	\\          
+R$^{2}$	& 0.017   		& 0.011		& 0.013   	\\
+\bottomrule
+\addlinespace[1ex]
+\multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
+  \textsuperscript{**}$p<0.05$, 
+  \textsuperscript{*}$p<0.1$}
+\end{tabular}
+\end{table}
+
+\subsubsection{Altitude}
+
+Figure \ref{fig:altitude} shows the relationship between altitude and pollution measurements. All three regression lines are relatively flat, which indicates that there is no relationship between altitude and the sensor readings. This result is supported by the regression results detailed in Table \ref{tab:altitude}, in which the altitude variable is not statistically significant in any of the three regressions.
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.32\linewidth}
+                \includegraphics[width=\textwidth]{images/altitude_pm}
+                \caption{PM10}
+                \label{fig:altitude_pm}
+            \end{subfigure}
+            \begin{subfigure}[t]{.32\linewidth}
+            	\includegraphics[width=\textwidth]{images/altitude_o3}
+            	\caption{O\textsubscript{3}}
+            	\label{fig:altitude_o3}
+	        \end{subfigure}
+            \begin{subfigure}[t]{.32\linewidth}
+                \includegraphics[width=\textwidth]{images/altitude_mq135}
+                \caption{General AQ}
+                \label{fig:altitude_mq135}
+            \end{subfigure}
+        \end{minipage}
+    \caption[Relationship between altitude and sensor measurements.]{Relationship between altitude and sensor measurements.}
+    \label{fig:altitude}
+\end{figure}
+
+%\begin{figure}[!tb]
+%    \centering
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/altitude_pm}
+%      \caption{PM10}
+%      \label{fig:altitude_pm}
+%    \endminipage\hfill
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/altitude_o3}
+%      \caption{O\textsubscript{3}}
+%      \label{fig:altitude_o3}
+%    \endminipage\hfill
+%    \minipage{0.33\textwidth}
+%      \includegraphics[width=\linewidth]{images/altitude_mq135}
+%      \caption{MQ135}
+%      \label{fig:altitude_mq135}
+%    \endminipage
+%    \caption[Effect of altitude on sensor measurements.]{Effect of altitude on sensor measurements.}
+%    \label{fig:altitude}
+%\end{figure}
+
+\begin{table}[!tb]
+\centering
+\caption{Effect of altitude on pollution measurements.}
+\label{tab:altitude}
+\begin{tabular}{c c c c}
+\toprule
+Variable & PM10 & Ozone & General AQ \\ 
+\midrule
+altitude	& 0.045		& -0.011		& -0.0002 	\\
+		& (0.03)		& (0.01)		& (0.001)   \\
+constant	& 33.305***	& 50.688***	& 1.161*** \\
+		& (0.99)		& (0.28)		& (0.005)   \\ \midrule
+ N		& 8063 		& 7784   		& 9676   	\\          
+R$^{2}$	& 0.0003   	& 0.0003		& 0.0003   \\
+\bottomrule
+\addlinespace[1ex]
+\multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
+  \textsuperscript{**}$p<0.05$, 
+  \textsuperscript{*}$p<0.1$}
+\end{tabular}
+\end{table}
+
+\subsubsection{Temperature}
+
+Needed?
+
+\subsubsection{Humidity}
+
+Needed?
 
 \subsection{Robustness}
 % Weather, vibration, power
 
 One issue encountered during the data collection was sensors breaking due to exposure to moisture. It rained during two of the data collection periods, which led to the ozone sensor (MQ131) and the humidity sensor (DHT22) ceasing to work. The MQ131 sensor's output consistently decreased until it reached zero, around which it remained. The DHT22 sensor's reading increased to 99.9\% humidity and did not reduce again. The sensors were left on in a dry environment to try and extract the moisture, but this did not solve the problem.
 
-A second issue was the device losing power. It is thought that severe vibrations, caused by something such as riding over a pothole in the road, led to the micro-USB cable from the external battery to the RPi losing its connection. The parts of the device were not secured in the triangular bicycle bag, which may have led to this issue occurring.
+A second issue was the device losing power. It is thought that severe vibrations, caused by something such as riding over a pothole in the road, led to the micro-USB cable from the external battery to the RPi losing its connection. The numerous parts of the device were not secured in the triangular bicycle bag, which may have led to this issue occurring.
 
 
 \section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?} \label{q2_results}
 
-\subsection{Bath Guildhall locus}
+In this section, we first detail results pertaining to the spatial aspect of this research question (Section \ref{locus_results}), before then detailing the results of the temporal aspect in Section \ref{event_results}.
+
+\subsection{Bath Guildhall locus} \label{locus_results}
 % Spatial
 
 \begin{figure}[!htb]
@@ -2162,22 +2335,31 @@ A second issue was the device losing power. It is thought that severe vibrations
     \label{fig:locus_maps}
 \end{figure}
 
-Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. Using the same outlier detection and removal technique detailed in Section X, the dataset was cleaned. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods were run on the dataset as a whole. This led to XXX outliers identified and removed.
+Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. Using the same outlier detection and removal technique used in Section \ref{q1_results}, the dataset was cleaned. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods were run on the dataset as a whole. This led to 300 outliers identified and removed, leaving a clean dataset of 1152 measurements.
 
-Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants.
+Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants. Primarily, this figure demonstrates the improved spatial resolution of this device compared to a fixed monitoring station, shown by the larger area covered compared to the single point of the Guildhall site. Moreover, the Guildhall fixed monitoring station can only measure NO\textsubscript{2}, whereas this air quality monitoring device can measure three different pollutants.
 
 % Re-do graphs for each 15-minute period
 
 % Compare 15 minute MQ135 sensors to NO2 data
 
-\subsection{Bath football event}
+In addition, Figure \ref{fig:guildhall_vs_bike} shows that even when covering a large spatial area, the bicycle-based monitoring device can match the fixed monitoring station's temporal resolution of 15 minutes. Each point on the graph is an average of the previous 15-minutes' measurements. Furthermore, the two lines follow a similar pattern. The correlation between these two datasets is 0.35, which indicates that there is a positive relationship between what the MQ135 sensor is detecting and what the Guildhall monitoring station is detecting.
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.8\textwidth]{images/guildhall_vs_bike}
+\caption[Comparison of MQ135 sensor on device against Guildhall NO\textsubscript{2}.]{Comparison of MQ135 sensor on the device against Guildhall NO\textsubscript{2}.}
+\label{fig:guildhall_vs_bike}
+\end{figure}
+
+\subsection{Bath football event}  \label{event_results}
 % Temporal
 
-\num{1044} measurements were collected for the Bath City FC football match. As with the locus dataset, the data was cleaned by running the outlier detection methods on the dataset as a whole. X outliers were detected and removed.
+\num{1044} measurements were collected for the Bath City FC football match. As with the locus dataset, the data was cleaned by running the outlier detection methods on the dataset as a whole. 129 outliers were detected and removed, leaving a dataset size of 915.
 
 Figure \ref{fig:event_heatmaps} visualises the pollution along the route outside the football stadium over time. The vertical lines represent key time intervals: the first line marks the start of the football match and the second marks the end. There is a heatmap for each pollutant. The x-axis represents time bins for every complete one-way traversal of the route and the y-axis represents longitude bins for each section of the route (the route has been separated into 20 longitude bins).
 
-For PM10, Figure \ref{fig:event_heatmap_pm10} shows a relatively high level of pollution prior to the match (indicated by the high proportion of red tiles), which then decreases as the time approaches kick-off (19:45). The pollution level remains low for the duration of the match and does not change significantly after the match has finished. The graphs for O\textsubscript{3} and the general air quality are not so clear. Figure \ref{fig:event_heatmap_o3} does not show as much variation. There is a `green' period just before the match starts, but then the pollution level rises again after kick-off. There is an increase as the match ends, although it is not entirely consistent along the route. For the general air quality, Figure \ref{fig:event_heatmap_mq135} there is some variation in the measurements, with a noticeable increase at the end of the game.
+For PM10, Figure \ref{fig:event_heatmap_pm10} shows a relatively high level of pollution prior to the match (indicated by the high proportion of red tiles), which then decreases as the time approaches kick-off (19:45). The pollution level remains low for the duration of the match and does not change significantly after the match has finished. The graphs for O\textsubscript{3} and the general air quality are not so clear. Figure \ref{fig:event_heatmap_o3} does not show as much variation. There is a `green' period just before the match starts, but then the pollution level rises again after kick-off. There is an increase as the match ends, although it is not entirely consistent along the route. For the general air quality (Figure \ref{fig:event_heatmap_mq135}), there is some variation in the measurements, with a noticeable increase at the end of the game.
 
 Furthermore, each vertical column of this graph represents a complete one-way traversal of the route outside the football match, taking approximately 7 minutes each time. This demonstrates that the device can satisfactorily measure pollution across a small spatial area with an improved time resolution compared to one of the fixed air quality monitoring stations in Bath (7 minutes compared to 15 minutes). If the device were to be moved less, then the temporal resolution could be increased further, up to a maximum temporal resolution of 10 seconds (the time interval between taking sensor measurements) if the device were stationary.
 
@@ -2214,6 +2396,7 @@ Furthermore, each vertical column of this graph represents a complete one-way tr
     \label{fig:event_heatmaps}
 \end{figure}
 
+\newpage
 
 \section{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{q3_results}
 
@@ -2222,7 +2405,7 @@ Having shown that this air quality monitoring device can measure air pollution t
 \subsection{Coverage}
 % Include comparison with other cities?
 
-As expected, the commuter simulations show an increase in coverage of the city as the number of cyclists increases. There are diminishing returns to an increase in cyclists, however. Interestingly, over 50\% of the roads in Bath can be covered with 50 cyclists. With 500 cyclists, it is possible to obtain 90.3\% coverage. Whilst it may appear odd that the other 10\% is missing [re-word], Figure X shows that these unvisited roads are likely to be dead-ends or residential cul-de-sacs, which are not of much importance in the analysis.
+As expected, the commuter simulations show an increase in coverage of the city as the number of cyclists increases. There are diminishing returns to an increase in cyclists, however. Over 50\% of the roads in Bath can be covered with 50 cyclists and with 500 cyclists it is possible to obtain 90.3\% coverage. Whilst 10\% of the road network is not covered, Figure X shows that these unvisited roads are likely to be dead-ends or residential cul-de-sacs, which are not of much importance in the analysis.
 
 % Discussion: This test did not weight roads by importance either, meaning if these cyclists were directed along the more important roads that the local authorities wish to analyse then good coverage of the city can be obtained.
 
@@ -2242,8 +2425,6 @@ We found that by taking the health-optimal route instead of the shortest route, 
 % Add stats tests for the change to show significant.
 
 It is worth noting that the reduction in pollution exposure can greatly depend on the given origin and destination, as illustrated in Figure \ref{fig:origdestpairs}. For example, in Figure \ref{fig:route_min} there is no difference between the shortest route and the health-optimal route. On the other hand, Figure \ref{fig:route_max} shows large deviations from the shortest route, with the health-optimal route being 57.1\% longer.
-
-Furthermore, these findings must be taken with caution. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. What we mean by this is the routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
 
 \begin{figure}[!tb]
     \centering
@@ -2267,7 +2448,7 @@ Furthermore, these findings must be taken with caution. If more people began to 
             \label{fig:route_max}
         \end{subfigure}
     \end{minipage}
-    \caption[Example routes.]{Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.}
+    \caption[Example routes.]{Three example origin-destination pairs in Bath with the corresponding shortest route (red) and health-optimal route (blue). Figure (a) shows no difference between the routes, whereas (b) shows some deviation and (c) shows a large amount of deviation.}
     \label{fig:origdestpairs}
 \end{figure}
 
@@ -2285,7 +2466,7 @@ Furthermore, these findings must be taken with caution. If more people began to 
   \end{tabular}
 \end{table}
 
-
+Figure \ref{fig:cumulatives} displays the cumulative distribution of the route length increases and pollution reductions. A sizeable percentage (approximately 40\%) of the routes show no increase in length and, thus, no pollution exposure reduction since the shortest path is the same as the lowest pollution path. This occurs despite including a 500~m minimum route length to avoid trivial routes.
 
 \begin{figure}[!tb]
     \centering
@@ -2304,12 +2485,6 @@ Furthermore, these findings must be taken with caution. If more people began to 
     \caption[Changes in exposure and route length.]{Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500~m. There are then diminishing number of routes as the delta increases.}
     \label{fig:cumulatives}
 \end{figure}
-
-\subsection{Health benefit}
-
-% Probably need to add a section into literature review related to this. Find out how an X% reduction in a type of pollution can lead to X many more QALYs.
-
-Choosing the health-optimal route can lead to a substantial reduction in pollution exposure. We now quantify the health benefit associated with this pollution reduction, based on previous findings.
 
 
 
@@ -2330,6 +2505,14 @@ Given this was carried out over a short time period and along the same quiet str
 \section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}
 
 \section{Question 3: How can these air quality monitoring devices be applied for public benefit?}
+
+Furthermore, these findings must be taken with caution. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. What we mean by this is the routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
+
+\subsection{Health benefit}
+
+% Probably need to add a section into literature review related to this. Find out how an X% reduction in a type of pollution can lead to X many more QALYs.
+
+Choosing the health-optimal route can lead to a substantial reduction in pollution exposure. We now quantify the health benefit associated with this pollution reduction, based on previous findings.
 
 
 \section{Limitations} \label{limitations}
