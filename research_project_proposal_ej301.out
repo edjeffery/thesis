@@ -26,27 +26,28 @@
 \BOOKMARK [0][-]{chapter.6}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{}% 26
 \BOOKMARK [1][-]{section.6.1}{Methodology}{chapter.6}% 27
 \BOOKMARK [1][-]{section.6.2}{Results}{chapter.6}% 28
-\BOOKMARK [0][-]{chapter.7}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{}% 29
-\BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.2}{Results and analysis}{chapter.7}% 31
-\BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 32
-\BOOKMARK [0][-]{chapter.8}{Discussion}{}% 33
-\BOOKMARK [1][-]{section.8.1}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{chapter.8}% 34
-\BOOKMARK [1][-]{section.8.2}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{chapter.8}% 35
-\BOOKMARK [1][-]{section.8.3}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.4}{Limitations}{chapter.8}% 37
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 38
-\BOOKMARK [1][-]{section.9.1}{Conclusions}{chapter.9}% 39
-\BOOKMARK [1][-]{section.9.2}{Future work}{chapter.9}% 40
-\BOOKMARK [1][-]{section.9.3}{Additional application post-project completion}{chapter.9}% 41
-\BOOKMARK [0][-]{figure.caption.89}{Bibliography}{}% 42
-\BOOKMARK [0][-]{chapter*.90}{Appendix}{}% 43
-\BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 44
-\BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 45
-\BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 46
-\BOOKMARK [0][-]{appendix.B}{Code}{}% 47
-\BOOKMARK [1][-]{section.B.1}{Main RPi program}{appendix.B}% 48
-\BOOKMARK [1][-]{section.B.2}{PHP API}{appendix.B}% 49
-\BOOKMARK [0][-]{appendix.C}{Data analysis code}{}% 50
-\BOOKMARK [1][-]{section.C.1}{Data structuring}{appendix.C}% 51
-\BOOKMARK [1][-]{section.C.2}{Learning}{appendix.C}% 52
+\BOOKMARK [1][-]{section.6.3}{Discussion}{chapter.6}% 29
+\BOOKMARK [0][-]{chapter.7}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{}% 30
+\BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 31
+\BOOKMARK [1][-]{section.7.2}{Results and analysis}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 33
+\BOOKMARK [0][-]{chapter.8}{Limitations}{}% 34
+\BOOKMARK [1][-]{section.8.1}{Public preferences}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.2}{Timing of project}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.3}{Resource constraints}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.4}{Equipment breakages}{chapter.8}% 38
+\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 39
+\BOOKMARK [1][-]{section.9.1}{Conclusions}{chapter.9}% 40
+\BOOKMARK [1][-]{section.9.2}{Future work}{chapter.9}% 41
+\BOOKMARK [1][-]{section.9.3}{Additional application post-project completion}{chapter.9}% 42
+\BOOKMARK [0][-]{figure.caption.89}{Bibliography}{}% 43
+\BOOKMARK [0][-]{chapter*.90}{Appendix}{}% 44
+\BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 45
+\BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 46
+\BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 47
+\BOOKMARK [0][-]{appendix.B}{Code}{}% 48
+\BOOKMARK [1][-]{section.B.1}{Main RPi program}{appendix.B}% 49
+\BOOKMARK [1][-]{section.B.2}{PHP API}{appendix.B}% 50
+\BOOKMARK [0][-]{appendix.C}{Data analysis code}{}% 51
+\BOOKMARK [1][-]{section.C.1}{Data structuring}{appendix.C}% 52
+\BOOKMARK [1][-]{section.C.2}{Learning}{appendix.C}% 53

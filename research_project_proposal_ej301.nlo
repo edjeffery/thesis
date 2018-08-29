@@ -1,5 +1,5 @@
 \nomenclatureentry{aWHO@[{WHO}]\begingroup World Health Organisation\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aNOx@[{NOx}]\begingroup Nitrogen oxides\nomeqref {1.0}|nompageref}{12}
+\nomenclatureentry{aNO\textsubscript{x}@[{NO\textsubscript{x}}]\begingroup Nitrogen oxides\nomeqref {1.0}|nompageref}{12}
 \nomenclatureentry{aLMIC@[{LMIC}]\begingroup Low and middle-income countries\nomeqref {1.0}|nompageref}{12}
 \nomenclatureentry{aO\textsubscript{3}@[{O\textsubscript{3}}]\begingroup Ozone\nomeqref {1.0}|nompageref}{12}
 \nomenclatureentry{aDEFRA@[{DEFRA}]\begingroup Department for Environmental and Rural Affairs\nomeqref {2.0}|nompageref}{19}
@@ -36,4 +36,4 @@
 \nomenclatureentry{aMSB@[{MSB}]\begingroup Most Significant Bit\nomeqref {4.7}|nompageref}{61}
 \nomenclatureentry{appm@[{ppm}]\begingroup Parts-per-million\nomeqref {4.16}|nompageref}{67}
 \nomenclatureentry{aBANES@[{BANES}]\begingroup Bath and North East Somerset Council\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{74}
+\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{76}

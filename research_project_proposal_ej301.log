@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.8)  28 AUG 2018 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.1.8)  29 AUG 2018 15:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1128,6 +1128,9 @@ LaTeX Info: Redefining \cite on input line 694.
 
 LaTeX Warning: Label `tab:mad_outliers' multiply defined.
 
+
+LaTeX Warning: Label `tab:speed' multiply defined.
+
 )
 \openout1 = `research_project_proposal_ej301.aux'.
 
@@ -1284,7 +1287,7 @@ l.58 ...e-based monitoring device?}{69}{chapter.5}
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.134 ...stallation instructions}{133}{appendix.A}
+l.135 ...er}{\numberline {B}Code}{138}{appendix.B}
                                                    [4])
 \tf@toc=\write6
 \openout6 = `research_project_proposal_ej301.toc'.
@@ -1319,12 +1322,16 @@ LaTeX Warning: Reference `chap: methodology' on page 14 undefined on input line
 LaTeX Warning: Reference `chap: results' on page 14 undefined on input line 122
 .
 
+
+LaTeX Warning: Reference `chap: discussion' on page 14 undefined on input line 
+122.
+
 [14] [15]
 Chapter 2.
 [16
 
 ]
-<Rationale_for_air_quality_monitoring.png, id=617, 576.1525pt x 556.0775pt>
+<Rationale_for_air_quality_monitoring.png, id=628, 576.1525pt x 556.0775pt>
 File: Rationale_for_air_quality_monitoring.png Graphic file (type png)
 
 <use Rationale_for_air_quality_monitoring.png>
@@ -1350,7 +1357,7 @@ LaTeX Font Info:    Try loading font information for TS1+cmr on input line 242.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [20] [21]
-<aeroflex.png, id=716, 300.1614pt x 187.4202pt>
+<aeroflex.png, id=727, 300.1614pt x 187.4202pt>
 File: aeroflex.png Graphic file (type png)
  <use aeroflex.png>
 Package pdftex.def Info: aeroflex.png used on input line 265.
@@ -1379,7 +1386,7 @@ Overfull \hbox (29.88554pt too wide) in paragraph at lines 371--387
  []
 
 [30] [31] [32] [33] [34] [35]
-<LURexplanation.jpg, id=970, 602.25pt x 519.9425pt>
+<LURexplanation.jpg, id=981, 602.25pt x 519.9425pt>
 File: LURexplanation.jpg Graphic file (type jpg)
  <use LURexplanation.jpg>
 Package pdftex.def Info: LURexplanation.jpg used on input line 515.
@@ -1390,14 +1397,14 @@ Overfull \hbox (0.89552pt too wide) in paragraph at lines 527--528
 ocated air qual-ity data is a heatmap.
  []
 
-<googleapi_heatmap_layer.png, id=976, 862.22125pt x 402.50375pt>
+<googleapi_heatmap_layer.png, id=987, 862.22125pt x 402.50375pt>
 File: googleapi_heatmap_layer.png Graphic file (type png)
 
 <use googleapi_heatmap_layer.png>
 Package pdftex.def Info: googleapi_heatmap_layer.png used on input line 533.
 (pdftex.def)             Requested size: 270.66988pt x 126.35329pt.
  [36] [37 <./LURexplanation.jpg> <./googleapi_heatmap_layer.png>] <hanoihexagon
-s.png, id=999, 552.0625pt x 329.23pt>
+s.png, id=1011, 552.0625pt x 329.23pt>
 File: hanoihexagons.png Graphic file (type png)
 
 <use hanoihexagons.png>
@@ -1405,7 +1412,7 @@ Package pdftex.def Info: hanoihexagons.png used on input line 544.
 (pdftex.def)             Requested size: 270.66988pt x 161.42458pt.
  [38 <./hanoihexagons.png>] [39] [40] [41]
 Chapter 3.
-<device.jpg, id=1048, 4143.48pt x 2330.7075pt>
+<device.jpg, id=1059, 4143.48pt x 2330.7075pt>
 File: device.jpg Graphic file (type jpg)
  <use device.jpg>
 Package pdftex.def Info: device.jpg used on input line 604.
@@ -1413,35 +1420,35 @@ Package pdftex.def Info: device.jpg used on input line 604.
  [42
 
 ] [43 <./device.jpg>] [44] [45] [46] [47]
-<images/gpio_expander1.jpg, id=1123, 2064.71375pt x 2355.80125pt>
+<images/gpio_expander1.jpg, id=1135, 2064.71375pt x 2355.80125pt>
 File: images/gpio_expander1.jpg Graphic file (type jpg)
 
 <use images/gpio_expander1.jpg>
 Package pdftex.def Info: images/gpio_expander1.jpg used on input line 739.
 (pdftex.def)             Requested size: 154.66681pt x 176.46179pt.
 
-<images/two_on_one.jpg, id=1124, 2889.79625pt x 1852.9225pt>
+<images/two_on_one.jpg, id=1136, 2889.79625pt x 1852.9225pt>
 File: images/two_on_one.jpg Graphic file (type jpg)
 
 <use images/two_on_one.jpg>
 Package pdftex.def Info: images/two_on_one.jpg used on input line 745.
 (pdftex.def)             Requested size: 193.33647pt x 123.95007pt.
 
-<images/protoboard.jpg, id=1125, 1270.7475pt x 1756.5625pt>
+<images/protoboard.jpg, id=1137, 1270.7475pt x 1756.5625pt>
 File: images/protoboard.jpg Graphic file (type jpg)
 
 <use images/protoboard.jpg>
 Package pdftex.def Info: images/protoboard.jpg used on input line 754.
 (pdftex.def)             Requested size: 154.66681pt x 213.78033pt.
  [48 <./images/gpio_expander1.jpg> <./images/two_on_one.jpg>] <images/ammeter.j
-pg, id=1133, 2319.66624pt x 3219.02625pt>
+pg, id=1145, 2319.66624pt x 3219.02625pt>
 File: images/ammeter.jpg Graphic file (type jpg)
 
 <use images/ammeter.jpg>
 Package pdftex.def Info: images/ammeter.jpg used on input line 783.
 (pdftex.def)             Requested size: 154.66681pt x 214.59795pt.
 
-<images/usb_cable.jpg, id=1134, 2330.7075pt x 3292.3pt>
+<images/usb_cable.jpg, id=1146, 2330.7075pt x 3292.3pt>
 File: images/usb_cable.jpg Graphic file (type jpg)
 
 <use images/usb_cable.jpg>
@@ -1449,21 +1456,21 @@ Package pdftex.def Info: images/usb_cable.jpg used on input line 789.
 (pdftex.def)             Requested size: 154.66681pt x 218.47804pt.
  [49 <./images/protoboard.jpg>] [50 <./images/ammeter.jpg> <./images/usb_cable.
 jpg>] [51]
-<images/design.png, id=1156, 694.2738pt x 358.941pt>
+<images/design.png, id=1168, 694.2738pt x 358.941pt>
 File: images/design.png Graphic file (type png)
  <use images/design.png>
 Package pdftex.def Info: images/design.png used on input line 841.
 (pdftex.def)             Requested size: 348.0033pt x 179.91916pt.
 
 [52 <./images/design.png>] [53]
-<images/code_flow.png, id=1178, 602.25pt x 360.34625pt>
+<images/code_flow.png, id=1190, 602.25pt x 360.34625pt>
 File: images/code_flow.png Graphic file (type png)
 
 <use images/code_flow.png>
 Package pdftex.def Info: images/code_flow.png used on input line 872.
 (pdftex.def)             Requested size: 348.0033pt x 208.23119pt.
  [54 <./images/code_flow.png>] [55]
-<images/web_app.png, id=1192, 1332.98pt x 746.79pt>
+<images/web_app.png, id=1204, 1332.98pt x 746.79pt>
 File: images/web_app.png Graphic file (type png)
  <use images/web_app.png>
 Package pdftex.def Info: images/web_app.png used on input line 916.
@@ -1473,53 +1480,53 @@ Package pdftex.def Info: images/web_app.png used on input line 916.
 Chapter 4.
 [58
 
-] [59] <spi_master_slave.png, id=1226, 382.42876pt x 119.44624pt>
+] [59] <spi_master_slave.png, id=1238, 382.42876pt x 119.44624pt>
 File: spi_master_slave.png Graphic file (type png)
 
 <use spi_master_slave.png>
 Package pdftex.def Info: spi_master_slave.png used on input line 1008.
 (pdftex.def)             Requested size: 309.33954pt x 96.6215pt.
  [60]
-<mcp3551.png, id=1232, 825.0825pt x 426.59375pt>
+<mcp3551.png, id=1245, 825.0825pt x 426.59375pt>
 File: mcp3551.png Graphic file (type png)
  <use mcp3551.png>
 Package pdftex.def Info: mcp3551.png used on input line 1020.
 (pdftex.def)             Requested size: 386.67296pt x 199.92627pt.
  [61 <./spi_master_slave.png> <./mcp3551.png>]
-<circuit.png, id=1240, 662.475pt x 638.385pt>
+<circuit.png, id=1252, 662.475pt x 638.385pt>
 File: circuit.png Graphic file (type png)
  <use circuit.png>
 Package pdftex.def Info: circuit.png used on input line 1032.
 (pdftex.def)             Requested size: 232.00613pt x 223.56471pt.
- [62 <./circuit.png>] <potentiometer.jpg, id=1250, 2315.65125pt x 2686.035pt>
+ [62 <./circuit.png>] <potentiometer.jpg, id=1262, 2315.65125pt x 2686.035pt>
 File: potentiometer.jpg Graphic file (type jpg)
 
 <use potentiometer.jpg>
 Package pdftex.def Info: potentiometer.jpg used on input line 1056.
 (pdftex.def)             Requested size: 154.66681pt x 179.3937pt.
  [63 <./potentiometer.jpg>]
-<ozone_data_sheet.png, id=1262, 892.33376pt x 703.62875pt>
+<ozone_data_sheet.png, id=1274, 892.33376pt x 703.62875pt>
 File: ozone_data_sheet.png Graphic file (type png)
 
 <use ozone_data_sheet.png>
 Package pdftex.def Info: ozone_data_sheet.png used on input line 1078.
 (pdftex.def)             Requested size: 174.00165pt x 137.20168pt.
 
-<mq135_data_sheet.jpg, id=1263, 401.5pt x 354.32375pt>
+<mq135_data_sheet.jpg, id=1275, 401.5pt x 354.32375pt>
 File: mq135_data_sheet.jpg Graphic file (type jpg)
 
 <use mq135_data_sheet.jpg>
 Package pdftex.def Info: mq135_data_sheet.jpg used on input line 1084.
 (pdftex.def)             Requested size: 174.00165pt x 153.56189pt.
  [64 <./ozone_data_sheet.png> <./mq135_data_sheet.jpg>] <images/gpio_adc_switch
-.jpg, id=1273, 2145.01375pt x 1829.83624pt>
+.jpg, id=1285, 2145.01375pt x 1829.83624pt>
 File: images/gpio_adc_switch.jpg Graphic file (type jpg)
 
 <use images/gpio_adc_switch.jpg>
 Package pdftex.def Info: images/gpio_adc_switch.jpg used on input line 1100.
 (pdftex.def)             Requested size: 154.66681pt x 131.9268pt.
  [65 <./images/gpio_adc_switch.jpg>]
-<images/dht22_data.png, id=1280, 1000.73875pt x 130.4875pt>
+<images/dht22_data.png, id=1292, 1000.73875pt x 130.4875pt>
 File: images/dht22_data.png Graphic file (type png)
 
 <use images/dht22_data.png>
@@ -1529,7 +1536,7 @@ Package pdftex.def Info: images/dht22_data.png used on input line 1119.
 Chapter 5.
 [69
 
-] <images/bath_elevation_large.png, id=1308, 625.33624pt x 419.5675pt>
+] <images/bath_elevation_large.png, id=1320, 625.33624pt x 419.5675pt>
 File: images/bath_elevation_large.png Graphic file (type png)
 
 <use images/bath_elevation_large.png>
@@ -1543,12 +1550,18 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  70
  []
 
-[70] <images/bicycle_positions.png, id=1317, 279.9258pt x 168.63pt>
-File: images/bicycle_positions.png Graphic file (type png)
+[70] <cycling_route.png, id=1329, 551.05875pt x 319.1925pt>
+File: cycling_route.png Graphic file (type png)
 
-<use images/bicycle_positions.png>
-Package pdftex.def Info: images/bicycle_positions.png used on input line 1173.
-(pdftex.def)             Requested size: 232.00613pt x 139.76215pt.
+<use cycling_route.png>
+Package pdftex.def Info: cycling_route.png used on input line 1173.
+(pdftex.def)             Requested size: 270.66988pt x 156.78558pt.
+ <shaded_route.png, id=1331, 1195.3458pt x 845.0772pt>
+File: shaded_route.png Graphic file (type png)
+
+<use shaded_route.png>
+Package pdftex.def Info: shaded_route.png used on input line 1182.
+(pdftex.def)             Requested size: 386.67296pt x 273.37024pt.
 
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
@@ -1557,13 +1570,24 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  []
 
 [71 <./images/bath_elevation_large.png>]
+
+LaTeX Warning: Text page 72 contains only floats.
+
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  72
  []
 
-[72 <./images/bicycle_positions.png>]
+[72 <./cycling_route.png> <./shaded_route.png>]
+<images/bicycle_positions.png, id=1350, 279.9258pt x 168.63pt>
+File: images/bicycle_positions.png Graphic file (type png)
+
+<use images/bicycle_positions.png>
+Package pdftex.def Info: images/bicycle_positions.png used on input line 1199.
+(pdftex.def)             Requested size: 232.00613pt x 139.76215pt.
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
@@ -1577,135 +1601,63 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  74
  []
 
-[74]
+[74 <./images/bicycle_positions.png>]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  75
  []
 
-[75] <cycling_route.png, id=1377, 551.05875pt x 319.1925pt>
-File: cycling_route.png Graphic file (type png)
-
-<use cycling_route.png>
-Package pdftex.def Info: cycling_route.png used on input line 1273.
-(pdftex.def)             Requested size: 270.66988pt x 156.78558pt.
- <shaded_route.png, id=1380, 1195.3458pt x 845.0772pt>
-File: shaded_route.png Graphic file (type png)
-
-<use shaded_route.png>
-Package pdftex.def Info: shaded_route.png used on input line 1284.
-(pdftex.def)             Requested size: 386.67296pt x 273.37024pt.
-
+[75]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  76
  []
 
-[76 <./cycling_route.png>]
+[76]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  77
  []
 
-[77 <./shaded_route.png>]
+[77] <images/roads.png, id=1411, 625.33624pt x 469.755pt>
+File: images/roads.png Graphic file (type png)
+
+<use images/roads.png>
+Package pdftex.def Info: images/roads.png used on input line 1308.
+(pdftex.def)             Requested size: 232.00613pt x 174.27971pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1337
+.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1337.
+
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  78
  []
 
-[78] <images/bike_positions_annotated.png, id=1417, 330.033pt x 313.17pt>
-File: images/bike_positions_annotated.png Graphic file (type png)
-
-<use images/bike_positions_annotated.png>
-Package pdftex.def Info: images/bike_positions_annotated.png used on input line
- 1319.
-(pdftex.def)             Requested size: 270.66988pt x 256.83928pt.
-
+[78 <./images/roads.png>]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  79
  []
 
-[79 <./images/bike_positions_annotated.png>]
-<images/pm_histogram.png, id=1426, 625.33624pt x 396.48125pt>
-File: images/pm_histogram.png Graphic file (type png)
+[79] <images/bike_positions_annotated.png, id=1425, 330.033pt x 313.17pt>
+File: images/bike_positions_annotated.png Graphic file (type png)
 
-<use images/pm_histogram.png>
-Package pdftex.def Info: images/pm_histogram.png used on input line 1357.
-(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
-
-<images/pm_boxplot.png, id=1427, 625.33624pt x 331.2375pt>
-File: images/pm_boxplot.png Graphic file (type png)
-
-<use images/pm_boxplot.png>
-Package pdftex.def Info: images/pm_boxplot.png used on input line 1363.
-(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
-
-<images/ozone_histogram.png, id=1428, 625.33624pt x 396.48125pt>
-File: images/ozone_histogram.png Graphic file (type png)
-
-<use images/ozone_histogram.png>
-Package pdftex.def Info: images/ozone_histogram.png used on input line 1372.
-(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
-
-<images/ozone_boxplot.png, id=1429, 625.33624pt x 331.2375pt>
-File: images/ozone_boxplot.png Graphic file (type png)
-
-<use images/ozone_boxplot.png>
-Package pdftex.def Info: images/ozone_boxplot.png used on input line 1378.
-(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
-
-<images/mq135_histogram.png, id=1430, 625.33624pt x 396.48125pt>
-File: images/mq135_histogram.png Graphic file (type png)
-
-<use images/mq135_histogram.png>
-Package pdftex.def Info: images/mq135_histogram.png used on input line 1386.
-(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
-
-<images/mq135_boxplot.png, id=1431, 625.33624pt x 331.2375pt>
-File: images/mq135_boxplot.png Graphic file (type png)
-
-<use images/mq135_boxplot.png>
-Package pdftex.def Info: images/mq135_boxplot.png used on input line 1392.
-(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
-
-<images/temp_histogram.png, id=1432, 625.33624pt x 403.5075pt>
-File: images/temp_histogram.png Graphic file (type png)
-
-<use images/temp_histogram.png>
-Package pdftex.def Info: images/temp_histogram.png used on input line 1400.
-(pdftex.def)             Requested size: 154.66681pt x 99.79915pt.
-
-<images/temp_boxplot.png, id=1433, 625.33624pt x 331.2375pt>
-File: images/temp_boxplot.png Graphic file (type png)
-
-<use images/temp_boxplot.png>
-Package pdftex.def Info: images/temp_boxplot.png used on input line 1406.
-(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
-
-<images/humidity_histogram.png, id=1434, 625.33624pt x 396.48125pt>
-File: images/humidity_histogram.png Graphic file (type png)
-
-<use images/humidity_histogram.png>
-Package pdftex.def Info: images/humidity_histogram.png used on input line 1414.
-
-(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
-
-<images/humidity_boxplot.png, id=1435, 625.33624pt x 331.2375pt>
-File: images/humidity_boxplot.png Graphic file (type png)
-
-<use images/humidity_boxplot.png>
-Package pdftex.def Info: images/humidity_boxplot.png used on input line 1420.
-(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
-
-
-LaTeX Warning: Float too large for page by 66.76794pt on input line 1427.
-
+<use images/bike_positions_annotated.png>
+Package pdftex.def Info: images/bike_positions_annotated.png used on input line
+ 1361.
+(pdftex.def)             Requested size: 270.66988pt x 256.83928pt.
 
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
@@ -1713,59 +1665,99 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  80
  []
 
-[80]
+[80 <./images/bike_positions_annotated.png>]
+<images/pm_histogram.png, id=1435, 625.33624pt x 396.48125pt>
+File: images/pm_histogram.png Graphic file (type png)
+
+<use images/pm_histogram.png>
+Package pdftex.def Info: images/pm_histogram.png used on input line 1399.
+(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
+
+<images/pm_boxplot.png, id=1436, 625.33624pt x 331.2375pt>
+File: images/pm_boxplot.png Graphic file (type png)
+
+<use images/pm_boxplot.png>
+Package pdftex.def Info: images/pm_boxplot.png used on input line 1405.
+(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
+
+<images/ozone_histogram.png, id=1437, 625.33624pt x 396.48125pt>
+File: images/ozone_histogram.png Graphic file (type png)
+
+<use images/ozone_histogram.png>
+Package pdftex.def Info: images/ozone_histogram.png used on input line 1414.
+(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
+
+<images/ozone_boxplot.png, id=1438, 625.33624pt x 331.2375pt>
+File: images/ozone_boxplot.png Graphic file (type png)
+
+<use images/ozone_boxplot.png>
+Package pdftex.def Info: images/ozone_boxplot.png used on input line 1420.
+(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
+
+<images/mq135_histogram.png, id=1439, 625.33624pt x 396.48125pt>
+File: images/mq135_histogram.png Graphic file (type png)
+
+<use images/mq135_histogram.png>
+Package pdftex.def Info: images/mq135_histogram.png used on input line 1428.
+(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
+
+<images/mq135_boxplot.png, id=1440, 625.33624pt x 331.2375pt>
+File: images/mq135_boxplot.png Graphic file (type png)
+
+<use images/mq135_boxplot.png>
+Package pdftex.def Info: images/mq135_boxplot.png used on input line 1434.
+(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
+
+<images/temp_histogram.png, id=1441, 625.33624pt x 403.5075pt>
+File: images/temp_histogram.png Graphic file (type png)
+
+<use images/temp_histogram.png>
+Package pdftex.def Info: images/temp_histogram.png used on input line 1442.
+(pdftex.def)             Requested size: 154.66681pt x 99.79915pt.
+
+<images/temp_boxplot.png, id=1442, 625.33624pt x 331.2375pt>
+File: images/temp_boxplot.png Graphic file (type png)
+
+<use images/temp_boxplot.png>
+Package pdftex.def Info: images/temp_boxplot.png used on input line 1448.
+(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
+
+<images/humidity_histogram.png, id=1443, 625.33624pt x 396.48125pt>
+File: images/humidity_histogram.png Graphic file (type png)
+
+<use images/humidity_histogram.png>
+Package pdftex.def Info: images/humidity_histogram.png used on input line 1456.
+
+(pdftex.def)             Requested size: 154.66681pt x 98.06134pt.
+
+<images/humidity_boxplot.png, id=1444, 625.33624pt x 331.2375pt>
+File: images/humidity_boxplot.png Graphic file (type png)
+
+<use images/humidity_boxplot.png>
+Package pdftex.def Info: images/humidity_boxplot.png used on input line 1462.
+(pdftex.def)             Requested size: 154.66681pt x 81.92467pt.
+
+
+LaTeX Warning: Float too large for page by 66.76794pt on input line 1469.
+
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  81
  []
 
-[81 <./images/pm_histogram.png> <./images/pm_boxplot.png> <./images/ozone_histo
-gram.png> <./images/ozone_boxplot.png> <./images/mq135_histogram.png> <./images
-/mq135_boxplot.png> <./images/temp_histogram.png> <./images/temp_boxplot.png> <
-./images/humidity_histogram.png> <./images/humidity_boxplot.png>]
-
-LaTeX Warning: Reference `tukey_boxplots' on page 82 undefined on input line 15
-12.
-
-
+[81]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  82
  []
 
-[82]
-Overfull \hbox (5.475pt too wide) detected at line 1528
- 
- []
-
-
-Overfull \hbox (14.30016pt too wide) in paragraph at lines 1525--1533
- [][] 
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 1549
- 
- []
-
-
-Overfull \hbox (14.30016pt too wide) in paragraph at lines 1546--1554
- [][] 
- []
-
-
-Overfull \hbox (5.475pt too wide) detected at line 1567
- 
- []
-
-
-Overfull \hbox (14.30016pt too wide) in paragraph at lines 1564--1572
- [][] 
- []
-
-
+[82 <./images/pm_histogram.png> <./images/pm_boxplot.png> <./images/ozone_histo
+gram.png> <./images/ozone_boxplot.png> <./images/mq135_histogram.png> <./images
+/mq135_boxplot.png> <./images/temp_histogram.png> <./images/temp_boxplot.png> <
+./images/humidity_histogram.png> <./images/humidity_boxplot.png>]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
@@ -1773,6 +1765,36 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  []
 
 [83]
+Overfull \hbox (5.475pt too wide) detected at line 1570
+ 
+ []
+
+
+Overfull \hbox (14.30016pt too wide) in paragraph at lines 1567--1575
+ [][] 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 1591
+ 
+ []
+
+
+Overfull \hbox (14.30016pt too wide) in paragraph at lines 1588--1596
+ [][] 
+ []
+
+
+Overfull \hbox (5.475pt too wide) detected at line 1609
+ 
+ []
+
+
+Overfull \hbox (14.30016pt too wide) in paragraph at lines 1606--1614
+ [][] 
+ []
+
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
@@ -1786,125 +1808,47 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  85
  []
 
-[85] <images/wave_longitudes.png, id=1494, 625.33624pt x 327.2225pt>
-File: images/wave_longitudes.png Graphic file (type png)
-
-<use images/wave_longitudes.png>
-Package pdftex.def Info: images/wave_longitudes.png used on input line 1613.
-(pdftex.def)             Requested size: 193.33647pt x 101.16829pt.
-
-<images/wave_latitudes.png, id=1495, 625.33624pt x 328.22626pt>
-File: images/wave_latitudes.png Graphic file (type png)
-
-<use images/wave_latitudes.png>
-Package pdftex.def Info: images/wave_latitudes.png used on input line 1618.
-(pdftex.def)             Requested size: 193.33647pt x 101.47864pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 1612--1622
-[][] [] 
- []
-
-
+[85]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  86
  []
 
-[86
-
-
- <./images/wave_longitudes.png> <./images/wave_latitudes.png>]
-<images/pm_histogram_clean.png, id=1507, 625.33624pt x 469.755pt>
-File: images/pm_histogram_clean.png Graphic file (type png)
-
-<use images/pm_histogram_clean.png>
-Package pdftex.def Info: images/pm_histogram_clean.png used on input line 1635.
-
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-<images/ozone_histogram_clean.png, id=1508, 625.33624pt x 469.755pt>
-File: images/ozone_histogram_clean.png Graphic file (type png)
-
-<use images/ozone_histogram_clean.png>
-Package pdftex.def Info: images/ozone_histogram_clean.png used on input line 16
-40.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 1634--1644
-[][] [] 
- []
-
-<images/mq135_histogram_clean.png, id=1509, 625.33624pt x 469.755pt>
-File: images/mq135_histogram_clean.png Graphic file (type png)
-
-<use images/mq135_histogram_clean.png>
-Package pdftex.def Info: images/mq135_histogram_clean.png used on input line 16
-47.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
+[86]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  87
  []
 
-[87 <./images/pm_histogram_clean.png> <./images/ozone_histogram_clean.png> <./i
-mages/mq135_histogram_clean.png>]
-<images/pm10_map_median.png, id=1524, 625.33624pt x 469.755pt>
-File: images/pm10_map_median.png Graphic file (type png)
+[87] <images/pm_histogram_clean.png, id=1513, 625.33624pt x 469.755pt>
+File: images/pm_histogram_clean.png Graphic file (type png)
 
-<use images/pm10_map_median.png>
-Package pdftex.def Info: images/pm10_map_median.png used on input line 1703.
+<use images/pm_histogram_clean.png>
+Package pdftex.def Info: images/pm_histogram_clean.png used on input line 1677.
+
 (pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-<images/pm10_map_max.png, id=1525, 625.33624pt x 469.755pt>
-File: images/pm10_map_max.png Graphic file (type png)
+<images/ozone_histogram_clean.png, id=1514, 625.33624pt x 469.755pt>
+File: images/ozone_histogram_clean.png Graphic file (type png)
 
-<use images/pm10_map_max.png>
-Package pdftex.def Info: images/pm10_map_max.png used on input line 1708.
+<use images/ozone_histogram_clean.png>
+Package pdftex.def Info: images/ozone_histogram_clean.png used on input line 16
+82.
 (pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 1702--1712
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 1676--1686
 [][] [] 
  []
 
-<images/o3_map_median.png, id=1526, 625.33624pt x 469.755pt>
-File: images/o3_map_median.png Graphic file (type png)
+<images/mq135_histogram_clean.png, id=1515, 625.33624pt x 469.755pt>
+File: images/mq135_histogram_clean.png Graphic file (type png)
 
-<use images/o3_map_median.png>
-Package pdftex.def Info: images/o3_map_median.png used on input line 1715.
+<use images/mq135_histogram_clean.png>
+Package pdftex.def Info: images/mq135_histogram_clean.png used on input line 16
+89.
 (pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-<images/o3_map_max.png, id=1527, 625.33624pt x 469.755pt>
-File: images/o3_map_max.png Graphic file (type png)
-
-<use images/o3_map_max.png>
-Package pdftex.def Info: images/o3_map_max.png used on input line 1720.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 1714--1724
-[][] [] 
- []
-
-<images/mq135_map_median.png, id=1528, 625.33624pt x 469.755pt>
-File: images/mq135_map_median.png Graphic file (type png)
-
-<use images/mq135_map_median.png>
-Package pdftex.def Info: images/mq135_map_median.png used on input line 1727.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-<images/mq135_map_max.png, id=1529, 625.33624pt x 469.755pt>
-File: images/mq135_map_max.png Graphic file (type png)
-
-<use images/mq135_map_max.png>
-Package pdftex.def Info: images/mq135_map_max.png used on input line 1732.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 1726--1736
-[][] [] 
- []
-
 
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
@@ -1912,55 +1856,72 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  88
  []
 
-[88]
+[88
+
+
+]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  89
  []
 
-[89 <./images/pm10_map_median.png> <./images/pm10_map_max.png> <./images/o3_map
-_median.png> <./images/o3_map_max.png> <./images/mq135_map_median.png> <./image
-s/mq135_map_max.png>] <images/dow_pm10.png, id=1549, 625.33624pt x 469.755pt>
-File: images/dow_pm10.png Graphic file (type png)
+[89 <./images/pm_histogram_clean.png> <./images/ozone_histogram_clean.png> <./i
+mages/mq135_histogram_clean.png>]
+<images/pm10_map_median.png, id=1537, 625.33624pt x 469.755pt>
+File: images/pm10_map_median.png Graphic file (type png)
 
-<use images/dow_pm10.png>
-Package pdftex.def Info: images/dow_pm10.png used on input line 1758.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+<use images/pm10_map_median.png>
+Package pdftex.def Info: images/pm10_map_median.png used on input line 1745.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-<images/dow_o3.png, id=1550, 625.33624pt x 469.755pt>
-File: images/dow_o3.png Graphic file (type png)
- <use images/dow_o3.png>
-Package pdftex.def Info: images/dow_o3.png used on input line 1763.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+<images/pm10_map_max.png, id=1538, 625.33624pt x 469.755pt>
+File: images/pm10_map_max.png Graphic file (type png)
 
-<images/dow_mq135.png, id=1551, 625.33624pt x 469.755pt>
-File: images/dow_mq135.png Graphic file (type png)
+<use images/pm10_map_max.png>
+Package pdftex.def Info: images/pm10_map_max.png used on input line 1750.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-<use images/dow_mq135.png>
-Package pdftex.def Info: images/dow_mq135.png used on input line 1771.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 1744--1754
+[][] [] 
+ []
 
-<images/week_period_pm10.png, id=1554, 625.33624pt x 469.755pt>
-File: images/week_period_pm10.png Graphic file (type png)
+<images/o3_map_median.png, id=1539, 625.33624pt x 469.755pt>
+File: images/o3_map_median.png Graphic file (type png)
 
-<use images/week_period_pm10.png>
-Package pdftex.def Info: images/week_period_pm10.png used on input line 1788.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+<use images/o3_map_median.png>
+Package pdftex.def Info: images/o3_map_median.png used on input line 1757.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-<images/week_period_o3.png, id=1555, 625.33624pt x 469.755pt>
-File: images/week_period_o3.png Graphic file (type png)
+<images/o3_map_max.png, id=1540, 625.33624pt x 469.755pt>
+File: images/o3_map_max.png Graphic file (type png)
 
-<use images/week_period_o3.png>
-Package pdftex.def Info: images/week_period_o3.png used on input line 1793.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+<use images/o3_map_max.png>
+Package pdftex.def Info: images/o3_map_max.png used on input line 1762.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-<images/week_period_mq135.png, id=1556, 625.33624pt x 469.755pt>
-File: images/week_period_mq135.png Graphic file (type png)
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 1756--1766
+[][] [] 
+ []
 
-<use images/week_period_mq135.png>
-Package pdftex.def Info: images/week_period_mq135.png used on input line 1801.
-(pdftex.def)             Requested size: 174.00165pt x 130.70619pt.
+<images/mq135_map_median.png, id=1541, 625.33624pt x 469.755pt>
+File: images/mq135_map_median.png Graphic file (type png)
+
+<use images/mq135_map_median.png>
+Package pdftex.def Info: images/mq135_map_median.png used on input line 1769.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
+
+<images/mq135_map_max.png, id=1542, 625.33624pt x 469.755pt>
+File: images/mq135_map_max.png Graphic file (type png)
+
+<use images/mq135_map_max.png>
+Package pdftex.def Info: images/mq135_map_max.png used on input line 1774.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 1768--1778
+[][] [] 
+ []
+
 
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
@@ -1975,48 +1936,48 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  91
  []
 
-[91 <./images/dow_pm10.png> <./images/dow_o3.png> <./images/dow_mq135.png>]
-<images/speed_pm.png, id=1574, 625.33624pt x 469.755pt>
-File: images/speed_pm.png Graphic file (type png)
+[91 <./images/pm10_map_median.png> <./images/pm10_map_max.png> <./images/o3_map
+_median.png> <./images/o3_map_max.png> <./images/mq135_map_median.png> <./image
+s/mq135_map_max.png>] <images/dow_pm10.png, id=1563, 625.33624pt x 469.755pt>
+File: images/dow_pm10.png Graphic file (type png)
 
-<use images/speed_pm.png>
-Package pdftex.def Info: images/speed_pm.png used on input line 1821.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<use images/dow_pm10.png>
+Package pdftex.def Info: images/dow_pm10.png used on input line 1804.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
-<images/speed_o3.png, id=1575, 625.33624pt x 469.755pt>
-File: images/speed_o3.png Graphic file (type png)
+<images/dow_o3.png, id=1564, 625.33624pt x 469.755pt>
+File: images/dow_o3.png Graphic file (type png)
+ <use images/dow_o3.png>
+Package pdftex.def Info: images/dow_o3.png used on input line 1809.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
-<use images/speed_o3.png>
-Package pdftex.def Info: images/speed_o3.png used on input line 1826.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<images/dow_mq135.png, id=1565, 625.33624pt x 469.755pt>
+File: images/dow_mq135.png Graphic file (type png)
 
-<images/speed_mq135.png, id=1576, 625.33624pt x 469.755pt>
-File: images/speed_mq135.png Graphic file (type png)
+<use images/dow_mq135.png>
+Package pdftex.def Info: images/dow_mq135.png used on input line 1814.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
-<use images/speed_mq135.png>
-Package pdftex.def Info: images/speed_mq135.png used on input line 1831.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<images/week_period_pm10.png, id=1566, 625.33624pt x 469.755pt>
+File: images/week_period_pm10.png Graphic file (type png)
 
-<images/altitude_pm.png, id=1579, 625.33624pt x 469.755pt>
-File: images/altitude_pm.png Graphic file (type png)
+<use images/week_period_pm10.png>
+Package pdftex.def Info: images/week_period_pm10.png used on input line 1853.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
-<use images/altitude_pm.png>
-Package pdftex.def Info: images/altitude_pm.png used on input line 1891.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<images/week_period_o3.png, id=1567, 625.33624pt x 469.755pt>
+File: images/week_period_o3.png Graphic file (type png)
 
-<images/altitude_o3.png, id=1580, 625.33624pt x 469.755pt>
-File: images/altitude_o3.png Graphic file (type png)
+<use images/week_period_o3.png>
+Package pdftex.def Info: images/week_period_o3.png used on input line 1858.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
-<use images/altitude_o3.png>
-Package pdftex.def Info: images/altitude_o3.png used on input line 1896.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<images/week_period_mq135.png, id=1568, 625.33624pt x 469.755pt>
+File: images/week_period_mq135.png Graphic file (type png)
 
-<images/altitude_mq135.png, id=1581, 625.33624pt x 469.755pt>
-File: images/altitude_mq135.png Graphic file (type png)
-
-<use images/altitude_mq135.png>
-Package pdftex.def Info: images/altitude_mq135.png used on input line 1901.
-(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+<use images/week_period_mq135.png>
+Package pdftex.def Info: images/week_period_mq135.png used on input line 1863.
+(pdftex.def)             Requested size: 127.60278pt x 95.85599pt.
 
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
@@ -2024,24 +1985,65 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  92
  []
 
-[92 <./images/week_period_pm10.png> <./images/week_period_o3.png> <./images/wee
-k_period_mq135.png>]
+[92 <./images/dow_pm10.png> <./images/dow_o3.png> <./images/dow_mq135.png> <./i
+mages/week_period_pm10.png> <./images/week_period_o3.png> <./images/week_period
+_mq135.png>] <images/speed_pm.png, id=1587, 625.33624pt x 469.755pt>
+File: images/speed_pm.png Graphic file (type png)
+
+<use images/speed_pm.png>
+Package pdftex.def Info: images/speed_pm.png used on input line 1910.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
+<images/speed_o3.png, id=1588, 625.33624pt x 469.755pt>
+File: images/speed_o3.png Graphic file (type png)
+
+<use images/speed_o3.png>
+Package pdftex.def Info: images/speed_o3.png used on input line 1915.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
+<images/speed_mq135.png, id=1589, 625.33624pt x 469.755pt>
+File: images/speed_mq135.png Graphic file (type png)
+
+<use images/speed_mq135.png>
+Package pdftex.def Info: images/speed_mq135.png used on input line 1920.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  93
  []
 
-[93 <./images/speed_pm.png> <./images/speed_o3.png> <./images/speed_mq135.png> 
-<./images/altitude_pm.png> <./images/altitude_o3.png> <./images/altitude_mq135.
-png>]
+[93 <./images/speed_pm.png> <./images/speed_o3.png> <./images/speed_mq135.png>]
+<images/altitude_pm.png, id=1603, 625.33624pt x 469.755pt>
+File: images/altitude_pm.png Graphic file (type png)
+
+<use images/altitude_pm.png>
+Package pdftex.def Info: images/altitude_pm.png used on input line 1980.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
+<images/altitude_o3.png, id=1604, 625.33624pt x 469.755pt>
+File: images/altitude_o3.png Graphic file (type png)
+
+<use images/altitude_o3.png>
+Package pdftex.def Info: images/altitude_o3.png used on input line 1985.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
+<images/altitude_mq135.png, id=1605, 625.33624pt x 469.755pt>
+File: images/altitude_mq135.png Graphic file (type png)
+
+<use images/altitude_mq135.png>
+Package pdftex.def Info: images/altitude_mq135.png used on input line 1990.
+(pdftex.def)             Requested size: 123.73817pt x 92.953pt.
+
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
  94
  []
 
-[94]
+[94 <./images/altitude_pm.png> <./images/altitude_o3.png> <./images/altitude_mq
+135.png>]
 Overfull \hbox (405.86804pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
  SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
@@ -2063,46 +2065,40 @@ Overfull \hbox (405.86804pt too wide) has occurred while \output is active
  []
 
 [97]
-Chapter 6.
-[98
+Overfull \hbox (405.86804pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 5.  QUESTION 1: CAN AIR POLLUTION BE MONITORED TO A
+ SATISFACTORY LEVEL USING A BICYCLE-BASED MONITORING DEVICE? \OT1/cmr/m/n/10.95
+ 98
+ []
 
-] <images/windsor_bridge.png, id=1640, 505.89pt x 291.0875pt>
+[98]
+Chapter 6.
+[99
+
+] <images/windsor_bridge.png, id=1655, 505.89pt x 291.0875pt>
 File: images/windsor_bridge.png Graphic file (type png)
 
 <use images/windsor_bridge.png>
-Package pdftex.def Info: images/windsor_bridge.png used on input line 2340.
+Package pdftex.def Info: images/windsor_bridge.png used on input line 2442.
 (pdftex.def)             Requested size: 174.00165pt x 100.11882pt.
 
-<images/london_road.png, id=1641, 505.89pt x 292.09125pt>
+<images/london_road.png, id=1656, 505.89pt x 292.09125pt>
 File: images/london_road.png Graphic file (type png)
 
 <use images/london_road.png>
-Package pdftex.def Info: images/london_road.png used on input line 2345.
+Package pdftex.def Info: images/london_road.png used on input line 2447.
 (pdftex.def)             Requested size: 174.00165pt x 100.46405pt.
 
-Overfull \hbox (19.09303pt too wide) in paragraph at lines 2339--2349
+Overfull \hbox (19.09303pt too wide) in paragraph at lines 2441--2451
 [][]   [] 
  []
 
-<images/guildhall.png, id=1642, 505.89pt x 293.095pt>
+<images/guildhall.png, id=1657, 505.89pt x 293.095pt>
 File: images/guildhall.png Graphic file (type png)
 
 <use images/guildhall.png>
-Package pdftex.def Info: images/guildhall.png used on input line 2354.
+Package pdftex.def Info: images/guildhall.png used on input line 2456.
 (pdftex.def)             Requested size: 174.00165pt x 100.80928pt.
-
-Overfull \hbox (602.88855pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
- TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
-TATIONS? \OT1/cmr/m/n/10.95 99
- []
-
-[99] <images/locus_route.png, id=1654, 503.8825pt x 292.09125pt>
-File: images/locus_route.png Graphic file (type png)
-
-<use images/locus_route.png>
-Package pdftex.def Info: images/locus_route.png used on input line 2369.
-(pdftex.def)             Requested size: 232.00613pt x 134.48839pt.
 
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
@@ -2110,89 +2106,34 @@ Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 TATIONS? \OT1/cmr/m/n/10.95 100
  []
 
-[100 <./images/windsor_bridge.png> <./images/london_road.png> <./images/guildha
-ll.png>]
+[100] <images/locus_route.png, id=1668, 503.8825pt x 292.09125pt>
+File: images/locus_route.png Graphic file (type png)
+
+<use images/locus_route.png>
+Package pdftex.def Info: images/locus_route.png used on input line 2471.
+(pdftex.def)             Requested size: 232.00613pt x 134.48839pt.
+
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
  TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
 TATIONS? \OT1/cmr/m/n/10.95 101
  []
 
-[101 <./images/locus_route.png>]
-<images/bath_fc_route.png, id=1670, 505.89pt x 291.0875pt>
-File: images/bath_fc_route.png Graphic file (type png)
-
-<use images/bath_fc_route.png>
-Package pdftex.def Info: images/bath_fc_route.png used on input line 2395.
-(pdftex.def)             Requested size: 232.00613pt x 133.49768pt.
-
+[101 <./images/windsor_bridge.png> <./images/london_road.png> <./images/guildha
+ll.png>]
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
  TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
 TATIONS? \OT1/cmr/m/n/10.95 102
  []
 
-[102 <./images/bath_fc_route.png>]
-<images/locus_pm10_mean.png, id=1681, 625.33624pt x 371.3875pt>
-File: images/locus_pm10_mean.png Graphic file (type png)
+[102 <./images/locus_route.png>]
+<images/bath_fc_route.png, id=1686, 505.89pt x 291.0875pt>
+File: images/bath_fc_route.png Graphic file (type png)
 
-<use images/locus_pm10_mean.png>
-Package pdftex.def Info: images/locus_pm10_mean.png used on input line 2415.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-<images/locus_pm10_max.png, id=1682, 625.33624pt x 371.3875pt>
-File: images/locus_pm10_max.png Graphic file (type png)
-
-<use images/locus_pm10_max.png>
-Package pdftex.def Info: images/locus_pm10_max.png used on input line 2420.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2414--2424
-[][] [] 
- []
-
-<images/locus_o3_mean.png, id=1683, 625.33624pt x 371.3875pt>
-File: images/locus_o3_mean.png Graphic file (type png)
-
-<use images/locus_o3_mean.png>
-Package pdftex.def Info: images/locus_o3_mean.png used on input line 2427.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-<images/locus_o3_max.png, id=1684, 625.33624pt x 371.3875pt>
-File: images/locus_o3_max.png Graphic file (type png)
-
-<use images/locus_o3_max.png>
-Package pdftex.def Info: images/locus_o3_max.png used on input line 2432.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2426--2436
-[][] [] 
- []
-
-<images/locus_mq135_mean.png, id=1685, 625.33624pt x 371.3875pt>
-File: images/locus_mq135_mean.png Graphic file (type png)
-
-<use images/locus_mq135_mean.png>
-Package pdftex.def Info: images/locus_mq135_mean.png used on input line 2439.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-<images/locus_mq135_max.png, id=1686, 625.33624pt x 371.3875pt>
-File: images/locus_mq135_max.png Graphic file (type png)
-
-<use images/locus_mq135_max.png>
-Package pdftex.def Info: images/locus_mq135_max.png used on input line 2444.
-(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2438--2448
-[][] [] 
- []
-
-<images/guildhall_vs_bike.png, id=1690, 625.33624pt x 469.755pt>
-File: images/guildhall_vs_bike.png Graphic file (type png)
-
-<use images/guildhall_vs_bike.png>
-Package pdftex.def Info: images/guildhall_vs_bike.png used on input line 2465.
-(pdftex.def)             Requested size: 309.33954pt x 232.3825pt.
+<use images/bath_fc_route.png>
+Package pdftex.def Info: images/bath_fc_route.png used on input line 2497.
+(pdftex.def)             Requested size: 232.00613pt x 133.49768pt.
 
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
@@ -2200,174 +2141,178 @@ Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 TATIONS? \OT1/cmr/m/n/10.95 103
  []
 
-[103]
+[103 <./images/bath_fc_route.png>]
+<images/locus_pm10_mean.png, id=1698, 625.33624pt x 371.3875pt>
+File: images/locus_pm10_mean.png Graphic file (type png)
+
+<use images/locus_pm10_mean.png>
+Package pdftex.def Info: images/locus_pm10_mean.png used on input line 2517.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+<images/locus_pm10_max.png, id=1699, 625.33624pt x 371.3875pt>
+File: images/locus_pm10_max.png Graphic file (type png)
+
+<use images/locus_pm10_max.png>
+Package pdftex.def Info: images/locus_pm10_max.png used on input line 2522.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2516--2526
+[][] [] 
+ []
+
+<images/locus_o3_mean.png, id=1700, 625.33624pt x 371.3875pt>
+File: images/locus_o3_mean.png Graphic file (type png)
+
+<use images/locus_o3_mean.png>
+Package pdftex.def Info: images/locus_o3_mean.png used on input line 2529.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+<images/locus_o3_max.png, id=1701, 625.33624pt x 371.3875pt>
+File: images/locus_o3_max.png Graphic file (type png)
+
+<use images/locus_o3_max.png>
+Package pdftex.def Info: images/locus_o3_max.png used on input line 2534.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2528--2538
+[][] [] 
+ []
+
+<images/locus_mq135_mean.png, id=1702, 625.33624pt x 371.3875pt>
+File: images/locus_mq135_mean.png Graphic file (type png)
+
+<use images/locus_mq135_mean.png>
+Package pdftex.def Info: images/locus_mq135_mean.png used on input line 2541.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+<images/locus_mq135_max.png, id=1703, 625.33624pt x 371.3875pt>
+File: images/locus_mq135_max.png Graphic file (type png)
+
+<use images/locus_mq135_max.png>
+Package pdftex.def Info: images/locus_mq135_max.png used on input line 2546.
+(pdftex.def)             Requested size: 193.33647pt x 114.8229pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2540--2550
+[][] [] 
+ []
+
+<images/guildhall_vs_bike.png, id=1707, 625.33624pt x 469.755pt>
+File: images/guildhall_vs_bike.png Graphic file (type png)
+
+<use images/guildhall_vs_bike.png>
+Package pdftex.def Info: images/guildhall_vs_bike.png used on input line 2567.
+(pdftex.def)             Requested size: 309.33954pt x 232.3825pt.
+
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
  TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
 TATIONS? \OT1/cmr/m/n/10.95 104
  []
 
-[104 <./images/locus_pm10_mean.png> <./images/locus_pm10_max.png> <./images/loc
-us_o3_mean.png> <./images/locus_o3_max.png> <./images/locus_mq135_mean.png> <./
-images/locus_mq135_max.png>]
+[104]
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
  TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
 TATIONS? \OT1/cmr/m/n/10.95 105
  []
 
-[105 <./images/guildhall_vs_bike.png>]
-<images/event_heatmap_pm10.png, id=1717, 625.33624pt x 469.755pt>
-File: images/event_heatmap_pm10.png Graphic file (type png)
-
-<use images/event_heatmap_pm10.png>
-Package pdftex.def Info: images/event_heatmap_pm10.png used on input line 2492.
-
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-<images/event_heatmap_o3.png, id=1718, 625.33624pt x 469.755pt>
-File: images/event_heatmap_o3.png Graphic file (type png)
-
-<use images/event_heatmap_o3.png>
-Package pdftex.def Info: images/event_heatmap_o3.png used on input line 2497.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2491--2501
-[][] [] 
- []
-
-<images/event_heatmap_mq135.png, id=1719, 625.33624pt x 469.755pt>
-File: images/event_heatmap_mq135.png Graphic file (type png)
-
-<use images/event_heatmap_mq135.png>
-Package pdftex.def Info: images/event_heatmap_mq135.png used on input line 2505
-.
-(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
-
+[105 <./images/locus_pm10_mean.png> <./images/locus_pm10_max.png> <./images/loc
+us_o3_mean.png> <./images/locus_o3_max.png> <./images/locus_mq135_mean.png> <./
+images/locus_mq135_max.png>]
 Overfull \hbox (608.36356pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
  TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
 TATIONS? \OT1/cmr/m/n/10.95 106
  []
 
-[106 <./images/event_heatmap_pm10.png> <./images/event_heatmap_o3.png> <./image
-s/event_heatmap_mq135.png>]
-Chapter 7.
-[107
+[106 <./images/guildhall_vs_bike.png>]
+<images/event_heatmap_pm10.png, id=1735, 625.33624pt x 469.755pt>
+File: images/event_heatmap_pm10.png Graphic file (type png)
 
-]
-Overfull \hbox (275.76299pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
-G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 108
+<use images/event_heatmap_pm10.png>
+Package pdftex.def Info: images/event_heatmap_pm10.png used on input line 2596.
+
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
+
+<images/event_heatmap_o3.png, id=1736, 625.33624pt x 469.755pt>
+File: images/event_heatmap_o3.png Graphic file (type png)
+
+<use images/event_heatmap_o3.png>
+Package pdftex.def Info: images/event_heatmap_o3.png used on input line 2601.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2595--2605
+[][] [] 
  []
 
-[108] <images/network_graph.png, id=1760, 350.30875pt x 341.275pt>
-File: images/network_graph.png Graphic file (type png)
+<images/event_heatmap_mq135.png, id=1737, 625.33624pt x 469.755pt>
+File: images/event_heatmap_mq135.png Graphic file (type png)
 
-<use images/network_graph.png>
-Package pdftex.def Info: images/network_graph.png used on input line 2562.
-(pdftex.def)             Requested size: 232.00613pt x 226.0285pt.
+<use images/event_heatmap_mq135.png>
+Package pdftex.def Info: images/event_heatmap_mq135.png used on input line 2609
+.
+(pdftex.def)             Requested size: 193.33647pt x 145.23547pt.
 
-Overfull \hbox (275.76299pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
-G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 109
+Overfull \hbox (608.36356pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
+ TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
+TATIONS? \OT1/cmr/m/n/10.95 107
+ []
+
+[107 <./images/event_heatmap_pm10.png> <./images/event_heatmap_o3.png> <./image
+s/event_heatmap_mq135.png>]
+Overfull \hbox (608.36356pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
+ TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
+TATIONS? \OT1/cmr/m/n/10.95 108
+ []
+
+[108]
+Overfull \hbox (608.36356pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 6.  QUESTION 2: CAN THIS DEVICE IMPROVE SPATIAL AND
+ TEMPORAL RESOLUTION OF AIR QUALITY MEASUREMENTS COMPARED TO FIXED MONITORING S
+TATIONS? \OT1/cmr/m/n/10.95 109
  []
 
 [109]
-Overfull \hbox (275.76299pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
-G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 110
- []
+Chapter 7.
+[110
 
-[110 <./images/network_graph.png>]
-Overfull \hbox (6.27753pt too wide) in paragraph at lines 2584--2585
-[]\OT1/cmr/m/n/10.95 Since data col-lec-tion for this ap-pli-ca-tion is deemed 
-in-fea-si-ble within the project's
- []
-
-<images/knn.png, id=1785, 270.7716pt x 357.9774pt>
-File: images/knn.png Graphic file (type png)
- <use images/knn.png>
-Package pdftex.def Info: images/knn.png used on input line 2598.
-(pdftex.def)             Requested size: 154.66681pt x 204.48074pt.
-
+]
 Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
 G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 111
  []
 
-[111]
+[111] <images/network_graph.png, id=1791, 350.30875pt x 341.275pt>
+File: images/network_graph.png Graphic file (type png)
 
-LaTeX Warning: Reference `q3_results' on page 112 undefined on input line 2613.
-
-
+<use images/network_graph.png>
+Package pdftex.def Info: images/network_graph.png used on input line 2677.
+(pdftex.def)             Requested size: 232.00613pt x 226.0285pt.
 
 Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
 G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 112
  []
 
-[112 <./images/knn.png>]
-<images/coverage.png, id=1803, 625.33624pt x 469.755pt>
-File: images/coverage.png Graphic file (type png)
-
-<use images/coverage.png>
-Package pdftex.def Info: images/coverage.png used on input line 2629.
-(pdftex.def)             Requested size: 270.66988pt x 203.3311pt.
-
+[112]
 Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
 G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 113
  []
 
-[113 <./images/coverage.png>]
-<images/health_optimal_route_min.png, id=1813, 405.515pt x 362.35374pt>
-File: images/health_optimal_route_min.png Graphic file (type png)
-
-<use images/health_optimal_route_min.png>
-Package pdftex.def Info: images/health_optimal_route_min.png used on input line
- 2648.
-(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
-
-<images/health_optimal_route_median.png, id=1814, 405.515pt x 362.35374pt>
-File: images/health_optimal_route_median.png Graphic file (type png)
-
-<use images/health_optimal_route_median.png>
-Package pdftex.def Info: images/health_optimal_route_median.png used on input l
-ine 2653.
-(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2647--2657
-[][] [] 
+[113 <./images/network_graph.png>]
+Overfull \hbox (6.27753pt too wide) in paragraph at lines 2699--2700
+[]\OT1/cmr/m/n/10.95 Since data col-lec-tion for this ap-pli-ca-tion is deemed 
+in-fea-si-ble within the project's
  []
 
-<images/health_optimal_route_max.png, id=1815, 405.515pt x 362.35374pt>
-File: images/health_optimal_route_max.png Graphic file (type png)
-
-<use images/health_optimal_route_max.png>
-Package pdftex.def Info: images/health_optimal_route_max.png used on input line
- 2661.
-(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
-
-<images/pollution_reductions.png, id=1817, 393.47pt x 266.9975pt>
-File: images/pollution_reductions.png Graphic file (type png)
-
-<use images/pollution_reductions.png>
-Package pdftex.def Info: images/pollution_reductions.png used on input line 269
-0.
-(pdftex.def)             Requested size: 193.33647pt x 131.19249pt.
-
-<images/length_increases.png, id=1818, 393.47pt x 266.9975pt>
-File: images/length_increases.png Graphic file (type png)
-
-<use images/length_increases.png>
-Package pdftex.def Info: images/length_increases.png used on input line 2695.
-(pdftex.def)             Requested size: 193.33647pt x 131.19249pt.
-
-Overfull \hbox (2.43332pt too wide) in paragraph at lines 2689--2699
-[][] [] 
- []
-
+<images/knn.png, id=1817, 270.7716pt x 357.9774pt>
+File: images/knn.png Graphic file (type png)
+ <use images/knn.png>
+Package pdftex.def Info: images/knn.png used on input line 2713.
+(pdftex.def)             Requested size: 154.66681pt x 204.48074pt.
 
 Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
@@ -2380,134 +2325,264 @@ Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 115
  []
 
-[115 <./images/health_optimal_route_min.png> <./images/health_optimal_route_med
-ian.png> <./images/health_optimal_route_max.png>]
+[115 <./images/knn.png>]
+<images/coverage.png, id=1834, 625.33624pt x 469.755pt>
+File: images/coverage.png Graphic file (type png)
+
+<use images/coverage.png>
+Package pdftex.def Info: images/coverage.png used on input line 2744.
+(pdftex.def)             Requested size: 270.66988pt x 203.3311pt.
+
 Overfull \hbox (275.76299pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
 G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 116
  []
 
-[116 <./images/pollution_reductions.png> <./images/length_increases.png>]
+[116 <./images/coverage.png>]
+<images/health_optimal_route_min.png, id=1844, 405.515pt x 362.35374pt>
+File: images/health_optimal_route_min.png Graphic file (type png)
+
+<use images/health_optimal_route_min.png>
+Package pdftex.def Info: images/health_optimal_route_min.png used on input line
+ 2763.
+(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
+
+<images/health_optimal_route_median.png, id=1845, 405.515pt x 362.35374pt>
+File: images/health_optimal_route_median.png Graphic file (type png)
+
+<use images/health_optimal_route_median.png>
+Package pdftex.def Info: images/health_optimal_route_median.png used on input l
+ine 2768.
+(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2762--2772
+[][] [] 
+ []
+
+<images/health_optimal_route_max.png, id=1846, 405.515pt x 362.35374pt>
+File: images/health_optimal_route_max.png Graphic file (type png)
+
+<use images/health_optimal_route_max.png>
+Package pdftex.def Info: images/health_optimal_route_max.png used on input line
+ 2776.
+(pdftex.def)             Requested size: 193.33647pt x 172.76118pt.
+
+<images/pollution_reductions.png, id=1848, 393.47pt x 266.9975pt>
+File: images/pollution_reductions.png Graphic file (type png)
+
+<use images/pollution_reductions.png>
+Package pdftex.def Info: images/pollution_reductions.png used on input line 280
+5.
+(pdftex.def)             Requested size: 193.33647pt x 131.19249pt.
+
+<images/length_increases.png, id=1849, 393.47pt x 266.9975pt>
+File: images/length_increases.png Graphic file (type png)
+
+<use images/length_increases.png>
+Package pdftex.def Info: images/length_increases.png used on input line 2810.
+(pdftex.def)             Requested size: 193.33647pt x 131.19249pt.
+
+Overfull \hbox (2.43332pt too wide) in paragraph at lines 2804--2814
+[][] [] 
+ []
+
+
+Overfull \hbox (275.76299pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
+G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 117
+ []
+
+[117]
+Overfull \hbox (275.76299pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
+G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 118
+ []
+
+[118 <./images/health_optimal_route_min.png> <./images/health_optimal_route_med
+ian.png> <./images/health_optimal_route_max.png>]
+Overfull \hbox (275.76299pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/10.95 CHAPTER 7.  QUESTION 3: HOW CAN THESE AIR QUALITY MONITORIN
+G DEVICES BE APPLIED FOR PUBLIC BENEFIT? \OT1/cmr/m/n/10.95 119
+ []
+
+[119 <./images/pollution_reductions.png> <./images/length_increases.png>]
 Chapter 8.
-
-LaTeX Warning: Reference `' on page 117 undefined on input line 3567.
-
-[117
-
-] [118] [119]
-Chapter 9.
 [120
 
-]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 3643
-.
- (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3643.
+] [121]
+Chapter 9.
+[122
 
-
-<images/robust_case.jpg, id=1865, 4143.48pt x 2330.7075pt>
+] [123] <images/robust_case.jpg, id=1897, 4143.48pt x 2330.7075pt>
 File: images/robust_case.jpg Graphic file (type jpg)
 
 <use images/robust_case.jpg>
-Package pdftex.def Info: images/robust_case.jpg used on input line 3660.
+Package pdftex.def Info: images/robust_case.jpg used on input line 3772.
 (pdftex.def)             Requested size: 270.66988pt x 152.24814pt.
- [121] [122 <./images/robust_case.jpg>]
-(./research_project_proposal_ej301.bbl [123
+ [124 <./images/robust_case.jpg>]
+(./research_project_proposal_ej301.bbl [125
 
 
-] [124] [125] [126]
-Underfull \hbox (badness 5008) in paragraph at lines 402--409
+] [126] [127] [128]
+Underfull \hbox (badness 5008) in paragraph at lines 414--421
 []\OT1/cmr/m/n/10.95 Google, 2017b.  \OT1/cmr/m/it/10.95 Maps Javascript API: H
 eatmaps \OT1/cmr/m/n/10.95 [On-line].  Moun-
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 402--409
+Underfull \hbox (badness 1221) in paragraph at lines 414--421
 \OT1/cmtt/m/n/10.95 com / maps / documentation / javascript / examples / layer-
 []heatmap$[][] \OT1/cmr/m/n/10.95 [Ac-cessed
  []
 
-[127] [128] [129]
+[129] [130] [131]
 Missing character: There is no í in font cmr10!
- [130] [131]) [132]
+ [132] [133]) [134]
 Appendix A.
 
-Overfull \hbox (20.3513pt too wide) in paragraph at lines 3705--3706
+Overfull \hbox (20.3513pt too wide) in paragraph at lines 3817--3818
 \OT1/cmr/m/n/10.95 to be edited. Add the fol-low-ing lines un-der-neath the \OT
 1/cmtt/m/n/10.95 server 3.debian.pool.ntp.org
  []
 
-[133
+[135
 
-] [134]
+] [136]
 Appendix B.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 3730.
-(./route_aqm.py [135
+nput line 3842.
+(./route_aqm.py [137
 
-] [136] [137] [138] [139] [140] [141] [142] [143] [144]
-[145] [146] [147] [148] [149]) (./route_api.php [150] [151] [152]) [153]
+] [138] [139] [140] [141] [142] [143] [144] [145] [146]
+[147] [148] [149] [150] [151]) (./route_api.php [152] [153] [154]) [155]
 Appendix C.
-[154
+[156
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3762.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 3762.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 3874.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 3874.
  (./research_project_proposal_ej301.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3762.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3762.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 3874.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 3874.
 
-Package rerunfilecheck Info: File `research_project_proposal_ej301.out' has not
- changed.
-(rerunfilecheck)             Checksum: F4216384A22D818E98D2A06A7CA8FB22;3681.
 
+
+Package rerunfilecheck Warning: File `research_project_proposal_ej301.out' has 
+changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `research_project_proposal_ej301.out
+':
+(rerunfilecheck)             Before: D3B58A085F22A0E7AB0C4F61F33AFC3D;3474
+(rerunfilecheck)             After:  A627F8E26D86318A17B1B5BB6E887F95;3474.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3762.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 3874.
  ) 
 Here is how much of TeX's memory you used:
- 39804 strings out of 492995
- 859515 string characters out of 6132705
- 1103068 words of memory out of 5000000
- 41624 multiletter control sequences out of 15000+600000
- 20477 words of font info for 78 fonts, out of 8000000 for 9000
+ 39826 strings out of 492995
+ 859758 string characters out of 6132705
+ 1102909 words of memory out of 5000000
+ 41623 multiletter control sequences out of 15000+600000
+ 22200 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,14n,65p,10382b,2056s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
-r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
-/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/t
-exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texl
-ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
-/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/20
-17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2017/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf
--dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2017/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmu10.pfb></usr/local/texlive/2017/texmf-dist
-/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-
-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on research_project_proposal_ej301.pdf (158 pages, 19515492 byte
+pdfTeX warning (dest): name{table.caption.90} has been referenced but does no
+t exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.71} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.59} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.54} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.51} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.45} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.43} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.91} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.87} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.77} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.75} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.70} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.65} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.63} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.58} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.56} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.47} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.44} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.42} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.93} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.92} has been referenced but does not
+ exist, replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr
+/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmu10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-di
+st/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on research_project_proposal_ej301.pdf (160 pages, 19823922 byte
 s).
 PDF statistics:
- 2990 PDF objects out of 3580 (max. 8388607)
- 2613 compressed objects within 27 object streams
- 1141 named destinations out of 1200 (max. 500000)
- 849 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3022 PDF objects out of 3580 (max. 8388607)
+ 2645 compressed objects within 27 object streams
+ 1162 named destinations out of 1200 (max. 500000)
+ 852 words of extra memory for PDF output out of 10000 (max. 10000000)
 

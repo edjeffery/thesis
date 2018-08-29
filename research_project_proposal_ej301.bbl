@@ -1,4 +1,4 @@
-\begin{thebibliography}{82}
+\begin{thebibliography}{83}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{Available from: }
@@ -321,6 +321,18 @@
   in Six U.S. Cities}}.
 \newblock \emph{\bibinfo{journal}{New England Journal of Medicine}},
   \bibinfo{volume}{329}(\bibinfo{number}{24}), pp.\bibinfo{pages}{1753--1759}.
+
+\bibitem[{Ebenstein et~al.(2017)Ebenstein, Fan, Greenstone, He and
+  Zhou}]{Ebenstein2017lifeexpectancy}
+\bibinfo{author}{Ebenstein, A.}, \bibinfo{author}{Fan, M.},
+  \bibinfo{author}{Greenstone, M.}, \bibinfo{author}{He, G.} and
+  \bibinfo{author}{Zhou, M.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{New evidence on the impact of sustained exposure to
+  air pollution on life expectancy from china{\textquoteright}s huai river
+  policy}.
+\newblock \emph{\bibinfo{journal}{Proceedings of the National Academy of
+  Sciences}}, \bibinfo{volume}{114}(\bibinfo{number}{39}),
+  pp.\bibinfo{pages}{10384--10389}.
 
 \bibitem[{Ebi and McGregor(2008)}]{Ebi2008ozonePMhealth}
 \bibinfo{author}{Ebi, K.L.} and \bibinfo{author}{McGregor, G.},

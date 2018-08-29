@@ -96,10 +96,10 @@ R.I.P. to my lungs and eyes, which suffered greatly throughout the data collecti
 
 \chapter{Introduction}
 
-The World Health Organisation (WHO) estimates that 90\% of the world's population lives in places that do not comply with the WHO Air Quality Guidelines and 3 million people each year die from breathing polluted air \citep{WHO2016ambient}. Disconcertingly, this is considered a conservative measure by the WHO because it focuses on particulates and excludes health impacts of other pollutants such as nitrogen oxides (NOx) and ozone (O\textsubscript{3}). Air pollution is also not just a problem in the most industrialised countries, but is a widespread problem around the world with 87\% of these deaths occurring in low and middle-income countries (LMICs). Besides the aforementioned fatalities, air pollution has a number of other serious consequences, such as cardiorespiratory and cardiovascular disease \citep{pope1995particulate,dockery1993_6cityairpoll,pope2002lungcancercardiomortality}.
+The World Health Organisation (WHO) estimates that 90\% of the world's population lives in places that do not comply with the WHO Air Quality Guidelines and 3 million people each year die from breathing polluted air \citep{WHO2016ambient}. Disconcertingly, this is considered a conservative measure by the WHO because it focuses on particulates and excludes health impacts of other pollutants such as nitrogen oxides (NO\textsubscript{x}) and ozone (O\textsubscript{3}). Air pollution is also not just a problem in the most industrialised countries, but is a widespread problem around the world with 87\% of these deaths occurring in low and middle-income countries (LMICs). Besides the aforementioned fatalities, air pollution has a number of other serious consequences, such as cardiorespiratory and cardiovascular disease \citep{pope1995particulate,dockery1993_6cityairpoll,pope2002lungcancercardiomortality}.
 
 \nomenclature{WHO}{World Health Organisation}
-\nomenclature{NOx}{Nitrogen oxides}
+\nomenclature{NO\textsubscript{x}}{Nitrogen oxides}
 \nomenclature{LMIC}{Low and middle-income countries}
 \nomenclature{O\textsubscript{3}}{Ozone}
 
@@ -225,7 +225,7 @@ In this study, we focus on particulates, nitrogen oxides and ozone. Further info
 
 \subsection{Nitrogen oxides}
 
-Nitrogen oxides (NOx) is a collective term for a group of reactive nitrogen-based substances that includes nitrogen monoxide (NO) and nitrogen dioxide (NO\textsubscript{2}). Research generally focuses on nitrogen dioxide because it one of the commonly regulated air quality pollutants \citep{Brook2004cardiostmnt}. In addition to this, NO rapidly oxidises with oxygen in the air to form NO\textsubscript{2} and so is not as prevalent in the environment. It also plays an important role in the formation of ozone (O\textsubscript{3}). One of the main sources of nitrogen oxides is the combustion of fossil fuels, which is typically found in petrol or diesel vehicles. Long-term exposure to NO\textsubscript{2} is associated with an increase in mortality rates \citep{Faustini2014nitrogenmortality}.
+Nitrogen oxides (NO\textsubscript{x}) is a collective term for a group of reactive nitrogen-based substances that includes nitrogen monoxide (NO) and nitrogen dioxide (NO\textsubscript{2}). Research generally focuses on nitrogen dioxide because it one of the commonly regulated air quality pollutants \citep{Brook2004cardiostmnt}. In addition to this, NO rapidly oxidises with oxygen in the air to form NO\textsubscript{2} and so is not as prevalent in the environment. It also plays an important role in the formation of ozone (O\textsubscript{3}). One of the main sources of nitrogen oxides is the combustion of fossil fuels, which is typically found in petrol or diesel vehicles. Long-term exposure to NO\textsubscript{2} is associated with an increase in mortality rates \citep{Faustini2014nitrogenmortality}.
 
 %\subsection{Sulphur dioxide}
 %
@@ -235,7 +235,7 @@ Nitrogen oxides (NOx) is a collective term for a group of reactive nitrogen-base
 
 \subsection{Ozone}
 
-Ozone (O\textsubscript{3}) is another pungent gas that is highly reactive. More specifically, ozone that is classed as a pollutant is known as `tropospheric ozone' as it is found near ground-level. Low-level exposure is widespread as it is formed naturally in the atmosphere. In addition to this, the action of solar UV radiation on NOx leads to the formation of O\textsubscript{3}, meaning concentrations are generally higher on sunnier days \citep{Brook2004cardiostmnt}. O\textsubscript{3} is a known pulmonary irritant \citep{Ebi2008ozonePMhealth} and long-term exposure to ambient ozone is related with an increased risk of respiratory and circulatory mortality \citep{Turner2016ozonemortality}.
+Ozone (O\textsubscript{3}) is another pungent gas that is highly reactive. More specifically, ozone that is classed as a pollutant is known as `tropospheric ozone' as it is found near ground-level. Low-level exposure is widespread as it is formed naturally in the atmosphere. In addition to this, the action of solar UV radiation on NO\textsubscript{x} leads to the formation of O\textsubscript{3}, meaning concentrations are generally higher on sunnier days \citep{Brook2004cardiostmnt}. O\textsubscript{3} is a known pulmonary irritant \citep{Ebi2008ozonePMhealth} and long-term exposure to ambient ozone is related with an increased risk of respiratory and circulatory mortality \citep{Turner2016ozonemortality}.
 
 \subsection{Particulates}
 
@@ -256,7 +256,7 @@ One example of an air quality monitoring device is an Arduino-based device deplo
 
 \nomenclature{VSN}{Vehicle sensor network}
 
-Other public transport has been used to attach air quality monitoring devices. \cite{Hasenfratz2015highresmapsTram} attached monitoring devices to trams in Zurich, Switzerland, and collected measurements over a two-year period. By using the tram network, they were able to cover a large urban area of 100km\textsuperscript{2} on a regular basis. For the base computer of their device they used a Gumstix, which is similar to a Raspberry Pi.  The device itself stored measurements in a local database and transmitted them in real-time over a cellular network, before then deleting stored readings once receipt was confirmed. Again, the paper highlighted the advantage of this mobile system compared to a static government monitoring station. Furthermore, their novel contribution was to derive a cost function for all street segments of Zurich's road network, which was then incorporated into a route finding algorithm to compute the health-optimal path. This was then compared to the route generated without the inclusion of this cost function and the authors found that taking the health-optimal path led to a 7.1\% reduction in particulate pollution exposure. \cite{Hagemann2014aerotram} also used trams to assess spatial variability of particle number concentrations and NOx.
+Other public transport has been used to attach air quality monitoring devices. \cite{Hasenfratz2015highresmapsTram} attached monitoring devices to trams in Zurich, Switzerland, and collected measurements over a two-year period. By using the tram network, they were able to cover a large urban area of 100km\textsuperscript{2} on a regular basis. For the base computer of their device they used a Gumstix, which is similar to a Raspberry Pi.  The device itself stored measurements in a local database and transmitted them in real-time over a cellular network, before then deleting stored readings once receipt was confirmed. Again, the paper highlighted the advantage of this mobile system compared to a static government monitoring station. Furthermore, their novel contribution was to derive a cost function for all street segments of Zurich's road network, which was then incorporated into a route finding algorithm to compute the health-optimal path. This was then compared to the route generated without the inclusion of this cost function and the authors found that taking the health-optimal path led to a 7.1\% reduction in particulate pollution exposure. \cite{Hagemann2014aerotram} also used trams to assess spatial variability of particle number concentrations and NO\textsubscript{x}.
 
 Another study used a device attached to a bicycle, named Aeroflex \citep{Elen2013aeroflex}. The focus was on high adaptability and ease of use since everybody is `able to ride a bike', thus enabling any volunteer member of the public to contribute to air quality monitoring. This ease of use was not only for the bicycle, but also for the software that collected, sent and displayed the data. All of the air quality monitoring equipment was attached to the bicycle (see Figure \ref{aeroflex}), including a robust data transmission system that could provide real time measurements on air quality. The Aeroflex took measurements every second and was ridden around a set route multiple times in order to provide a high spatial resolution and to ensure good temporal resolution. The success of the project was demonstrated by city authorities using it in a number of cities in Belgium, including Antwerp, Ghent and Brussels. Whilst the novel use of a bicycle to monitor air quality is a major advantage of this study, it only focused on measuring particulates, carbon monoxide and black carbon. Out of these, only particulates are part of the indexes used by the UK and the EEA, which questions the device's usefulness in helping the city authorities in monitoring air quality so that air pollution limits are not broken. This identifies a gap in the literature for a bicycle-based monitoring system that measures more of the gases and particulates detailed in Section \ref{airqualitymeasures}.
 
@@ -286,7 +286,7 @@ Looking at the air quality monitoring literature as a whole, a number of areas r
   \cite{Devarakonda2013} & Bus \& Car & CO, PM & Arduino \\ \midrule
   \cite{Elen2013aeroflex} & Bicycle & PM\textsubscript{1}, PM\textsubscript{2.5}, PM\textsubscript{10}, BC, CO & Netbook \\ \midrule
   \cite{Ferdoush2014rasppiandarduino} & Stationary & Temperature, humidity & RPi \& Arduino \\ \midrule
-  \cite{Hagemann2014aerotram} & Tram & CO, CO\textsubscript{2}, NO, NOx, O\textsubscript{3}  & Custom \\ \midrule
+  \cite{Hagemann2014aerotram} & Tram & CO, CO\textsubscript{2}, NO, NO\textsubscript{x}, O\textsubscript{3}  & Custom \\ \midrule
   \cite{Hagler2010durhamallelectric} & Electric car & CO, UFPs & N/A \\ \midrule
   \cite{Hasenfratz2015highresmapsTram} & Tram & O\textsubscript{3}, CO, NO\textsubscript{2}, UFPs & Gumstix \\ \midrule
   \cite{Hoang2013hanoihexagons} & Motorcycle & CO & Waspmote \\ \midrule
@@ -294,10 +294,10 @@ Looking at the air quality monitoring literature as a whole, a number of areas r
   \cite{Piedrahita2014quantexposuremtrng} & Person (wearable) & CO, CO\textsubscript{2}, NO\textsubscript{2}, O\textsubscript{3} & Arduino \\ \midrule
   \cite{2014busairqualityVSN} & Bus & NO\textsubscript{2}, CO\textsubscript{2}, CO, O\textsubscript{3} & RPi \& Arduino \\ \midrule
   \cite{sun2016HKmarathonML} & Stationary & CO, NO\textsubscript{2}, O\textsubscript{3}, PM\textsubscript{2.5} & Arduino \\ \midrule
-  \cite{Wallace2009mobilehamilton} & Van & NOx, SO\textsubscript{2} & N/A \\ \midrule
+  \cite{Wallace2009mobilehamilton} & Van & NO\textsubscript{x}, SO\textsubscript{2} & N/A \\ \midrule
   \cite{Weijers2004movingmeasurementunit} & Van & PM\textsubscript{1}, PM\textsubscript{\textgreater 1} & N/A \\ \midrule
   \cite{Westerdahl2005losangeles} & Car & CO, CO\textsubscript{2}, PM\textsubscript{2.5}, NO, NO\textsubscript{2} & N/A \\ \midrule
-  \cite{Wong2009envmonitoringtemporal} & Car & CO, NOx & Renesas MCU \\ \bottomrule
+  \cite{Wong2009envmonitoringtemporal} & Car & CO, NO\textsubscript{x} & Renesas MCU \\ \bottomrule
   \hline
 \end{longtable}
 
@@ -591,7 +591,7 @@ This literature review has identified a number of gaps in the literature that th
 
 \chapter{System design and implementation} \label{chap: system_design}
 
-In order to answer our research questions detailed at the end of Chapter \ref{chap: related_work}, we developed an air quality monitoring device that attaches to a bicycle. The device is based upon a Raspberry Pi computer and includes a variety of different sensors. These are as follows: temperature and humidity sensor, particulate (PM) sensor, ozone (O\textsubscript{3}) sensor and a general air quality sensor that is sensitive to a variety of gases that includes nitrogen oxides (NOx) and carbon monoxide (CO). It also has a GPS module attached that provides geo-location information. The device sends the collected data to a database, which is then processed and displayed in a web application. 
+In order to answer our research questions detailed at the end of Chapter \ref{chap: related_work}, we developed an air quality monitoring device that attaches to a bicycle. The device is based upon a Raspberry Pi computer and includes a variety of different sensors. These are as follows: temperature and humidity sensor, particulate (PM) sensor, ozone (O\textsubscript{3}) sensor and a general air quality sensor that is sensitive to a variety of gases that includes nitrogen oxides (NO\textsubscript{x}) and carbon monoxide (CO). It also has a GPS module attached that provides geo-location information. The device sends the collected data to a database, which is then processed and displayed in a web application. 
 
 In this chapter, we describe the design and implementation of the air quality monitoring device, providing our rationale for both the physical construction and the software design.
 
@@ -715,9 +715,9 @@ One of the main reasons for choosing to use MikroElektronika's click-board techn
 
 The MQ131 ozone sensor has been used in air quality projects previously, including in a unmanned aerial vehicle (UAV) air quality monitoring device \citep{alvear2017uav} and indoor monitoring \citep{Abraham2014costeffindoor}.
 
-\subsection{NOx sensor}
+\subsection{NO\textsubscript{x} sensor}
 
-For an NOx sensor, we chose the MikroElektronika `Air Quality Click'. This uses an MQ135 sensor and is marketed as being sensitive to NOx. However, upon further analysis, one can see that NOx is not listed on the data sheet's calibration curves and the sensor is actually sensitive to a variety of different gases. Unfortunately, the company did not have any dedicated NOx sensors available to replace this with. As a result of this issue and the project's time constraints, we use it as a general air quality sensor.
+For an NO\textsubscript{x} sensor, we chose the MikroElektronika `Air Quality Click'. This uses an MQ135 sensor and is marketed as being sensitive to NO\textsubscript{x}. However, upon further analysis, one can see that NO\textsubscript{x} is not listed on the data sheet's calibration curves and the sensor is actually sensitive to a variety of different gases. Unfortunately, the company did not have any dedicated NO\textsubscript{x} sensors available to replace this with. As a result of this issue and the project's time constraints, we use it as a general air quality sensor.
 
 Nonetheless, as previously explained, the modular nature of MikroElektronika's click-board technology means it would be easily replaceable in the future. In fact, towards the end of the project, MikroElektronika released a dedicated NO\textsubscript{2} sensor. This is worth noting for future developments of this air quality monitoring device.
 
@@ -1107,7 +1107,7 @@ These 12 bits allow for a range of digital values between 0 and 4095. Again, the
 V_{IN} = \frac{d}{4096} \cdot V_{REF}, \hspace{5mm} V_{REF} = 5V
 \end{equation}
 
-A similar calibration process can be attempted, but using the calibration curve in Figure \ref{mq135_curve} instead. However, this graph does not detail NOx on any of the calibration curves, despite the sensor description detailing it is sensitive to NOx. Upon further research, it was found that the MQ135 sensor is actually sensitive to a number of different gases that indicate poor air quality, including ammonia, nitrogen oxides, benzene, smoke, carbon monoxide and carbon dioxide. However, it is impossible to isolate any of these gases from the signal without further equipment. Therefore, much of the analysis herein for this sensor focuses on the raw voltage output and only the voltage delta can be analysed, with no precise NOx relation. Essentially, the voltage acts as a `basket' measure of air quality.
+A similar calibration process can be attempted, but using the calibration curve in Figure \ref{mq135_curve} instead. However, this graph does not detail NO\textsubscript{x} on any of the calibration curves, despite the sensor description detailing it is sensitive to NO\textsubscript{x}. Upon further research, it was found that the MQ135 sensor is actually sensitive to a number of different gases that indicate poor air quality, including ammonia, nitrogen oxides, benzene, smoke, carbon monoxide and carbon dioxide. However, it is impossible to isolate any of these gases from the signal without further equipment. Therefore, much of the analysis herein for this sensor focuses on the raw voltage output and only the voltage delta can be analysed, with no precise NO\textsubscript{x} relation. Essentially, the voltage acts as a `basket' measure of air quality.
 % As an alternative, we attempt a carbon monoxide calibration from the voltage reading. However, this appears to be inaccurate.
 
 \section{Temperature and humidity sensor}
@@ -1127,7 +1127,7 @@ One of the shortcomings of our calibration process for the Shinyei PPD42 particu
 
 Furthermore, there are no known concentrations of ozone gas available at the university, meaning we cannot measure the output voltage of the MQ131 sensor at specific concentrations of ozone. As a result, we cannot plot points at different concentrations to create our own calibration curve. Instead, we are forced to use the data sheet's calibration curve, which may be inaccurate.
 
-Similarly for the MQ135, we do not have access to known concentrations of NOx in the sensor's detection range. We did manage to test the sensor output using 500~ppm NOx gas in the university's Automotive Research Group laboratory. However, this concentration was far greater the normal range of NOx found in the atmosphere and so overwhelmed the sensor. Moreover, the aforementioned issue relating to the sensor's multi-functionality means we cannot calibrate the voltage to a specific concentration of a single gas. This means the device cannot definitively identify variations in NOx, but nonetheless is still useful in identifying poor general air quality.
+Similarly for the MQ135, we do not have access to known concentrations of NO\textsubscript{x} in the sensor's detection range. We did manage to test the sensor output using 500~ppm NO\textsubscript{x} gas in the university's Automotive Research Group laboratory. However, this concentration was far greater the normal range of NO\textsubscript{x} found in the atmosphere and so overwhelmed the sensor. Moreover, the aforementioned issue relating to the sensor's multi-functionality means we cannot calibrate the voltage to a specific concentration of a single gas. This means the device cannot definitively identify variations in NO\textsubscript{x}, but nonetheless is still useful in identifying poor general air quality.
 
 \nomenclature{ppm}{Parts-per-million}
 
@@ -1164,6 +1164,32 @@ Furthermore, Bath is geographically interesting because of its position surround
 \label{bath_elevation}
 \end{figure}
 
+\subsection{Route selection} \label{route_selection}
+
+The selected route is based upon the current fixed air quality monitoring stations in Bath, so that measurements obtained by this project can be compared to the official council measurements. The locations of these stations are displayed and labelled in Figure \ref{cycling_route}. The cycling route passes by all of these stations, and attempts to follow the main roads where possible as these likely have the highest levels of pollution. This route has also been overlaid on the figure.
+
+\begin{figure}[!tb]
+  \centering
+  \includegraphics[width=0.7\linewidth]{cycling_route}
+  \caption[Cycling route.]{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.}
+  \label{cycling_route}
+\end{figure}
+
+Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is shown in Figure \ref{aqma}. Again, the chosen cycling route almost completely falls within this area, thus strengthening our rationale behind the route's choice. By monitoring pollution inside this area, the results will be most useful for the local authority.
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=1\textwidth]{shaded_route}
+\caption[Bath Air Quality Management Area.]{Bath Air Quality Management Area \citep{BANES2017baqap} with shaded cycling route.}
+\label{aqma}
+\end{figure}
+
+\subsection{Data collection}
+
+To collect data, we ride a bicycle with the air quality monitoring device attached around a pre-determined route, detailed in Section \ref{route_selection}. The route is traversed in both directions in order to help identify anomalous measurements. This leads to minor differences in the route due to certain one-way streets in Bath. We ride the bicycle at a relatively constant speed in order to distribute measurements regularly in spatial terms.
+
+Data is collected across 3 weeks in July and August, from Monday 23rd July to Tuesday 14th August. The route is cycled both in the morning and afternoon. The morning run is to coincide with the morning rush hour and the evening run is to coincide with the evening rush hour. These times are deemed to have the highest pollution levels across the day. 3 weeks is also deemed long enough to allow for weather variations, which allows us to analyse the effect of weather on the measurements.
+
 \subsection{Positioning on bicycle} \label{position_testing}
 
 In order to identify which position on a bicycle is optimal for an air quality monitoring device, we need to test the device attached to different positions. We identify three potential positions on a bicycle, shown in Figure \ref{bicycle_positions}. Position 1 is situated directly below the rider and could potentially be impacted by particles thrown up by the front wheel. It is also not as visible to the user. On the other hand, this position may provide good protection from the elements and help to make the device robust. Position 2 is the least visible, but is situated lowest on the bicycle frame and, thus, provides a different testing environment for the sensor. This may also be impacted by particles thrown up by the wheels. Finally, Position 3 is situated above the front wheel, thus avoiding any particles thrown up by the wheels. In addition, it is the most suitable position for the user to view the device and allows the user to notice when the system-status LED is flashing. 
@@ -1194,9 +1220,9 @@ However, the mean and standard deviation are not robust to outliers (i.e. the ad
 
 In order to more precisely identify which measurements are outliers in our data, we use a three-part approach. In each case, we apply the outlier detection method and if all of these methods report a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
 \begin{enumerate}
-\item Inter-quartile range (IQR) (Section \ref{iqr})
-\item Median and Median Absolute Deviation (MAD) (Section \ref{mad})
-\item S\textsubscript{n} (Section \ref{sn})
+\item Inter-quartile range (IQR)
+\item Median and Median Absolute Deviation (MAD)
+\item S\textsubscript{n}
 \end{enumerate}
 
 %These outlier detection techniques are then used to create a type of band pass filter in which data outside a calculated range are filtered out.
@@ -1257,46 +1283,62 @@ The second way we account for the time series nature is by using a similar metho
 %\subsection{Outlier correction or removal}
 %We chose to exclude values that were deemed to be outliers.
 
-\subsubsection{Geo-spatial outliers} \label{gps_outliers}
-
-It is also sagacious to have a process in place to identify and correct geo-spatial outliers i.e. anomalous locations of measurements. The GPS module is relatively low-cost and if it loses a strong signal from the satellites then the locations may be anomalous. Plotting these values on a map could lead to inaccurate conclusions being drawn.
-
-The geo-spatial outliers are corrected by extrapolating from the closest known prior location. We calculate the bearing and estimate the corrected location by moving along that bearing by the average distance travelled every 10 seconds on the bicycle. Whilst this method makes some strong assumptions, the average distance travelled is only 49.7 metres, which means any deviation from the actual route will be minimal.
-
-
-\subsection{Route selection} \label{route_selection}
-
-The selected route is based upon the current fixed air quality monitoring stations in Bath, so that measurements obtained by this project can be compared to the official council measurements. The locations of these stations are displayed and labelled in Figure \ref{cycling_route}.
-
-\begin{figure}[!tb]
-  \centering
-  \includegraphics[width=0.7\linewidth]{cycling_route}
-  \caption[Cycling route.]{Map of fixed air quality monitoring sites in Bath with the chosen cycling route overlaid. The route passes by all three fixed monitoring stations.}
-  \label{cycling_route}
-\end{figure}
-
-The cycling route passes by all of these stations, and attempts to follow the main roads where possible as these likely have the highest levels of pollution. This route has been overlaid on the above figure, with the resulting map shown in Figure \ref{cycling_route}.
-
-Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is shown in Figure \ref{aqma}. Again, the chosen cycling route almost completely falls within this area, thus strengthening our rationale behind the route's choice.
-
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=1\textwidth]{shaded_route}
-\caption[Bath Air Quality Management Area.]{Bath Air Quality Management Area \citep{BANES2017baqap} with shaded cycling route.}
-\label{aqma}
-\end{figure}
-
-\subsection{Data collection}
-
-To collect data, we ride a bicycle with the air quality monitoring device attached around a pre-determined route, detailed in Section \ref{route_selection}. The route is traversed in both directions in order to help identify anomalous measurements. This leads to minor differences in the route due to certain one-way streets in Bath. We ride the bicycle at a relatively constant speed in order to distribute measurements regularly in spatial terms.
-
-Data is collected across 3 weeks in July and August, from Monday 23rd July to Tuesday 14th August. The route is cycled both in the morning and afternoon. The morning run is to coincide with the morning rush hour and the evening run is to coincide with the evening rush hour. These times are deemed to have the highest pollution levels across the day. 3 weeks is also deemed long enough to allow for weather variations, which allows us to analyse the effect of weather on the measurements.
+%\subsubsection{Geo-spatial outliers} \label{gps_outliers}
+%
+%It is also sagacious to have a process in place to identify and correct geo-spatial outliers i.e. anomalous locations of measurements. The GPS module is relatively low-cost and if it loses a strong signal from the satellites then the locations may be anomalous. Plotting these values on a map could lead to inaccurate conclusions being drawn.
+%
+%The geo-spatial outliers are corrected by extrapolating from the closest known prior location. We calculate the bearing and estimate the corrected location by moving along that bearing by the average distance travelled every 10 seconds on the bicycle. Whilst this method makes some strong assumptions, the average distance travelled is only 49.7 metres, which means any deviation from the actual route will be minimal.
 
 \subsection{Pollution mapping}
 
-With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route on average, at different times of day and at different times of the week. To achieve this, we overlay hexagonal shapes on a map based upon the method used by \cite{Hoang2013hanoihexagons}. Each hexagon's colour is an average of all values that fall inside it's boundaries. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme.
+With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, an overlay of tiles is placed on top of the map. A $75 \times 75$ grid of tiles will be used, which makes each tile $Xm \times Xm$ in size. Each tile's colour is an aggregation of all values that fall inside it's boundaries. We use median and maximum aggregations for this. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme, using green to highlight good air quality and red for poor air quality.
 
 \subsection{Identifying patterns}
+
+In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM10, the devices measurements can be compared against those from the Windsor Bridge and London Road sites. Unfortunately, the Guildhall site's particulate sensor was broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guidlhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
+
+Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, the route is separated into 10 distinct sections. These are detailed in Figure \ref{fig:roads}. The three relevant sections for comparing the device with the fixed monitoring stations are as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall.
+
+in addition, he remaining route sections are displayed as the po
+
+%along with the traffic counts and the median pollution levels for each section.
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.6\textwidth]{images/roads}
+\caption[Road sections.]{Road sections for the route.}
+\label{fig:roads}
+\end{figure}
+
+\begin{table}[!tb]
+\centering
+\caption{Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.}
+\label{tab:speed}
+\begin{tabular}{l c S[table-format=5]}
+\toprule
+Section name & Code & \multicolumn{1}{c}{AADF} \\ 
+\midrule
+Lower Bristol Road & LB & 23173 \\
+Windsor Bridge & WB & 18269 \\
+Upper Bristol Road & UB & 16978 \\
+Queen's Square & QS & 8056 \\
+The Paragon & TP & 8583 \\
+London Road & LR & 23173 \\
+Bathwick Street & BS & 15824 \\
+Great Pulteney Street & GPS & 3267 \\
+Manvers Street & MS & 5489 \\
+Dorchester Street & DS & 7051 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In addition, the following variables will be tested to see whether this device can detect patterns in air quality:
+\begin{itemize}
+\item Day of the week
+\item Morning vs. evening
+\item Traffic level (by road)
+\item Speed
+\end{itemize}
 
 \subsection{Robustness}
 
@@ -1600,29 +1642,29 @@ The outlier detection methods are also applied using moving averages, to account
 \end{table}
 \end{landscape}
 
-\subsubsection{Geo-spatial outliers}
-
-There were a small number of geo-spatial outliers, which were corrected using the method detailed in Section \ref{gps_outliers}.
-% Might need to edit to remove reference to event-based collection period
-Since the routes in each of the three data collection periods are consistent, the longitude and latitude measurements create waveform-like patterns. These are useful in identifying outliers as they clearly show when the value exceeds the usual minimums and maximums (represented by red horizontal lines). For example, Figure \ref{fig:waves} shows the longitude and latitude time series from the event-based collection period. Figure \ref{fig:wave_longitudes} has erratic longitude measurements until 18:45, before settling into a consistent pattern. Figure \ref{fig:wave_latitudes} has a slightly longer period of inconsistent latitude measurements and the values are clearly erroneous as they stretch far away from the peaks of the pattern.
-
-\begin{figure}[!tb]
-    \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/wave_longitudes}
-                \caption{Longitudes}
-                \label{fig:wave_longitudes}
-            \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/wave_latitudes}
-            	\caption{Latitudes}
-            	\label{fig:wave_latitudes}
-	   \end{subfigure}
-        \end{minipage}
-    \caption[Longitude and latitude waveforms.]{Longitude and latitude data from a consistent route creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the horizontal red lines) or that appear irregular can be considered outliers.}
-    \label{fig:waves}
-\end{figure}
+%\subsubsection{Geo-spatial outliers}
+%
+%There were a small number of geo-spatial outliers, which were corrected using the method detailed in Section \ref{gps_outliers}.
+%% Might need to edit to remove reference to event-based collection period
+%Since the routes in each of the three data collection periods are consistent, the longitude and latitude measurements create waveform-like patterns. These are useful in identifying outliers as they clearly show when the value exceeds the usual minimums and maximums (represented by red horizontal lines). For example, Figure \ref{fig:waves} shows the longitude and latitude time series from the event-based collection period. Figure \ref{fig:wave_longitudes} has erratic longitude measurements until 18:45, before settling into a consistent pattern. Figure \ref{fig:wave_latitudes} has a slightly longer period of inconsistent latitude measurements and the values are clearly erroneous as they stretch far away from the peaks of the pattern.
+%
+%\begin{figure}[!tb]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/wave_longitudes}
+%                \caption{Longitudes}
+%                \label{fig:wave_longitudes}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/wave_latitudes}
+%            	\caption{Latitudes}
+%            	\label{fig:wave_latitudes}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \caption[Longitude and latitude waveforms.]{Longitude and latitude data from a consistent route creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the horizontal red lines) or that appear irregular can be considered outliers.}
+%    \label{fig:waves}
+%\end{figure}
 
 \subsubsection{Outlier summary}
 
@@ -1694,7 +1736,7 @@ Regarding the geo-spatial outliers, these have been corrected as best possible. 
 
 Using the cleaned dataset, pollution levels along the route can be mapped. Figure \ref{fig:route_pollution_maps} shows pollution maps for each of the pollutants. Each pollutant has two maps: the first uses the mean of all measurements inside each tile's boundaries to colour the tile and the second uses the maximum. By analysing the colours of the tiles in these maps, it is possible to identify high pollution areas in Bath.
 
-Figure \ref{fig:pm10_map_median} has a high level of pollution in the north west corner of the route. This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. For the average ozone levels in Figure \ref{fig:o3_map_median}, the worst pollution is along the road in the south west part of the route. This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). Figure \ref{fig:o3_map_max} does not show much variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge. This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Figure \ref{fig:mq135_map_median} does not have any identifiable problem areas for general air quality, with any high points being sparsely dotted around the route. Taking the maximum measurements in each tile, the majority of the route has experienced a high measurement from the general air quality sensor.
+Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the route, with the majority varying between 20-50~$\mu g/m^3$. In addition, there are a small number of highly elevated PM10 levels, one of which is found in the north west corner of the route at a level of 100~$\mu g/m^3$ (Lng = -2.378, Lat = 51.386). This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum aggregation instead, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. The average ozone levels along the route are shown in Figure \ref{fig:o3_map_median}, which indicates that the worst O\textsubscript{3} pollution is along the road in the south west part of the route (Lng = -2.382 to -2.364, Lat = 51.377 to 51.382). This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). The median ozone pollution level appears to be in the 50-60~$\mu g/m^3$ range. The maximum pollution levels (Figure \ref{fig:o3_map_max}) are elevated along the whole route compared to the median levels, which is as expected. Overall, there is little variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge (Lng = -2.382, Lat = 51.385). This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Again, the median general air quality (Figure \ref{fig:mq135_map_median}) does not vary dramatically, with a small number of highly elevated levels sparsely distributed around the route. These problem areas appear to be outside of an old storage warehouse demolition site (Lng = -2.367, Lat = 51.378) and at a large traffic junction on London Road (Lng = -2.358, Lat = 51.390). Using the maximum to aggregate each tiles' values, the majority of the route has experienced a high measurement from the general air quality sensor, with no particular area being better than others.
 
 \begin{figure}[!htbp]
     \centering
@@ -1747,65 +1789,112 @@ Figure \ref{fig:pm10_map_median} has a high level of pollution in the north west
 
 The pollution maps display how the results vary spatially. We now present how the results differ temporally and in relation to other factors (speed of the bicycle, altitude, temperature and humidity). Any such patterns that can be identified in the data collected by the air quality monitoring device are displayed.
 
+\subsubsection{Road}
+
+
+
+
 \subsubsection{Day of the week}
 
 Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant by the day of the week. As Figure \ref{fig:dow_pm10} shows, the average pollution level increases throughout the week, from a low on Monday of 20$\mu g/m^3$ to a high on Sunday of over 30 $\mu g/m^3$. There is no identifiable pattern in Figure \ref{fig:dow_o3} for O\textsubscript{3} or Figure \ref{fig:dow_mq135} for general air quality.
 
-\begin{figure}[!htbp]
+\begin{figure}[!tbp]
     \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.45\linewidth}
-                \includegraphics[width=\textwidth]{images/dow_pm10}
-                \caption{PM10}
-                \label{fig:dow_pm10}
-            \end{subfigure}
-            \begin{subfigure}[t]{.45\linewidth}
-            	\includegraphics[width=\textwidth]{images/dow_o3}
-            	\caption{O\textsubscript{3}}
-            	\label{fig:dow_o3}
-	   \end{subfigure}
-        \end{minipage}
-    \begin{minipage}{1\linewidth}
-    	\centering
-            \begin{subfigure}[t]{.45\linewidth}
-                \includegraphics[width=\textwidth]{images/dow_mq135}
-                \caption{General AQ}
-                \label{fig:dow_mq135}
-            \end{subfigure}
-        \end{minipage}
-    \caption[Pollution by day of the week.]{Pollution by day of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/dow_pm10}
+      \caption{PM10}
+      \label{fig:dow_pm10}
+    \endminipage\hfill
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/dow_o3}
+      \caption{O\textsubscript{3}}
+      \label{fig:dow_o3}
+    \endminipage\hfill
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/dow_mq135}
+      \caption{MQ135}
+      \label{fig:dow_mq135}
+    \endminipage
+    \caption[Pollution by day of the week.]{Pollution by day of the week. Each bar represents the median pollution level for that day.}
     \label{fig:dow_bars}
 \end{figure}
 
+%\begin{figure}[!htbp]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.45\linewidth}
+%                \includegraphics[width=\textwidth]{images/dow_pm10}
+%                \caption{PM10}
+%                \label{fig:dow_pm10}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.45\linewidth}
+%            	\includegraphics[width=\textwidth]{images/dow_o3}
+%            	\caption{O\textsubscript{3}}
+%            	\label{fig:dow_o3}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%    	\centering
+%            \begin{subfigure}[t]{.45\linewidth}
+%                \includegraphics[width=\textwidth]{images/dow_mq135}
+%                \caption{General AQ}
+%                \label{fig:dow_mq135}
+%            \end{subfigure}
+%        \end{minipage}
+%    \caption[Pollution by day of the week.]{Pollution by day of the week. Each bar represents the median pollution level for that day. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+%    \label{fig:dow_bars}
+%\end{figure}
+
 \subsubsection{Morning vs. Evening}
 
-Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by AM/PM and the week period (week/weekend), as initially detailed in Section \ref{time_series_incorp}. For PM10, the measurements from the morning collection runs (AM) are on average higher than the measurements from the evening collection runs (PM). This holds for both the week and weekend periods. Similarly, this relationship also occurs with the O\textsubscript{3} measurements, although the difference is very slight with the week period. However, this relationship does not completely hold for the general air quality measurements since the weekend PM period has a higher average compared to the weekend AM period.
-
-\begin{figure}[!tb]
+\begin{figure}[!htbp]
     \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.45\linewidth}
-                \includegraphics[width=\textwidth]{images/week_period_pm10}
-                \caption{PM10}
-                \label{fig:week_period_pm10}
-            \end{subfigure}
-            \begin{subfigure}[t]{.45\linewidth}
-            	\includegraphics[width=\textwidth]{images/week_period_o3}
-            	\caption{O\textsubscript{3}}
-            	\label{fig:week_period_o3}
-	   \end{subfigure}
-        \end{minipage}
-    \begin{minipage}{1\linewidth}
-    	\centering
-            \begin{subfigure}[t]{.45\linewidth}
-                \includegraphics[width=\textwidth]{images/week_period_mq135}
-                \caption{General AQ}
-                \label{fig:week_period_mq135}
-            \end{subfigure}
-        \end{minipage}
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/week_period_pm10}
+      \caption{PM10}
+      \label{fig:week_period_pm10}
+    \endminipage\hfill
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/week_period_o3}
+      \caption{O\textsubscript{3}}
+      \label{fig:week_period_o3}
+    \endminipage\hfill
+    \minipage{0.33\textwidth}
+      \includegraphics[width=\linewidth]{images/week_period_mq135}
+      \caption{MQ135}
+      \label{fig:week_period_mq135}
+    \endminipage
     \caption[Pollution by AM/PM and period of the week.]{Pollution by AM/PM and period of the week. Each bar represents the median pollution level for that time period.}
     \label{fig:week_period_bars}
 \end{figure}
+
+Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by AM/PM and the week period (week/weekend), as initially detailed in Section \ref{time_series_incorp}. For PM10, the measurements from the morning collection runs (AM) are on average higher than the measurements from the evening collection runs (PM). This holds for both the week and weekend periods. Similarly, this relationship also occurs with the O\textsubscript{3} measurements, although the difference is very slight with the week period. However, this relationship does not completely hold for the general air quality measurements since the weekend PM period has a higher average compared to the weekend AM period.
+
+%\begin{figure}[!tb]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.45\linewidth}
+%                \includegraphics[width=\textwidth]{images/week_period_pm10}
+%                \caption{PM10}
+%                \label{fig:week_period_pm10}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.45\linewidth}
+%            	\includegraphics[width=\textwidth]{images/week_period_o3}
+%            	\caption{O\textsubscript{3}}
+%            	\label{fig:week_period_o3}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%    	\centering
+%            \begin{subfigure}[t]{.45\linewidth}
+%                \includegraphics[width=\textwidth]{images/week_period_mq135}
+%                \caption{General AQ}
+%                \label{fig:week_period_mq135}
+%            \end{subfigure}
+%        \end{minipage}
+%    \caption[Pollution by AM/PM and period of the week.]{Pollution by AM/PM and period of the week. Each bar represents the median pollution level for that time period.}
+%    \label{fig:week_period_bars}
+%\end{figure}
 
 
 % Morning vs Evening maps as well
@@ -1989,7 +2078,20 @@ Furthermore, it is clear that the geo-spatial measurements can occasionally be e
 
 The pollution maps generated using measurements collected by this device clearly demonstrate that the device can detect variations in air pollution. 
 
+The pollution levels shown on these maps demonstrate that the pollution limit is being broken etc... However, this finding must be taken with caution as we were not able to properly calibrate the sensors against a reference device. Therefore, if our sensors are found to be reporting inflated values, this finding no longer holds. Nonetheless, it is interesting to demonstrate how this device can inform authorities on pollution limit exceedance. In fact, this could be incorporated into the device -- an email alert could be sent when the day's average level exceeds those set by the WHO or EEA (Table \ref{airqualityguidelines}). 
+
 Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles, but the number of tiles can be increased to further increase the spatial resolution of these maps.
+
+One way in which the pollution maps could be improved is through the addition of pollution mapping techniques, such as land-use regression (LUR) or Kriging. These allow for estimation of pollution values in locations where no measurement has been taken, by taking into account a variety of factors. This was originally going to be attempted, but project time constraints meant this was not possible. The added benefit of using such techniques would be a smoothed map, instead of individual tiles. Bicycles, whilst more mobile than cars, cannot cover everywhere so this could help to further map pollution in an area.
+
+%No baseline to compare against. But maps do show variation, so we are measuring something.
+
+%Given this was carried out over a short time period and along the same quiet stretch of road, it was not expected that the environmental conditions would change significantly over the collection period. Therefore, the results should be relatively constant. However, the figure shows that Position 1 and Position 2 have relatively large spikes in their measurements. These positions are underneath the rider and on the seat stay (refer to Figure \ref{} for images of these positions) and were identified as positions that could potentially be impacted by particulate matter thrown up by the wheels.
+
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2362,7 +2464,7 @@ As Section \ref{route_selection} details, there are three fixed air quality moni
 
 \subsubsection{Data collection}
 
-For the data collection, a circular locus is drawn around the monitoring site with a radius of 350~m and a route created that covers as much of the locus as possible in the time frame allowed. One difficulty here is that Bath has a relatively high number of one-way streets, which means the route is constrained by these. The Bath Guildhall station reports NOx readings every 15 minutes, meaning our route is chosen so that it takes approximately 15 minutes to cycle around, finishing back at the origin each time. The selected route is shown in Figure \ref{fig: locus_route}. By undertaking this part of the experiment, we are be able to compare our readings against the readings reported by the high-quality fixed monitoring station, as well as demonstrate an improved spatial resolution without sacrificing temporal resolution.
+For the data collection, a circular locus is drawn around the monitoring site with a radius of 350~m and a route created that covers as much of the locus as possible in the time frame allowed. One difficulty here is that Bath has a relatively high number of one-way streets, which means the route is constrained by these. The Bath Guildhall station reports NO\textsubscript{x} readings every 15 minutes, meaning our route is chosen so that it takes approximately 15 minutes to cycle around, finishing back at the origin each time. The selected route is shown in Figure \ref{fig: locus_route}. By undertaking this part of the experiment, we are be able to compare our readings against the readings reported by the high-quality fixed monitoring station, as well as demonstrate an improved spatial resolution without sacrificing temporal resolution.
 
 \begin{figure}[!tb]
 \centering
@@ -2373,7 +2475,7 @@ For the data collection, a circular locus is drawn around the monitoring site wi
 
 \subsubsection{Demonstrating higher spatial resolution}
 
-The collected data is used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements are first plotted as points on a map to demonstrate how a larger area can be monitored. We then use Kriging/IDW interpolation to generate an even higher resolution pollution map. The results from these are detailed in Section \ref{results:q2}.
+The collected data is used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements are first plotted as points on a map to demonstrate how a larger area can be monitored. The results from these are detailed in Section \ref{results:q2}. % We then use Kriging/IDW interpolation to generate an even higher resolution pollution map. 
 
 
 \subsection{Event route} \label{sec:event}
@@ -2399,7 +2501,7 @@ To test the event-based capabilities of the device, we collect air quality measu
 
 \subsubsection{Demonstrating higher temporal resolution}
 
-The data provides a pollution level along the route for every 7-minute interval, which can then be used to show how the pollution changes over the whole time period. This more granular picture of air quality over time demonstrates the improved temporal resolution that this device can offer, as well as proving its use in monitoring events whilst maintaining portability. The results of this are shown in Section \ref{results:q2} in the next chapter.
+The data provides a pollution level along the route for every 7-minute interval, which can then be used to show how the pollution changes over the whole time period. This more granular picture of air quality over time demonstrates the improved temporal resolution that this device can offer, as well as proving its use in monitoring events whilst maintaining portability. The results of this are shown in Section \ref{results:q2}.
 
 \section{Results} \label{results:q2}
 
@@ -2467,6 +2569,8 @@ In addition, Figure \ref{fig:guildhall_vs_bike} shows that even when covering a 
 \label{fig:guildhall_vs_bike}
 \end{figure}
 
+\newpage
+
 \subsection{Bath football event}  \label{event_results}
 % Temporal
 
@@ -2511,8 +2615,19 @@ Furthermore, each vertical column of this graph represents a complete one-way tr
     \label{fig:event_heatmaps}
 \end{figure}
 
+\section{Discussion}
 
+Covering a larger area and improving spatial resolution are only beneficial if the air quality measurements vary across this spatial area. For example, if all of the measurements collected around the Guildhall fixed monitoring station had little variation, then this increase in spatial resolution actually adds no benefit. This is because the fixed monitoring station's measurements apply approximately equally to the surrounding area. Therefore, the maps generated by the locus-based monitoring need to demonstrate that the device can register varying pollution levels over short distances. Previous research has shown that pollution can indeed vary over extremely short distances [REF]. In particular, `street canyons' can trap pollution on the street whilst behind these buildings the level drops to the background pollution level. This implies that improving spatial resolution is beneficial as it allows one to better understand how pollution varies across the urban environment. 
 
+We find that pollution does vary over short distances (Figure \ref{fig:locus_maps}), both when using the median and maximum to aggregate measurements within each tile.
+
+\cite{Elen2013aeroflex} also demonstrated an improved spatial resolution when riding a bicycle-based air quality monitoring device around a section of Antwerp, Belgium. The maps generated by this device demonstrated variations of up to a factor of 10 between measurements on the main road (where the fixed monitoring site was located) and measurements from nearby minor roads. Whilst our device does not register such great variations, their device was built using much more expensive sensors, which likely has greater accuracy. Nonetheless, this supports our finding that the bicycle-based monitoring can improve spatial resolution and that the improved resolution is beneficial.
+
+A similar argument also applies for temporal resolution: improving the temporal resolution is only beneficial if the air quality measurements vary over time, otherwise a lower temporal resolution is equally as valuable. We find that the device does detect variations in pollution temporally at a temporal resolution of 7 minutes.
+
+These findings are also important from a technical standpoint. If the improvement in resolutions was not actually beneficial, then these extra measurements would just be pointlessly filling up the database. On a large enough scale, this could cause performance issues.
+
+Furthermore, the results from the event-based monitoring also demonstrate the capability of the device to monitor air quality at events on an ad-hoc basis. No such application of a portable air quality monitoring device occurs in the literature. Therefore, this novel application is promising and warrants further investigation. There is particular value in this application because fixed monitoring stations are unlikely to be set up for short-term events. This bicycle-based device enables rapid deployment to events and allows one to understand how an event impacts the local pollution level. For example, local authorities could deploy one of these devices to ...
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%							Question 3						      	       %%%%%%%%
@@ -2545,7 +2660,7 @@ However, whilst this simulation of data is sufficient for this project, we want 
 Using the most recent census data \citep{ons2011census}, the urban area of Bath has a population of $94782$ and 1.9\% of the population cycle to work. This means there are an estimated $94782 \times 1.9\% = 1801$ people that commute via bicycle in Bath every day. Clearly, not all of these commutes will be within the boundaries of our test area, so testing up to $n=500$ is not an unreasonable figure.
 % Provide information about boundaries
 
-In order to minimise the number of trivial routes, we introduce a minimum commute distance of 500~m. This avoids the origin and destination being extremely close to each other.
+In order to minimise the number of trivial routes, we introduce a minimum commute distance of 500~m. This avoids the origin and destination being extremely close to each other and, therefore, should avoid the shortest route being identical to the health-optimal route.
 
 The calculated coverage percentages are then plotted on a graph to visualise how the coverage of the city changes with the number of commuting cyclists.
 
@@ -2610,7 +2725,7 @@ The aforementioned minimum commute distance was also implemented here to avoid s
 
 \subsection{Comparing routes}
 
-Once the required number of `health-optimal' and shortest route pairs has been generated, we compare these routes to analyse the percentage decrease in pollution exposure and the percentage increase in distance. The results of this are detailed in Section \ref{q3_results} in the following chapter.
+Once the required number of `health-optimal' and shortest route pairs has been generated, we compare these routes to analyse the percentage decrease in pollution exposure and the percentage increase in distance. The results of this are detailed in Section \ref{results:q3}.
 
 
 \section{Results and analysis} \label{results:q3}
@@ -2702,6 +2817,16 @@ Figure \ref{fig:cumulatives} displays the cumulative distribution of the route l
 \end{figure}
 
 \section{Discussion}
+
+\cite{Ebenstein2017lifeexpectancy} found that a 10~$\mu g/m^3$ reduction in particulate matter pollution exposure leads to an increase in life expectancy of 0.64 years. Given an average reduction in pollution exposure of X\% and an average level of pollution in Bath of X, choosing the health-optimal routing consistency could lead to an increase in life expectancy of X. Obviously this is only an estimate etc etc..., but demonstrating a tangible health improvement can dramatically influence people's behaviour [CITE psychology papers]. To achieve this, this routing application could be incorporated into a mobile phone application. One can imagine the Google Maps application offering the shortest and health-optimal routes side-by-side when a user searches for a route with a value displayed on-screen of the health benefit of choosing the health-optimal route.
+
+Furthermore, these findings must be taken with caution. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. What we mean by this is the routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
+
+\subsection{Health benefit}
+
+% Probably need to add a section into literature review related to this. Find out how an X% reduction in a type of pollution can lead to X many more QALYs.
+
+Choosing the health-optimal route can lead to a substantial reduction in pollution exposure. We now quantify the health benefit associated with this pollution reduction, based on previous findings.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3556,38 +3681,25 @@ Figure \ref{fig:cumulatives} displays the cumulative distribution of the route l
 %%%%%%%%							DISCUSSION							       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Discussion} \label{chap: discussion}
-% THIS IS WHAT IT MEANS
-% Contextualise!
-
-\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
-
-No baseline to compare against. But maps do show variation, so we are measuring something.
-
-Given this was carried out over a short time period and along the same quiet stretch of road, it was not expected that the environmental conditions would change significantly over the collection period. Therefore, the results should be relatively constant. However, the figure shows that Position 1 and Position 2 have relatively large spikes in their measurements. These positions are underneath the rider and on the seat stay (refer to Figure \ref{} for images of these positions) and were identified as positions that could potentially be impacted by particulate matter thrown up by the wheels.
-
-\section{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}
-
-\section{Question 3: How can these air quality monitoring devices be applied for public benefit?}
-
-Furthermore, these findings must be taken with caution. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. What we mean by this is the routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
-
-\subsection{Health benefit}
-
-% Probably need to add a section into literature review related to this. Find out how an X% reduction in a type of pollution can lead to X many more QALYs.
-
-Choosing the health-optimal route can lead to a substantial reduction in pollution exposure. We now quantify the health benefit associated with this pollution reduction, based on previous findings.
+%\chapter{Discussion} \label{chap: discussion}
+%% THIS IS WHAT IT MEANS
+%% Contextualise!
+%
+%\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
+%
 
 
-\section{Limitations} \label{limitations}
+
+
+\chapter{Limitations} \label{limitations}
 
 All well and good doing all this, but if people don't have the ease of use (Need more cycle path) and education (on effects of pollution).
 
-\subsection{Public preferences}
+\section{Public preferences}
 
 People care more about speed.
 
-\subsection{Timing of project}
+\section{Timing of project}
 
 An analysis of seasonal and diurnal variation at a UK city is presented by Bigi and Harrison [2010] [REF]. NO2 concentrations in Europe tend to be higher in the winter than in the summer season. Hence, observations in the summer season had a lower chance to be detected as outliers by our method.
 
@@ -3597,11 +3709,11 @@ Might not be as high levels since schools broken up for holiday.
 
 Given the time restrictions of the project (June 2018 -- September 2018), it was not possible to collect data over a sufficient time period to analyse sensor drift in the low-quality sensors.
 
-\subsection{Resource constraints}
+\section{Resource constraints}
 
 One of the main restrictions faced during this project was the availability of one rider and only one constructed air quality monitoring device. Consequently, a limited amount of data could be collected.
 
-\subsection{Equipment breakages}
+\section{Equipment breakages}
 
 Broken ozone and humidity sensors half-way through data collection.
 
@@ -3643,7 +3755,7 @@ Test laser-based particulate sensors instead. With fan.
 \item Higher quality sensors / different sensors
 \item Fully enclosed in case (waterproof and controlled air flow)
 \item Calibrate the ozone sensor using a controlled environment.
-\item Use focused NOx sensor next time.
+\item Use focused NO\textsubscript{x} sensor next time.
 \item Add SIM to Raspberry Pi so does not rely on WiFi. Data cost is ridiculously low.
 \item Heatwave in the UK during data collection. No rain.
 \item Routing app
@@ -3653,7 +3765,7 @@ Test laser-based particulate sensors instead. With fan.
 
 In collaboration with the University of Bath's Department of Mathematical Sciences, this air quality monitoring device is being tested in the capital of Mongolia, Ulaanbaatar. The research team are in the process of creating a project proposal and will use the device to demonstrate a physical application that can collect data for use in mathematical pollution modelling. The air quality in Ulaanbaatar is extremely poor, mainly due to households burning low-quality coal for heating in the cold climate.
 
-Some adjustments were made to the device to enable this application. Firstly, the triangular bicycle bag was replaced with a plastic container and fans fitted into the walls of the container to induce air flow over the sensors. This makes the device relatively waterproof as the sensors are no longer directly exposed to the environment. Secondly, we replaced the MQ135 sensor with the dedicated NO\textsubscript{2} sensor that was recently released by MikroElektronika. This should enable accurate NO\textsubscript{2} measurements. Thirdly, we secured all sensors physically inside the container, thereby avoiding power disruption issues from vibrations and making the device more robust. Figure \ref{fig:modified_device} shows the modified device.
+Some adjustments were made to the device to enable this application. Firstly, the triangular bicycle bag was replaced with a plastic container and fans fitted into the walls of the container to induce air flow over the sensors. This makes the device relatively waterproof as the sensors are no longer directly exposed to the environment. Secondly, we replaced the MQ135 sensor with the dedicated NO\textsubscript{2} sensor that was recently released by MikroElektronika (NO\textsubscript{2} click). There was not sufficient time before the team flew to Mongolia to calibrate the NO\textsubscript{2} sensor, so the readings are stored as raw voltages. This should enable accurate NO\textsubscript{2} measurements, which can then be converted from voltages to NO\textsubscript{2} readings in the future once the sensor has been calibrated. Thirdly, we secured all sensors physically inside the container, thereby avoiding power disruption issues from vibrations and making the device more robust. Finally, functionality for HTTP posting the CSV files to a database was removed and replaced by saving all readings to one continuous CSV file. Figure \ref{fig:modified_device} shows the modified device.
 
 \begin{figure}[!tb]
 \centering
