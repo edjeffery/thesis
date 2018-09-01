@@ -1,62 +1,64 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{18}{figure.caption.5}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{23}{figure.caption.7}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}\relax }}{37}{figure.caption.10}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}\relax }}{37}{figure.caption.11}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}\relax }}{38}{figure.caption.12}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{22}{figure.caption.7}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces DAQI for PM10 \citep {defra2018daqi}.\relax }}{34}{figure.caption.9}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}.\relax }}{35}{figure.caption.10}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}.\relax }}{36}{figure.caption.11}
+\contentsline {figure}{\numberline {2-6}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}.\relax }}{37}{figure.caption.12}
+\contentsline {figure}{\numberline {2-7}{\ignorespaces High resolution raster created by \cite {Hasenfratz2015highresmapsTram}.\relax }}{37}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{43}{figure.caption.13}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{48}{figure.caption.16}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{49}{figure.caption.17}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{50}{figure.caption.18}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{52}{figure.caption.20}
-\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{54}{figure.caption.21}
-\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{57}{figure.caption.25}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{42}{figure.caption.14}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{47}{figure.caption.17}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{47}{figure.caption.18}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{48}{figure.caption.19}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{50}{figure.caption.21}
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{52}{figure.caption.22}
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{54}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{61}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{61}{figure.caption.28}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{62}{figure.caption.29}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{63}{figure.caption.30}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{64}{figure.caption.31}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{65}{figure.caption.32}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{66}{figure.caption.33}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{57}{figure.caption.27}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{58}{figure.caption.28}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{59}{figure.caption.29}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{60}{figure.caption.30}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{61}{figure.caption.31}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{62}{figure.caption.32}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{63}{figure.caption.33}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{71}{figure.caption.34}
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{72}{figure.caption.35}
-\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{72}{figure.caption.36}
-\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{74}{figure.caption.37}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces Road sections.}}{78}{figure.caption.41}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces Bike position testing.}}{80}{figure.caption.43}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces Sensor measurement histograms and boxplots.}}{82}{figure.caption.46}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{89}{figure.caption.55}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{91}{figure.caption.57}
-\contentsline {figure}{\numberline {5-10}{\ignorespaces PM10\relax }}{92}{figure.caption.60}
-\contentsline {figure}{\numberline {5-11}{\ignorespaces O\textsubscript {3}\relax }}{92}{figure.caption.60}
-\contentsline {figure}{\numberline {5-12}{\ignorespaces MQ135\relax }}{92}{figure.caption.60}
-\contentsline {figure}{\numberline {5-13}{\ignorespaces Pollution by day of the week.}}{92}{figure.caption.60}
-\contentsline {figure}{\numberline {5-14}{\ignorespaces PM10\relax }}{92}{figure.caption.62}
-\contentsline {figure}{\numberline {5-15}{\ignorespaces O\textsubscript {3}\relax }}{92}{figure.caption.62}
-\contentsline {figure}{\numberline {5-16}{\ignorespaces MQ135\relax }}{92}{figure.caption.62}
-\contentsline {figure}{\numberline {5-17}{\ignorespaces Pollution by AM/PM and period of the week.}}{92}{figure.caption.62}
-\contentsline {figure}{\numberline {5-18}{\ignorespaces Relationship between speed and sensor measurements.}}{93}{figure.caption.64}
-\contentsline {figure}{\numberline {5-19}{\ignorespaces Relationship between altitude and sensor measurements.}}{94}{figure.caption.67}
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{67}{figure.caption.34}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{67}{figure.caption.35}
+\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{68}{figure.caption.36}
+\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{69}{figure.caption.37}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces Road sections.}}{74}{figure.caption.42}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Bike position testing.}}{75}{figure.caption.43}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Sensor measurement histograms and boxplots.}}{77}{figure.caption.46}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{80}{figure.caption.50}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{82}{figure.caption.51}
+\contentsline {figure}{\numberline {5-10}{\ignorespaces PM10\relax }}{83}{figure.caption.53}
+\contentsline {figure}{\numberline {5-11}{\ignorespaces O\textsubscript {3}\relax }}{83}{figure.caption.53}
+\contentsline {figure}{\numberline {5-12}{\ignorespaces MQ135\relax }}{83}{figure.caption.53}
+\contentsline {figure}{\numberline {5-13}{\ignorespaces Pollution by day of the week.}}{83}{figure.caption.53}
+\contentsline {figure}{\numberline {5-14}{\ignorespaces PM10\relax }}{84}{figure.caption.55}
+\contentsline {figure}{\numberline {5-15}{\ignorespaces O\textsubscript {3}\relax }}{84}{figure.caption.55}
+\contentsline {figure}{\numberline {5-16}{\ignorespaces MQ135\relax }}{84}{figure.caption.55}
+\contentsline {figure}{\numberline {5-17}{\ignorespaces Pollution by AM/PM and period of the week.}}{84}{figure.caption.55}
+\contentsline {figure}{\numberline {5-18}{\ignorespaces Boxplot by road.}}{84}{figure.caption.57}
+\contentsline {figure}{\numberline {5-19}{\ignorespaces Relationship between speed and sensor measurements.}}{85}{figure.caption.61}
+\contentsline {figure}{\numberline {5-20}{\ignorespaces Relationship between altitude and sensor measurements.}}{86}{figure.caption.64}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{101}{figure.caption.72}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{102}{figure.caption.74}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{103}{figure.caption.78}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{105}{figure.caption.80}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{106}{figure.caption.81}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{107}{figure.caption.82}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{93}{figure.caption.67}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{94}{figure.caption.69}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{95}{figure.caption.73}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{96}{figure.caption.75}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{97}{figure.caption.76}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{99}{figure.caption.77}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{113}{figure.caption.83}
-\contentsline {figure}{\numberline {7-2}{\ignorespaces K-nearest neighbours.}}{115}{figure.caption.84}
-\contentsline {figure}{\numberline {7-3}{\ignorespaces Cyclist coverage.}}{116}{figure.caption.85}
-\contentsline {figure}{\numberline {7-4}{\ignorespaces Example routes.}}{118}{figure.caption.86}
-\contentsline {figure}{\numberline {7-5}{\ignorespaces Changes in exposure and route length.}}{119}{figure.caption.88}
+\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{104}{figure.caption.78}
+\contentsline {figure}{\numberline {7-2}{\ignorespaces Cyclist coverage.}}{107}{figure.caption.79}
+\contentsline {figure}{\numberline {7-3}{\ignorespaces Example routes.}}{108}{figure.caption.81}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{124}{figure.caption.89}
+\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{115}{figure.caption.82}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

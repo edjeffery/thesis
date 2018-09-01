@@ -4,44 +4,44 @@ The top-level auxiliary file: research_project_proposal_ej301.aux
 The style file: bath.bst
 Database file #1: bibliography.bib.bib
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 83 entries,
+You've used 84 entries,
             3664 wiz_defined-function locations,
-            1230 strings with 27312 characters,
-and the built_in function-call counts, 75440 in all, are:
-= -- 5163
-> -- 4212
-< -- 9
-+ -- 1586
-- -- 1495
-* -- 8757
-:= -- 10814
-add.period$ -- 268
-call.type$ -- 83
-change.case$ -- 889
-chr.to.int$ -- 87
-cite$ -- 83
-duplicate$ -- 5011
-empty$ -- 4992
-format.name$ -- 1689
-if$ -- 14175
+            1236 strings with 27423 characters,
+and the built_in function-call counts, 75931 in all, are:
+= -- 5196
+> -- 4224
+< -- 10
++ -- 1591
+- -- 1499
+* -- 8808
+:= -- 10890
+add.period$ -- 272
+call.type$ -- 84
+change.case$ -- 895
+chr.to.int$ -- 88
+cite$ -- 84
+duplicate$ -- 5051
+empty$ -- 5041
+format.name$ -- 1693
+if$ -- 14268
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 1000
-newline$ -- 433
-num.names$ -- 348
-pop$ -- 1278
+missing$ -- 1006
+newline$ -- 439
+num.names$ -- 352
+pop$ -- 1287
 preamble$ -- 1
-purify$ -- 773
+purify$ -- 778
 quote$ -- 0
-skip$ -- 2417
+skip$ -- 2430
 stack$ -- 0
-substring$ -- 2778
-swap$ -- 4734
-text.length$ -- 8
+substring$ -- 2789
+swap$ -- 4762
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 744
+type$ -- 753
 warning$ -- 0
-while$ -- 498
+while$ -- 502
 width$ -- 0
-write$ -- 1110
+write$ -- 1124

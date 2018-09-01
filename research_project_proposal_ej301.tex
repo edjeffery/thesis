@@ -1,4 +1,5 @@
-\documentclass[11pt]{report}
+\documentclass[11pt,twosided,a4paper]{report}
+% [11pt,twoside,a4paper]
 % packages
 \usepackage{baththesis}
 \usepackage{amssymb} %for Blackboard bold etc \usepackage{graphicx} %for including eps graphics
@@ -22,6 +23,9 @@
 \usepackage{graphicx}
 \usepackage{subcaption}
 
+% Margins
+\usepackage{geometry}
+
 % Abbreviations
 \usepackage{nomencl}
 \makenomenclature
@@ -42,6 +46,10 @@
 
 % Code inclusion
 \usepackage{listings}
+
+% Custom headers
+%\usepackage{fancyhdr}
+%\pagestyle{fancy}
 
 \lstset{frame=tblr,
 	aboveskip=3mm,
@@ -103,24 +111,39 @@ The World Health Organisation (WHO) estimates that 90\% of the world's populatio
 \nomenclature{LMIC}{Low and middle-income countries}
 \nomenclature{O\textsubscript{3}}{Ozone}
 
-In addition to the health problems associated with air pollution, air quality monitoring equipment is relatively expensive, with professional sensing equipment reaching into the thousands of pounds. Within the last ten years, low-cost sensors have been developed that are now widely available as a cheap alternative to their more expensive counterparts \citep{Clements2017lowcostworkshop}. Coupled with the decline in both the cost of computers and their size, creating low-cost monitoring equipment for air quality monitoring purposes has become a more realistic opportunity. Attempts have been made at creating such devices, but studies focusing on stationary devices require a large number to be installed to get distributed readings in a given location because of the large spatial variability of these pollutants in urban environments. In addition, many are indoor-based devices and thus do not measure ambient (i.e. outdoor) air quality. An alternative is to use a mobile platform, which can assess the spatial variability using far fewer sensing devices and in a constrained time-frame \citep{Hagler2010durhamallelectric,Wallace2009mobilehamilton,Westerdahl2005losangeles,Weijers2004movingmeasurementunit,Adams2012hamilton20052010,Elen2013aeroflex}. This introduces the concept of `runs', whereby the vehicle carrying the sensing device takes repeated measurements over the entire area at different days and/or different times of one day \citep{Peters2013cycleruns}.
+In addition to the health problems associated with air pollution, air quality monitoring equipment is relatively expensive, with professional sensing equipment reaching into the thousands of pounds. Within the last ten years, low-cost sensors have been developed that are now widely available as a cheap alternative to their more expensive counterparts \citep{Clements2017lowcostworkshop}. Coupled with the decline in both the cost of computers and their size, creating low-cost monitoring equipment for air quality monitoring purposes has become a more realistic opportunity. Attempts have been made at creating such devices, but studies focusing on stationary devices require a large number to be installed to get distributed readings in a given location because of the large spatial variability of these pollutants in urban environments. In addition, many are indoor-based devices and thus do not measure ambient (i.e. outdoor) air quality. An alternative is to use a mobile platform, which can lead to improvements in spatial and temporal resolution in comparison to the more expensive fixed air quality monitoring stations currently used \citep{Weijers2004movingmeasurementunit,Westerdahl2005losangeles,Wallace2009mobilehamilton,Hagler2010durhamallelectric,Adams2012hamilton20052010,Elen2013aeroflex}. %This introduces the concept of `runs', whereby the vehicle carrying the sensing device takes repeated measurements over the entire area at different days and/or different times of one day \citep{Peters2013cycleruns}.
 
 A further issue hampering the development of these devices is the inaccuracy of low-cost sensors. They are often sensitive to environmental factors, such as temperature, and can have cross-sensitivities with other pollutants. As a result, calibration methods have been developed that implement multi-variate linear regression and different machine learning techniques to increase the accuracy of these sensors \citep{Spinelle2015fieldcalibrationa,Spinelle2017fieldcalibrationb,zimmerman2018machinelearning}.
 
-Many different vehicles have been used previously when monitoring air quality. A similar study was conducted using a vehicular sensor network on public buses \citep{2014busairqualityVSN}. A different study based the monitoring on public trams \citep{Hagemann2014aerotram}, indicating that public transport is a viable way of making the sensing mobile. Another study used a tricycle-based vehicle \citep{Jabbar2017bikefossarchitecture} and standard bicycles have also been used \citep{Elen2013aeroflex,Peters2013cycleruns}. Alternatively, other options include: fuel-based cars \citep{Apte2017googlestreetview,Devarakonda2013}, electric cars \citep{Hagler2010durhamallelectric}, Post Office vehicles, couriers, and other public transport. Those papers in which a non-polluting vehicle was used stress the advantage of using a vehicle that does not affect the measurements with its own pollution. Furthermore, bicycles can be used both on the road as well as in areas that typical traffic cannot go. For these reasons coupled with the resource availabilities to the project, a bicycle will be used to host the monitoring device.
+Many different vehicles have been used previously when monitoring air quality. A similar study was conducted using a vehicular sensor network on public buses \citep{2014busairqualityVSN}. A different study based the monitoring on public trams \citep{Hagemann2014aerotram}, indicating that public transport is a viable way of making the sensing mobile. Another study used a tricycle-based vehicle \citep{Jabbar2017bikefossarchitecture} and standard bicycles have also been used \citep{Elen2013aeroflex,Peters2013cycleruns}. Alternatively, other options include: fuel-based cars \citep{Devarakonda2013,Apte2017googlestreetview}, electric cars \citep{Hagler2010durhamallelectric}, Post Office vehicles, couriers, and other public transport. Those papers in which a non-polluting vehicle was used stress the advantage of using a vehicle that does not affect the measurements with its own pollution. Furthermore, bicycles can be used both on the road as well as in areas that typical traffic cannot go. For these reasons coupled with the resource availabilities to the project, a bicycle will be used to host the monitoring device.
 
 There are a number of potential problems with building a portable sensing device. The device needs to be supplied with consistent and reliable power, and it needs to be robust to varying environmental conditions. It also needs to be small and light enough to attach onto a vehicle without affecting its usability. Additionally, the device needs to be able to remotely send its readings for processing, storage and display.
 
 If the project is successful and a reliable air-quality map of Bath can be generated, there is the potential that routes identified to have poor air quality can be avoided, which may lead to cardiopulmonary/cardiorespiratory health benefits. In fact, \cite{Google2017EnvReport} are trialling an air quality monitoring project in California with the view to incorporate this data into their Google Maps product. Rather than using the typical path-finding algorithms, the pollution level can be incorporated into the cost function in order to re-direct the route away from areas of high pollution. In addition to Google's efforts, an air quality monitoring project in Zurich found that taking the health-optimal path instead of the shortest path could lead to a 7.1\% reduction in exposure \citep{Hasenfratz2015highresmapsTram}. Furthermore, if air pollution exposure is found to be high for cyclists, then the council could build alternative cycle paths that distance cyclists from the pollution and help to reduce exposure \citep{schepers2015bikepaths}. There is also an educational aspect from presenting air quality data to the public because citizens can learn more about air pollution and how it affects them. 
 
-As a proposed solution to the problems detailed above, this project aims to design and create a low-cost, portable air quality monitoring device that can be attached to a vehicle and collect measurements whilst the vehicle is moving around the city of Bath. Making the device low-cost is important for air quality monitoring becoming ubiquitous in the future and the device being mobile is also important in order to improve the spatial resolution of the air quality monitoring in comparison to current fixed stations. Furthermore, this project will also seek to assess the feasibility of using low-cost sensors to accurately measure air pollution and attempt to enhance the calibration accuracy of the low-cost sensors over time using either regression or machine learning techniques. In addition, if the device is a success, there is also the possibility of deploying multiple devices so that a larger sample set and greater geographical coverage can be obtained compared to if a singular device was used. Finally, the data will be used to generate pollution maps of Bath, which should inform the public about the air quality in their area.
+As a proposed solution to the problems detailed above, this project details the design and creation of a low-cost, portable air quality monitoring device that can be attached to a bicycle and collect measurements whilst the bicycle is moving around the city of Bath. Making the device low-cost is important for air quality monitoring becoming ubiquitous in the future and the device being mobile is also important in order to improve the spatial resolution of the air quality monitoring in comparison to current fixed stations. In addition, the air quality monitoring system as a whole should be robust. The data flow from collection through to display will ideally be smooth and reliable, and data processing and cleaning will form part of this process. 
+
+Our device consists of a Raspberry Pi as the base computer, with the addition of a particulate sensor, ozone sensor, general air quality sensor, and a temperature and humidity sensor. The main data collection period consisted of riding the bicycle-based device around a chosen route over a 3-week period, as well as a locus-based collection around an existing monitoring station and a novel event-based data collection period. In total, approximately 12,000 measurements are collected. Based on these data, the project assesses whether a bicycle-based monitoring device can monitor air pollution to a satisfactory level. In addition, this project tests whether such a device can improve spatial and temporal resolution compared to fixed monitoring stations. Furthermore, the data will be used to generate pollution maps of Bath, which should inform the public about the air quality in their area. Finally, the project will evaluate whether the device can be applied for public benefit, through the creation of alternative routes that expose the user to less pollution.
+%In addition, if the device is a success, there is also the possibility of deploying multiple devices so that a larger sample set and greater geographical coverage can be obtained compared to if a singular device was used. 
 
 %\nomenclature{PCB}{Printed circuit board}
 
-In terms of more technical objectives, the air quality monitoring system as a whole should be robust. The data flow from collection through to display will ideally be smooth and reliable, and data processing and cleaning will form part of this process. 
+%In addition, in terms of the technical objectives, the air quality monitoring system as a whole should be robust. The data flow from collection through to display will ideally be smooth and reliable, and data processing and cleaning will form part of this process. 
 
-In this paper, we present a bicycle-based air quality monitoring device. In Chapter \ref{chap: related_work}, we cover the literature on air pollution and existing air quality monitoring platforms. In Chapter \ref{chap: system_design}, we describe how the device was designed, from both a physical and software standpoint. Chapter \ref{chap: calibration} then details how the raw sensor outputs were read and converted to meaningful readings. Chapter \ref{chap: methodology} deals with the experiment setup and how we aim to answer our research questions arising from our review of the literature. Next, we detail our results in Chapter \ref{chap: results} and discuss our findings in Chapter \ref{chap: discussion}. Finally, Chapter \ref{chap: conclusion} details our conclusions and recommendations for future work.
+%We survey related work in Chapter \ref{chap: related_work}.
 
+In summary, this paper makes the following contributions:
+\begin{itemize}
+\item We design and create a bicycle-based air quality monitoring device that measures particulates, ozone and general air quality (Chapter \ref{chap: system_design}).
+\item All of the sensors in this project output either analogue or digital raw signals. We design and implement an output conversion and calibration process for each of these sensors in Chapter \ref{chap: calibration}.
+\item We test whether air pollution can be monitored to a satisfactory level using a bicycle-based monitoring device (Chapter \ref{chap:q1}). The results show that this is achievable, with the device demonstrating sensitivity to trends in air pollution, as well as the creation of pollution maps from the data collected by the device. In addition, we also identify the optimal position of the monitoring device on a bicycle.
+\item Chapter \ref{chap:q2} demonstrates how such a device can improve spatial and temporal resolution compared to fixed monitoring stations. A novel application of the device to conduct event-based monitoring is also demonstrated, with successful identification of the pollution impact of the event.
+\item Since coverage of a large area is infeasible using one cyclist, we calculate in Chapter \ref{chap:q3} that approximately 50 commuting cyclists are needed to generate sufficient coverage for air quality monitoring purposes. We then use simulated data to demonstrate that a person can reduce their pollution exposure by 5.08\% by choosing to take the `health-optimal' route instead of the shortest route. This equates to an increase in life expectancy of 0.08 years if chosen consistently.
+\end{itemize}
+
+%In this paper, we present a bicycle-based air quality monitoring device. In Chapter \ref{chap: related_work}, we cover the literature on air pollution and existing air quality monitoring platforms. In Chapter \ref{chap: system_design}, we describe how the device is designed, from both a physical and software standpoint. Chapter \ref{chap: calibration} then details how the raw sensor outputs are read and converted to meaningful readings. Each of the research questions are then answered in turn. Chapter \ref{chap:q1} focuses on answering whether air pollution can be monitored to a satisfactory level using a bicycle-based monitoring device. Chapter \ref{chap:q2} then looks at whether such a device can improve spatial and temporal resolution compared to fixed monitoring stations and Chapter \ref{chap:q3} focuses on how the device can be used for public benefit. Finally, Chapter \ref{limitations} details the limitations and Chapter \ref{conclusion} concludes, with recommendations for future work.
+
+In addition, Chapter \ref{chap:limitations} details the limitations of our work, before Chapter \ref{chap:conclusion} concludes and provides recommendations for future work.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%							RELATED WORK				      		       %%%%%%%%
@@ -201,11 +224,12 @@ Many governments have central bodies that handle the measuring of air quality an
 
 \begin{table}[!tbp]
   \centering
+  \small
   \caption{UK and EEA air quality guidelines}
   \label{airqualityguidelines}
   \begin{tabular}{ l l l l l l }
   \toprule
-  & \multicolumn{4}{c}{Limit ($\mu g/m^3$)} 													\\ \cmidrule(l{0mm}r{0mm}){2-6}
+  & \multicolumn{5}{c}{Limit ($\mu g/m^3$)} 													\\ \cmidrule(l{0mm}r{0mm}){2-6}
   Gas/particulate  							& 15-minute 	& 1-hour 	& 8-hour 	& 24-hour 	& Annual 	\\ \midrule
   Fine particulate matter (PM\textsubscript{2.5}) 	& -- 			& -- 		& -- 		& 50 		& 40\textsuperscript{$\diamond$} 		\\
   Particulate matter (PM\textsubscript{10}) 		& -- 			& -- 		& -- 		& -- 		& 25 		\\
@@ -271,13 +295,15 @@ Another interesting study was conducted by \cite{Apte2017googlestreetview} using
 
 Looking at the air quality monitoring literature as a whole, a number of areas remain unaddressed. Firstly, no study measure all of pollutants detailed in Section \ref{airqualitymeasures} that form UK and EU legislation. Whilst this may be because it is difficult to fit that number of sensors into one device, if mobile air quality monitoring in the future is to be a viable option in the UK, this needs to be addressed. Secondly, the capabilities of using a sole Raspberry Pi device for air quality monitoring purposes needs further investigation as it is often used in conjunction with another computer (see Table \ref{listofprevdevices}). Thirdly, only three of the studies detailed in Table \ref{listofprevdevices} used bicycles, which are ubiquitous, non-polluting vehicles that would appear to be an ideal candidate vehicle for mobile air quality monitoring. Finally, in all of these three cases, the air quality monitoring device appeared bulky and cumbersome (see Figure \ref{aeroflex} for an example). Therefore, it would be interesting to see if all of the sensing capabilities could be incorporated into a small device.
 
+\newgeometry{left = 3cm, right = 3cm, top = 4cm, bottom = 2cm}
+
 \begin{landscape}
-  \footnotesize
+  \small
 \begin{longtable}{ p{0.4\textwidth} p{0.3\textwidth} p{0.4\textwidth} p{0.2\textwidth} }
   \caption{\mbox{List of air quality monitoring devices in the literature}}
   \vspace{-0.4cm}
   \label{listofprevdevices} \\
-  %\renewcommand{\arraystretch}{1.25} \\
+  %\renewcommand{\arraystretch}{0.5} \\
   \toprule
   Study & Vehicle type & Gas/particulates measured & Base computer \\ \midrule
   \cite{Jabbar2017bikefossarchitecture} & Tricycle & PM\textsubscript{2.5} & RPi \\ \midrule
@@ -302,6 +328,8 @@ Looking at the air quality monitoring literature as a whole, a number of areas r
 \end{longtable}
 
 \end{landscape}
+
+\restoregeometry
 
 \nomenclature{CO}{Carbon monoxide}
 \nomenclature{UFP}{Ultra-fine particle}
@@ -368,15 +396,15 @@ The device itself is almost twice the price of the second-most expensive SBC in 
   \footnotesize
   \caption{Comparison of SBCs}
   \label{sbccomparisontable}
-  \begin{tabular}{ l p{0.175\textwidth} p{0.15\textwidth} l p{0.08\textwidth} p{0.06\textwidth} p{0.1\textwidth}}
+  \begin{tabular}{ l p{0.175\textwidth} p{0.15\textwidth} l p{0.07\textwidth} p{0.06\textwidth} p{0.1\textwidth}}
   \toprule
-  Model & Recommended / min. current\textsuperscript{4} & CPU speed & RAM & Wi-Fi built-in & Blue--tooth & Price \\ \midrule
-  RPi Model A+ & 700mA/180mA & 700MHz & 512MB & No & No & \textsterling 20.00\textsuperscript{1} \\
-  RPi 2 Model B & 1.8A/350mA & 900MHz (QC) & 1GB & No & No & \textsterling 34.00\textsuperscript{1} \\
+  Model & Recommended / min. current\textsuperscript{4} & CPU speed & RAM & Wi-Fi & Blue--tooth & Price \\ \midrule
+  RPi Model A+ & 700mA/180mA & 0.7GHz & 512MB & No & No & \textsterling 20.00\textsuperscript{1} \\
+  RPi 2 Model B & 1.8A/350mA & 0.9GHz (QC) & 1GB & No & No & \textsterling 34.00\textsuperscript{1} \\
   RPi 3 Model B & 2.5A/400mA & 1.2GHz (QC) & 1GB & Yes & Yes & \textsterling 32.00\textsuperscript{1} \\
   RPi Zero W & 1.2A/150mA & 1GHz & 512MB & Yes & Yes & \textsterling9.16\textsuperscript{1} \\
   Arduino Uno & 100mA/50mA & 16MHz & N/A & No & No & \textsterling 16.64\textsuperscript{2} \\
-  BeagleBone Black W & 1.2A/500mA & 1GHz & 512MB & Yes & Yes & \textsterling 62.24\textsuperscript{3} \\ \bottomrule
+  BeagleBone Black & 1.2A/500mA & 1GHz & 512MB & Yes & Yes & \textsterling 62.24\textsuperscript{3} \\ \bottomrule
   \multicolumn{6}{l}{\textsuperscript{1}\footnotesize{Source: \href{https://thepihut.com/collections/raspberry-pi}{https://thepihut.com/collections/raspberry-pi}}} \\
   \multicolumn{6}{l}{\textsuperscript{2}\footnotesize{Source: \href{https://store.arduino.cc/}{https://store.arduino.cc/}}} \\
   \multicolumn{6}{l}{\textsuperscript{3}\footnotesize{Source: \href{https://beagleboard.org/black-wireless}{https://beagleboard.org/black-wireless}}} \\
@@ -450,29 +478,29 @@ However, a major problem is that the data generated by these low-cost sensors is
 
 Calibration of sensors is key to ensuring that accurate and reliable measurements are obtained. This topic has particular gravitas for low-cost sensors because of their lower accuracy than more expensive alternatives.
 
-In 2008, the \cite{eudir2008airquality} issued a directive on ambient air quality and cleaner air in Europe, in which it laid out a set of Data Quality Objectives (DQOs) that specify the maximum level of acceptable uncertainty in air quality measurements. These are detailed in Table \ref{dataqualityobjectives}. If low-cost sensors are to be a viable for meaningful air quality monitoring, their measurements will need to meet or surpass these DQOs.
-
-\nomenclature{DQO}{Data Quality Objective}
-
-\begin{table}[!htbp]
-  \centering
-  \caption{EU Data Quality Objectives}
-  \label{dataqualityobjectives}
-  \begin{tabular}{ l c}
-  \toprule
-  Gas/particulate & Maximum uncertainty \\ \midrule
-  CO & 25\% \\
-  NO\textsubscript{2} & 25\% \\
-  SO\textsubscript{2} & 25\% \\
-  PM\textsubscript{2.5} & 50\% \\
-  PM\textsubscript{10} & 50\% \\
-  O\textsubscript{3} & 30\% \\ \bottomrule
-  \end{tabular}
-\end{table}
+%In 2008, the \cite{eudir2008airquality} issued a directive on ambient air quality and cleaner air in Europe, in which it laid out a set of Data Quality Objectives (DQOs) that specify the maximum level of acceptable uncertainty in air quality measurements. These are detailed in Table \ref{dataqualityobjectives}. If low-cost sensors are to be a viable for meaningful air quality monitoring, their measurements will need to meet or surpass these DQOs.
+%
+%\nomenclature{DQO}{Data Quality Objective}
+%
+%\begin{table}[!htbp]
+%  \centering
+%  \caption{EU Data Quality Objectives}
+%  \label{dataqualityobjectives}
+%  \begin{tabular}{ l c}
+%  \toprule
+%  Gas/particulate & Maximum uncertainty \\ \midrule
+%  CO & 25\% \\
+%  NO\textsubscript{2} & 25\% \\
+%  SO\textsubscript{2} & 25\% \\
+%  PM\textsubscript{2.5} & 50\% \\
+%  PM\textsubscript{10} & 50\% \\
+%  O\textsubscript{3} & 30\% \\ \bottomrule
+%  \end{tabular}
+%\end{table}
 
 One simple calibration technique is to calibrate each sensor to a `ground truth' measurement from a more expensive sensor. One study calibrated low-cost particulate sensors using a device 400 times more expensive and found the sensor provided an accuracy of over 90\% \citep{thorpe2017RPimesh}. Typically, linear regression has been used for sensor signal normalisation to reference measurements. However, there is no evidence that these correlations are transferable to different locations \citep{Clements2017lowcostworkshop}. Furthermore, the study by \cite{thorpe2017RPimesh} was conducted indoors and in a controlled environment, which does not involve the same difficulties as outdoor air quality monitoring using low-cost sensors. Indeed, linear calibration models developed in a laboratory environment have been shown to perform poorly on ambient data \citep{Castell2017}.
 
-To counter these problems, multi-variate linear regression models have been used \citep{Spinelle2015fieldcalibrationa,Spinelle2017fieldcalibrationb}, which provide an improvement to the calibration because they take into account more complex factors that are known to affect sensor performance. They also tested artificial neural network (ANN) calibration. ANNs are a supervised machine learning technique that trains the model on known input-output pairs and then uses the trained model to predict the output from unseen inputs. The authors found in both papers that multi-variate linear regression had the highest measurement uncertainty along with the simple linear regression model when compared to an artificial neural network (ANN) for calibration of NO, NO\textsubscript{2}, CO, CO\textsubscript{2} and O\textsubscript{3} sensors. Despite the high uncertainty, it was still possible to exceed the DQO for O\textsubscript{3} using a linear regression model. In addition, the ANN approach resulted in exceeding the DQOs for O\textsubscript{3} and CO, and generated an extremely low uncertainty level for CO\textsubscript{2} even though this gas does not have a DQO. On the other hand, meeting the NO and NO\textsubscript{2} DQOs remained a challenge, which may have been as a result of their high cross-sensitivity. Therefore, despite this supervised machine learning technique providing more effective calibration than linear or multi-variate linear regression, further work is needed to calibrate sensors so they comply with the DQOs.
+[REWRITE] To counter these problems, multi-variate linear regression models have been used \citep{Spinelle2015fieldcalibrationa,Spinelle2017fieldcalibrationb}, which provide an improvement to the calibration because they take into account more complex factors that are known to affect sensor performance. They also tested artificial neural network (ANN) calibration. ANNs are a supervised machine learning technique that trains the model on known input-output pairs and then uses the trained model to predict the output from unseen inputs. The authors found in both papers that multi-variate linear regression had the highest measurement uncertainty along with the simple linear regression model when compared to an artificial neural network (ANN) for calibration of NO, NO\textsubscript{2}, CO, CO\textsubscript{2} and O\textsubscript{3} sensors. Despite the high uncertainty, it was still possible to exceed the DQO for O\textsubscript{3} using a linear regression model. In addition, the ANN approach resulted in exceeding the DQOs for O\textsubscript{3} and CO, and generated an extremely low uncertainty level for CO\textsubscript{2} even though this gas does not have a DQO. On the other hand, meeting the NO and NO\textsubscript{2} DQOs remained a challenge, which may have been as a result of their high cross-sensitivity. Therefore, despite this supervised machine learning technique providing more effective calibration than linear or multi-variate linear regression, further work is needed to calibrate sensors so they comply with the DQOs.
 
 \nomenclature{ANN}{Artificial neural network}
 
@@ -504,20 +532,33 @@ An alternative to using a fan for improving air flow is to funnel the air flow d
 
 Given the health impact of air pollution detailed in Section \ref{healthimpact}, maps are needed to identify pollution `hot spots', to show changes in pollution over time, to define at-risk groups and to provide better air pollution exposure estimates for epidemiological studies.
 
+\subsection{Colouring}
+
+In the UK, the recommended air quality index is the Daily Air Quality Index (DAQI). For each of the pollutants that are officially monitored in the UK (Section \ref{airqualitymeasures}), the DAQI is indexed 1-10 and is divided into four bands: low, moderate, high and very high. It was designed to inform the public about air quality in a simple and easy to understand way. An example is shown in Figure \ref{fig:daqi_pm10}, which is for PM10.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{images/daqi_pm10}
+\caption{DAQI for PM10 \citep{defra2018daqi}.}
+\label{fig:daqi_pm10}
+\end{figure}
+
+The DAQI levels can be used to colour pollution maps. For example, a PM10 measurement of 56~$\mu g/m^3$ would be coloured yellow. By doing this, the generated pollution maps are relevant and consistent with the rest of the UK's air quality information.
+
 \subsection{Estimation techniques} \label{estimationtechniques}
 
 As discussed in Section \ref{spatialres}, current air quality monitoring mainly uses fixed monitoring stations. Even in the 1990s, it was noted that air pollution often varies over extremely short distances whilst the air quality data from these fixed stations are often sparse, leading to highly generalised maps and poor estimates \citep{Briggs1997mappingGIS}.
 
 As a result, techniques have been developed to generate estimated air pollution values in areas where no readings have been taken, thus allowing the improvement of air pollution maps by increasing the resolution. Such methods include spatial interpolation, dispersion modelling and regression-based approaches. A specific example of a regression-based approach is land-use regression (LUR), which was first detailed by \cite{Briggs1997mappingGIS} using data from the SAVIAH (Small Area Variations in Air Quality and Health) study. It has become increasingly popular since its introduction \citep{Hoek2008LUR}. This method combines air quality measurements spread over an area with stochastic modelling in order to generate air quality predictions at unsampled locations. The independent variables for the regression are obtained through geographical-information systems (GIS), which contains data on various environmental factors such as traffic volume and the road network. Figure \ref{LURexplanation} visually demonstrates this method. $y$ is the pollution concentration and $x_i$ are the land-use types within the `buffer' (circles). Good performance of the regression maps was achieved, with $r^2$ values ranging from 0.79 to 0.87 across the three mapped locations. However, LUR models are poor at separating out the impact of different pollutants due to the high correlation that can occur between pollutants \citep{Hoek2008LUR} and this type of extrapolation can perform poorly when the study area has significantly different land-use. For example, moving the study area from Bath, which is a small city in the countryside, to London, which is a much bigger and congested city.
 
-\begin{figure}[!htb]
+\begin{figure}[!tb]
 \centering
 \includegraphics[width=0.7\textwidth]{LURexplanation}
-\caption{Visual representation of LUR by \cite{Jerrett2005evalmapmodels}}
+\caption{Visual representation of LUR by \cite{Jerrett2005evalmapmodels}.}
 \label{LURexplanation}
 \end{figure}
 
-GIS files are made publicly available from DEFRA for modelling purposes for local air quality management. The relevant file could be incorporated with the data obtained in this project to generate pollution maps of the local area that includes unsampled locations.
+%GIS files are made publicly available from DEFRA for modelling purposes for local air quality management. The relevant file could be incorporated with the data obtained in this project to generate pollution maps of the local area that includes unsampled locations.
 
 \nomenclature{GIS}{Geographical-information system}
 \nomenclature{LUR}{Land-use regression}
@@ -528,10 +569,10 @@ A particularly interesting visualisation of geo-located air quality data is a he
 
 \nomenclature{API}{Application programming interface}
 
-\begin{figure}[!htb]
+\begin{figure}[!tb]
 \centering
 \includegraphics[width=0.7\textwidth]{googleapi_heatmap_layer}
-\caption{Heatmap Layer example from the Google API website \citep{google2018heatmap}}
+\caption{Heatmap Layer example from the Google API website \citep{google2018heatmap}.}
 \label{heatmap}
 \end{figure}
 
@@ -539,16 +580,25 @@ A particularly interesting visualisation of geo-located air quality data is a he
 
 An alternative is to use a custom coloured shape overlay on a map. For example, \cite{Hoang2013hanoihexagons} used hexagons, shown in Figure \ref{hanoihexagons}. The hexagonal shapes were used instead of the more widely used rectangular shapes because of their visual advantages. Firstly, there is less map ambiguity, and secondly, hexagonal shapes are easier for human vision to interpret since, on the map, there are no distinct horizontal and vertical lines, to which the authors note human vision is especially sensitive to. 
 
-\begin{figure}[!htb]
+\begin{figure}[!tb]
 \centering
 \includegraphics[width=0.7\textwidth]{hanoihexagons}
-\caption{Heatmap using hexagonal shapes \citep{Hoang2013hanoihexagons}}
+\caption{Heatmap using hexagonal shapes \citep{Hoang2013hanoihexagons}.}
 \label{hanoihexagons}
+\end{figure}
+
+Another way of visualising air pollution is through the use of a grid of tiles, which is similar to the technique used by \citeauthor{Hoang2013hanoihexagons}, but uses squares instead of hexagons. The underlying map can be discarded and a graph made completely of these tiles. This is known as a raster. This was successfully used by \cite{Hasenfratz2015highresmapsTram} to create high resolution maps of pollution in Zurich. A sample of their map is shown in Figure \ref{fig:raster}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.5\textwidth]{images/raster}
+\caption{High resolution raster created by \cite{Hasenfratz2015highresmapsTram}.}
+\label{fig:raster}
 \end{figure}
 
 \section{Health-optimal route planning}
 
-One potential application of air quality data is in alternative route planning for the public that takes into account pollution levels on different streets. Typically, route planning has focused on finding the shortest route from an origin to a destination. However, recent developments have begun to incorporate other factors. For example, [INSERT REFS FOR DIFFERENT ROUTING]. In addition, air pollution has begun to be incorporated into route planning \citep{sharker2014exposureroutes, Hasenfratz2015highresmapsTram}.
+One potential application of air quality data is in alternative route planning for the public that takes into account pollution levels on different streets. Typically, route planning has focused on finding the shortest route from an origin to a destination. However, recent developments have begun to incorporate other factors. In particular, air pollution has begun to be incorporated into route planning \citep{sharker2014exposureroutes, Hasenfratz2015highresmapsTram}.
 
 \cite{Hasenfratz2015highresmapsTram} use trams in Zurich to generate high-resolution pollution maps, which are then used to identify pollution levels on every street in a given section of the city. They use the product of the pollution level and the length of the road segment to add weights to the roads. These weights are then used by the A* search algorithm to generate lowest air pollution exposure routes. The authors find that travelling along these alternative routes leads to a 7.1\% reduction in air pollution exposure for a 6.4\% increase in route length.
 
@@ -597,13 +647,23 @@ In this chapter, we describe the design and implementation of the air quality mo
 
 \section{Physical device}
 
-This section details how the device is constructed. An image of the final device is shown in Figure \ref{device}.
+This section details how the device is constructed. Images of the final device are shown in Figure \ref{device}, which shows both the outside and inside of the device.
 
 \begin{figure}[!htb]
 \centering
-\includegraphics[width=0.7\textwidth]{device}
-\caption[Finished device.]{Picture of the finished device. (a) shows the outside view, whereas (b) shows inside the case.}
-% Update with new image once temp/hum sensor attached
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{images/device_outside}
+  \caption{Outside}
+  \label{fig:outside}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{images/device_inside}
+  \caption{Inside}
+  \label{fig:inside}
+\end{subfigure}
+\caption[Finished device.]{The finished device. (a) shows the outside view \{1: GPS, 2: particulate sensor, 3: general air quality sensor, 4: ozone sensor, 5: temperature and humidity sensor\}. (b) shows inside the case.}
 \label{device}
 \end{figure}
 
@@ -633,7 +693,7 @@ GPIO stands for General Purpose Input/Output and provides a standardised interfa
   \label{gpio}
   \begin{tabular}{ l l l }
   \toprule
-  Pin & BCM number & Usage \\ \midrule
+  Pin & BCM \# & Usage \\ \midrule
   1 & 3v3 power & DHT22 power  \\
   3 & BCM 2 &  \\
   5 & BCM 3 &  \\
@@ -658,7 +718,7 @@ GPIO stands for General Purpose Input/Output and provides a standardised interfa
   \hspace{0.5em}
   \begin{tabular}{ l l l }
   \toprule
-  Pin & BCM number & Usage \\ \midrule
+  Pin & BCM \# & Usage \\ \midrule
   2 & 5V power & Shinyei power \\
   4 & 5V power & MQ135/131 power \\
   6 & Ground & Shinyei ground  \\
@@ -876,9 +936,9 @@ Figure \ref{code_flow} visualises this whole process, as well as the insertion i
 
 \subsubsection{GPS}
 
-Geo-location functionality is provided by a USB GPS module, specifically a GlobalSat BU-353S3 USB GPS Receiver. This plugs directly into one of the RPi's USB ports and appears as the device \texttt{ttyUSB0}. The GPSD protocol, which is built on top of JSON, is used to communicate with the GPS receiver. Responses from the GPS receiver are JavaScript Object Notation (JSON) objects. The \texttt{gpsd-py3} python module is used to interface with the GPSD protocol, parsing the JSON to output longitude and latitude coordinates, as well as other useful information such as horizontal speed and altitude. 
+Geo-location functionality is provided by a USB GPS module, specifically a GlobalSat BU-353S3 USB GPS Receiver. This plugs directly into one of the RPi's USB ports and appears as the device \texttt{ttyUSB0}. The GPSD protocol, which is built on top of JSON, is used to communicate with the GPS receiver. Responses from the GPS receiver are JavaScript Object Notation (JSON) objects. The \texttt{gpsd} python module is used to interface with the GPSD protocol, parsing the JSON to output longitude and latitude coordinates, as well as other useful information such as horizontal speed and altitude. Installation instructions are detailed in Appendix \ref{GPS}.
 
-Moreover, the RPi is configured to use the GPS receiver as a Network Time Protocol (NTP) time server. This involves the use of the NTP daemon. Installation instructions are detailed in Appendix XXX. By enabling this, the RPi syncs its internal clock with an accurate source -- the GPS satellites. This overcomes the issue of the Raspberry Pi having no real time clock, which otherwise can lead to inaccurate timing when recording measurements because the RPi is oblivious to time lapsed since the previous shutdown.
+Moreover, the RPi is configured to use the GPS receiver as a Network Time Protocol (NTP) time server. This involves the use of the NTP daemon. Installation instructions are detailed in Appendix \ref{NTP}. By enabling this, the RPi syncs its internal clock with an accurate source -- the GPS satellites. This overcomes the issue of the Raspberry Pi having no real time clock, which otherwise can lead to inaccurate timing when recording measurements because the RPi is oblivious to time lapsed since the previous shutdown.
 
 Initially, the project was going to develop an Android application that merged readings from the RPi with GPS data, because the RPi does not have a built-in GPS receiver. The application was created using Android Studio for Mac OSX. The application works by connecting the RPi to the Android phone via Bluetooth, and then uses \texttt{ObexFTP} to send the CSV files from the RPi to the phone. The application then watches a particular directory for new files and upon receipt matches up timestamps in the CSV file with GPS-timestamp pairs stored on the phone, before HTTP posting the file to the server. However, this was a far from ideal solution and introduced tight coupling between the RPi and the phone. Once it was realised that a USB GPS module was available, the Android application was shelved.
 
@@ -973,31 +1033,31 @@ Therefore, the mass of particles per cubic foot is calculated by multiplying the
 \mu g/m^3 = y \cdot m \cdot 3531.5
 \end{equation}
 
-Additionally, there is a humidity and temperature adjustment, described in Equation \ref{eq:temphumconv}. $O$ is the output of the initial conversion from particle count to concentration (described above), $H$ is the relative humidity percentage, $C$ is the correction factor, and $F$ is the final adjusted output concentration.
-\begin{equation} \label{eq:temphumconv}
-F = O \times H \times C
-\end{equation}
-
-Table \ref{humtemp} shows the values of $H$ and $C$ in normal conditions.
-
-% CHECK IF THIS IS CORRECT AND/OR NEEDED
-
-\begin{table}[!htbp]
-  \centering
-  \caption{Humidity and temperature factors}
-  \label{humtemp}
-  \begin{tabular}{ l l }
-  \toprule 
-  H & C \\ \midrule
-  0-39\% & 13 \\
-  40-49\% & 8 \\
-  50-59\% & 6 \\
-  60-69\% & 4 \\
-  70-79\% & 1.75 \\
-  80-89\% & 1.5 \\
-  90-100\% & 1 \\  \bottomrule
-  \end{tabular}
-\end{table}
+%Additionally, there is a humidity and temperature adjustment, described in Equation \ref{eq:temphumconv}. $O$ is the output of the initial conversion from particle count to concentration (described above), $H$ is the relative humidity percentage, $C$ is the correction factor, and $F$ is the final adjusted output concentration.
+%\begin{equation} \label{eq:temphumconv}
+%F = O \times H \times C
+%\end{equation}
+%
+%Table \ref{humtemp} shows the values of $H$ and $C$ in normal conditions.
+%
+%% CHECK IF THIS IS CORRECT AND/OR NEEDED
+%
+%\begin{table}[!htbp]
+%  \centering
+%  \caption{Humidity and temperature factors}
+%  \label{humtemp}
+%  \begin{tabular}{ l l }
+%  \toprule 
+%  H & C \\ \midrule
+%  0-39\% & 13 \\
+%  40-49\% & 8 \\
+%  50-59\% & 6 \\
+%  60-69\% & 4 \\
+%  70-79\% & 1.75 \\
+%  80-89\% & 1.5 \\
+%  90-100\% & 1 \\  \bottomrule
+%  \end{tabular}
+%\end{table}
 
 \section{Ozone sensor} \label{mq131_calibration}
 
@@ -1139,7 +1199,12 @@ It is also worth noting that the data sheets for these sensors indicate that the
 %%%%%%%%							Question 1					      		       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?} \label{chap:q1}
+%\renewcommand{\chaptermark}[1]{%
+%\markboth{\MakeUppercase{%
+%\chaptername\ \thechapter.%
+%\ #1}}{}}
+
+\chapter[Bicycle-based monitoring]{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?} \label{chap:q1}
 
 Chapters \ref{chap: system_design} and \ref{chap: calibration} detailed how the air quality monitoring device, and system as a whole, was constructed and how the sensors were calibrated to output meaningful values. These chapters collectively described the process undertaken in creating the final device, providing a product that can now be used to answer our research questions.
 
@@ -1147,7 +1212,9 @@ This chapter focuses on the first research question: whether air pollution can b
 
 \section{Methodology} \label{meth:q1}
 
-In order to answer this research question, three distinct parts need to be considered. Firstly, data needs to be collected along a consistent route for a suitable period of time so as to encompass varying environmental conditions. By analysing the sensor outputs under these different conditions, we can test whether the device can identifying trends/differences in air pollution. Secondly, different positions of the device on a bicycle need to be considered. Finally, the optimal method of inducing air flow over/into the air quality sensors needs to be analysed. % CHANGE
+The methodology is structured as follows. The first three parts focus on where and how the data is collected, which includes the location choice (Section \ref{location}), the selection of the route (Section \ref{route_selection}) and the data collection method (Section \ref{data_collection:q1}). In order to then answer the research question, a number of distinct parts need to be considered. Firstly, the optimal positioning of the device on the bicycle needs to be considered (Section \ref{position_testing}). Secondly, the quality of the data from this device must be assessed to test whether it is satisfactory and any necessary changes made (Section \ref{data_quality}). Thirdly, the data from the device needs to be tested to see whether it can detect variations and patterns in the pollution ... [RE-WORD]
+
+%In order to answer this research question, three distinct parts need to be considered. Firstly, data needs to be collected along a consistent route for a suitable period of time so as to encompass varying environmental conditions. By analysing the sensor outputs under these different conditions, we can test whether the device can identifying trends/differences in air pollution. Secondly, different positions of the device on a bicycle need to be considered. Finally, the optimal method of inducing air flow over/into the air quality sensors needs to be analysed. % CHANGE
 
 \subsection{Location} \label{location}
 
@@ -1184,7 +1251,7 @@ Furthermore, BANES outlined an `Air Quality Management Area' in 2013. This is sh
 \label{aqma}
 \end{figure}
 
-\subsection{Data collection}
+\subsection{Data collection} \label{data_collection:q1}
 
 To collect data, we ride a bicycle with the air quality monitoring device attached around a pre-determined route, detailed in Section \ref{route_selection}. The route is traversed in both directions in order to help identify anomalous measurements. This leads to minor differences in the route due to certain one-way streets in Bath. We ride the bicycle at a relatively constant speed in order to distribute measurements regularly in spatial terms.
 
@@ -1203,13 +1270,11 @@ In order to identify which position on a bicycle is optimal for an air quality m
 
 We cycle with the device attached in each position in turn along the same stretch of road. This testing is also carried out across a short time period in order to minimise the effect of changes in the environmental conditions. The results are then compared to ascertain whether the position of the device makes a difference, analysing whether any major spikes occur in the data, which could indicate that the device is being impacted by particulate matter thrown up by the wheels.
 
-\subsection{Data cleaning and data validation}
+\subsection{Data quality} \label{data_quality}
 
-Whilst ideally our sensors will not output anomalous readings, it is almost inevitable given their low cost. Therefore, it is prudent to detail our approach to cleaning the data outputted by these sensors, especially for future reproducibility.
+%Data cleaning is the process of transforming raw data into consistent data that can be analysed. The operations carried out influence the statistical properties of the data, meaning they should be conducted with caution and in a reproducible manner.
 
-Data cleaning is the process of transforming raw data into consistent data that can be analysed. The operations carried out influence the statistical properties of the data, meaning they should be conducted with caution and in a reproducible manner.
-
-Outlier detection is an important part of the data cleaning process. Outliers are often detected by considering the distribution of values around a mean $\mu$ with standard deviation $\sigma$ and an indicator of the confidence interval $z$:
+Whilst ideally our sensors will not output anomalous readings, it is almost inevitable given their low cost. Therefore, it is prudent to detail our approach to cleaning the data outputted by these sensors, especially for future reproducibility. The approach used in this project focuses on the detection and removal of outliers. Outliers are often detected by considering the distribution of values around a mean $\mu$ with standard deviation $\sigma$ and an indicator of the confidence interval $z$:
 \begin{equation}
 \mu \pm z \times \sigma
 \end{equation}
@@ -1218,12 +1283,14 @@ Values that fall outside this range are unlikely to be from the underlying distr
 
 However, the mean and standard deviation are not robust to outliers (i.e. the addition of one large erroneous value can disproportionately influence these values). Given we are using low-cost sensors that are more prone to errors than industry-grade sensors, a robust detection method is needed. As a simple check for the presence of outliers, one can examine the distribution of values using a histogram. If some bars are spaced considerably far away from the majority of values, this can indicate outliers are present.
 
-In order to more precisely identify which measurements are outliers in our data, we use a three-part approach. In each case, we apply the outlier detection method and if all of these methods report a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
+In order to more precisely identify which measurements are outliers in our data, a three-part approach is used. In each case, we apply the outlier detection method and if all of these methods report a reading to be an outlier, it is filtered out from the sample through the use of a type of band pass filter.
 \begin{enumerate}
 \item Inter-quartile range (IQR)
 \item Median and Median Absolute Deviation (MAD)
 \item S\textsubscript{n}
 \end{enumerate}
+
+These methods are run on three different groupings to assess which is best: (i) on the dataset as a whole, (ii) by time period grouping, and (iii) by a moving time period.
 
 %These outlier detection techniques are then used to create a type of band pass filter in which data outside a calculated range are filtered out.
 
@@ -1264,21 +1331,19 @@ S_n = c \cdot M_i ( M_j | x_i - x_j | )
 Equation \ref{eqn:sn} is very similar to Equation \ref{eqn:mad}, except that the median function $M_j(\cdot)$ has been moved outside the absolute value. The breakdown point of estimator $S_n$ is still 50\%, but it has a better efficiency than MAD.
 
 
-\subsection{Time series} \label{time_series_incorp}
+\subsubsection{Time series} \label{time_series_incorp}
 
 Since our dataset is a collection of time series, the outlier detection should also take this into account. There are two ways we incorporate this into our methodology.
 
-Firstly, the outlier detection techniques detailed above are also run using moving averages. The dataset is separated into distinct collection runs (e.g. YYYY-MM-DD AM) and the moving average outlier detection is run on each of these. The reasoning for using a moving average is to account for any trends in the pollution data. For example, if, on a main road, the pollution level is much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
-
-The second way we account for the time series nature is by using a similar method to \cite{vanZoest2018outlierdetection}. The authors appear to be one of the first to create a method for identifying outliers in spatio-temporal air quality data. Their method consists of separating the data into spatial and temporal divisions. For example, urban traffic and urban background (spatial), and weekdays/weekends and traffic times (temporal). The reason for this was that air quality can depend highly on the local area and the time of day, so outlier detection must take these divisions into account. As a result, the spatio-temporal variability in pollution concentrations is maintained. Our data cannot be split easily into spatial categories as we focus on a small city, but we can separate the data into 4 temporal categories. The first split is for a weekday or weekend, the rationale being that traffic is highly likely to be higher during the week when people are commuting to and from work. The second split is for the first half of the day (AM) and the second half of the day (PM). When combined, these separations produce four categories:
+The first way we account for the time series nature is by using a similar method to \cite{vanZoest2018outlierdetection}. The authors appear to be one of the first to create a method for identifying outliers in spatio-temporal air quality data. Their method consists of separating the data into spatial and temporal divisions. For example, urban traffic and urban background (spatial), and weekdays/weekends and traffic times (temporal). The reason for this was that air quality can depend highly on the local area and the time of day, so outlier detection must take these divisions into account. As a result, the spatio-temporal variability in pollution concentrations is maintained. Our data cannot be split easily into spatial categories as we focus on a small city, but we can separate the data into 4 temporal categories. The first split is for a weekday or weekend, the rationale being that traffic is highly likely to be higher during the week when people are commuting to and from work. The second split is for the first half of the day (AM) and the second half of the day (PM). When combined, these separations produce four categories:
 \begin{enumerate}
 \item Weekday AM
 \item Weekday PM
 \item Weekend AM
 \item Weekend PM
 \end{enumerate}
-% Maybe include one a daily basis? Or save that for just the analysis?
 
+Secondly, the outlier detection techniques detailed above are also run using moving averages. The dataset is separated into distinct collection runs (e.g. YYYY-MM-DD AM) and the moving average outlier detection is run on each of these. The reasoning for using a moving average is to account for any trends in the pollution data. For example, if, on a main road, the pollution level is much higher than the average for that collection run, it would not make sense to use the outlier detection methods on the dataset as a whole as otherwise these higher values could be removed erroneously (i.e. false positive).
 
 %\subsection{Outlier correction or removal}
 %We chose to exclude values that were deemed to be outliers.
@@ -1291,15 +1356,20 @@ The second way we account for the time series nature is by using a similar metho
 
 \subsection{Pollution mapping}
 
-With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, an overlay of tiles is placed on top of the map. A $75 \times 75$ grid of tiles will be used, which makes each tile $Xm \times Xm$ in size. Each tile's colour is an aggregation of all values that fall inside it's boundaries. We use median and maximum aggregations for this. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme, using green to highlight good air quality and red for poor air quality.
+With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, an overlay of tiles is placed on top of the map. A $75 \times 75$ grid of tiles will be used, which makes each tile $Xm \times Xm$ in size. Each tile's colour is an aggregation of all values that fall inside it's boundaries -- median and maximum aggregations are used for this. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme, using green to highlight good air quality and red for poor air quality.
 
 \subsection{Identifying patterns}
 
-In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM10, the devices measurements can be compared against those from the Windsor Bridge and London Road sites. Unfortunately, the Guildhall site's particulate sensor was broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guidlhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
+In order for this device to meet the requirement of monitoring air quality to a `satisfactory level', it needs to be able to identify patterns and variations in air pollution. To achieve this, the following variables are tested:
+\begin{itemize}
+\item Day of the week
+\item Morning vs. evening
+\item Road
+\item Traffic level
+\item Speed of bicycle
+\end{itemize}
 
-Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, the route is separated into 10 distinct sections. These are detailed in Figure \ref{fig:roads}. The three relevant sections for comparing the device with the fixed monitoring stations are as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall.
 
-in addition, he remaining route sections are displayed as the po
 
 %along with the traffic counts and the median pollution levels for each section.
 
@@ -1310,40 +1380,18 @@ in addition, he remaining route sections are displayed as the po
 \label{fig:roads}
 \end{figure}
 
-\begin{table}[!tb]
-\centering
-\caption{Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.}
-\label{tab:speed}
-\begin{tabular}{l c S[table-format=5]}
-\toprule
-Section name & Code & \multicolumn{1}{c}{AADF} \\ 
-\midrule
-Lower Bristol Road & LB & 23173 \\
-Windsor Bridge & WB & 18269 \\
-Upper Bristol Road & UB & 16978 \\
-Queen's Square & QS & 8056 \\
-The Paragon & TP & 8583 \\
-London Road & LR & 23173 \\
-Bathwick Street & BS & 15824 \\
-Great Pulteney Street & GPS & 3267 \\
-Manvers Street & MS & 5489 \\
-Dorchester Street & DS & 7051 \\
-\bottomrule
-\end{tabular}
-\end{table}
 
-In addition, the following variables will be tested to see whether this device can detect patterns in air quality:
-\begin{itemize}
-\item Day of the week
-\item Morning vs. evening
-\item Traffic level (by road)
-\item Speed
-\end{itemize}
 
-\subsection{Robustness}
+%\subsection{Robustness}
+%
+%There is no empirical test conducted in this project to measure the robustness of the air quality monitoring device, since such a test would be a small project in itself. Instead, two factors are analysed: (i) whether the device is impacted by the weather, and (ii) whether the device is impacted by the vibrations of the bicycle.
+%% FLESH OUT
 
-There is no empirical test conducted in this project to measure the robustness of the air quality monitoring device, since such a test would be a small project in itself. Instead, two factors are analysed: (i) whether the device is impacted by the weather, and (ii) whether the device is impacted by the vibrations of the bicycle.
-% FLESH OUT
+\subsection{Comparison with fixed monitoring stations}
+
+In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM10, the devices measurements can be compared against those from the Windsor Bridge and London Road sites. Unfortunately, the Guildhall site's particulate sensor was broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guidlhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
+
+Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, the route is separated into 10 distinct sections. These are detailed in Figure \ref{fig:roads}. The three relevant sections for comparing the device with the fixed monitoring stations are as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall.
 
 
 \section{Results} \label{results:q1}
@@ -1352,7 +1400,7 @@ Across the data collection period, \num{9877} measurements were collected along 
 
 \subsection{Positioning on bicycle}
 
-Figure \ref{fig:bike_positions_pm10} displays the results from testing the air quality monitoring device in different positions on the bicycle, with a picture of each position underneath the corresponding section of the graph. The results are displayed for PM10 only as the O\textsubscript{3} and general air quality measurements show no significant difference in pattern.
+Figure \ref{fig:bike_positions_pm10} displays the results from testing the air quality monitoring device in different positions on the bicycle, with a picture of each position underneath the corresponding section of the graph. The results are displayed for PM10 only because the O\textsubscript{3} and general air quality measurements show no significant difference in pattern.
 
 Overall, the figure shows varying levels of PM10 across the three positions. Position 1 and Position 2 have relatively large spikes in their measurements compared to the baseline of approximately 20-25$\mu g/m^3$, with Position 2 experiencing the highest levels of PM10. Position 1 has two readings over 100$\mu g/m^3$, whilst Position 2 has two readings close to the 200$\mu g/m^3$ level. Conversely, Position 3 appears to be the most stable position, with lower variation in the measurements compared to the other two positions. 
 
@@ -1549,98 +1597,190 @@ The measurements from the DHT22 temperature and humidity sensor do not follow a 
 %    \label{tukey_boxplots}
 %\end{figure}
 
-\subsubsection{Outlier detection methods}
+\subsubsection{Outliers}
 
-The first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{fig:histograms_and_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have a non-zero number of outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
+The process of identifying outliers in the data using each of the detection methods (IQR, MAD, S\textsubscript{n}) is extensive and including all the results here would be impractical. Instead, the more detailed results tables have been moved to Appendix \ref{appendix:outliers} and a general overview provided here.
 
-The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.75\%) compared to the ozone (1.79\%) and general air quality measurements (1.97\%). The upper bound of 128.64 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}. The MQ131 sensor has the lowest percentage of outliers when using the IQR detection method. It must be noted that the sample size $N$ for the ozone measurements is considerably lower than for the other two pollutants due to the aforementioned breakage and replacement of the MQ131 sensor midway through data collection. However, the percentage of outliers is similar to that for the general air quality measurements, so this exclusion does not appear to have detrimentally impacted the analysis from a statistical perspective.
-
-The second outlier detection method is the median and MAD method. Outliers were identified as any measurements which were more than 3 times the MAD away from the median. The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
-
-The third method uses the median and S\textsubscript{n} and the results are shown in Table \ref{tab:mad_outliers}. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
-
+Table \ref{tab:size_change} details the number of errors and outliers removed from the dataset, in both absolute and percentage terms. The first step of the data cleaning removes errors from the sensor measurements, which were measurements that were taken during periods of sensor malfunction. Up to 20\% of the measurements are excluded as a result. Next, measurements that are labelled as an outlier by all three methods are removed. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.3\%) compared to the other sensor measurements. For the other four sensors, the outlier percentages are between 1.0\% and 1.6\%, which are much lower and reasonable.
 
 \begin{table}[!tbp]
   \centering
-  \caption{Outlier detection summary using IQR method on the whole dataset.}
-  \label{tab:iqr_outliers}
-  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \caption{Dataset size changes resulting from removing errors and outliers.}
+  \label{tab:size_change}
+  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=4] S[table-format=2.1] S[table-format=5] S[table-format=4] S[table-format=2.1]}
   \toprule
-  Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 45.50 & 128.64 & 0.00 & 1068 & 11.75 \\
-  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 11.17 & 72.74 & 28.06 & 142 & 1.79 \\
-  General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
-    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+   {} & {Initial} & \multicolumn{3}{c}{Errors removed} & \multicolumn{3}{c}{Outliers removed} \\
+  \cmidrule(lr){2-2}
+  \cmidrule(lr){3-5}
+  \cmidrule(lr){6-8}
+  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%}  \\ \midrule
+  PM10			& 9877	& 9089	& 788	& 8.0		& 8063	& 1026	& 11.3 \\
+  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 9837	& 83		& 1.0 \\
+  General AQ		& 9877	& 9877	& 0		& 0.0		& 9737	& 140	& 1.4 \\ 
+  Temperature		& 9877	& 9234	& 643	& 6.5		& 9132	& 102	& 1.1 \\ 
+  Humidity			& 9877	& 7797 	& 2080	& 21.1	& 7672	& 125	& 1.6  \\ \bottomrule
+ % Total			& 29631	& 26886	& 2745	& 9.3		& 26637	& 1249	& 4.6 \\ \bottomrule
   \end{tabular}
 \end{table}
-% Include temp and humidity as well?
 
-%\subsubsection{Median and MAD}
+In addition, Table \ref{tab:upper_bounds} displays the upper bounds from running the outlier detection methods using different temporal groupings: on the dataset as a whole, by time period grouping (Week AM, Week PM, Weekend AM, Weekend PM) and moving average within each collection run. The upper bounds for all the sensors are lowest when using the dataset as a whole and highest when using moving averages, with per time period grouping in the middle. The maximum upper bound when using moving averages is abnormally high.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Maximum upper bounds for each sensor, by temporal grouping method.}
+  \label{tab:upper_bounds}
+  \begin{tabular}{ l S[table-format=3.2] S[table-format=3.2] S[table-format=4.2] }
+  \toprule
+%   {} & {Initial} & \multicolumn{3}{c}{Errors removed} & \multicolumn{3}{c}{Outliers removed} \\
+%  \cmidrule(lr){2-2}
+%  \cmidrule(lr){3-5}
+%  \cmidrule(lr){6-8}
+  Gas/particulate & \multicolumn{1}{c}{Whole dataset} & \multicolumn{1}{c}{Time period grouping} & \multicolumn{1}{c}{Moving average} \\ \midrule
+  PM10 ($\mu g/m^3$)			& 128.64	& 251.18	& 1768.13	 \\
+  O\textsubscript{3} ($\mu g/m^3$)	& 75.69	& 91.59	& 146.23	 \\
+  General AQ (V)				& 1.67	& 1.72	& 3.66		 \\
+  Temperature (\SI{}{\celsius})		& 26.12	& 27.08	& 34.03 		  \\ 
+  Humidity	(\%)					& 79.67	& 85.48	& 96.72	 	  \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+
+The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. 
+
+The results indicate that moving averages should definitely not be used, which leaves the other two options remaining. We choose to use per time period grouping because, although the maximum upper bounds are slightly higher, it takes into account temporal variation.
+
+Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
+
+\begin{figure}[!tbp]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/pm_histogram_clean}
+                \caption{Shinyei PPD42}
+                \label{fig:pm_histogram_clean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/ozone_histogram_clean}
+            	\caption{MQ131}
+            	\label{fig:ozone_histogram_clean}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/mq135_histogram_clean}
+                \caption{MQ135}
+                \label{fig:mq135_histogram_clean}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/histogram_temp_clean}
+            	\caption{DHT22 temperature}
+            	\label{fig:temp_histogram_clean}
+	   \end{subfigure}
+        \end{minipage}
+    \begin{minipage}{1\linewidth}
+    	\centering
+        \begin{subfigure}[t]{.5\linewidth}
+            \includegraphics[width=\textwidth]{images/histogram_humidity_clean}
+            \caption{DHT22 humidity}
+            \label{fig:humidity_histogram_clean}
+        \end{subfigure}
+    \end{minipage}
+    \caption[Sensor measurement histograms with cleaned data.]{Histograms depicting the distribution of pollution sensor measurements with cleaned data. (a) shows a slight positive skew, (b), (c) and (d) have approximately normal distributions, and (e) has a more varied distribution.}
+    \label{fig:histograms_clean}
+\end{figure}
+
+%\subsubsection{Outlier detection methods}
 %
-%The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
+%The first method for detecting outliers, as detailed in Section \ref{iqr}, uses the IQR. The IQR is visualised in Tukey's boxplot by the height of the box -- the top indicates the 75th quartile and the bottom indicates the 25th quartile. Figure \ref{fig:histograms_and_boxplots} shows the boxplots for each of the sensors. These show that all of the sensor measurements have a non-zero number of outliers, although the Shinyei PPD42, MQ131 and MQ135 sensors appear to have the most, indicated by the number of points outside of the `whiskers' of the boxplots. These whiskers represent the outlier detection rule of 1.5 times the IQR away from the 25th and 75th quartiles.
 %
-%The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
-
-\begin{table}[!tbp]
-  \centering
-  \caption{Outlier detection summary using median and MAD method on the whole dataset.}
-  \label{tab:mad_outliers}
-  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
-  \toprule
-  Gas/particulate & N & {Median} & {MAD} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.38 & 104.26 & 0.00 & 1285 & 14.14 \\
-  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.30 & 75.21 & 25.42 & 105 & 1.33 \\
-  General AQ (V) & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
-    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
-  \end{tabular}
-\end{table}
-
-%\subsubsection{S\textsubscript{n}}
+%The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.75\%) compared to the ozone (1.79\%) and general air quality measurements (1.97\%). The upper bound of 128.64 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}. The MQ131 sensor has the lowest percentage of outliers when using the IQR detection method. It must be noted that the sample size $N$ for the ozone measurements is considerably lower than for the other two pollutants due to the aforementioned breakage and replacement of the MQ131 sensor midway through data collection. However, the percentage of outliers is similar to that for the general air quality measurements, so this exclusion does not appear to have detrimentally impacted the analysis from a statistical perspective.
 %
-%Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method of outlier detection. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
-
-\begin{table}[!tbp]
-  \centering
-  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset.}
-  \label{tab:mad_outliers}
-  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
-  \toprule
-  Gas/particulate & N & {Median} & {S\textsubscript{n}} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
-  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.22 & 103.80 & 0.00 & 1288 & 14.17 \\
-  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.46 & 75.69 & 24.94 & 97 & 1.22 \\
-  General AQ (V) & 9877 & 1.17 & 0.17 & 1.67 & 0.67 & 121 & 1.23 \\ \bottomrule
-    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
-  \end{tabular}
-\end{table}
-
-\subsubsection{Per time period group}
-
-The above methods are also implemented on a per-group basis, with the group being the week period (Week AM, Week PM, Weekend AM, Weekend PM). These results are shown in column 2 of Table \ref{tab:all_outliers}. In the interest of clarity, the table is simplified to only show the main figures. The results show that, on average, running the outlier detection on a per-group basis leads to a slightly decreased number of measurements identified as outliers. Although the number of outliers rises when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually falls. It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping.
-
-\subsubsection{Moving average}
-
-The outlier detection methods are also applied using moving averages, to account for the time series nature of the data. The results are shown in column 3 of Table \ref{tab:all_outliers}. The results show that the number of outliers for PM10 reduces considerably, but the figure increases for O\textsubscript{3} and General AQ measurements, with the number of outliers increasing by approximately a factor of 3.
-
-\begin{landscape}
-\begin{table}[!tbp]
-  \centering
-  \small
-  \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
-  \label{tab:all_outliers}
-  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
-  \toprule
-  {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} & \multicolumn{4}{c}{Moving average} \\
-  \cmidrule(lr){2-5}
-  \cmidrule(lr){6-9}
-  \cmidrule(lr){10-13}
-  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
-  PM10			& 1068	& 1285	& 1288	& 1214	& 1026	& 1298	& 1304	& 1209	& 980	& 800	& 769	& 850	\\
-  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 136	& 89		& 93		& 106	& 612	& 502	& 463	& 526	\\
-  General AQ		& 195	& 139	& 121	& 152	& 201	& 152	& 141	& 165 	& 674	& 406	& 342	& 474	\\ \midrule
-  Total			& 1405	& 1529	& 1506	& 1480	& 1363	& 1539	& 1538	& 1480	& 2266	& 1708	& 1574	& 1850	\\ \bottomrule
-  \end{tabular}
-\end{table}
-\end{landscape}
+%The second outlier detection method is the median and MAD method. Outliers were identified as any measurements which were more than 3 times the MAD away from the median. The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+%
+%The third method uses the median and S\textsubscript{n} and the results are shown in Table \ref{tab:mad_outliers}. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+%
+%
+%\begin{table}[!tbp]
+%  \centering
+%  \caption{Outlier detection summary using IQR method on the whole dataset.}
+%  \label{tab:iqr_outliers}
+%  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+%  \toprule
+%  Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+%  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 45.50 & 128.64 & 0.00 & 1068 & 11.75 \\
+%  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 11.17 & 72.74 & 28.06 & 142 & 1.79 \\
+%  General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
+%    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+%  \end{tabular}
+%\end{table}
+%% Include temp and humidity as well?
+%
+%%\subsubsection{Median and MAD}
+%%
+%%The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
+%%
+%%The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+%
+%\begin{table}[!tbp]
+%  \centering
+%  \caption{Outlier detection summary using median and MAD method on the whole dataset.}
+%  \label{tab:mad_outliers}
+%  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+%  \toprule
+%  Gas/particulate & N & {Median} & {MAD} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+%  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.38 & 104.26 & 0.00 & 1285 & 14.14 \\
+%  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.30 & 75.21 & 25.42 & 105 & 1.33 \\
+%  General AQ (V) & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
+%    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+%  \end{tabular}
+%\end{table}
+%
+%%\subsubsection{S\textsubscript{n}}
+%%
+%%Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method of outlier detection. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+%
+%\begin{table}[!tbp]
+%  \centering
+%  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset.}
+%  \label{tab:mad_outliers}
+%  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+%  \toprule
+%  Gas/particulate & N & {Median} & {S\textsubscript{n}} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+%  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.22 & 103.80 & 0.00 & 1288 & 14.17 \\
+%  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.46 & 75.69 & 24.94 & 97 & 1.22 \\
+%  General AQ (V) & 9877 & 1.17 & 0.17 & 1.67 & 0.67 & 121 & 1.23 \\ \bottomrule
+%    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+%  \end{tabular}
+%\end{table}
+%
+%\subsubsection{Per time period group}
+%
+%The above methods are also implemented on a per-group basis, with the group being the week period (Week AM, Week PM, Weekend AM, Weekend PM). These results are shown in column 2 of Table \ref{tab:all_outliers}. In the interest of clarity, the table is simplified to only show the main figures. The results show that, on average, running the outlier detection on a per-group basis leads to a slightly decreased number of measurements identified as outliers. Although the number of outliers rises when using the MAD and S\textsubscript{n} methods, the number of outliers detected by using the IQR method actually falls. It is also clear that PM10 has the highest number of outliers. When running these methods on the sample as a whole, the MAD method leads to the highest total number of outliers, but this changes to the S\textsubscript{n} when running the methods per time period grouping.
+%
+%\subsubsection{Moving average}
+%
+%The outlier detection methods are also applied using moving averages, to account for the time series nature of the data. The results are shown in column 3 of Table \ref{tab:all_outliers}. The results show that the number of outliers for PM10 reduces considerably, but the figure increases for O\textsubscript{3} and General AQ measurements, with the number of outliers increasing by approximately a factor of 3.
+%
+%\begin{landscape}
+%\begin{table}[!tbp]
+%  \centering
+%  \small
+%  \caption{Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.}
+%  \label{tab:all_outliers}
+%  \begin{tabular}{ l S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] S[table-format=4] }
+%  \toprule
+%  {} & \multicolumn{4}{c}{Whole dataset} & \multicolumn{4}{c}{Time period grouping} & \multicolumn{4}{c}{Moving average} \\
+%  \cmidrule(lr){2-5}
+%  \cmidrule(lr){6-9}
+%  \cmidrule(lr){10-13}
+%  Gas/particulate & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} & \multicolumn{1}{l}{IQR} & \multicolumn{1}{l}{MAD} & \multicolumn{1}{l}{S\textsubscript{n}} & \multicolumn{1}{l}{Avg.} \\ \midrule
+%  PM10			& 1068	& 1285	& 1288	& 1214	& 1026	& 1298	& 1304	& 1209	& 980	& 800	& 769	& 850	\\
+%  O\textsubscript{3}	& 142	& 105	& 97		& 115	& 136	& 89		& 93		& 106	& 612	& 502	& 463	& 526	\\
+%  General AQ		& 195	& 139	& 121	& 152	& 201	& 152	& 141	& 165 	& 674	& 406	& 342	& 474	\\ \midrule
+%  Total			& 1405	& 1529	& 1506	& 1480	& 1363	& 1539	& 1538	& 1480	& 2266	& 1708	& 1574	& 1850	\\ \bottomrule
+%  \end{tabular}
+%\end{table}
+%\end{landscape}
 
 %\subsubsection{Geo-spatial outliers}
 %
@@ -1665,68 +1805,68 @@ The outlier detection methods are also applied using moving averages, to account
 %    \caption[Longitude and latitude waveforms.]{Longitude and latitude data from a consistent route creates a waveform, which can be used to identify outliers. Values outside of the pattern's minimum and maximum (shown by the horizontal red lines) or that appear irregular can be considered outliers.}
 %    \label{fig:waves}
 %\end{figure}
-
-\subsubsection{Outlier summary}
-
-The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
-
-\begin{figure}[!tbp]
-    \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/pm_histogram_clean}
-                \caption{Shinyei PPD42}
-                \label{fig:pm_histogram_clean}
-            \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/ozone_histogram_clean}
-            	\caption{MQ131}
-            	\label{fig:ozone_histogram_clean}
-	   \end{subfigure}
-        \end{minipage}
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/mq135_histogram_clean}
-                \caption{MQ135}
-                \label{fig:mq135_histogram_clean}
-            \end{subfigure}
+%
+%\subsubsection{Outlier summary}
+%
+%The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
+%
+%\begin{figure}[!tbp]
+%    \centering
+%    \begin{minipage}{1\linewidth}
 %            \begin{subfigure}[t]{.5\linewidth}
-%            	\includegraphics[width=\textwidth]{images/temp_histogram}
+%                \includegraphics[width=\textwidth]{images/pm_histogram_clean}
+%                \caption{Shinyei PPD42}
+%                \label{fig:pm_histogram_clean}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/ozone_histogram_clean}
+%            	\caption{MQ131}
+%            	\label{fig:ozone_histogram_clean}
+%	   \end{subfigure}
+%        \end{minipage}
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/mq135_histogram_clean}
+%                \caption{MQ135}
+%                \label{fig:mq135_histogram_clean}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/histogram_temp_clean}
 %            	\caption{DHT22 temperature}
-%            	\label{fig:temp_histogram}
+%            	\label{fig:temp_histogram_clean}
 %	   \end{subfigure}
 %        \end{minipage}
 %    \begin{minipage}{1\linewidth}
 %    	\centering
 %        \begin{subfigure}[t]{.5\linewidth}
-%            \includegraphics[width=\textwidth]{images/humidity_histogram}
+%            \includegraphics[width=\textwidth]{images/histogram_humidity_clean}
 %            \caption{DHT22 humidity}
-%            \label{fig:humidity_histogram}
+%            \label{fig:humidity_histogram_clean}
 %        \end{subfigure}
-    \end{minipage}
-    \caption[Sensor measurement histograms with cleaned data.]{Histograms depicting the distribution of pollution sensor measurements with cleaned data. (a) shows a slight positive skew; (b) and (c) have approximately normal distributions.}
-    \label{fig:histograms_clean}
-\end{figure}
+%    \end{minipage}
+%    \caption[Sensor measurement histograms with cleaned data.]{Histograms depicting the distribution of pollution sensor measurements with cleaned data. (a) shows a slight positive skew, (b), (c) and (d) have approximately normal distributions, and (e) has a more varied distribution.}
+%    \label{fig:histograms_clean}
+%\end{figure}
 
-\begin{table}[!tbp]
-  \centering
-  \caption{Dataset size changes.}
-  \label{tab:size_change}
-  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=4] S[table-format=2.1] S[table-format=5] S[table-format=4] S[table-format=2.1]}
-  \toprule
-   {} & {Initial} & \multicolumn{3}{c}{Errors removed} & \multicolumn{3}{c}{Outliers removed} \\
-  \cmidrule(lr){2-2}
-  \cmidrule(lr){3-5}
-  \cmidrule(lr){6-8}
-  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%}  \\ \midrule
-  PM10			& 9877	& 9089	& 788	& 8.0		& 8063	& 1026	& 11.3 \\
-  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 7784	& 136	& 1.7 \\
-  General AQ		& 9877	& 9877	& 0		& 0.0		& 9676	& 201	& 2.0 \\ \midrule
-  Total			& 29631	& 26886	& 2745	& 9.3		& 26030	& 856	& 3.2 \\ \bottomrule
-  \end{tabular}
-\end{table}
+%\begin{table}[!tbp]
+%  \centering
+%  \caption{Dataset size changes.}
+%  \label{tab:size_change}
+%  \begin{tabular}{ l S[table-format=5] S[table-format=5] S[table-format=4] S[table-format=2.1] S[table-format=5] S[table-format=4] S[table-format=2.1]}
+%  \toprule
+%   {} & {Initial} & \multicolumn{3}{c}{Errors removed} & \multicolumn{3}{c}{Outliers removed} \\
+%  \cmidrule(lr){2-2}
+%  \cmidrule(lr){3-5}
+%  \cmidrule(lr){6-8}
+%  Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%}  \\ \midrule
+%  PM10			& 9877	& 9089	& 788	& 8.0		& 8063	& 1026	& 11.3 \\
+%  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 9837	& 83		& 1.0 \\
+%  General AQ		& 9877	& 9877	& 0		& 0.0		& 9737	& 140	& 1.4 \\ \midrule
+%  Total			& 29631	& 26886	& 2745	& 9.3		& 26637	& 1249	& 4.6 \\ \bottomrule
+%  \end{tabular}
+%\end{table}
 
-Regarding the geo-spatial outliers, these have been corrected as best possible. Where they still remain erroneous, these measurements have been discarded from any geo-spatial analysis. However, the geo-spatial measurement being an outlier does not affect the pollution sensor measurements, so these remain for the other analyses.
+%Regarding the geo-spatial outliers, these have been corrected as best possible. Where they still remain erroneous, these measurements have been discarded from any geo-spatial analysis. However, the geo-spatial measurement being an outlier does not affect the pollution sensor measurements, so these remain for the other analyses.
 
 
 \subsection{Maps}
@@ -1736,7 +1876,7 @@ Regarding the geo-spatial outliers, these have been corrected as best possible. 
 
 Using the cleaned dataset, pollution levels along the route can be mapped. Figure \ref{fig:route_pollution_maps} shows pollution maps for each of the pollutants. Each pollutant has two maps: the first uses the mean of all measurements inside each tile's boundaries to colour the tile and the second uses the maximum. By analysing the colours of the tiles in these maps, it is possible to identify high pollution areas in Bath.
 
-Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the route, with the majority varying between 20-50~$\mu g/m^3$. In addition, there are a small number of highly elevated PM10 levels, one of which is found in the north west corner of the route at a level of 100~$\mu g/m^3$ (Lng = -2.378, Lat = 51.386). This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum aggregation instead, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. The average ozone levels along the route are shown in Figure \ref{fig:o3_map_median}, which indicates that the worst O\textsubscript{3} pollution is along the road in the south west part of the route (Lng = -2.382 to -2.364, Lat = 51.377 to 51.382). This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). The median ozone pollution level appears to be in the 50-60~$\mu g/m^3$ range. The maximum pollution levels (Figure \ref{fig:o3_map_max}) are elevated along the whole route compared to the median levels, which is as expected. Overall, there is little variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge (Lng = -2.382, Lat = 51.385). This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Again, the median general air quality (Figure \ref{fig:mq135_map_median}) does not vary dramatically, with a small number of highly elevated levels sparsely distributed around the route. These problem areas appear to be outside of an old storage warehouse demolition site (Lng = -2.367, Lat = 51.378) and at a large traffic junction on London Road (Lng = -2.358, Lat = 51.390). Using the maximum to aggregate each tiles' values, the majority of the route has experienced a high measurement from the general air quality sensor, with no particular area being better than others.
+Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the route, with the majority varying between 20-50~$\mu g/m^3$. In addition, there are a small number of highly elevated PM10 levels, one of which is found in the north west corner of the route at a level of 100~$\mu g/m^3$ (Long = -2.378, Lat = 51.386). This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum aggregation instead, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. The average ozone levels along the route are shown in Figure \ref{fig:o3_map_median}, which indicates that the worst O\textsubscript{3} pollution is along the road in the south west part of the route (Long = -2.382 to -2.364, Lat = 51.377 to 51.382). This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). The median ozone pollution level appears to be in the 50-60~$\mu g/m^3$ range. The maximum pollution levels (Figure \ref{fig:o3_map_max}) are elevated along the whole route compared to the median levels, which is as expected. Overall, there is little variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge (Long = -2.382, Lat = 51.385). This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Again, the median general air quality (Figure \ref{fig:mq135_map_median}) does not vary dramatically, with a small number of highly elevated levels sparsely distributed around the route. These problem areas appear to be outside of an old storage warehouse demolition site (Long = -2.367, Lat = 51.378) and at a large traffic junction on London Road (Long = -2.358, Lat = 51.390). Using the maximum to aggregate each tiles' values, the majority of the route has experienced a high measurement from the general air quality sensor, with no particular area being better than others.
 
 \begin{figure}[!htbp]
     \centering
@@ -1788,11 +1928,6 @@ Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the 
 % Direction of travel
 
 The pollution maps display how the results vary spatially. We now present how the results differ temporally and in relation to other factors (speed of the bicycle, altitude, temperature and humidity). Any such patterns that can be identified in the data collected by the air quality monitoring device are displayed.
-
-\subsubsection{Road}
-
-
-
 
 \subsubsection{Day of the week}
 
@@ -1898,6 +2033,40 @@ Figure \ref{fig:week_period_bars} shows the median pollution levels for each pol
 
 
 % Morning vs Evening maps as well
+
+\subsubsection{Road}
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.6\textwidth]{images/road_pm}
+\caption[Boxplot by road.]{Boxplot by road.}
+\label{fig:road_pm}
+\end{figure}
+
+
+\subsubsection{Traffic}
+
+\begin{table}[!tb]
+\centering
+\caption{Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.}
+\label{tab:speed}
+\begin{tabular}{l c S[table-format=5]}
+\toprule
+Section name & Code & \multicolumn{1}{c}{AADF} \\ 
+\midrule
+Lower Bristol Road & LB & 23173 \\
+Windsor Bridge & WB & 18269 \\
+Upper Bristol Road & UB & 16978 \\
+Queen's Square & QS & 8056 \\
+The Paragon & TP & 8583 \\
+London Road & LR & 23173 \\
+Bathwick Street & BS & 15824 \\
+Great Pulteney Street & GPS & 3267 \\
+Manvers Street & MS & 5489 \\
+Dorchester Street & DS & 7051 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \subsubsection{Speed of the bicycle}
 
@@ -2039,13 +2208,13 @@ R$^{2}$	& 0.0003   	& 0.0003		& 0.0003   \\
 \end{tabular}
 \end{table}
 
-\subsubsection{Temperature}
+%\subsubsection{Temperature}
 
-Needed?
+%Needed?
 
-\subsubsection{Humidity}
+%\subsubsection{Humidity}
 
-Needed?
+%Needed?
 
 \subsection{Robustness}
 % Weather, vibration, power
@@ -2072,7 +2241,9 @@ The percentage of outliers for O\textsubscript{3} and general air quality were m
 
 The outlier results also show that running the outlier detection methods per-temporal group does not change the number of outliers detected drastically. Using moving averages significantly affects the number of outliers detected. One explanation for this is if there are a high proportion of outliers in a given time period, the moving average will be greatly impacted when it moves over that time period, thus not identifying extreme values as outliers because a large proportion of the group's values are also extreme.
 
-Furthermore, it is clear that the geo-spatial measurements can occasionally be erroneous, which leads to points appearing on the map in incorrect positions. Often, this occurs towards the beginning of a collection period when the GPS connection is not as stable. In this project, a retrospective detection and correction technique was applied, but this could be advanced by using a real-time method. 
+As the last column of Table \ref{tab:upper_bounds} shows, using outlier detection methods with moving averages is unwise. This is because if there are a relatively high number of consecutive outliers, the moving average window's statistics are greatly skewed and measurements that would otherwise be considered extreme outliers are not excluded. Using moving averages on the PM10 measurements is particularly bad due to the abnormally high proportion of outliers.
+
+%Furthermore, it is clear that the geo-spatial measurements can occasionally be erroneous, which leads to points appearing on the map in incorrect positions. Often, this occurs towards the beginning of a collection period when the GPS connection is not as stable. In this project, a retrospective detection and correction technique was applied, but this could be advanced by using a real-time method. 
 
 \subsection{Maps}
 
@@ -2080,7 +2251,7 @@ The pollution maps generated using measurements collected by this device clearly
 
 The pollution levels shown on these maps demonstrate that the pollution limit is being broken etc... However, this finding must be taken with caution as we were not able to properly calibrate the sensors against a reference device. Therefore, if our sensors are found to be reporting inflated values, this finding no longer holds. Nonetheless, it is interesting to demonstrate how this device can inform authorities on pollution limit exceedance. In fact, this could be incorporated into the device -- an email alert could be sent when the day's average level exceeds those set by the WHO or EEA (Table \ref{airqualityguidelines}). 
 
-Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles, but the number of tiles can be increased to further increase the spatial resolution of these maps.
+Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles which gives a spatial resolution of X~m, but the number of tiles can be increased to further increase the spatial resolution of these maps.
 
 One way in which the pollution maps could be improved is through the addition of pollution mapping techniques, such as land-use regression (LUR) or Kriging. These allow for estimation of pollution values in locations where no measurement has been taken, by taking into account a variety of factors. This was originally going to be attempted, but project time constraints meant this was not possible. The added benefit of using such techniques would be a smoothed map, instead of individual tiles. Bicycles, whilst more mobile than cars, cannot cover everywhere so this could help to further map pollution in an area.
 
@@ -2088,9 +2259,17 @@ One way in which the pollution maps could be improved is through the addition of
 
 %Given this was carried out over a short time period and along the same quiet stretch of road, it was not expected that the environmental conditions would change significantly over the collection period. Therefore, the results should be relatively constant. However, the figure shows that Position 1 and Position 2 have relatively large spikes in their measurements. These positions are underneath the rider and on the seat stay (refer to Figure \ref{} for images of these positions) and were identified as positions that could potentially be impacted by particulate matter thrown up by the wheels.
 
+\subsection{Patterns}
+
+The results show that the air quality monitoring device can detect patterns in pollution. Even if this device is less accurate than the more expensive fixed monitoring stations, this device can still detect relative changes well.
+
+\subsection{Comparison to fixed monitoring stations}
 
 
 
+\subsection{Robustness}
+
+Unfortunately, the device did suffer from robustness issues. However, these issues provide useful information that informs future iterations of the device. The fact that moisture affected some of the sensors indicates that the device would be better housed in a more water resistant container. For example, a sealable plastic box with a fan attached to generate air flow for the sensors, since a completely sealed container is impossible for \textit{air} quality monitoring. In addition, we identified that vibrations might be causing power issues, which indicates that the parts of the device should be more securely fixed inside the container.
 
 
 
@@ -2417,7 +2596,7 @@ One way in which the pollution maps could be improved is through the addition of
 %%%%%%%%							Question 2					      		       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}  \label{chap:q2}
+\chapter[Improving spatial \& temporal resolution]{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}  \label{chap:q2}
 
 Chapter \ref{chap:q1} showed that this air quality monitoring device can measure air quality to a satisfactory level, meaning it can identify trends and variations in air pollution. Consequently, the second research question focuses on whether this device can improve on the spatial and temporal resolution of the fixed air quality monitoring stations. Answering this question will help to ascertain whether such bicycle-based devices can replace their more expensive, fixed counterparts.
 
@@ -2552,7 +2731,7 @@ In this section, we first detail results pertaining to the spatial aspect of thi
     \label{fig:locus_maps}
 \end{figure}
 
-Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. Using the same outlier detection and removal technique used in Section \ref{results:q1}, the dataset was cleaned. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods were run on the dataset as a whole. This led to 300 outliers identified and removed, leaving a clean dataset of 1152 measurements.
+Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. The same outlier detection and removal technique used in Section \ref{results:q1} is used to clean the dataset. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods are run on the dataset as a whole. This led to 300 outliers identified and removed, leaving a clean dataset of 1152 measurements.
 
 Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants. Primarily, this figure demonstrates the improved spatial resolution of this device compared to a fixed monitoring station, shown by the larger area covered compared to the single point of the Guildhall site. Moreover, the Guildhall fixed monitoring station can only measure NO\textsubscript{2}, whereas this air quality monitoring device can measure three different pollutants.
 
@@ -2611,7 +2790,7 @@ Furthermore, each vertical column of this graph represents a complete one-way tr
                 \label{fig:event_heatmap_mq135}
             \end{subfigure}
         \end{minipage}
-    \caption[Heatmaps of event pollution.]{Heatmaps of event pollution. (a) shows PM10, (b) shows O\textsubscript{3}, and (c) shows general air quality.}
+    \caption[Heatmaps of event pollution.]{Heatmaps of event pollution. The horizontal axis represents discrete 7-minute time intervals and the y-axis represents longitude (position along the road).}
     \label{fig:event_heatmaps}
 \end{figure}
 
@@ -2633,7 +2812,7 @@ Furthermore, the results from the event-based monitoring also demonstrate the ca
 %%%%%%%%							Question 3						      	       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{chap:q3}
+\chapter[Public benefit application]{Question 3: How can these air quality monitoring devices be applied for public benefit?} \label{chap:q3}
 
 Chapter \ref{chap:q2} demonstrated how this air quality monitoring device can improve spatial and temporal resolution compared to fixed monitoring stations. Coupled with the findings of Chapter \ref{chap:q1}, the results show that this device is suitable for air quality monitoring, with clear benefits over existing solutions. This chapter now focuses on how the device can be applied for a tangible public benefit.
 
@@ -2687,70 +2866,113 @@ w_{p, j} = \sum_{k=1}^{n} d_{j, k} \cdot c_k
 \end{equation}
 where $n$ is the number of $100m \times 100m$ grid cells the edge penetrates, $d_{j, k}$ is the length of edge $e_j$ penetrating grid cell $k$, and $c_k$ is the modelled pollution concentration in grid cell $k$.
 
-We expand upon this relatively simple cost function by accounting for two additional variables. Firstly, we include whether the road has a positive or negative gradient, which is a variable that is specific to human-powered methods of travel (i.e. driving a car has no physical exertion). This has an impact because cycling uphill is physically more demanding, which means the cyclist will be breathing more deeply and, thus, inhaling more pollution in any given time frame. This effect is reversed when cycling downhill as the cyclist's physical exertion is likely to be lower. We introduced this to our cost function as a factor: a positive gradient $g_j$ implies $1 + g_j > 1$ and a negative gradient implies $1 + g_j < 1$ . Secondly, each edge $e_j$ of our graph has a road classification $type_j$ associated with it, which provides a proxy for the traffic level. For example, a `primary' road will likely have higher levels of traffic, which could slow down the cyclist and lead to increased pollution exposure times. We assigned a value to each classification and added this to the distance product. Our final cost function is, therefore, as follows:
+We expand upon this relatively simple cost function by accounting for an additional variables. We include whether the road has a positive or negative gradient, which is a variable that is specific to human-powered methods of travel (i.e. driving a car has no physical exertion). This has an impact because cycling uphill is physically more demanding, which means the cyclist will be breathing more deeply and, thus, inhaling more pollution in any given time frame. This effect is reversed when cycling downhill as the cyclist's physical exertion is likely to be lower. This is introduced to the cost function as a factor: a positive gradient $g_j$ implies $1 + g_j > 1$ and a negative gradient implies $1 + g_j < 1$. Our final cost function is, therefore, as follows:%Secondly, each edge $e_j$ of our graph has a road classification $type_j$ associated with it, which provides a proxy for the traffic level. For example, a `primary' road will likely have higher levels of traffic, which could slow down the cyclist and lead to increased pollution exposure times. We assigned a value to each classification and added this to the distance product. Our final cost function is, therefore, as follows:
 % Cost function
 \begin{equation}
-w_{p, j} = (1 + g_j) \cdot (d_j \cdot p_j + type_j)
+w_{p, j} = (1 + g_j) \cdot (d_j \cdot p_j)
 \end{equation}
 % (1 +  g) ^2 ?? non-linear
 
 %In order to assign the relevant pollution value to each edge for input into the cost function, we first grouped the pollution data into a raster of X by X cells, with the cell's value representing the average of the pollution readings that fall inside the cell's spatial boundaries. We then identified which cell each edge $e_j$ intersected and used the cell's value as the pollution level for that edge. This method is visualised in Figure \ref{health_optimal_cell}.
 
-Since data collection for this application is deemed infeasible within the project's constraints, the data is generated by sampling points from a distribution. The distribution of pollution measurements in the main route dataset was used to make these values as realistic as possible.
+Since data collection for this application is deemed infeasible within the project's constraints and the route data from Chapter \ref{chap:q1} only partially covers Bath, the data is generated by using average annual daily flow (AADF) of all motor vehicle traffic in Bath. There are 27 locations within Bath at which the traffic level is monitored or estimated based on previous figures \citep{dft2018traffic}. Using these locations, the centre of each road in Bath is calculated and the nearest traffic count location to the road is found. The AADT value at this location is then assigned to the road and normalised to a value $a_i$ between 0.5 and 1.5 by using the following formula:
+\begin{equation}
+a_j = \frac{AADT_j - min(AADT)}{max(AADT) - min(AADT)} + 0.5
+\end{equation}
+Depending on the distance $e_j$ of the road from the traffic count location, a normalised scaling value like above is applied. The value is subtracted from 1.5 so that shorter distances to the traffic count have greater effect.
+\begin{equation}
+b_j = 1.5 - \frac{e_j - min(e)}{max(e) - min(e)}
+\end{equation}
+These factors then multiply a fixed average pollution value ($\overline{p} = 50$), with the addition of a random value $\epsilon$ between -20 and 20.
+\begin{equation}
+p_j = a_i \cdot b_j \cdot \overline{p} + \epsilon
+\end{equation}
 
-In order to assign the relevant pollution value to each edge for input into the cost function, we calculated the centre point along each road and used the k-nearest neighbours (KNN) algorithm to find the closest k values (we used $k=5$). The KNN algorithm implemented Haversine distance to account for the curvature of the earth's surface. We then averaged these values for each road. This method is visualised in Figure \ref{fig:knn}. Whilst using only the centre of each road may be a strong simplification, many of the roads are not straight and so are separated into multiple segments by \texttt{osmnx}, meaning the centre points are still representative of their road segments.
+%Since data collection for this application is deemed infeasible within the project's constraints, the data is generated by sampling points from a distribution. The distribution of pollution measurements in the main route dataset was used to make these values as realistic as possible.
 
-% FINISH
+%In order to assign the relevant pollution value to each edge for input into the cost function, we calculated the centre point along each road and used the k-nearest neighbours (KNN) algorithm to find the closest k values (we used $k=5$). The KNN algorithm implemented Haversine distance to account for the curvature of the earth's surface. We then averaged these values for each road. This method is visualised in Figure \ref{fig:knn}. Whilst using only the centre of each road may be a strong simplification, many of the roads are not straight and so are separated into multiple segments by \texttt{osmnx}, meaning the centre points are still representative of their road segments.
+%
+%% FINISH
+%%\begin{figure}[!tb]
+%%\centering
+%%\includegraphics[width=0.4\textwidth]{images/health_optimal_cell}
+%%\caption{Example edge that intersects four grid cells and resulting edge weight}
+%%\label{health_optimal_cell}
+%%\end{figure}
+%
 %\begin{figure}[!tb]
 %\centering
-%\includegraphics[width=0.4\textwidth]{images/health_optimal_cell}
-%\caption{Example edge that intersects four grid cells and resulting edge weight}
-%\label{health_optimal_cell}
+%\includegraphics[width=0.4\textwidth]{images/knn}
+%\caption[K-nearest neighbours.]{Example of selecting k-nearest air quality measurements for two roads (k = 5).}
+%\label{fig:knn}
 %\end{figure}
-
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=0.4\textwidth]{images/knn}
-\caption[K-nearest neighbours.]{Example of selecting k-nearest air quality measurements for two roads (k = 5).}
-\label{fig:knn}
-\end{figure}
 
 \subsection{Search algorithm}
 
 The graph comprises of $|V| = X$ nodes and $|E| = X$ edges, where an edge represents a road and a node represents an intersection of two or more roads. We use Dijkstra's algorithm \citep{dijkstra1959} as our search algorithm for this application. It finds the lowest cost path between any two nodes in a graph. In this case, the two nodes are the origin $O$ and destination $D$. This algorithm starts by expanding the origin node $O$ and analyses the available edges. It takes the edge with the lowest cost each time and then analyses each edges from the resulting node, building up a set of known distances from $O$ to each visited node. The algorithm stops once it has visited the destination node.
 
-The aforementioned minimum commute distance was also implemented here to avoid short trips that are unlikely to have any deviation between the shortest and health-optimal routes.
+The aforementioned minimum commute distance is also implemented here to avoid short trips that are unlikely to have any deviation between the shortest and health-optimal routes.
 
 % Show example shortest path
 
 \subsection{Comparing routes}
 
-Once the required number of `health-optimal' and shortest route pairs has been generated, we compare these routes to analyse the percentage decrease in pollution exposure and the percentage increase in distance. The results of this are detailed in Section \ref{results:q3}.
+Once the required number of `health-optimal' and shortest route pairs has been generated, these routes are aggregated and compared to calculate the percentage decrease in pollution exposure and the percentage increase in distance. The results of this are detailed in Section \ref{results:q3}.
 
 
-\section{Results and analysis} \label{results:q3}
+\section{Results} \label{results:q3}
 
 Having shown that this air quality monitoring device can measure air pollution to a satisfactory level and can improve spatio-temporal resolution, we now demonstrate how it can be used to reduce the public's exposure to air pollution.
 
 \subsection{Coverage}
 % Include comparison with other cities?
 
-As expected, the commuter simulations show an increase in coverage of the city as the number of cyclists increases. There are diminishing returns to an increase in cyclists, however. Over 50\% of the roads in Bath can be covered with 50 cyclists and with 500 cyclists it is possible to obtain 90.3\% coverage. Whilst 10\% of the road network is not covered, Figure X shows that these unvisited roads are likely to be dead-ends or residential cul-de-sacs, which are not of much importance in the analysis.
+As expected, the commuter simulations show an increase in coverage of the city as the number of cyclists increases. There are diminishing returns to an increase in cyclists, however. Over 50\% of the roads in Bath can be covered with 50 cyclists and with 500 cyclists it is possible to obtain 90.3\% coverage. Whilst 10\% of the road network is not covered, these unvisited roads are often dead-ends or residential cul-de-sacs, which are not of much importance in the analysis.
 
 % Discussion: This test did not weight roads by importance either, meaning if these cyclists were directed along the more important roads that the local authorities wish to analyse then good coverage of the city can be obtained.
 
+%\begin{figure}[!tb]
+%\centering
+%\includegraphics[width=0.7\textwidth]{images/coverage}
+%\caption[Cyclist coverage.]{Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.}
+%\label{fig:coverage}
+%\end{figure}
+
 \begin{figure}[!tb]
 \centering
-\includegraphics[width=0.7\textwidth]{images/coverage}
-\caption[Cyclist coverage.]{Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases.}
+\begin{subfigure}[b]{0.49\textwidth}
+  \includegraphics[width=1\linewidth]{images/coverage}
+  \caption{Cumulative coverage}
+  \label{fig:coverage}
+\end{subfigure}
+\hfill
+\begin{subfigure}[b]{0.49\textwidth}
+  \includegraphics[width=1\linewidth]{images/coverage_50}
+  \caption{Coverage map with 50 cyclists}
+  \label{fig:coverage_50}
+\end{subfigure}
+\caption[Cyclist coverage.]{ (a) Percentage of Bath theoretically covered by $n$ cyclists. Over 50\% of the city can be covered with only 50 cyclists, with diminishing returns to scale as the number of cyclists increases. (b) Map showing extensive coverage has been achieved with 50 cyclists.}
 \label{fig:coverage}
 \end{figure}
+
 
 % Also add a series of map-graphs for each of the n values, showing coverage.
 
 \subsection{Comparison of shortest and health-optimal routes}
 
-We found that by taking the health-optimal route instead of the shortest route, one can decrease their pollution exposure by 10.3\% on average. However, this comes at the cost of a 13.5\% increase in distance travelled, on average.
+We found that by taking the health-optimal route instead of the shortest route, one can decrease their pollution exposure by 5.08\% on average. However, this comes at the cost of a 4.39\% increase in distance travelled, on average. When the gradient factor $1+g_j$ is removed from the cost function, the pollution reduction effect is reduced slightly to 4.70\%, a change of 0.38\%. At the same time, the increase in route length is increased slightly to 4.43\%, a change of 0.04\%.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Health-optimal route pollution reductions and length increases. Results shown for the cost function with and without the gradient factor.}
+  \label{tab:pollution_reductions}
+  \begin{tabular}{ l l l }
+  \toprule
+  Cost function & Pollution change & Length change \\ \midrule
+  With gradient & -5.08\% & +4.39\% \\
+  Without gradient & -4.70\% & +4.43\% \\ \bottomrule
+  \end{tabular}
+\end{table}
 
 % Add stats tests for the change to show significant.
 
@@ -2782,51 +3004,51 @@ It is worth noting that the reduction in pollution exposure can greatly depend o
     \label{fig:origdestpairs}
 \end{figure}
 
-% Insert table with reductions/increases for each pollutant and length
-\begin{table}[!tbp]
-  \centering
-  \caption{Health-optimal route pollution reductions and length increases}
-  \label{tab:pollution_reductions}
-  \begin{tabular}{ l l l }
-  \toprule
-  Gas/particulate & Pollution change & Length change \\ \midrule
-  PM10 & -10.3\% & +13.5\% \\
-  O\textsubscript{3} & -X\% & +X\% \\
-  General air quality & -X\% & +X\% \\ \bottomrule
-  \end{tabular}
-\end{table}
 
-Figure \ref{fig:cumulatives} displays the cumulative distribution of the route length increases and pollution reductions. A sizeable percentage (approximately 40\%) of the routes show no increase in length and, thus, no pollution exposure reduction since the shortest path is the same as the lowest pollution path. This occurs despite including a 500~m minimum route length to avoid trivial routes.
-
-\begin{figure}[!tb]
-    \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.5\linewidth}
-                \includegraphics[width=\textwidth]{images/pollution_reductions}
-                \caption{Reduction in pollution exposure.}
-                \label{fig:pollution_reductions}
-            \end{subfigure}
-            \begin{subfigure}[t]{.5\linewidth}
-            	\includegraphics[width=\textwidth]{images/length_increases}
-            	\caption{Increase in route length.}
-            	\label{fig:length_increases}
-	   \end{subfigure}
-    \end{minipage}
-    \caption[Changes in exposure and route length.]{Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500~m. There are then diminishing number of routes as the delta increases.}
-    \label{fig:cumulatives}
-\end{figure}
+%
+%Figure \ref{fig:cumulatives} displays the cumulative distribution of the route length increases and pollution reductions. A sizeable percentage (approximately 40\%) of the routes show no increase in length and, thus, no pollution exposure reduction since the shortest path is the same as the lowest pollution path. This occurs despite including a 500~m minimum route length to avoid trivial routes.
+%
+%\begin{figure}[!tb]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.5\linewidth}
+%                \includegraphics[width=\textwidth]{images/pollution_reductions}
+%                \caption{Reduction in pollution exposure.}
+%                \label{fig:pollution_reductions}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.5\linewidth}
+%            	\includegraphics[width=\textwidth]{images/length_increases}
+%            	\caption{Increase in route length.}
+%            	\label{fig:length_increases}
+%	   \end{subfigure}
+%    \end{minipage}
+%    \caption[Changes in exposure and route length.]{Cumulative depictions of the route length increases and pollution exposure decreases from the 500 generated routes. A sizeable percentage of routes show no increase/decrease, even with a minimum route length of 500~m. There are then diminishing number of routes as the delta increases.}
+%    \label{fig:cumulatives}
+%\end{figure}
 
 \section{Discussion}
 
-\cite{Ebenstein2017lifeexpectancy} found that a 10~$\mu g/m^3$ reduction in particulate matter pollution exposure leads to an increase in life expectancy of 0.64 years. Given an average reduction in pollution exposure of X\% and an average level of pollution in Bath of X, choosing the health-optimal routing consistency could lead to an increase in life expectancy of X. Obviously this is only an estimate etc etc..., but demonstrating a tangible health improvement can dramatically influence people's behaviour [CITE psychology papers]. To achieve this, this routing application could be incorporated into a mobile phone application. One can imagine the Google Maps application offering the shortest and health-optimal routes side-by-side when a user searches for a route with a value displayed on-screen of the health benefit of choosing the health-optimal route.
+% Try running algorithm without the grade influence - see what difference it makes.
 
-Furthermore, these findings must be taken with caution. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. What we mean by this is the routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
+\subsection{Coverage}
 
-\subsection{Health benefit}
+The coverage results show that approximately 50 cyclists would need to have one of these pollution devices attached to their bike in order to generate sufficient coverage of the city using commuters alone. Whilst 50 cyclists covers just over 50\% of the city, the corresponding coverage map (Figure \ref{fig:coverage_50}) illustrates that extensive coverage has been achieved. Using pollution mapping estimation techniques, a relatively complete picture of the pollution in Bath could be generated and so, therefore, 100\% coverage is not needed. Nevertheless, despite this interesting finding, further work needs to be conducted to understand how this result scales to other cities. For example, London is much larger and arguably has worse pollution, meaning far more than 50 cyclists may be needed.
+
+\subsection{Health-optimal routing}
+
+Choosing the health-optimal route in Bath instead of the shortest route can lead to a 5.08\% reduction in exposure to air pollution. In comparison, \cite{Hasenfratz2015highresmapsTram} found that choosing the health-optimal route in Zurich leads to a 7.1\% reduction, on average. Therefore, the effect found in this project is 2\% lower, even when additionally accounting for the gradient changes. The reason for this could be related to the route lengths. \citeauthor{Hasenfratz2015highresmapsTram} found that the pollution reduction came at the cost of a 6.4\% increase in route length, whereas we find a 4.39\% increase. The area examined by these authors was the whole of Zurich, which is a much larger city than Bath. As a result, there are more options available when choosing a route, meaning it is feasible that the routing algorithm took longer paths away from highly polluted areas. This would have reduced pollution exposure more, but at the cost of even longer routes. In addition, the ratio between the pollution and route length changes in this study is 1.16, which is similar to the ratio of 1.11 found by \cite{Hasenfratz2015highresmapsTram}.
+
+When removing the gradient from the cost function, the pollution exposure reduction falls to -4.70\%, which is a 7.5\% decrease. This suggests that the effect of cycling uphill is a 7.5\% increase in pollution exposure. This result is as expected, because without the gradient factor the routing algorithm will not take into account the effect of cycling uphill (breathing more deeply leads to higher pollution intake). We believe this is the first cost function to take this factor into account and so further investigation is needed to more accurately study its effect.
+
+It is also possible to quantify the health effect of choosing the health optimal path. \cite{Ebenstein2017lifeexpectancy} found that a 10~$\mu g/m^3$ reduction in particulate matter pollution exposure leads to an increase in life expectancy of 0.64 years. Given an average reduction in pollution exposure of 5.08\% and an average level of PM10 pollution in Bath of 24.38~$\mu g/m^3$, choosing the health-optimal route \textit{consistently} could lead to an increase in life expectancy ($\delta LE$) of 0.08 years.
+\begin{equation}
+\delta LE = \frac{(24.38 \times 5.08\%)}{10} \times 0.64
+\end{equation}
+Obviously, this is only an estimate as the pollution data for Bath used in the routing algorithm is simulated. Nonetheless, demonstrating a tangible health improvement can dramatically influence people's behaviour [CITE psychology papers]. To achieve this, this routing application could be incorporated into a mobile phone application. One can imagine the Google Maps application offering the shortest and health-optimal routes side-by-side when a user searches for a route with a value displayed on-screen of the health benefit of choosing the health-optimal route.
+
+These findings must be taken with caution, however. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. The routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
 
 % Probably need to add a section into literature review related to this. Find out how an X% reduction in a type of pollution can lead to X many more QALYs.
-
-Choosing the health-optimal route can lead to a substantial reduction in pollution exposure. We now quantify the health benefit associated with this pollution reduction, based on previous findings.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -3691,7 +3913,7 @@ Choosing the health-optimal route can lead to a substantial reduction in polluti
 
 
 
-\chapter{Limitations} \label{limitations}
+\chapter{Limitations} \label{chap:limitations}
 
 All well and good doing all this, but if people don't have the ease of use (Need more cycle path) and education (on effects of pollution).
 
@@ -3725,7 +3947,7 @@ Flat tyres
 %%%%%%%%							CONCLUSION							       %%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Conclusion} \label{chap: conclusion}
+\chapter{Conclusion} \label{chap:conclusion}
 
 In this chapter, we conclude the project and provide recommendations for future work.
 
@@ -3791,7 +4013,7 @@ Some adjustments were made to the device to enable this application. Firstly, th
 
 \chapter{Installation instructions}
 
-\section{GPS}
+\section{GPS} \label{GPS}
 
 To get the USB GPS module to work with the Raspberry Pi, a number of libraries must first be installed.
 \begin{lstlisting}
@@ -3812,7 +4034,7 @@ sudo systemctl status gpsd
 \end{lstlisting}
 Now run \texttt{cgps -s} to test whether the GPS is connecting to satellites. The longitude and latitude fields should be populated.
 
-\section{NTP}
+\section{NTP} \label{NTP}
 
 To enable the RPi to use the GPS as an NTP server, the \texttt{/etc/ntp.conf} file needs to be edited. Add the following lines underneath the \texttt{server 3.debian.pool.ntp.org iburst} line.
 \begin{lstlisting}
@@ -3833,6 +4055,68 @@ sudo systemctl start ntp
 sudo systemctl status ntp
 \end{lstlisting}
 Now run \texttt{ntpq -p} to test whether the GPS is working as an NTP server. It should display time from \texttt{SHM(0)} and \texttt{SHM(1)}.
+
+\chapter{Outliers} \label{appendix:outliers}
+
+The results of performing this outlier detection method are shown in Table \ref{tab:iqr_outliers}. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.75\%) compared to the ozone (1.79\%) and general air quality measurements (1.97\%). The upper bound of 128.64 $\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}. The MQ131 sensor has the lowest percentage of outliers when using the IQR detection method. It must be noted that the sample size $N$ for the ozone measurements is considerably lower than for the other two pollutants due to the aforementioned breakage and replacement of the MQ131 sensor midway through data collection. However, the percentage of outliers is similar to that for the general air quality measurements, so this exclusion does not appear to have detrimentally impacted the analysis from a statistical perspective.
+
+The second outlier detection method is the median and MAD method. Outliers were identified as any measurements which were more than 3 times the MAD away from the median. The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+
+The third method uses the median and S\textsubscript{n} and the results are shown in Table \ref{tab:mad_outliers}. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Outlier detection summary using IQR method on the whole dataset.}
+  \label{tab:iqr_outliers}
+  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  Gas/particulate & N & {Median} & {IQR} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 45.50 & 128.64 & 0.00 & 1068 & 11.75 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 11.17 & 72.74 & 28.06 & 142 & 1.79 \\
+  General AQ (V) & 9877 & 1.17 & 0.21 & 1.60 & 0.74 & 195 & 1.97 \\ \bottomrule
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+  \end{tabular}
+\end{table}
+% Include temp and humidity as well?
+
+%\subsubsection{Median and MAD}
+%
+%The median and MAD outlier detection method was also implemented. Outliers were identified as any measurements which were more than 3 times the MAD away from the median.
+%
+%The results of this method are detailed in Table \ref{tab:mad_outliers}. Once again, PM10 shows the highest percentage of outliers, with 14.14\% of the measurements being considered outliers. This is a 2.39\% increase over the number of outliers found by the IQR detection method. On the other hand, there has been a small decrease in the outlier percentages for the ozone and general air quality measurements. However, overall, the values are not too dissimilar to those found by the IQR method, which indicates the robustness of these methods.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Outlier detection summary using median and MAD method on the whole dataset.}
+  \label{tab:mad_outliers}
+  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  Gas/particulate & N & {Median} & {MAD} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.38 & 104.26 & 0.00 & 1285 & 14.14 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.30 & 75.21 & 25.42 & 105 & 1.33 \\
+  General AQ (V) & 9877 & 1.17 & 0.16 & 1.65 & 0.69 & 139 & 1.41 \\ \bottomrule
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+  \end{tabular}
+\end{table}
+
+%\subsubsection{S\textsubscript{n}}
+%
+%Table \ref{tab:mad_outliers} shows the result of the S\textsubscript{n} method of outlier detection. The PM10 outlier percentage is only 0.07\% less than using the MAD method. The percentage of outliers for ozone and general air quality are the lowest out of the three methods.
+
+\begin{table}[!tbp]
+  \centering
+  \caption{Outlier detection summary using median and S\textsubscript{n} method on the whole dataset.}
+  \label{tab:mad_outliers}
+  \begin{tabular}{ l l S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] S[table-format=3.2] }
+  \toprule
+  Gas/particulate & N & {Median} & {S\textsubscript{n}} & {U.B.} & {L.B.*} & {\# outliers} & {\%} \\ \midrule
+  PM10 $(\mu g/m^3)$ & 9089 & 28.13 & 25.22 & 103.80 & 0.00 & 1288 & 14.17 \\
+  O\textsubscript{3} $(\mu g/m^3)$ & 7920 & 50.31 & 8.46 & 75.69 & 24.94 & 97 & 1.22 \\
+  General AQ (V) & 9877 & 1.17 & 0.17 & 1.67 & 0.67 & 121 & 1.23 \\ \bottomrule
+    \multicolumn{7}{l}{\textsuperscript{$\ast$}\footnotesize{Lower bound (L.B.) capped at 0 as negative concentrations are nonsensical.}} \\
+  \end{tabular}
+\end{table}
 
 
 \chapter{Code}

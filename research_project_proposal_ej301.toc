@@ -1,138 +1,140 @@
 \contentsline {chapter}{\numberline {1}Introduction}{12}{chapter.1}
 \contentsline {chapter}{\numberline {2}Related work}{16}{chapter.2}
-\contentsline {section}{\numberline {2.1}Air pollution}{17}{section.2.1}
+\contentsline {section}{\numberline {2.1}Air pollution}{16}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Health impact of air pollution}{17}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}The need for monitoring air pollution}{18}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Measures of air quality}{19}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Nitrogen oxides}{20}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.1.2}The need for monitoring air pollution}{17}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Measures of air quality}{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Nitrogen oxides}{19}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Ozone}{20}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Particulates}{20}{subsection.2.2.3}
-\contentsline {section}{\numberline {2.3}Monitoring urban air quality}{21}{section.2.3}
+\contentsline {section}{\numberline {2.3}Monitoring urban air quality}{20}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Previous monitoring devices}{21}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Spatial variability}{26}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Spatial resolution}{26}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Temporal resolution}{27}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Comparison of single-board computers}{27}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Raspberry Pi (RPi)}{28}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Arduino}{29}{subsection.2.4.2}
-\contentsline {subsection}{\numberline {2.4.3}BeagleBone}{29}{subsection.2.4.3}
-\contentsline {subsection}{\numberline {2.4.4}Comparison}{30}{subsection.2.4.4}
-\contentsline {section}{\numberline {2.5}Power}{31}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Raspberry Pi power requirements}{31}{subsection.2.5.1}
-\contentsline {subsection}{\numberline {2.5.2}Power sources}{31}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Use of low-cost sensors}{32}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}Calibration of sensors}{33}{subsection.2.6.1}
-\contentsline {subsection}{\numberline {2.6.2}Air flow}{35}{subsection.2.6.2}
-\contentsline {section}{\numberline {2.7}Mapping air pollution}{35}{section.2.7}
-\contentsline {subsection}{\numberline {2.7.1}Estimation techniques}{35}{subsection.2.7.1}
-\contentsline {subsection}{\numberline {2.7.2}Mapping visualisations}{36}{subsection.2.7.2}
-\contentsline {section}{\numberline {2.8}Health-optimal route planning}{38}{section.2.8}
-\contentsline {section}{\numberline {2.9}Data quality monitoring}{39}{section.2.9}
-\contentsline {section}{\numberline {2.10}Summary}{40}{section.2.10}
-\contentsline {chapter}{\numberline {3}System design and implementation}{42}{chapter.3}
-\contentsline {section}{\numberline {3.1}Physical device}{42}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Technical details}{43}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Raspberry Pi}{44}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}GPIO}{44}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {2.3.2}Spatial variability}{25}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Spatial resolution}{25}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Temporal resolution}{26}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Comparison of single-board computers}{26}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Raspberry Pi (RPi)}{27}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Arduino}{28}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}BeagleBone}{28}{subsection.2.4.3}
+\contentsline {subsection}{\numberline {2.4.4}Comparison}{29}{subsection.2.4.4}
+\contentsline {section}{\numberline {2.5}Power}{29}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Raspberry Pi power requirements}{30}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Power sources}{30}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Use of low-cost sensors}{31}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Calibration of sensors}{32}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}Air flow}{33}{subsection.2.6.2}
+\contentsline {section}{\numberline {2.7}Mapping air pollution}{34}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Colouring}{34}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Estimation techniques}{34}{subsection.2.7.2}
+\contentsline {subsection}{\numberline {2.7.3}Mapping visualisations}{36}{subsection.2.7.3}
+\contentsline {section}{\numberline {2.8}Health-optimal route planning}{37}{section.2.8}
+\contentsline {section}{\numberline {2.9}Data quality monitoring}{38}{section.2.9}
+\contentsline {section}{\numberline {2.10}Summary}{39}{section.2.10}
+\contentsline {chapter}{\numberline {3}System design and implementation}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}Physical device}{41}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Technical details}{41}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Raspberry Pi}{42}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}GPIO}{43}{subsection.3.1.3}
 \contentsline {subsection}{\numberline {3.1.4}Particulate sensor}{44}{subsection.3.1.4}
-\contentsline {subsection}{\numberline {3.1.5}Ozone sensor}{46}{subsection.3.1.5}
-\contentsline {subsection}{\numberline {3.1.6}NO\textsubscript {x} sensor}{47}{subsection.3.1.6}
-\contentsline {subsection}{\numberline {3.1.7}Temperature and humidity sensor}{47}{subsection.3.1.7}
-\contentsline {subsection}{\numberline {3.1.8}HAT}{47}{subsection.3.1.8}
-\contentsline {subsection}{\numberline {3.1.9}Power}{49}{subsection.3.1.9}
-\contentsline {subsection}{\numberline {3.1.10}Case}{51}{subsection.3.1.10}
-\contentsline {subsection}{\numberline {3.1.11}Cost}{51}{subsection.3.1.11}
-\contentsline {section}{\numberline {3.2}Software}{52}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Raspberry Pi software}{52}{subsection.3.2.1}
-\contentsline {subsubsection}{GPS}{54}{section*.22}
-\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{55}{subsection.3.2.2}
-\contentsline {subsubsection}{RESTful API}{55}{section*.23}
-\contentsline {subsubsection}{Database}{56}{section*.24}
-\contentsline {subsection}{\numberline {3.2.3}Web application}{56}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Output conversion and calibration}{58}{chapter.4}
-\contentsline {section}{\numberline {4.1}Particulate sensor}{58}{section.4.1}
-\contentsline {section}{\numberline {4.2}Ozone sensor}{60}{section.4.2}
-\contentsline {section}{\numberline {4.3}General air quality sensor}{64}{section.4.3}
-\contentsline {section}{\numberline {4.4}Temperature and humidity sensor}{66}{section.4.4}
-\contentsline {section}{\numberline {4.5}Limitations}{67}{section.4.5}
-\contentsline {chapter}{\numberline {5}Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{69}{chapter.5}
-\contentsline {section}{\numberline {5.1}Methodology}{70}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Location}{70}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}Route selection}{71}{subsection.5.1.2}
-\contentsline {subsection}{\numberline {5.1.3}Data collection}{73}{subsection.5.1.3}
-\contentsline {subsection}{\numberline {5.1.4}Positioning on bicycle}{73}{subsection.5.1.4}
-\contentsline {subsection}{\numberline {5.1.5}Data cleaning and data validation}{74}{subsection.5.1.5}
-\contentsline {subsubsection}{IQR}{75}{section*.38}
-\contentsline {subsubsection}{Median and MAD}{75}{section*.39}
-\contentsline {subsubsection}{S\textsubscript {n}}{76}{section*.40}
-\contentsline {subsection}{\numberline {5.1.6}Time series}{76}{subsection.5.1.6}
-\contentsline {subsection}{\numberline {5.1.7}Pollution mapping}{77}{subsection.5.1.7}
-\contentsline {subsection}{\numberline {5.1.8}Identifying patterns}{77}{subsection.5.1.8}
-\contentsline {subsection}{\numberline {5.1.9}Robustness}{79}{subsection.5.1.9}
-\contentsline {section}{\numberline {5.2}Results}{79}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Positioning on bicycle}{80}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Data quality}{81}{subsection.5.2.2}
-\contentsline {subsubsection}{Exploratory analysis}{83}{section*.45}
-\contentsline {subsubsection}{Outlier detection methods}{83}{section*.47}
-\contentsline {subsubsection}{Per time period group}{85}{section*.51}
-\contentsline {subsubsection}{Moving average}{85}{section*.52}
-\contentsline {subsubsection}{Outlier summary}{88}{section*.54}
-\contentsline {subsection}{\numberline {5.2.3}Maps}{88}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Pattern analysis}{90}{subsection.5.2.4}
-\contentsline {subsubsection}{Road}{92}{section*.58}
-\contentsline {subsubsection}{Day of the week}{92}{section*.59}
-\contentsline {subsubsection}{Morning vs. Evening}{92}{section*.61}
-\contentsline {subsubsection}{Speed of the bicycle}{93}{section*.63}
-\contentsline {subsubsection}{Altitude}{93}{section*.66}
-\contentsline {subsubsection}{Temperature}{95}{section*.69}
-\contentsline {subsubsection}{Humidity}{95}{section*.70}
-\contentsline {subsection}{\numberline {5.2.5}Robustness}{95}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Discussion}{95}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Positioning on bicycle}{95}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Data quality}{96}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Maps}{97}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{99}{chapter.6}
-\contentsline {section}{\numberline {6.1}Methodology}{99}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Locus around fixed monitoring station}{100}{subsection.6.1.1}
-\contentsline {subsubsection}{Location}{100}{section*.71}
-\contentsline {subsubsection}{Data collection}{100}{section*.73}
-\contentsline {subsubsection}{Demonstrating higher spatial resolution}{101}{section*.75}
-\contentsline {subsection}{\numberline {6.1.2}Event route}{102}{subsection.6.1.2}
-\contentsline {subsubsection}{Location}{102}{section*.76}
-\contentsline {subsubsection}{Data collection}{103}{section*.77}
-\contentsline {subsubsection}{Demonstrating higher temporal resolution}{103}{section*.79}
-\contentsline {section}{\numberline {6.2}Results}{104}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{104}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Bath football event}{105}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Discussion}{108}{section.6.3}
-\contentsline {chapter}{\numberline {7}Question 3: How can these air quality monitoring devices be applied for public benefit?}{110}{chapter.7}
-\contentsline {section}{\numberline {7.1}Methodology}{110}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Using commuting cyclists to collect pollution data}{111}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Road network graph}{112}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Search algorithm}{114}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}Comparing routes}{115}{subsection.7.1.4}
-\contentsline {section}{\numberline {7.2}Results and analysis}{116}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Coverage}{116}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Comparison of shortest and health-optimal routes}{117}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Discussion}{117}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Health benefit}{119}{subsection.7.3.1}
-\contentsline {chapter}{\numberline {8}Limitations}{120}{chapter.8}
-\contentsline {section}{\numberline {8.1}Public preferences}{120}{section.8.1}
-\contentsline {section}{\numberline {8.2}Timing of project}{120}{section.8.2}
-\contentsline {section}{\numberline {8.3}Resource constraints}{121}{section.8.3}
-\contentsline {section}{\numberline {8.4}Equipment breakages}{121}{section.8.4}
-\contentsline {chapter}{\numberline {9}Conclusion}{122}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{122}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future work}{122}{section.9.2}
-\contentsline {section}{\numberline {9.3}Additional application post-project completion}{123}{section.9.3}
-\contentsline {chapter}{Bibliography}{125}{figure.caption.89}
-\contentsline {chapter}{Appendix}{135}{chapter*.90}
-\contentsline {chapter}{\numberline {A}Installation instructions}{135}{appendix.A}
-\contentsline {section}{\numberline {A.1}GPS}{135}{section.A.1}
-\contentsline {section}{\numberline {A.2}NTP}{136}{section.A.2}
-\contentsline {chapter}{\numberline {B}Code}{137}{appendix.B}
-\contentsline {section}{\numberline {B.1}Main RPi program}{137}{section.B.1}
-\contentsline {section}{\numberline {B.2}PHP API}{152}{section.B.2}
-\contentsline {chapter}{\numberline {C}Data analysis code}{156}{appendix.C}
-\contentsline {section}{\numberline {C.1}Data structuring}{156}{section.C.1}
-\contentsline {section}{\numberline {C.2}Learning}{156}{section.C.2}
+\contentsline {subsection}{\numberline {3.1.5}Ozone sensor}{45}{subsection.3.1.5}
+\contentsline {subsection}{\numberline {3.1.6}NO\textsubscript {x} sensor}{45}{subsection.3.1.6}
+\contentsline {subsection}{\numberline {3.1.7}Temperature and humidity sensor}{46}{subsection.3.1.7}
+\contentsline {subsection}{\numberline {3.1.8}HAT}{46}{subsection.3.1.8}
+\contentsline {subsection}{\numberline {3.1.9}Power}{48}{subsection.3.1.9}
+\contentsline {subsection}{\numberline {3.1.10}Case}{49}{subsection.3.1.10}
+\contentsline {subsection}{\numberline {3.1.11}Cost}{49}{subsection.3.1.11}
+\contentsline {section}{\numberline {3.2}Software}{50}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Raspberry Pi software}{50}{subsection.3.2.1}
+\contentsline {subsubsection}{GPS}{52}{section*.23}
+\contentsline {subsection}{\numberline {3.2.2}Server-side software and database}{53}{subsection.3.2.2}
+\contentsline {subsubsection}{RESTful API}{53}{section*.24}
+\contentsline {subsubsection}{Database}{53}{section*.25}
+\contentsline {subsection}{\numberline {3.2.3}Web application}{54}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Output conversion and calibration}{55}{chapter.4}
+\contentsline {section}{\numberline {4.1}Particulate sensor}{55}{section.4.1}
+\contentsline {section}{\numberline {4.2}Ozone sensor}{57}{section.4.2}
+\contentsline {section}{\numberline {4.3}General air quality sensor}{60}{section.4.3}
+\contentsline {section}{\numberline {4.4}Temperature and humidity sensor}{62}{section.4.4}
+\contentsline {section}{\numberline {4.5}Limitations}{63}{section.4.5}
+\contentsline {chapter}{\numberline {5}Bicycle-based monitoring}{65}{chapter.5}
+\contentsline {section}{\numberline {5.1}Methodology}{65}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Location}{66}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}Route selection}{66}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Data collection}{68}{subsection.5.1.3}
+\contentsline {subsection}{\numberline {5.1.4}Positioning on bicycle}{69}{subsection.5.1.4}
+\contentsline {subsection}{\numberline {5.1.5}Data quality}{70}{subsection.5.1.5}
+\contentsline {subsubsection}{IQR}{70}{section*.38}
+\contentsline {subsubsection}{Median and MAD}{71}{section*.39}
+\contentsline {subsubsection}{S\textsubscript {n}}{71}{section*.40}
+\contentsline {subsubsection}{Time series}{72}{section*.41}
+\contentsline {subsection}{\numberline {5.1.6}Pollution mapping}{73}{subsection.5.1.6}
+\contentsline {subsection}{\numberline {5.1.7}Identifying patterns}{73}{subsection.5.1.7}
+\contentsline {subsection}{\numberline {5.1.8}Comparison with fixed monitoring stations}{73}{subsection.5.1.8}
+\contentsline {section}{\numberline {5.2}Results}{74}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Positioning on bicycle}{75}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Data quality}{76}{subsection.5.2.2}
+\contentsline {subsubsection}{Exploratory analysis}{76}{section*.45}
+\contentsline {subsubsection}{Outliers}{78}{section*.47}
+\contentsline {subsection}{\numberline {5.2.3}Maps}{81}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Pattern analysis}{83}{subsection.5.2.4}
+\contentsline {subsubsection}{Day of the week}{83}{section*.52}
+\contentsline {subsubsection}{Morning vs. Evening}{83}{section*.54}
+\contentsline {subsubsection}{Road}{84}{section*.56}
+\contentsline {subsubsection}{Traffic}{84}{section*.58}
+\contentsline {subsubsection}{Speed of the bicycle}{84}{section*.60}
+\contentsline {subsubsection}{Altitude}{86}{section*.63}
+\contentsline {subsection}{\numberline {5.2.5}Robustness}{86}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Discussion}{87}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Positioning on bicycle}{87}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Data quality}{88}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Maps}{89}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Patterns}{90}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.5}Comparison to fixed monitoring stations}{90}{subsection.5.3.5}
+\contentsline {subsection}{\numberline {5.3.6}Robustness}{90}{subsection.5.3.6}
+\contentsline {chapter}{\numberline {6}Improving spatial \& temporal resolution}{91}{chapter.6}
+\contentsline {section}{\numberline {6.1}Methodology}{91}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Locus around fixed monitoring station}{92}{subsection.6.1.1}
+\contentsline {subsubsection}{Location}{92}{section*.66}
+\contentsline {subsubsection}{Data collection}{92}{section*.68}
+\contentsline {subsubsection}{Demonstrating higher spatial resolution}{93}{section*.70}
+\contentsline {subsection}{\numberline {6.1.2}Event route}{94}{subsection.6.1.2}
+\contentsline {subsubsection}{Location}{94}{section*.71}
+\contentsline {subsubsection}{Data collection}{95}{section*.72}
+\contentsline {subsubsection}{Demonstrating higher temporal resolution}{95}{section*.74}
+\contentsline {section}{\numberline {6.2}Results}{96}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{96}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Bath football event}{98}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Discussion}{98}{section.6.3}
+\contentsline {chapter}{\numberline {7}Public benefit application}{101}{chapter.7}
+\contentsline {section}{\numberline {7.1}Methodology}{101}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Using commuting cyclists to collect pollution data}{102}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Road network graph}{103}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Search algorithm}{105}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Comparing routes}{106}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}Results}{106}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Coverage}{106}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Comparison of shortest and health-optimal routes}{106}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Discussion}{108}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Coverage}{108}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Health-optimal routing}{109}{subsection.7.3.2}
+\contentsline {chapter}{\numberline {8}Limitations}{111}{chapter.8}
+\contentsline {section}{\numberline {8.1}Public preferences}{111}{section.8.1}
+\contentsline {section}{\numberline {8.2}Timing of project}{111}{section.8.2}
+\contentsline {section}{\numberline {8.3}Resource constraints}{112}{section.8.3}
+\contentsline {section}{\numberline {8.4}Equipment breakages}{112}{section.8.4}
+\contentsline {chapter}{\numberline {9}Conclusion}{113}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{113}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future work}{113}{section.9.2}
+\contentsline {section}{\numberline {9.3}Additional application post-project completion}{114}{section.9.3}
+\contentsline {chapter}{Bibliography}{116}{figure.caption.82}
+\contentsline {chapter}{Appendix}{127}{chapter*.83}
+\contentsline {chapter}{\numberline {A}Installation instructions}{127}{appendix.A}
+\contentsline {section}{\numberline {A.1}GPS}{127}{section.A.1}
+\contentsline {section}{\numberline {A.2}NTP}{127}{section.A.2}
+\contentsline {chapter}{\numberline {B}Outliers}{129}{appendix.B}
+\contentsline {chapter}{\numberline {C}Code}{131}{appendix.C}
+\contentsline {section}{\numberline {C.1}Main RPi program}{131}{section.C.1}
+\contentsline {section}{\numberline {C.2}PHP API}{145}{section.C.2}
+\contentsline {chapter}{\numberline {D}Data analysis code}{149}{appendix.D}
+\contentsline {section}{\numberline {D.1}Data structuring}{149}{section.D.1}
+\contentsline {section}{\numberline {D.2}Learning}{149}{section.D.2}

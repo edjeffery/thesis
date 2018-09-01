@@ -1,30 +1,29 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {2.1}{\ignorespaces UK and EEA air quality guidelines\relax }}{19}{table.caption.6}
-\contentsline {table}{\numberline {2.2}{\ignorespaces \unhbox \voidb@x \hbox {List of air quality monitoring devices in the literature}\relax }}{25}{table.2.2}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of SBCs\relax }}{30}{table.caption.8}
-\contentsline {table}{\numberline {2.4}{\ignorespaces EU Data Quality Objectives\relax }}{33}{table.caption.9}
+\contentsline {table}{\numberline {2.2}{\ignorespaces \unhbox \voidb@x \hbox {List of air quality monitoring devices in the literature}\relax }}{24}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Comparison of SBCs\relax }}{29}{table.caption.8}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces GPIO pin layout and usage for the 40 GPIO pins on the Raspberry Pi. Of these 40, 17 are directly used by the sensors in the device.\relax }}{45}{table.caption.14}
-\contentsline {table}{\numberline {3.2}{\ignorespaces Comparison of different particulate sensors considered. All of these sensors use a light-scattering technique for detecting particles. The Shinyei PPD42 sensor is the cheapest, with joint-smallest minimum particle detection size.\relax }}{45}{table.caption.15}
-\contentsline {table}{\numberline {3.3}{\ignorespaces Cost breakdown of device. The overall cost of the device is relatively low at only \textsterling 152.63, which satisfies this project's objective of making a low-cost air quality monitoring device.\relax }}{51}{table.caption.19}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Humidity and temperature factors\relax }}{60}{table.caption.26}
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.\relax }}{79}{table.caption.42}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Summary statistics by device position on bicycle.\relax }}{81}{table.caption.44}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Outlier detection summary using IQR method on the whole dataset.\relax }}{84}{table.caption.48}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset.\relax }}{85}{table.caption.49}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset.\relax }}{85}{table.caption.50}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Total number of outliers when running each method on the whole sample or per time period grouping. On average, per time period grouping leads to a higher number of measurements being identified as outliers.\relax }}{87}{table.caption.53}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Dataset size changes.\relax }}{88}{table.caption.56}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Effect of speed on pollution measurements.\relax }}{94}{table.caption.65}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Effect of altitude on pollution measurements.\relax }}{94}{table.caption.68}
+\contentsline {table}{\numberline {3.1}{\ignorespaces GPIO pin layout and usage for the 40 GPIO pins on the Raspberry Pi. Of these 40, 17 are directly used by the sensors in the device.\relax }}{43}{table.caption.15}
+\contentsline {table}{\numberline {3.2}{\ignorespaces Comparison of different particulate sensors considered. All of these sensors use a light-scattering technique for detecting particles. The Shinyei PPD42 sensor is the cheapest, with joint-smallest minimum particle detection size.\relax }}{44}{table.caption.16}
+\contentsline {table}{\numberline {3.3}{\ignorespaces Cost breakdown of device. The overall cost of the device is relatively low at only \textsterling 152.63, which satisfies this project's objective of making a low-cost air quality monitoring device.\relax }}{49}{table.caption.20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Health-optimal route pollution reductions and length increases\relax }}{117}{table.caption.87}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Summary statistics by device position on bicycle.\relax }}{76}{table.caption.44}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Dataset size changes resulting from removing errors and outliers.\relax }}{79}{table.caption.48}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Maximum upper bounds for each sensor, by temporal grouping method.\relax }}{79}{table.caption.49}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.\relax }}{85}{table.caption.59}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Effect of speed on pollution measurements.\relax }}{85}{table.caption.62}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Effect of altitude on pollution measurements.\relax }}{86}{table.caption.65}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Health-optimal route pollution reductions and length increases. Results shown for the cost function with and without the gradient factor.\relax }}{107}{table.caption.80}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces Outlier detection summary using IQR method on the whole dataset.\relax }}{130}{table.caption.84}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset.\relax }}{130}{table.caption.85}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset.\relax }}{130}{table.caption.86}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -19,17 +19,17 @@
 \BOOKMARK [1][-]{section.4.3}{General air quality sensor}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.4}{Temperature and humidity sensor}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.5}{Limitations}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}{}% 22
+\BOOKMARK [0][-]{chapter.5}{Bicycle-based monitoring}{}% 22
 \BOOKMARK [1][-]{section.5.1}{Methodology}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.2}{Results}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.3}{Discussion}{chapter.5}% 25
-\BOOKMARK [0][-]{chapter.6}{Question 2: Can this device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}{}% 26
+\BOOKMARK [0][-]{chapter.6}{Improving spatial \046 temporal resolution}{}% 26
 \BOOKMARK [1][-]{section.6.1}{Methodology}{chapter.6}% 27
 \BOOKMARK [1][-]{section.6.2}{Results}{chapter.6}% 28
 \BOOKMARK [1][-]{section.6.3}{Discussion}{chapter.6}% 29
-\BOOKMARK [0][-]{chapter.7}{Question 3: How can these air quality monitoring devices be applied for public benefit?}{}% 30
+\BOOKMARK [0][-]{chapter.7}{Public benefit application}{}% 30
 \BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 31
-\BOOKMARK [1][-]{section.7.2}{Results and analysis}{chapter.7}% 32
+\BOOKMARK [1][-]{section.7.2}{Results}{chapter.7}% 32
 \BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 33
 \BOOKMARK [0][-]{chapter.8}{Limitations}{}% 34
 \BOOKMARK [1][-]{section.8.1}{Public preferences}{chapter.8}% 35
@@ -40,14 +40,15 @@
 \BOOKMARK [1][-]{section.9.1}{Conclusions}{chapter.9}% 40
 \BOOKMARK [1][-]{section.9.2}{Future work}{chapter.9}% 41
 \BOOKMARK [1][-]{section.9.3}{Additional application post-project completion}{chapter.9}% 42
-\BOOKMARK [0][-]{figure.caption.89}{Bibliography}{}% 43
-\BOOKMARK [0][-]{chapter*.90}{Appendix}{}% 44
+\BOOKMARK [0][-]{figure.caption.82}{Bibliography}{}% 43
+\BOOKMARK [0][-]{chapter*.83}{Appendix}{}% 44
 \BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 45
 \BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 46
 \BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 47
-\BOOKMARK [0][-]{appendix.B}{Code}{}% 48
-\BOOKMARK [1][-]{section.B.1}{Main RPi program}{appendix.B}% 49
-\BOOKMARK [1][-]{section.B.2}{PHP API}{appendix.B}% 50
-\BOOKMARK [0][-]{appendix.C}{Data analysis code}{}% 51
-\BOOKMARK [1][-]{section.C.1}{Data structuring}{appendix.C}% 52
-\BOOKMARK [1][-]{section.C.2}{Learning}{appendix.C}% 53
+\BOOKMARK [0][-]{appendix.B}{Outliers}{}% 48
+\BOOKMARK [0][-]{appendix.C}{Code}{}% 49
+\BOOKMARK [1][-]{section.C.1}{Main RPi program}{appendix.C}% 50
+\BOOKMARK [1][-]{section.C.2}{PHP API}{appendix.C}% 51
+\BOOKMARK [0][-]{appendix.D}{Data analysis code}{}% 52
+\BOOKMARK [1][-]{section.D.1}{Data structuring}{appendix.D}% 53
+\BOOKMARK [1][-]{section.D.2}{Learning}{appendix.D}% 54
