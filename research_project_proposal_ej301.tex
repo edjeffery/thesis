@@ -39,7 +39,8 @@
 \usepackage{pgfgantt}
 
 % Micro metre (units)
-\usepackage[group-separator={,}]{siunitx}
+\usepackage{siunitx}
+\sisetup{input-symbols = ()}
 
 % Circuit diagrams
 \usepackage{circuitikz}
@@ -545,15 +546,17 @@ In the UK, the recommended air quality index is the Daily Air Quality Index (DAQ
 
 The DAQI levels can be used to colour pollution maps. For example, a PM10 measurement of 56~$\mu g/m^3$ would be coloured yellow. By doing this, the generated pollution maps are relevant and consistent with the rest of the UK's air quality information.
 
+In addition, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. These colours could also be used to create a gradient scale from red to green for poor to good air quality, respectively.
+
 \subsection{Estimation techniques} \label{estimationtechniques}
 
 As discussed in Section \ref{spatialres}, current air quality monitoring mainly uses fixed monitoring stations. Even in the 1990s, it was noted that air pollution often varies over extremely short distances whilst the air quality data from these fixed stations are often sparse, leading to highly generalised maps and poor estimates \citep{Briggs1997mappingGIS}.
 
 As a result, techniques have been developed to generate estimated air pollution values in areas where no readings have been taken, thus allowing the improvement of air pollution maps by increasing the resolution. Such methods include spatial interpolation, dispersion modelling and regression-based approaches. A specific example of a regression-based approach is land-use regression (LUR), which was first detailed by \cite{Briggs1997mappingGIS} using data from the SAVIAH (Small Area Variations in Air Quality and Health) study. It has become increasingly popular since its introduction \citep{Hoek2008LUR}. This method combines air quality measurements spread over an area with stochastic modelling in order to generate air quality predictions at unsampled locations. The independent variables for the regression are obtained through geographical-information systems (GIS), which contains data on various environmental factors such as traffic volume and the road network. Figure \ref{LURexplanation} visually demonstrates this method. $y$ is the pollution concentration and $x_i$ are the land-use types within the `buffer' (circles). Good performance of the regression maps was achieved, with $r^2$ values ranging from 0.79 to 0.87 across the three mapped locations. However, LUR models are poor at separating out the impact of different pollutants due to the high correlation that can occur between pollutants \citep{Hoek2008LUR} and this type of extrapolation can perform poorly when the study area has significantly different land-use. For example, moving the study area from Bath, which is a small city in the countryside, to London, which is a much bigger and congested city.
 
-\begin{figure}[!tb]
+\begin{figure}[!htbp]
 \centering
-\includegraphics[width=0.7\textwidth]{LURexplanation}
+\includegraphics[width=0.6\textwidth]{LURexplanation}
 \caption{Visual representation of LUR by \cite{Jerrett2005evalmapmodels}.}
 \label{LURexplanation}
 \end{figure}
@@ -1356,7 +1359,7 @@ Secondly, the outlier detection techniques detailed above are also run using mov
 
 \subsection{Pollution mapping}
 
-With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, an overlay of tiles is placed on top of the map. A $75 \times 75$ grid of tiles will be used, which makes each tile $Xm \times Xm$ in size. Each tile's colour is an aggregation of all values that fall inside it's boundaries -- median and maximum aggregations are used for this. Additionally, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. Consequently, we also follow this colour scheme, using green to highlight good air quality and red for poor air quality.
+With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, a grid of tiles overlay is placed on top of the map, combining mapping ideas from both \cite{Hoang2013hanoihexagons} and \cite{Hasenfratz2015highresmapsTram}. A $75 \times 75$ grid of tiles will be used, which makes each tile $Xm \times Xm$ in size. Each tile's colour is an aggregation of all values that fall inside it's boundaries -- median and maximum aggregations are used for this. We use two colouring schemes: (i) a green-to-red gradient as \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality, and (ii) a DAQI colour scheme \citep{defra2018daqi}.
 
 \subsection{Identifying patterns}
 
@@ -1364,9 +1367,9 @@ In order for this device to meet the requirement of monitoring air quality to a 
 \begin{itemize}
 \item Day of the week
 \item Morning vs. evening
-\item Road
-\item Traffic level
+\item Road section around the route
 \item Speed of bicycle
+\item Temperature and humidity
 \end{itemize}
 
 
@@ -1389,9 +1392,9 @@ In order for this device to meet the requirement of monitoring air quality to a 
 
 \subsection{Comparison with fixed monitoring stations}
 
-In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM10, the devices measurements can be compared against those from the Windsor Bridge and London Road sites. Unfortunately, the Guildhall site's particulate sensor was broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guidlhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
+In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM10, the devices measurements can be compared against those from the Windsor Bridge. Unfortunately, the Guildhall and London Road sites' particulate sensors were broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guildhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
 
-Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, the route is separated into 10 distinct sections. These are detailed in Figure \ref{fig:roads}. The three relevant sections for comparing the device with the fixed monitoring stations are as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall.
+Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, three sections around the monitoring stations have been extracted from the route. These are detailed in Figure \ref{fig:roads} and are labelled as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall. The measurements from within these sections will be compared against the measurements from the fixed stations.
 
 
 \section{Results} \label{results:q1}
@@ -1601,7 +1604,7 @@ The measurements from the DHT22 temperature and humidity sensor do not follow a 
 
 The process of identifying outliers in the data using each of the detection methods (IQR, MAD, S\textsubscript{n}) is extensive and including all the results here would be impractical. Instead, the more detailed results tables have been moved to Appendix \ref{appendix:outliers} and a general overview provided here.
 
-Table \ref{tab:size_change} details the number of errors and outliers removed from the dataset, in both absolute and percentage terms. The first step of the data cleaning removes errors from the sensor measurements, which were measurements that were taken during periods of sensor malfunction. Up to 20\% of the measurements are excluded as a result. Next, measurements that are labelled as an outlier by all three methods are removed. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.3\%) compared to the other sensor measurements. For the other four sensors, the outlier percentages are between 1.0\% and 1.6\%, which are much lower and reasonable.
+Table \ref{tab:size_change} details the number of errors and outliers removed from the dataset, in both absolute and percentage terms. The first step of the data cleaning removes errors from the sensor measurements, which were measurements that were taken during periods of sensor malfunction. Up to 20\% of the measurements are excluded as a result. Next, measurements that are labelled as an outlier by all three methods are removed. These methods were run per time period grouping (Week AM, Week PM, Weekend AM, Weekend PM), as explained further below. It is clear from the table that the PM10 measurements have the highest percentage of outliers (11.3\%) compared to the other sensor measurements. For the other four sensors, the outlier percentages are between 1.0\% and 1.6\%, which are much lower and reasonable.
 
 \begin{table}[!tbp]
   \centering
@@ -1615,7 +1618,7 @@ Table \ref{tab:size_change} details the number of errors and outliers removed fr
   \cmidrule(lr){6-8}
   Gas/particulate & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%} & \multicolumn{1}{c}{N} & \multicolumn{1}{c}{Diff.} & \multicolumn{1}{c}{\%}  \\ \midrule
   PM10			& 9877	& 9089	& 788	& 8.0		& 8063	& 1026	& 11.3 \\
-  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 9837	& 83		& 1.0 \\
+  O\textsubscript{3}	& 9877	& 7920	& 1957	& 19.8	& 7837	& 83		& 1.0 \\
   General AQ		& 9877	& 9877	& 0		& 0.0		& 9737	& 140	& 1.4 \\ 
   Temperature		& 9877	& 9234	& 643	& 6.5		& 9132	& 102	& 1.1 \\ 
   Humidity			& 9877	& 7797 	& 2080	& 21.1	& 7672	& 125	& 1.6  \\ \bottomrule
@@ -1623,7 +1626,7 @@ Table \ref{tab:size_change} details the number of errors and outliers removed fr
   \end{tabular}
 \end{table}
 
-In addition, Table \ref{tab:upper_bounds} displays the upper bounds from running the outlier detection methods using different temporal groupings: on the dataset as a whole, by time period grouping (Week AM, Week PM, Weekend AM, Weekend PM) and moving average within each collection run. The upper bounds for all the sensors are lowest when using the dataset as a whole and highest when using moving averages, with per time period grouping in the middle. The maximum upper bound when using moving averages is abnormally high.
+The decision to run the methods per week period is based on analysis of the upper bounds by temporal grouping. Table \ref{tab:upper_bounds} displays the upper bounds from running the outlier detection methods using the different temporal groupings under analysis: (i) on the dataset as a whole, (ii) by week period, and (iii) moving average within each collection run. The values shown are the maximum of the upper bounds. For example, the moving average generates an upper bound for each window, so the maximum upper bound is the largest out of all of these. The upper bounds for all the sensors are lowest when using the dataset as a whole and highest when using moving averages, with per week period grouping in the middle. The use of moving averages when applying these methods leads to abnormally high upper bounds and results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run using a different temporal grouping. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. Therefore, although the maximum upper bounds are slightly higher, we choose to use week period as the temporal grouping.
 
 \begin{table}[!tbp]
   \centering
@@ -1644,12 +1647,7 @@ In addition, Table \ref{tab:upper_bounds} displays the upper bounds from running
   \end{tabular}
 \end{table}
 
-
-The use of moving averages when applying these methods results in too many measurements being identified as outliers -- many of these would otherwise not be considered outliers if the methods were run on the dataset as a whole. It is still beneficial to separate the dataset into time period groupings, however, in order to account for temporal variation. 
-
-The results indicate that moving averages should definitely not be used, which leaves the other two options remaining. We choose to use per time period grouping because, although the maximum upper bounds are slightly higher, it takes into account temporal variation.
-
-Therefore, the methods are run per time period grouping. For a value to be considered an outlier, all of the three methods -- IQR, MAD and S\textsubscript{n} -- have to identify it as an outlier. These values are then filtered out. Histograms of the pollution measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}. The resulting changes in dataset sizes, from the initial dataset to the final dataset with outliers removed, are shown in Table \ref{tab:size_change}.
+With the cleaned dataset, the sensor measurements have smoother distributions with no outliers. Histograms of the measurements from the cleaned dataset are shown in Figure \ref{fig:histograms_clean}.
 
 \begin{figure}[!tbp]
     \centering
@@ -1876,9 +1874,9 @@ Therefore, the methods are run per time period grouping. For a value to be consi
 
 Using the cleaned dataset, pollution levels along the route can be mapped. Figure \ref{fig:route_pollution_maps} shows pollution maps for each of the pollutants. Each pollutant has two maps: the first uses the mean of all measurements inside each tile's boundaries to colour the tile and the second uses the maximum. By analysing the colours of the tiles in these maps, it is possible to identify high pollution areas in Bath.
 
-Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the route, with the majority varying between 20-50~$\mu g/m^3$. In addition, there are a small number of highly elevated PM10 levels, one of which is found in the north west corner of the route at a level of 100~$\mu g/m^3$ (Long = -2.378, Lat = 51.386). This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum aggregation instead, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. The average ozone levels along the route are shown in Figure \ref{fig:o3_map_median}, which indicates that the worst O\textsubscript{3} pollution is along the road in the south west part of the route (Long = -2.382 to -2.364, Lat = 51.377 to 51.382). This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). The median ozone pollution level appears to be in the 50-60~$\mu g/m^3$ range. The maximum pollution levels (Figure \ref{fig:o3_map_max}) are elevated along the whole route compared to the median levels, which is as expected. Overall, there is little variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge (Long = -2.382, Lat = 51.385). This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Again, the median general air quality (Figure \ref{fig:mq135_map_median}) does not vary dramatically, with a small number of highly elevated levels sparsely distributed around the route. These problem areas appear to be outside of an old storage warehouse demolition site (Long = -2.367, Lat = 51.378) and at a large traffic junction on London Road (Long = -2.358, Lat = 51.390). Using the maximum to aggregate each tiles' values, the majority of the route has experienced a high measurement from the general air quality sensor, with no particular area being better than others.
+Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the route, with the majority varying between 20-50~$\mu g/m^3$. In addition, there are a small number of highly elevated PM10 levels, one of which is found in the north west corner of the route at a level of 100~$\mu g/m^3$ (Lng\footnote{Lng = Longitude} = -2.378, Lat\footnote{Lat = Latitude} = 51.386). This location is directly outside the waste recycling facility in Bath, which may be the source of the pollution. By using the maximum aggregation instead, Figure \ref{fig:pm10_map_max} shows that large sections of the route have measured a high level of pollution at some point during the data collection period. The average ozone levels along the route are shown in Figure \ref{fig:o3_map_median}, which indicates that the worst O\textsubscript{3} pollution is along the road in the south west part of the route (Lng = -2.382 to -2.364, Lat = 51.377 to 51.382). This road is Lower Bristol Road and is one of the busiest roads in Bath because it leads to the A36 (a major road). The median ozone pollution level appears to be in the 50-60~$\mu g/m^3$ range. The maximum pollution levels (Figure \ref{fig:o3_map_max}) are elevated along the whole route compared to the median levels, which is as expected. Overall, there is little variation in the maximum pollution levels around the route. The only noticeable maximum in solid red is again in the north west of the route, on the north side of Windsor Bridge (Lng = -2.382, Lat = 51.385). This is located at one of the larger traffic junctions in Bath and is situated nearby the aforementioned waste recycling centre, both of which could be contributing to this higher reading. Again, the median general air quality (Figure \ref{fig:mq135_map_median}) does not vary dramatically, with a small number of highly elevated levels sparsely distributed around the route. These problem areas appear to be outside of an old storage warehouse demolition site (Lng = -2.367, Lat = 51.378) and at a large traffic junction on London Road (Lng = -2.358, Lat = 51.390). Using the maximum to aggregate each tiles' values, the majority of the route has experienced a high measurement from the general air quality sensor, with no particular area being better than others.
 
-\begin{figure}[!htbp]
+\begin{figure}[!tbp]
     \centering
     \begin{minipage}{1\linewidth}
             \begin{subfigure}[t]{.5\linewidth}
@@ -1920,6 +1918,37 @@ Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the 
     \label{fig:route_pollution_maps}
 \end{figure}
 
+In addition, Figure \ref{fig:daqi_maps} shows the same maps using the UK's DAQI colouring scheme. Only PM10 and O\textsubscript{3} are shown as the MQ135 measures general air quality using voltage and this does not correspond to the DAQI. The median graphs shows that the PM10 and O\textsubscript{3} pollution levels are `Low' on average, despite Figure \ref{fig:pm10_map_median} and Figure \ref{fig:o3_map_median} showing variations in the values. In addition, the maximum graph for PM10 (Figure \ref{fig:pm10_map_max_daqi}) indicates that the majority of the route has been measured as `High' or `Very High' at least once. On the other hand, Figure \ref{fig:o3_map_max_daqi} shows that the maximum ozone level around the route is always `Low'.
+
+\begin{figure}[!tb]
+    \centering
+    \begin{minipage}{1\linewidth}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/pm10_map_median_daqi}
+                \caption{PM10 (median)}
+                \label{fig:pm10_map_median_daqi}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/pm10_map_max_daqi}
+            	\caption{PM10 (max)}
+            	\label{fig:pm10_map_max_daqi}
+	   \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+                \includegraphics[width=\textwidth]{images/o3_map_median_daqi}
+                \caption{O\textsubscript{3} (median)}
+                \label{fig:o3_map_median_daqi}
+            \end{subfigure}
+            \begin{subfigure}[t]{.5\linewidth}
+            	\includegraphics[width=\textwidth]{images/o3_map_max_daqi}
+            	\caption{O\textsubscript{3} (max)}
+            	\label{fig:o3_map_max_daqi}
+	   \end{subfigure}
+        \end{minipage}
+    \caption[DAQI pollution maps of the route.]{DAQI pollution maps of the route. On average, the pollution levels are `Low'. However, the majority of the route has been measured as `High' or `Very High' at least once.}
+    \label{fig:daqi_maps}
+\end{figure}
+
+\newpage
 
 \subsection{Pattern analysis}
 % Any differences between days of week?
@@ -1927,30 +1956,70 @@ Figure \ref{fig:pm10_map_median} shows some variation in PM10 levels around the 
 % Morning vs afternoon
 % Direction of travel
 
-The pollution maps display how the results vary spatially. We now present how the results differ temporally and in relation to other factors (speed of the bicycle, altitude, temperature and humidity). Any such patterns that can be identified in the data collected by the air quality monitoring device are displayed.
+The pollution maps display how the results vary spatially. We now present how the results differ temporally and in relation to speed of the bicycle.
 
 \subsubsection{Day of the week}
 
-Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant by the day of the week. As Figure \ref{fig:dow_pm10} shows, the average pollution level increases throughout the week, from a low on Monday of 20$\mu g/m^3$ to a high on Sunday of over 30 $\mu g/m^3$. There is no identifiable pattern in Figure \ref{fig:dow_o3} for O\textsubscript{3} or Figure \ref{fig:dow_mq135} for general air quality.
+Figure \ref{fig:dow_bars} shows the distribution of pollution levels for each pollutant by the day of the week. As Figure \ref{fig:dow_pm10} shows, the average pollution level increases throughout the week, from a low on Monday of 20.3~$\mu g/m^3$ to a high on Sunday of 32.1~$\mu g/m^3$. Table \ref{tab:dow} shows the results of regression the pollution measurements on the days of the week, with Monday as the reference category (to avoid the dummy variable trap/multicollinearity) and the rest of the days as dummy variables. The results indicate that Tuesday to Thursday have no significant effect for PM10, but Friday, Saturday and Sunday are all significant at the 1\% significance level, with the coefficient ranging from 6.28 to 16.99~$\mu g/m^3$. Although the coefficients on all of the days are significant for ozone, there is no clear pattern. The only noticeable effect is a reduction of 5.18~$\mu g/m^3$ on a Saturday. For the general air quality measurements, all coefficients are negative and significant, with the largest effect being a reduction of 0.14~V at the weekend.
 
-\begin{figure}[!tbp]
+
+\begin{table}[!htbp]
+\centering
+\caption{Effect of day of the week on pollution measurements.}
+\label{tab:dow}
+\begin{tabular}{l S[table-format=2.3] !{\qquad} S[table-format=2.3] !{\qquad} S[table-format=1.3]}
+\toprule
+Variable & \multicolumn{1}{c}{PM10} & \multicolumn{1}{c}{Ozone} & \multicolumn{1}{c}{General AQ} \\ 
+\midrule
+Intercept		& 29.880{$^{***}$}	& 50.006{$^{***}$}	& 1.224{$^{***}$} \\
+			& (0.76)			& (0.24)			& (0.004)   \\
+Tuesday		& 2.533{$^{*}$}		& -2.150{$^{***}$}	& -0.050{$^{***}$} \\
+			& (1.13)			& (0.34)			& (0.01)   \\
+Wednesday	& 0.673			& -0.901{$^{***}$}	& -0.092{$^{***}$} \\
+			& (1.08)			& (0.32)			& (0.01)   \\
+Thursday		& 0.604			& 3.430{$^{***}$}	& -0.049{$^{***}$} \\
+			& (1.22)			& (0.32)			& (0.01)   \\
+Friday		& 6.281{$^{***}$}	& 3.173{$^{***}$}	& -0.025{$^{***}$} \\
+			& (1.10)			& (0.34)			& (0.01)   \\
+Saturday		& 13.981{$^{***}$}	& -5.183{$^{***}$}	& -0.138{$^{***}$} \\
+			& (1.40)			& (0.39)			& (0.01)   \\
+Sunday		& 16.994{$^{***}$}	& 0.822{$^{*}$}		& -0.141{$^{***}$} \\
+			& (1.33)			& (0.45)			& (0.01)   \\
+\midrule
+ N			& {8063} 			& {7837}   			& {9737}   	\\          
+R$^{2}$		& 0.03   			& 0.10			& 0.07   	\\
+\bottomrule
+\addlinespace[1ex]
+\multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
+  \textsuperscript{**}$p<0.05$, 
+  \textsuperscript{*}$p<0.1$}
+\end{tabular}
+\end{table}
+
+\begin{figure}[!tb]
     \centering
     \minipage{0.33\textwidth}
+      \begin{subfigure}[t]{\linewidth}
       \includegraphics[width=\linewidth]{images/dow_pm10}
       \caption{PM10}
       \label{fig:dow_pm10}
+      \end{subfigure}
     \endminipage\hfill
     \minipage{0.33\textwidth}
+      \begin{subfigure}[t]{\linewidth}
       \includegraphics[width=\linewidth]{images/dow_o3}
       \caption{O\textsubscript{3}}
       \label{fig:dow_o3}
+      \end{subfigure}
     \endminipage\hfill
     \minipage{0.33\textwidth}
+      \begin{subfigure}[t]{\linewidth}
       \includegraphics[width=\linewidth]{images/dow_mq135}
       \caption{MQ135}
       \label{fig:dow_mq135}
+      \end{subfigure}
     \endminipage
-    \caption[Pollution by day of the week.]{Pollution by day of the week. Each bar represents the median pollution level for that day.}
+    \caption[Pollution by day of the week.]{Pollution by day of the week.}
     \label{fig:dow_bars}
 \end{figure}
 
@@ -1980,30 +2049,59 @@ Figure \ref{fig:dow_bars} shows the median pollution levels for each pollutant b
 %    \label{fig:dow_bars}
 %\end{figure}
 
-\subsubsection{Morning vs. Evening}
+\subsubsection{Time of day}
 
-\begin{figure}[!htbp]
+\begin{figure}[!tb]
     \centering
     \minipage{0.33\textwidth}
-      \includegraphics[width=\linewidth]{images/week_period_pm10}
+      \begin{subfigure}[t]{\linewidth}
+      \includegraphics[width=\linewidth]{images/am_pm10}
       \caption{PM10}
-      \label{fig:week_period_pm10}
+      \label{fig:am_pm10}
+      \end{subfigure}
     \endminipage\hfill
     \minipage{0.33\textwidth}
-      \includegraphics[width=\linewidth]{images/week_period_o3}
+      \begin{subfigure}[t]{\linewidth}
+      \includegraphics[width=\linewidth]{images/am_o3}
       \caption{O\textsubscript{3}}
-      \label{fig:week_period_o3}
+      \label{fig:am_o3}
+      \end{subfigure}
     \endminipage\hfill
     \minipage{0.33\textwidth}
-      \includegraphics[width=\linewidth]{images/week_period_mq135}
+      \begin{subfigure}[t]{\linewidth}
+      \includegraphics[width=\linewidth]{images/am_mq135}
       \caption{MQ135}
-      \label{fig:week_period_mq135}
+      \label{fig:am_mq135}
+      \end{subfigure}
     \endminipage
-    \caption[Pollution by AM/PM and period of the week.]{Pollution by AM/PM and period of the week. Each bar represents the median pollution level for that time period.}
-    \label{fig:week_period_bars}
+    \caption[Pollution by time of day.]{Pollution by time of day.}
+    \label{fig:am_bars}
 \end{figure}
 
-Figure \ref{fig:week_period_bars} shows the median pollution levels for each pollutant by AM/PM and the week period (week/weekend), as initially detailed in Section \ref{time_series_incorp}. For PM10, the measurements from the morning collection runs (AM) are on average higher than the measurements from the evening collection runs (PM). This holds for both the week and weekend periods. Similarly, this relationship also occurs with the O\textsubscript{3} measurements, although the difference is very slight with the week period. However, this relationship does not completely hold for the general air quality measurements since the weekend PM period has a higher average compared to the weekend AM period.
+Figure \ref{fig:am_bars} shows the distribution of pollution levels for each pollutant by AM/PM. This is supplemented by the regression results in Table \ref{tab:am}. The regression was run on each pollutant using morning as the reference category and evening as the dummy variable. For PM10, the measurements from the morning collection runs (AM) are on average 7.54\% higher than the measurements from the evening collection runs (PM). Similarly, this relationship also occurs with the O\textsubscript{3} measurements, although the difference is smaller with the morning measurements being 2.14\% higher. Both of these effects are significant at the 1\% significance level. However, this relationship does not hold for the general air quality measurements, which has a small increase for evening measurements that is significant at the 10\% significance. level.
+
+\begin{table}[!htbp]
+\centering
+\caption{Effect of time of day on pollution measurements.}
+\label{tab:am}
+\begin{tabular}{l S[table-format=2.3] !{\qquad} S[table-format=2.3] !{\qquad} S[table-format=1.3]}
+\toprule
+Variable & \multicolumn{1}{c}{PM10} & \multicolumn{1}{c}{Ozone} & \multicolumn{1}{c}{General AQ} \\ 
+\midrule
+Intercept		& 38.427{$^{***}$}	& 51.572{$^{***}$}	& 1.161{$^{***}$} \\
+			& (0.50)			& (0.13)			& (0.002)   \\
+Evening		& -7.544{$^{***}$}	& -2.142{$^{***}$}	& 0.007{$^{*}$} \\
+			& (0.67)			& (0.19)			& (0.003)   \\
+\midrule
+ N			& {8063} 			& {7837}   			& {9737}   	\\          
+R$^{2}$		& 0.02   			& 0.02			& 0.0003   	\\
+\bottomrule
+\addlinespace[1ex]
+\multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
+  \textsuperscript{**}$p<0.05$, 
+  \textsuperscript{*}$p<0.1$}
+\end{tabular}
+\end{table}
 
 %\begin{figure}[!tb]
 %    \centering
@@ -2034,43 +2132,43 @@ Figure \ref{fig:week_period_bars} shows the median pollution levels for each pol
 
 % Morning vs Evening maps as well
 
-\subsubsection{Road}
+%\subsubsection{Road}
+%
+%\begin{figure}[!tb]
+%\centering
+%\includegraphics[width=0.6\textwidth]{images/road_pm}
+%\caption[Boxplot by road.]{Boxplot by road.}
+%\label{fig:road_pm}
+%\end{figure}
 
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=0.6\textwidth]{images/road_pm}
-\caption[Boxplot by road.]{Boxplot by road.}
-\label{fig:road_pm}
-\end{figure}
 
-
-\subsubsection{Traffic}
-
-\begin{table}[!tb]
-\centering
-\caption{Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.}
-\label{tab:speed}
-\begin{tabular}{l c S[table-format=5]}
-\toprule
-Section name & Code & \multicolumn{1}{c}{AADF} \\ 
-\midrule
-Lower Bristol Road & LB & 23173 \\
-Windsor Bridge & WB & 18269 \\
-Upper Bristol Road & UB & 16978 \\
-Queen's Square & QS & 8056 \\
-The Paragon & TP & 8583 \\
-London Road & LR & 23173 \\
-Bathwick Street & BS & 15824 \\
-Great Pulteney Street & GPS & 3267 \\
-Manvers Street & MS & 5489 \\
-Dorchester Street & DS & 7051 \\
-\bottomrule
-\end{tabular}
-\end{table}
+%\subsubsection{Traffic}
+%
+%\begin{table}[!tb]
+%\centering
+%\caption{Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.}
+%\label{tab:speed}
+%\begin{tabular}{l c S[table-format=5]}
+%\toprule
+%Section name & Code & \multicolumn{1}{c}{AADF} \\ 
+%\midrule
+%Lower Bristol Road & LB & 23173 \\
+%Windsor Bridge & WB & 18269 \\
+%Upper Bristol Road & UB & 16978 \\
+%Queen's Square & QS & 8056 \\
+%The Paragon & TP & 8583 \\
+%London Road & LR & 23173 \\
+%Bathwick Street & BS & 15824 \\
+%Great Pulteney Street & GPS & 3267 \\
+%Manvers Street & MS & 5489 \\
+%Dorchester Street & DS & 7051 \\
+%\bottomrule
+%\end{tabular}
+%\end{table}
 
 \subsubsection{Speed of the bicycle}
 
-Figure \ref{fig:speed} shows the effect of the bicycle's speed on the sensor measurements. This is accompanied by a regression table in Table \ref{tab:speed}, which details the results of regressing each pollutant's measurements on corresponding speed measurements. A higher speed is associated with a higher PM10 reading. More specifically, every additional 1~m/s increase in speed leads to a 1.31~$\mu g/m^3$ increase in PM10 pollution, on average. On the other hand, a higher speed is associated with a lower O\textsubscript{3} reading, with a coefficient of -0.30~$\mu g/m^3$. Similarly, the general air quality measurement decreases by an average of 0.007~V for a unit increase in speed. These three findings are all statistically significant at the 1\% level. Overall, there is a wide dispersion of measurements for each of the sensors, which leads to low R\textsuperscript{2} values.
+Figure \ref{fig:speed} shows the effect of the bicycle's speed on the sensor measurements. This is accompanied by a regression table in Table \ref{tab:speed}, which details the results of regressing each pollutant's measurements on corresponding speed measurements. A higher speed is associated with a higher PM10 reading. More specifically, every additional 1~m/s increase in speed leads to a 1.31~$\mu g/m^3$ increase in PM10 pollution, on average. On the other hand, a higher speed is associated with a lower O\textsubscript{3} reading, with a coefficient of -0.30~$\mu g/m^3$. Similarly, the general air quality measurement decreases by an average of 0.007~V for a unit increase in speed. These three findings are all statistically significant at the 1\% level. Overall, there is a wide dispersion of measurements for each of the sensors, which leads to low R\textsuperscript{2} values. However, we are looking at the effects of variables, not predictive power, so the low R\textsuperscript{2} values are not of much importance.
 
 \begin{figure}[!tb]
     \centering
@@ -2120,16 +2218,17 @@ Figure \ref{fig:speed} shows the effect of the bicycle's speed on the sensor mea
 \centering
 \caption{Effect of speed on pollution measurements.}
 \label{tab:speed}
-\begin{tabular}{c c c c}
+\begin{tabular}{l S[table-format=2.3] !{\qquad} S[table-format=2.3] !{\qquad} S[table-format=1.3]}
 \toprule
-Variable & PM10 & Ozone & General AQ \\ 
+Variable & \multicolumn{1}{l}{PM10} & \multicolumn{1}{l}{Ozone} & \multicolumn{1}{c}{General AQ} \\ 
 \midrule
-speed	& 1.305***		& -0.296***	& -0.007*** \\
-		& (0.11)		& (0.03)		& (0.001)   \\
-constant	& 27.995***	& 51.926***	& 1.199*** \\
-		& (0.64)		& (0.20)		& (0.004)   \\ \midrule
- N		& 8063 		& 7784   		& 9676   	\\          
-R$^{2}$	& 0.017   		& 0.011		& 0.013   	\\
+Intercept	& 27.995{$^{***}$}	& 51.926{$^{***}$}	& 1.199{$^{***}$} \\
+		& (0.64)			& (0.20)			& (0.004)   \\
+Speed	& 1.305{$^{***}$}	& -0.296{$^{***}$}	& -0.007{$^{***}$} \\
+		& (0.11)			& (0.03)			& (0.001)   \\
+\midrule
+ N		& {8063} 			& {7784}   			& {9676}   	\\          
+R$^{2}$	& 0.017   			& 0.011			& 0.013   	\\
 \bottomrule
 \addlinespace[1ex]
 \multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
@@ -2138,32 +2237,32 @@ R$^{2}$	& 0.017   		& 0.011		& 0.013   	\\
 \end{tabular}
 \end{table}
 
-\subsubsection{Altitude}
-
-Figure \ref{fig:altitude} shows the relationship between altitude and pollution measurements. All three regression lines are relatively flat, which indicates that there is no relationship between altitude and the sensor readings. This result is supported by the regression results detailed in Table \ref{tab:altitude}, in which the altitude variable is not statistically significant in any of the three regressions.
-
-\begin{figure}[!tb]
-    \centering
-    \begin{minipage}{1\linewidth}
-            \begin{subfigure}[t]{.32\linewidth}
-                \includegraphics[width=\textwidth]{images/altitude_pm}
-                \caption{PM10}
-                \label{fig:altitude_pm}
-            \end{subfigure}
-            \begin{subfigure}[t]{.32\linewidth}
-            	\includegraphics[width=\textwidth]{images/altitude_o3}
-            	\caption{O\textsubscript{3}}
-            	\label{fig:altitude_o3}
-	        \end{subfigure}
-            \begin{subfigure}[t]{.32\linewidth}
-                \includegraphics[width=\textwidth]{images/altitude_mq135}
-                \caption{General AQ}
-                \label{fig:altitude_mq135}
-            \end{subfigure}
-        \end{minipage}
-    \caption[Relationship between altitude and sensor measurements.]{Relationship between altitude and sensor measurements.}
-    \label{fig:altitude}
-\end{figure}
+%\subsubsection{Altitude}
+%
+%Figure \ref{fig:altitude} shows the relationship between altitude and pollution measurements. All three regression lines are relatively flat, which indicates that there is no relationship between altitude and the sensor readings. This result is supported by the regression results detailed in Table \ref{tab:altitude}, in which the altitude variable is not statistically significant in any of the three regressions.
+%
+%\begin{figure}[!tb]
+%    \centering
+%    \begin{minipage}{1\linewidth}
+%            \begin{subfigure}[t]{.32\linewidth}
+%                \includegraphics[width=\textwidth]{images/altitude_pm}
+%                \caption{PM10}
+%                \label{fig:altitude_pm}
+%            \end{subfigure}
+%            \begin{subfigure}[t]{.32\linewidth}
+%            	\includegraphics[width=\textwidth]{images/altitude_o3}
+%            	\caption{O\textsubscript{3}}
+%            	\label{fig:altitude_o3}
+%	        \end{subfigure}
+%            \begin{subfigure}[t]{.32\linewidth}
+%                \includegraphics[width=\textwidth]{images/altitude_mq135}
+%                \caption{General AQ}
+%                \label{fig:altitude_mq135}
+%            \end{subfigure}
+%        \end{minipage}
+%    \caption[Relationship between altitude and sensor measurements.]{Relationship between altitude and sensor measurements.}
+%    \label{fig:altitude}
+%\end{figure}
 
 %\begin{figure}[!tb]
 %    \centering
@@ -2186,20 +2285,49 @@ Figure \ref{fig:altitude} shows the relationship between altitude and pollution 
 %    \label{fig:altitude}
 %\end{figure}
 
+%\begin{table}[!tb]
+%\centering
+%\caption{Effect of altitude on pollution measurements.}
+%\label{tab:altitude}
+%\begin{tabular}{c c c c}
+%\toprule
+%Variable & PM10 & Ozone & General AQ \\ 
+%\midrule
+%altitude	& 0.045		& -0.011		& -0.0002 	\\
+%		& (0.03)		& (0.01)		& (0.001)   \\
+%constant	& 33.305***	& 50.688***	& 1.161*** \\
+%		& (0.99)		& (0.28)		& (0.005)   \\ \midrule
+% N		& 8063 		& 7784   		& 9676   	\\          
+%R$^{2}$	& 0.0003   	& 0.0003		& 0.0003   \\
+%\bottomrule
+%\addlinespace[1ex]
+%\multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
+%  \textsuperscript{**}$p<0.05$, 
+%  \textsuperscript{*}$p<0.1$}
+%\end{tabular}
+%\end{table}
+
+\subsubsection{Temperature and humidity}
+
+Table \ref{tab:temp_hum} details the results of regressing each pollutant on temperature and humidity. These variables are significant in all cases. The effect on PM10 measurements is negative, with a \SI{1}{\celsius} increase in temperature leading to a 1.24~$\mu g/m^3$ decrease in PM10 and a 1 percentage point increase in humidity leading to a 0.14~$\mu g/m^3$ decrease in PM10. The effect on ozone and general air quality measurements is positive for both temperature and humidity. The magnitude of the effects is similar for ozone with 1.17 and 0.13~$\mu g/m^3$ increases for unit increases in temperature and humidity, respectively. For general air quality, these effects are 0.015~V and 0.004~V.
+
 \begin{table}[!tb]
 \centering
-\caption{Effect of altitude on pollution measurements.}
-\label{tab:altitude}
-\begin{tabular}{c c c c}
+\caption{Effect of temperature and humidity on pollution measurements.}
+\label{tab:temp_hum}
+\begin{tabular}{l S[table-format=2.3] !{\qquad} S[table-format=2.3] !{\qquad} S[table-format=1.3]}
 \toprule
-Variable & PM10 & Ozone & General AQ \\ 
+Variable & \multicolumn{1}{l}{PM10} & \multicolumn{1}{l}{Ozone} & \multicolumn{1}{c}{General AQ} \\ 
 \midrule
-altitude	& 0.045		& -0.011		& -0.0002 	\\
-		& (0.03)		& (0.01)		& (0.001)   \\
-constant	& 33.305***	& 50.688***	& 1.161*** \\
-		& (0.99)		& (0.28)		& (0.005)   \\ \midrule
- N		& 8063 		& 7784   		& 9676   	\\          
-R$^{2}$	& 0.0003   	& 0.0003		& 0.0003   \\
+Intercept		& 72.413{$^{***}$}	& 15.023{$^{***}$}	& 0.586{$^{***}$} \\
+			& (3.82)			& (0.98)			& (0.02)   \\
+Temperature	& -1.237{$^{***}$}	& 1.169{$^{***}$}	& 0.015{$^{***}$} \\
+			& (0.11)			& (0.03)			& (0.001)   \\
+Humidity		& -0.140{$^{***}$}	& 0.130{$^{***}$}	& 0.004{$^{***}$} \\
+			& (0.03)			& (0.01)			& (0.0001)   \\
+\midrule
+ N		& {8063} 			& {7784}   			& {9676}   	\\          
+R$^{2}$	& 0.02   			& 0.21			& 0.12   	\\
 \bottomrule
 \addlinespace[1ex]
 \multicolumn{4}{l}{\textsuperscript{***}$p<0.01$, 
@@ -2208,13 +2336,22 @@ R$^{2}$	& 0.0003   	& 0.0003		& 0.0003   \\
 \end{tabular}
 \end{table}
 
-%\subsubsection{Temperature}
+\subsection{Comparison to fixed monitoring stations}
 
-%Needed?
+The results from comparing the bicycle-based device's measurements with those from the fixed monitoring stations are mixed. The PM10 results, which are for the Windsor Bridge location only, show a slightly negative relationship between the two sets of measurements. The device's measurements also have a negative relationship with the Guildhall's NO\textsubscript{x} measurements. On the other hand, the Windsor Bridge and London Road locations show positive relationships for NO\textsubscript{x}, with corresponding correlations of 0.54 and 0.27.
 
-%\subsubsection{Humidity}
-
-%Needed?
+\begin{figure}[!tb]
+	\begin{subfigure}[t]{.5\linewidth}
+		\includegraphics[width=\textwidth]{images/comparison_pm10}
+                \caption{PM10}
+                \label{fig:comparison_pm10}
+	\end{subfigure}
+	\begin{subfigure}[t]{.5\linewidth}
+		\includegraphics[width=\textwidth]{images/comparison_nox}
+                \caption{NO\textsubscript{x}}
+                \label{fig:comparison_nox}
+	\end{subfigure}
+\end{figure}
 
 \subsection{Robustness}
 % Weather, vibration, power
@@ -2226,6 +2363,8 @@ A second issue was the device losing power. It is thought that severe vibrations
 \section{Discussion}
 % Dialogue between my results and other people's findings
 
+This section discusses the findings of this chapter in the order in which the results were presented.
+
 \subsection{Positioning on bicycle}
 
 The results from testing the device in different positions on the bicycle indicated that placing the device under the headtube at the front of the bike is the optimal position. This is because the variation in measurements is lowest, with no extreme peaks. There is clearly variation in the measurements taken in each position, even though no change environmental changes occurred during the data collection (temperature and humidity measurements experienced no significant change). This suggests there is a factor affecting the sensor measurements. One suggestion is that this is being caused by particulate matter from the road being discarded into the air by the wheels. This is supported by the fact that the ozone and general air quality measurements were not affected (wheels cannot `throw' gases into the air). The elevation of the device is much below human head height, so these measurements may not correspond to the air quality that humans experience. Therefore, the positioning is important because otherwise the measurements could be artificially inflated. However, this testing was not extensive as doing so would require much more time and could be considered a small project itself. As a result, further testing may be warranted. For example, bicycle mud guards would prevent any particulate matter being thrown up by the wheels, so these could be used to help identify the cause.
@@ -2234,7 +2373,7 @@ There does not appear to be any previous research on this topic, potentially bec
 
 \subsection{Data quality}
 
-Overall, the outlier detection results indicate that detecting and removing or correcting outliers is an important step in the process of collecting air quality data, particularly when using low-cost sensors. The results indicate that the Shinyei PPD42 particulate sensor is the most prone to outliers compared to the other sensors on the device, with 11.3\% of measurements labelled as outliers. The reason for this may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. Although the bicycle generates air flow as it moves, it is not a consistent flow rate, which could impact the number of particles detected by the light-scattering technique. For example, if the air flow stops then a particle could be suspended in front of the light beam for an extended period of time, artificially inflating the measurement. Consequently, using a particulate sensor with an built-in fan could regulate the air flow and help to avoid this issue. Therefore, it is suggested that a different low-cost particulate sensor be used in future iterations of the device.
+Overall, the outlier detection results indicate that detecting and removing or correcting outliers is an important step in the process of collecting air quality data, particularly when using low-cost sensors. The results indicate that the Shinyei PPD42 particulate sensor is the most prone to outliers compared to the other sensors on the device, with 11.3\% of measurements labelled as outliers. The reason for this may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. Although the bicycle generates air flow as it moves, it is not a consistent flow rate, which could impact the number of particles detected by the light-scattering technique. For example, if the air flow stops then a particle could be suspended in front of the light beam for an extended period of time, artificially inflating the measurement. Consequently, using a particulate sensor with an built-in fan could regulate the air flow and help to avoid this issue. Therefore, it is suggested that a different low-cost particulate sensor be used in future iterations of the device. It is also worth noting that the upper bound of 251.18~$\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}.
 % Test whether outliers correlated with speed
 
 The percentage of outliers for O\textsubscript{3} and general air quality were much lower, at 1.7\% and 2.0\%, respectively. In comparison, \cite{vanZoest2018outlierdetection} used the same spatio-temporal separation method and found an outlier rate of 0.1-0.5\% of outliers in measurements from a network of low-cost NO\textsubscript{2} sensor, which is lower than found in this study. However, the sensors were not mobile, but instead attached to lamp-posts. This suggests that fixed air quality monitoring devices may output fewer outliers. Moreover, \cite{Hagler2010durhamallelectric} found 2.7\% of carbon monoxide and particulate measurements to be outliers from an electric vehicle-based air quality monitoring device. This is slightly higher than the outlier rates found in this study for ozone and general air quality, but much lower than the particulate outlier rate.
@@ -2262,6 +2401,8 @@ One way in which the pollution maps could be improved is through the addition of
 \subsection{Patterns}
 
 The results show that the air quality monitoring device can detect patterns in pollution. Even if this device is less accurate than the more expensive fixed monitoring stations, this device can still detect relative changes well.
+
+We also attempted to find a relationship between traffic levels and pollution using Average Annual Traffic Flow (AADT). However, the annual data was simply not granular enough to conduct such an investigation and so we leave this for future work.
 
 \subsection{Comparison to fixed monitoring stations}
 
@@ -3028,23 +3169,23 @@ It is worth noting that the reduction in pollution exposure can greatly depend o
 
 \section{Discussion}
 
-% Try running algorithm without the grade influence - see what difference it makes.
+We now discuss the results from this chapter and detail what they mean for the subject area. Section \ref{disc:coverage} discusses the results relating to cyclist coverage, before Section \ref{disc:routing} discusses the health-optimal routing results.
 
-\subsection{Coverage}
+\subsection{Coverage} \label{disc:coverage}
 
 The coverage results show that approximately 50 cyclists would need to have one of these pollution devices attached to their bike in order to generate sufficient coverage of the city using commuters alone. Whilst 50 cyclists covers just over 50\% of the city, the corresponding coverage map (Figure \ref{fig:coverage_50}) illustrates that extensive coverage has been achieved. Using pollution mapping estimation techniques, a relatively complete picture of the pollution in Bath could be generated and so, therefore, 100\% coverage is not needed. Nevertheless, despite this interesting finding, further work needs to be conducted to understand how this result scales to other cities. For example, London is much larger and arguably has worse pollution, meaning far more than 50 cyclists may be needed.
 
-\subsection{Health-optimal routing}
+\subsection{Health-optimal routing} \label{disc:routing}
 
 Choosing the health-optimal route in Bath instead of the shortest route can lead to a 5.08\% reduction in exposure to air pollution. In comparison, \cite{Hasenfratz2015highresmapsTram} found that choosing the health-optimal route in Zurich leads to a 7.1\% reduction, on average. Therefore, the effect found in this project is 2\% lower, even when additionally accounting for the gradient changes. The reason for this could be related to the route lengths. \citeauthor{Hasenfratz2015highresmapsTram} found that the pollution reduction came at the cost of a 6.4\% increase in route length, whereas we find a 4.39\% increase. The area examined by these authors was the whole of Zurich, which is a much larger city than Bath. As a result, there are more options available when choosing a route, meaning it is feasible that the routing algorithm took longer paths away from highly polluted areas. This would have reduced pollution exposure more, but at the cost of even longer routes. In addition, the ratio between the pollution and route length changes in this study is 1.16, which is similar to the ratio of 1.11 found by \cite{Hasenfratz2015highresmapsTram}.
 
 When removing the gradient from the cost function, the pollution exposure reduction falls to -4.70\%, which is a 7.5\% decrease. This suggests that the effect of cycling uphill is a 7.5\% increase in pollution exposure. This result is as expected, because without the gradient factor the routing algorithm will not take into account the effect of cycling uphill (breathing more deeply leads to higher pollution intake). We believe this is the first cost function to take this factor into account and so further investigation is needed to more accurately study its effect.
 
-It is also possible to quantify the health effect of choosing the health optimal path. \cite{Ebenstein2017lifeexpectancy} found that a 10~$\mu g/m^3$ reduction in particulate matter pollution exposure leads to an increase in life expectancy of 0.64 years. Given an average reduction in pollution exposure of 5.08\% and an average level of PM10 pollution in Bath of 24.38~$\mu g/m^3$, choosing the health-optimal route \textit{consistently} could lead to an increase in life expectancy ($\delta LE$) of 0.08 years.
+It is also possible to quantify the health effect of choosing the health optimal path. \cite{Ebenstein2017lifeexpectancy} found that a 10~$\mu g/m^3$ reduction in particulate matter pollution exposure leads to an increase in life expectancy of 0.64 years. Given an average reduction in pollution exposure of 5.08\% and an average level of PM10 pollution in Bath of 24.38~$\mu g/m^3$, choosing the health-optimal route \textit{consistently} could lead to an increase in life expectancy ($\Delta LE$) of 0.08 years.
 \begin{equation}
-\delta LE = \frac{(24.38 \times 5.08\%)}{10} \times 0.64
+\Delta LE = \frac{(24.38 \times 5.08\%)}{10} \times 0.64 = 0.08
 \end{equation}
-Obviously, this is only an estimate as the pollution data for Bath used in the routing algorithm is simulated. Nonetheless, demonstrating a tangible health improvement can dramatically influence people's behaviour [CITE psychology papers]. To achieve this, this routing application could be incorporated into a mobile phone application. One can imagine the Google Maps application offering the shortest and health-optimal routes side-by-side when a user searches for a route with a value displayed on-screen of the health benefit of choosing the health-optimal route.
+This is a small improvement. Obviously, this is only an estimate as the pollution data for Bath used in the routing algorithm is simulated. Nonetheless, demonstrating a tangible health improvement can dramatically influence people's behaviour. This is known as outcome framing and has been found to impact individuals' choice of transport when informed about the consequences of air pollution \citep{mir2016framing}. To achieve this, this routing application could be incorporated into a mobile phone application. One can imagine the Google Maps application offering the shortest and health-optimal routes side-by-side when a user searches for a route with a value displayed on-screen of the health benefit of choosing the health-optimal route.
 
 These findings must be taken with caution, however. If more people began to use these health-optimal routes, they may cease to be health-optimal routes by the very nature of more people travelling along and polluting them. Therefore, there is a clear need for this application to be dynamic. The routing should use real-time pollution data (or as close as one can get to real-time) and base the current health-optimal route on this data, thereby avoiding a surge in traffic along one particular route.
 

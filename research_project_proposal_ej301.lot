@@ -12,18 +12,19 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Summary statistics by device position on bicycle.\relax }}{76}{table.caption.44}
 \contentsline {table}{\numberline {5.2}{\ignorespaces Dataset size changes resulting from removing errors and outliers.\relax }}{79}{table.caption.48}
 \contentsline {table}{\numberline {5.3}{\ignorespaces Maximum upper bounds for each sensor, by temporal grouping method.\relax }}{79}{table.caption.49}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Summary of road sections and corresponding traffic counts. AADF = Annual Average Daily Flow for all motor vehicles.\relax }}{85}{table.caption.59}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Effect of speed on pollution measurements.\relax }}{85}{table.caption.62}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Effect of altitude on pollution measurements.\relax }}{86}{table.caption.65}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Effect of day of the week on pollution measurements.\relax }}{85}{table.caption.54}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Effect of time of day on pollution measurements.\relax }}{86}{table.caption.58}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Effect of speed on pollution measurements.\relax }}{87}{table.caption.61}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Effect of temperature and humidity on pollution measurements.\relax }}{87}{table.caption.63}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Health-optimal route pollution reductions and length increases. Results shown for the cost function with and without the gradient factor.\relax }}{107}{table.caption.80}
+\contentsline {table}{\numberline {7.1}{\ignorespaces Health-optimal route pollution reductions and length increases. Results shown for the cost function with and without the gradient factor.\relax }}{109}{table.caption.79}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Outlier detection summary using IQR method on the whole dataset.\relax }}{130}{table.caption.84}
-\contentsline {table}{\numberline {B.2}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset.\relax }}{130}{table.caption.85}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset.\relax }}{130}{table.caption.86}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Outlier detection summary using IQR method on the whole dataset.\relax }}{132}{table.caption.83}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Outlier detection summary using median and MAD method on the whole dataset.\relax }}{132}{table.caption.84}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Outlier detection summary using median and S\textsubscript {n} method on the whole dataset.\relax }}{132}{table.caption.85}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

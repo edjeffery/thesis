@@ -33,31 +33,24 @@
 \contentsline {figure}{\numberline {5-7}{\ignorespaces Sensor measurement histograms and boxplots.}}{77}{figure.caption.46}
 \contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{80}{figure.caption.50}
 \contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{82}{figure.caption.51}
-\contentsline {figure}{\numberline {5-10}{\ignorespaces PM10\relax }}{83}{figure.caption.53}
-\contentsline {figure}{\numberline {5-11}{\ignorespaces O\textsubscript {3}\relax }}{83}{figure.caption.53}
-\contentsline {figure}{\numberline {5-12}{\ignorespaces MQ135\relax }}{83}{figure.caption.53}
-\contentsline {figure}{\numberline {5-13}{\ignorespaces Pollution by day of the week.}}{83}{figure.caption.53}
-\contentsline {figure}{\numberline {5-14}{\ignorespaces PM10\relax }}{84}{figure.caption.55}
-\contentsline {figure}{\numberline {5-15}{\ignorespaces O\textsubscript {3}\relax }}{84}{figure.caption.55}
-\contentsline {figure}{\numberline {5-16}{\ignorespaces MQ135\relax }}{84}{figure.caption.55}
-\contentsline {figure}{\numberline {5-17}{\ignorespaces Pollution by AM/PM and period of the week.}}{84}{figure.caption.55}
-\contentsline {figure}{\numberline {5-18}{\ignorespaces Boxplot by road.}}{84}{figure.caption.57}
-\contentsline {figure}{\numberline {5-19}{\ignorespaces Relationship between speed and sensor measurements.}}{85}{figure.caption.61}
-\contentsline {figure}{\numberline {5-20}{\ignorespaces Relationship between altitude and sensor measurements.}}{86}{figure.caption.64}
+\contentsline {figure}{\numberline {5-10}{\ignorespaces DAQI pollution maps of the route.}}{83}{figure.caption.52}
+\contentsline {figure}{\numberline {5-11}{\ignorespaces Pollution by day of the week.}}{84}{figure.caption.55}
+\contentsline {figure}{\numberline {5-12}{\ignorespaces Pollution by time of day.}}{85}{figure.caption.57}
+\contentsline {figure}{\numberline {5-13}{\ignorespaces Relationship between speed and sensor measurements.}}{86}{figure.caption.60}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{93}{figure.caption.67}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{94}{figure.caption.69}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{95}{figure.caption.73}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{96}{figure.caption.75}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{97}{figure.caption.76}
-\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{99}{figure.caption.77}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{95}{figure.caption.66}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{96}{figure.caption.68}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{97}{figure.caption.72}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{98}{figure.caption.74}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Comparison of MQ135 sensor on device against Guildhall NO\textsubscript {2}.}}{99}{figure.caption.75}
+\contentsline {figure}{\numberline {6-6}{\ignorespaces Heatmaps of event pollution.}}{101}{figure.caption.76}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{104}{figure.caption.78}
-\contentsline {figure}{\numberline {7-2}{\ignorespaces Cyclist coverage.}}{107}{figure.caption.79}
-\contentsline {figure}{\numberline {7-3}{\ignorespaces Example routes.}}{108}{figure.caption.81}
+\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{106}{figure.caption.77}
+\contentsline {figure}{\numberline {7-2}{\ignorespaces Cyclist coverage.}}{109}{figure.caption.78}
+\contentsline {figure}{\numberline {7-3}{\ignorespaces Example routes.}}{110}{figure.caption.80}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{115}{figure.caption.82}
+\contentsline {figure}{\numberline {9-1}{\ignorespaces Modified device for Mongolia trip.}}{117}{figure.caption.81}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -371,12 +371,6 @@
   \urlprefix\url{https://www.eea.europa.eu/highlights/european-air-quality-index-current}
   [\urldateprefix{}29/03/2018].
 
-\bibitem[{{European Parliament}(2008)}]{eudir2008airquality}
-\bibinfo{author}{{European Parliament}}, \bibinfo{year}{2008}.
-\newblock \bibinfo{title}{Directive 2008/50/ec of the {European} {Parliament}
-  and of the {Council} of 21st {May} 2008 on ambient air quality and cleaner
-  air for {Europe}} \bibinfo{titleaddon}{[2008] \emph{OJ} L151/1}.
-
 \bibitem[{Faustini, Rapp and Forastiere(2014)}]{Faustini2014nitrogenmortality}
 \bibinfo{author}{Faustini, A.}, \bibinfo{author}{Rapp, R.} and
   \bibinfo{author}{Forastiere, F.}, \bibinfo{year}{2014}.
@@ -603,6 +597,15 @@
   Processing in Sensor Networks}}}, 15--17 April 2014 Berlin.
   \bibinfo{address}{Washington}: \bibinfo{publisher}{IEEE},
   pp.\bibinfo{pages}{325--326}.
+
+\bibitem[{Mir et~al.(2016)Mir, Behrang, Isaai and Nejat}]{mir2016framing}
+\bibinfo{author}{Mir, H.M.}, \bibinfo{author}{Behrang, K.},
+  \bibinfo{author}{Isaai, M.T.} and \bibinfo{author}{Nejat, P.},
+  \bibinfo{year}{2016}.
+\newblock \bibinfo{title}{The impact of outcome framing and psychological
+  distance of air pollution consequences on transportation mode choice}.
+\newblock \emph{\bibinfo{journal}{Transportation Research Part D: Transport and
+  Environment}}, \bibinfo{volume}{46}, pp.\bibinfo{pages}{328 -- 338}.
 
 \bibitem[{{Office for National Statistics}(2011)}]{ons2011census}
 \bibinfo{author}{{Office for National Statistics}}, \bibinfo{year}{2011}.
