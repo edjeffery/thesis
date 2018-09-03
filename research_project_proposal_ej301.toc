@@ -87,53 +87,53 @@
 \contentsline {subsection}{\numberline {5.3.1}Positioning on bicycle}{89}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Data quality}{89}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Maps}{91}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Patterns}{91}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Patterns}{92}{subsection.5.3.4}
 \contentsline {subsection}{\numberline {5.3.5}Comparison to fixed monitoring stations}{92}{subsection.5.3.5}
-\contentsline {subsection}{\numberline {5.3.6}Robustness}{92}{subsection.5.3.6}
-\contentsline {chapter}{\numberline {6}Improving spatial \& temporal resolution}{93}{chapter.6}
-\contentsline {section}{\numberline {6.1}Methodology}{93}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Locus around fixed monitoring station}{94}{subsection.6.1.1}
-\contentsline {subsubsection}{Location}{94}{section*.65}
-\contentsline {subsubsection}{Data collection}{94}{section*.67}
-\contentsline {subsubsection}{Demonstrating higher spatial resolution}{95}{section*.69}
-\contentsline {subsection}{\numberline {6.1.2}Event route}{96}{subsection.6.1.2}
-\contentsline {subsubsection}{Location}{96}{section*.70}
-\contentsline {subsubsection}{Data collection}{97}{section*.71}
-\contentsline {subsubsection}{Demonstrating higher temporal resolution}{97}{section*.73}
-\contentsline {section}{\numberline {6.2}Results}{98}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{98}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Bath football event}{100}{subsection.6.2.2}
-\contentsline {section}{\numberline {6.3}Discussion}{100}{section.6.3}
-\contentsline {chapter}{\numberline {7}Public benefit application}{103}{chapter.7}
-\contentsline {section}{\numberline {7.1}Methodology}{103}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Using commuting cyclists to collect pollution data}{104}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Road network graph}{105}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Search algorithm}{107}{subsection.7.1.3}
-\contentsline {subsection}{\numberline {7.1.4}Comparing routes}{108}{subsection.7.1.4}
-\contentsline {section}{\numberline {7.2}Results}{108}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Coverage}{108}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Comparison of shortest and health-optimal routes}{108}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Discussion}{110}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Coverage}{111}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Health-optimal routing}{111}{subsection.7.3.2}
-\contentsline {chapter}{\numberline {8}Limitations}{113}{chapter.8}
-\contentsline {section}{\numberline {8.1}Public preferences}{113}{section.8.1}
-\contentsline {section}{\numberline {8.2}Timing of project}{113}{section.8.2}
-\contentsline {section}{\numberline {8.3}Resource constraints}{114}{section.8.3}
-\contentsline {section}{\numberline {8.4}Equipment breakages}{114}{section.8.4}
-\contentsline {chapter}{\numberline {9}Conclusion}{115}{chapter.9}
-\contentsline {section}{\numberline {9.1}Conclusions}{115}{section.9.1}
-\contentsline {section}{\numberline {9.2}Future work}{115}{section.9.2}
-\contentsline {section}{\numberline {9.3}Additional application post-project completion}{116}{section.9.3}
-\contentsline {chapter}{Bibliography}{118}{figure.caption.81}
-\contentsline {chapter}{Appendix}{129}{chapter*.82}
-\contentsline {chapter}{\numberline {A}Installation instructions}{129}{appendix.A}
-\contentsline {section}{\numberline {A.1}GPS}{129}{section.A.1}
-\contentsline {section}{\numberline {A.2}NTP}{129}{section.A.2}
-\contentsline {chapter}{\numberline {B}Outliers}{131}{appendix.B}
-\contentsline {chapter}{\numberline {C}Code}{133}{appendix.C}
-\contentsline {section}{\numberline {C.1}Main RPi program}{133}{section.C.1}
-\contentsline {section}{\numberline {C.2}PHP API}{147}{section.C.2}
-\contentsline {chapter}{\numberline {D}Data analysis code}{151}{appendix.D}
-\contentsline {section}{\numberline {D.1}Data structuring}{151}{section.D.1}
-\contentsline {section}{\numberline {D.2}Learning}{151}{section.D.2}
+\contentsline {subsection}{\numberline {5.3.6}Robustness}{93}{subsection.5.3.6}
+\contentsline {chapter}{\numberline {6}Improving spatial \& temporal resolution}{94}{chapter.6}
+\contentsline {section}{\numberline {6.1}Methodology}{94}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Locus around fixed monitoring station}{95}{subsection.6.1.1}
+\contentsline {subsubsection}{Location}{95}{section*.65}
+\contentsline {subsubsection}{Data collection}{95}{section*.67}
+\contentsline {subsubsection}{Demonstrating higher spatial resolution}{96}{section*.69}
+\contentsline {subsection}{\numberline {6.1.2}Event route}{97}{subsection.6.1.2}
+\contentsline {subsubsection}{Location}{97}{section*.70}
+\contentsline {subsubsection}{Data collection}{98}{section*.71}
+\contentsline {subsubsection}{Demonstrating higher temporal resolution}{98}{section*.73}
+\contentsline {section}{\numberline {6.2}Results}{99}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Bath Guildhall locus}{99}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Bath football event}{101}{subsection.6.2.2}
+\contentsline {section}{\numberline {6.3}Discussion}{101}{section.6.3}
+\contentsline {chapter}{\numberline {7}Public benefit application}{104}{chapter.7}
+\contentsline {section}{\numberline {7.1}Methodology}{104}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Using commuting cyclists to collect pollution data}{105}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Road network graph}{106}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Search algorithm}{108}{subsection.7.1.3}
+\contentsline {subsection}{\numberline {7.1.4}Comparing routes}{109}{subsection.7.1.4}
+\contentsline {section}{\numberline {7.2}Results}{109}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Coverage}{109}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Comparison of shortest and health-optimal routes}{109}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Discussion}{111}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Coverage}{112}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Health-optimal routing}{112}{subsection.7.3.2}
+\contentsline {chapter}{\numberline {8}Limitations}{114}{chapter.8}
+\contentsline {section}{\numberline {8.1}Public preferences}{114}{section.8.1}
+\contentsline {section}{\numberline {8.2}Timing of project}{114}{section.8.2}
+\contentsline {section}{\numberline {8.3}Resource constraints}{115}{section.8.3}
+\contentsline {section}{\numberline {8.4}Equipment breakages}{115}{section.8.4}
+\contentsline {chapter}{\numberline {9}Conclusion}{116}{chapter.9}
+\contentsline {section}{\numberline {9.1}Conclusions}{116}{section.9.1}
+\contentsline {section}{\numberline {9.2}Future work}{116}{section.9.2}
+\contentsline {section}{\numberline {9.3}Additional application post-project completion}{117}{section.9.3}
+\contentsline {chapter}{Bibliography}{119}{figure.caption.80}
+\contentsline {chapter}{Appendix}{130}{chapter*.81}
+\contentsline {chapter}{\numberline {A}Installation instructions}{130}{appendix.A}
+\contentsline {section}{\numberline {A.1}GPS}{130}{section.A.1}
+\contentsline {section}{\numberline {A.2}NTP}{130}{section.A.2}
+\contentsline {chapter}{\numberline {B}Outliers}{132}{appendix.B}
+\contentsline {chapter}{\numberline {C}Code}{134}{appendix.C}
+\contentsline {section}{\numberline {C.1}Main RPi program}{134}{section.C.1}
+\contentsline {section}{\numberline {C.2}PHP API}{148}{section.C.2}
+\contentsline {chapter}{\numberline {D}Data analysis code}{152}{appendix.D}
+\contentsline {section}{\numberline {D.1}Data structuring}{152}{section.D.1}
+\contentsline {section}{\numberline {D.2}Learning}{152}{section.D.2}

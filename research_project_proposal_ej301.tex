@@ -2376,9 +2376,9 @@ There does not appear to be any previous research on this topic, potentially bec
 Overall, the outlier detection results indicate that detecting and removing or correcting outliers is an important step in the process of collecting air quality data, particularly when using low-cost sensors. The results indicate that the Shinyei PPD42 particulate sensor is the most prone to outliers compared to the other sensors on the device, with 11.3\% of measurements labelled as outliers. The reason for this may be due to the measurement technique of the sensor. It uses a low-cost version of light-scattering and counts how long the signal is low over a 10-second time period. Although the bicycle generates air flow as it moves, it is not a consistent flow rate, which could impact the number of particles detected by the light-scattering technique. For example, if the air flow stops then a particle could be suspended in front of the light beam for an extended period of time, artificially inflating the measurement. Consequently, using a particulate sensor with an built-in fan could regulate the air flow and help to avoid this issue. Therefore, it is suggested that a different low-cost particulate sensor be used in future iterations of the device. It is also worth noting that the upper bound of 251.18~$\mu g/m^3$ is reasonable, given that the highest PM10 measurement recorded in 2017 by the Windsor Bridge monitoring station in Bath was 204 $\mu g/m^3$ \citep{courthold2018max}.
 % Test whether outliers correlated with speed
 
-The percentage of outliers for O\textsubscript{3} and general air quality were much lower, at 1.7\% and 2.0\%, respectively. In comparison, \cite{vanZoest2018outlierdetection} used the same spatio-temporal separation method and found an outlier rate of 0.1-0.5\% of outliers in measurements from a network of low-cost NO\textsubscript{2} sensor, which is lower than found in this study. However, the sensors were not mobile, but instead attached to lamp-posts. This suggests that fixed air quality monitoring devices may output fewer outliers. Moreover, \cite{Hagler2010durhamallelectric} found 2.7\% of carbon monoxide and particulate measurements to be outliers from an electric vehicle-based air quality monitoring device. This is slightly higher than the outlier rates found in this study for ozone and general air quality, but much lower than the particulate outlier rate.
+The percentage of outliers for the other sensors are much lower, ranging from 1.0\% for O\textsubscript{3} to 1.6\% for humidity. In comparison, \cite{vanZoest2018outlierdetection} used a similar spatio-temporal separation method and found an outlier rate of 0.1-0.5\% of outliers in measurements from a network of low-cost NO\textsubscript{2} sensor, which is slightly lower than found in this study. However, the sensors were not mobile, but instead attached to lamp-posts. This could suggest that fixed air quality monitoring devices may output fewer outliers. Moreover, \cite{Hagler2010durhamallelectric} found 2.7\% of carbon monoxide and particulate measurements to be outliers from an electric vehicle-based air quality monitoring device. This is slightly higher than the outlier rates found in this study for ozone and general air quality, but much lower than the particulate outlier rate.
 
-The outlier results also show that running the outlier detection methods per-temporal group does not change the number of outliers detected drastically. Using moving averages significantly affects the number of outliers detected. One explanation for this is if there are a high proportion of outliers in a given time period, the moving average will be greatly impacted when it moves over that time period, thus not identifying extreme values as outliers because a large proportion of the group's values are also extreme.
+The outlier results also show that running the outlier detection methods per-temporal group does not change the number of outliers detected drastically, but using moving averages significantly affects the number of outliers detected. One explanation for this is if there are a high proportion of outliers in a given time period, the moving average statistics will be greatly impacted when its window moves over that time period, meaning that extreme values are not not identified as outliers because a significant proportion of the group's values are also extreme.
 
 As the last column of Table \ref{tab:upper_bounds} shows, using outlier detection methods with moving averages is unwise. This is because if there are a relatively high number of consecutive outliers, the moving average window's statistics are greatly skewed and measurements that would otherwise be considered extreme outliers are not excluded. Using moving averages on the PM10 measurements is particularly bad due to the abnormally high proportion of outliers.
 
@@ -2386,11 +2386,11 @@ As the last column of Table \ref{tab:upper_bounds} shows, using outlier detectio
 
 \subsection{Maps}
 
-The pollution maps generated using measurements collected by this device clearly demonstrate that the device can detect variations in air pollution. 
+The pollution maps generated using measurements collected by this device clearly demonstrate that the device can detect variations in air pollution (Figure \ref{fig:route_pollution_maps}).  Using these maps, a PM10 hotspot can be identified near the waste recycling centre and an ozone hotspot along a major road (Lower Bristol Road). Furthermore, the use of the DAQI colouring scheme (Figure \ref{fig:daqi_maps}) demonstrates that, despite variation in the pollution levels being detected by the device, these levels on average are `Low', which is not harmful to human health. The worrying finding with these maps, however, is that the majority of the route has experienced a `Very High' PM10 pollution level at some point. This suggests that, although the average pollution level is low, certain events are causing spikes. Further investigation would be needed to ascertain the causes and length of these spikes.
 
-The pollution levels shown on these maps demonstrate that the pollution limit is being broken etc... However, this finding must be taken with caution as we were not able to properly calibrate the sensors against a reference device. Therefore, if our sensors are found to be reporting inflated values, this finding no longer holds. Nonetheless, it is interesting to demonstrate how this device can inform authorities on pollution limit exceedance. In fact, this could be incorporated into the device -- an email alert could be sent when the day's average level exceeds those set by the WHO or EEA (Table \ref{airqualityguidelines}). 
+However, these findings must be taken with caution as we were not able to properly calibrate the sensors against a reference device. Therefore, if our sensors are found to be reporting inflated values, this finding no longer holds. Nonetheless, it is interesting to demonstrate how this device can inform authorities on pollution limit exceedance. In fact, this could be incorporated into the device -- an email alert could be sent when the day's average level exceeds those set by the WHO or EEA (Table \ref{airqualityguidelines}). 
 
-Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles which gives a spatial resolution of X~m, but the number of tiles can be increased to further increase the spatial resolution of these maps.
+%Moreover, these maps demonstrate a number of different ways in which the air quality monitoring device can be applied. Firstly, the device has the ability to identify pollution hotspots. Secondly, it can create high resolution air quality maps. The pollution overlays on these maps are $75 \times 75$ grids of tiles which gives a spatial resolution of X~m, but the number of tiles can be increased to further increase the spatial resolution of these maps.
 
 One way in which the pollution maps could be improved is through the addition of pollution mapping techniques, such as land-use regression (LUR) or Kriging. These allow for estimation of pollution values in locations where no measurement has been taken, by taking into account a variety of factors. This was originally going to be attempted, but project time constraints meant this was not possible. The added benefit of using such techniques would be a smoothed map, instead of individual tiles. Bicycles, whilst more mobile than cars, cannot cover everywhere so this could help to further map pollution in an area.
 
@@ -2402,11 +2402,15 @@ One way in which the pollution maps could be improved is through the addition of
 
 The results show that the air quality monitoring device can detect patterns in pollution. Even if this device is less accurate than the more expensive fixed monitoring stations, this device can still detect relative changes well.
 
+The finding that the PM10 level increases significantly on a Friday, Saturday and Sunday is an interesting result. Without further investigation, it is difficult to understand the cause of this. One suggestion, however, is that the data collection period was during the school summer holidays, which may have meant families were going on holiday at the weekends. This would have increased traffic levels and led to more pollution being generated. It is also interesting to find that the pollution level is lower for PM10 and O\textsubscript{3} in the morning compared to the evening collection run. This could be because the morning rush hour traffic is worse and, thus, generates higher levels of pollution. As a consequence, finding alternative routes to work could be important in the morning, in order to avoid the higher levels of pollution. This question is investigated in Chapter \ref{chap:q3}.
+
+The speed and temperature and humidity findings show that these have a measured impact on the pollution measurements. As a result, future work should add a correction factor to account for these effects. This could be especially important if the device were to be encased in a container because the heat from the sensors could increase the temperature artificially and trapped water vapour could increase the humidity.
+
 We also attempted to find a relationship between traffic levels and pollution using Average Annual Traffic Flow (AADT). However, the annual data was simply not granular enough to conduct such an investigation and so we leave this for future work.
 
 \subsection{Comparison to fixed monitoring stations}
 
-
+The results from the comparison between fixed monitoring stations and the bicycle-based device are mixed. The problem with this comparison is that it is difficult to compare measurements from a moving device with a stationary point. Consequently, the results from this are not discussed further. Future comparisons should be conducted against a different `ground-truth', for example, collecting measurements from along the same route using an industry-grade sensor.
 
 \subsection{Robustness}
 
@@ -2830,7 +2834,7 @@ In this section, we first detail results pertaining to the spatial aspect of thi
 \subsection{Bath Guildhall locus} \label{locus_results}
 % Spatial
 
-\begin{figure}[!htb]
+\begin{figure}[!tb]
     \centering
     \begin{minipage}{1\linewidth}
             \begin{subfigure}[t]{.5\linewidth}
@@ -2868,7 +2872,7 @@ In this section, we first detail results pertaining to the spatial aspect of thi
             	\label{fig:locus_mq135_max}
 	   \end{subfigure}
         \end{minipage}
-    \caption[Pollution maps of locus route.]{Pollution maps of locus route. (a) and (b) show PM10; (c) and (d) show O\textsubscript{3}; (e) and (f) show general air quality.}
+    \caption[Pollution maps of locus route.]{Pollution maps of locus route. The black circle represents the location of the Guildhall fixed monitoring station.}
     \label{fig:locus_maps}
 \end{figure}
 
@@ -2876,18 +2880,20 @@ Using the chosen route within the locus around the Guildhall in Bath, \num{1452}
 
 Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants. Primarily, this figure demonstrates the improved spatial resolution of this device compared to a fixed monitoring station, shown by the larger area covered compared to the single point of the Guildhall site. Moreover, the Guildhall fixed monitoring station can only measure NO\textsubscript{2}, whereas this air quality monitoring device can measure three different pollutants.
 
+[STRUGGLING FOR WHAT ELSE TO PUT HERE]
+
 % Re-do graphs for each 15-minute period
 
 % Compare 15 minute MQ135 sensors to NO2 data
-
-In addition, Figure \ref{fig:guildhall_vs_bike} shows that even when covering a large spatial area, the bicycle-based monitoring device can match the fixed monitoring station's temporal resolution of 15 minutes. Each point on the graph is an average of the previous 15-minutes' measurements. Furthermore, the two lines follow a similar pattern. The correlation between these two datasets is 0.35, which indicates that there is a positive relationship between what the MQ135 sensor is detecting and what the Guildhall monitoring station is detecting.
-
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=0.8\textwidth]{images/guildhall_vs_bike}
-\caption[Comparison of MQ135 sensor on device against Guildhall NO\textsubscript{2}.]{Comparison of MQ135 sensor on the device against Guildhall NO\textsubscript{2}.}
-\label{fig:guildhall_vs_bike}
-\end{figure}
+%
+%In addition, Figure \ref{fig:guildhall_vs_bike} shows that even when covering a large spatial area, the bicycle-based monitoring device can match the fixed monitoring station's temporal resolution of 15 minutes. Each point on the graph is an average of the previous 15-minutes' measurements. Furthermore, the two lines follow a similar pattern. The correlation between these two datasets is 0.35, which indicates that there is a positive relationship between what the MQ135 sensor is detecting and what the Guildhall monitoring station is detecting.
+%
+%\begin{figure}[!tb]
+%\centering
+%\includegraphics[width=0.8\textwidth]{images/guildhall_vs_bike}
+%\caption[Comparison of MQ135 sensor on device against Guildhall NO\textsubscript{2}.]{Comparison of MQ135 sensor on the device against Guildhall NO\textsubscript{2}.}
+%\label{fig:guildhall_vs_bike}
+%\end{figure}
 
 \newpage
 
@@ -2937,17 +2943,15 @@ Furthermore, each vertical column of this graph represents a complete one-way tr
 
 \section{Discussion}
 
-Covering a larger area and improving spatial resolution are only beneficial if the air quality measurements vary across this spatial area. For example, if all of the measurements collected around the Guildhall fixed monitoring station had little variation, then this increase in spatial resolution actually adds no benefit. This is because the fixed monitoring station's measurements apply approximately equally to the surrounding area. Therefore, the maps generated by the locus-based monitoring need to demonstrate that the device can register varying pollution levels over short distances. Previous research has shown that pollution can indeed vary over extremely short distances [REF]. In particular, `street canyons' can trap pollution on the street whilst behind these buildings the level drops to the background pollution level. This implies that improving spatial resolution is beneficial as it allows one to better understand how pollution varies across the urban environment. 
-
-We find that pollution does vary over short distances (Figure \ref{fig:locus_maps}), both when using the median and maximum to aggregate measurements within each tile.
+Covering a larger area and improving spatial resolution are only beneficial if the air quality measurements vary across this spatial area. For example, if all of the measurements collected around the Guildhall fixed monitoring station had little variation, then this increase in spatial resolution actually adds no benefit. This is because the fixed monitoring station's measurements apply approximately equally to the surrounding area. Therefore, the maps generated by the locus-based monitoring need to demonstrate that the device can register varying pollution levels over short distances. Previous research has shown that pollution can indeed vary over extremely short distances [REF]. In particular, `street canyons' can trap pollution on the street whilst behind these buildings the level drops to the background pollution level. We find that pollution does vary over short distances (Figure \ref{fig:locus_maps}), both when using the median and maximum to aggregate measurements within each tile. This implies that the improved spatial resolution found in this project is beneficial as it allows one to better understand how pollution varies across the urban environment. 
 
 \cite{Elen2013aeroflex} also demonstrated an improved spatial resolution when riding a bicycle-based air quality monitoring device around a section of Antwerp, Belgium. The maps generated by this device demonstrated variations of up to a factor of 10 between measurements on the main road (where the fixed monitoring site was located) and measurements from nearby minor roads. Whilst our device does not register such great variations, their device was built using much more expensive sensors, which likely has greater accuracy. Nonetheless, this supports our finding that the bicycle-based monitoring can improve spatial resolution and that the improved resolution is beneficial.
 
-A similar argument also applies for temporal resolution: improving the temporal resolution is only beneficial if the air quality measurements vary over time, otherwise a lower temporal resolution is equally as valuable. We find that the device does detect variations in pollution temporally at a temporal resolution of 7 minutes.
+A similar argument also applies for temporal resolution: improving the temporal resolution is only beneficial if the air quality measurements vary over time, otherwise a lower temporal resolution is equally as valuable. We find that the device does detect variations in pollution temporally at a temporal resolution of 7 minutes, which implies that the improvement in temporal resolution is beneficial. Moreover, the temporal resolution can be increased further by decreasing the length of the route, up to a maximum resolution of 10 seconds (the timing between measurements by the device). The device could be situated outside of an event and capture air quality measurements at this high resolution.
 
 These findings are also important from a technical standpoint. If the improvement in resolutions was not actually beneficial, then these extra measurements would just be pointlessly filling up the database. On a large enough scale, this could cause performance issues.
 
-Furthermore, the results from the event-based monitoring also demonstrate the capability of the device to monitor air quality at events on an ad-hoc basis. No such application of a portable air quality monitoring device occurs in the literature. Therefore, this novel application is promising and warrants further investigation. There is particular value in this application because fixed monitoring stations are unlikely to be set up for short-term events. This bicycle-based device enables rapid deployment to events and allows one to understand how an event impacts the local pollution level. For example, local authorities could deploy one of these devices to ...
+Furthermore, the results from the event-based monitoring also demonstrate the capability of the device to monitor air quality at events on an ad-hoc basis. No such application of a portable air quality monitoring device occurs in the literature. Therefore, this novel application is promising and warrants further investigation. There is particular value in this application because fixed monitoring stations are unlikely to be set up for short-term events. This bicycle-based device enables rapid deployment to such events and allows one to understand how an event impacts the local pollution level. For example, local authorities could deploy one of these devices to an event believed to increase traffic (and, therefore, pollution levels), identifying its impact and using this to direct policy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%							Question 3						      	       %%%%%%%%
@@ -4051,10 +4055,14 @@ These findings must be taken with caution, however. If more people began to use 
 %\section{Question 1: Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
 %
 
-
-
-
 \chapter{Limitations} \label{chap:limitations}
+
+Having answered our research questions in Chapters \ref{chap:q1}, \ref{chap:q2} and \ref{chap:q3}, this chapter now focuses on the limitations of our work.
+
+\section{Sensor issues}
+
+Firstly, the MQ135 sensor that we originally planned to use as a NO\textsubscript{x} sensor does not have a calibration curve for NO\textsubscript{x} on its data sheet and is sensitive to a variety of gases. As a result, all analysis for this sensor was conducted using the raw voltage readings.
+
 
 All well and good doing all this, but if people don't have the ease of use (Need more cycle path) and education (on effects of pollution).
 
