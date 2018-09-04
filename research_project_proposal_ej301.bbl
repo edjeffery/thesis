@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{85}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{Available from: }
@@ -166,6 +166,14 @@
 \newblock \emph{\bibinfo{journal}{Transport Reviews}},
   \bibinfo{volume}{34}(\bibinfo{number}{2}), pp.\bibinfo{pages}{221--245}.
 
+\bibitem[{Bigi and Harrison(2010)}]{Bigi2010summer}
+\bibinfo{author}{Bigi, A.} and \bibinfo{author}{Harrison, R.M.},
+  \bibinfo{year}{2010}.
+\newblock \bibinfo{title}{Analysis of the air pollution climate at a central
+  urban background site}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{44}(\bibinfo{number}{16}), pp.\bibinfo{pages}{2004 -- 2012}.
+
 \bibitem[{Boeing(2017)}]{boeing2017osmnx}
 \bibinfo{author}{Boeing, G.}, \bibinfo{year}{2017}.
 \newblock \bibinfo{title}{{OSMnx: New methods for acquiring, constructing,
@@ -237,7 +245,7 @@
 
 \bibitem[{Courthold(07/08/2018)}]{courthold2018max}
 \bibinfo{author}{Courthold, N.}, \bibinfo{year}{07/08/2018}.
-\newblock \emph{\bibinfo{title}{Air quality monitoring in bath}}.
+\newblock \emph{\bibinfo{title}{{Air quality monitoring in Bath}}}.
 \newblock \bibinfo{note}{Email to E. Jeffery}.
 
 \bibitem[{De~Hartog et~al.(2010)De~Hartog, Boogaard, Nijland and

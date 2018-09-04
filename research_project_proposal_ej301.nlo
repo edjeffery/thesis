@@ -1,38 +1,38 @@
-\nomenclatureentry{aWHO@[{WHO}]\begingroup World Health Organisation\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aNO\textsubscript{x}@[{NO\textsubscript{x}}]\begingroup Nitrogen oxides\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aLMIC@[{LMIC}]\begingroup Low and middle-income countries\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aO\textsubscript{3}@[{O\textsubscript{3}}]\begingroup Ozone\nomeqref {1.0}|nompageref}{12}
-\nomenclatureentry{aDEFRA@[{DEFRA}]\begingroup Department for Environmental and Rural Affairs\nomeqref {2.0}|nompageref}{19}
-\nomenclatureentry{aAURN@[{AURN}]\begingroup Automatic Urban and Rural Network\nomeqref {2.0}|nompageref}{19}
-\nomenclatureentry{aDAQI@[{DAQI}]\begingroup Daily Air Quality Index\nomeqref {2.0}|nompageref}{19}
-\nomenclatureentry{aEEA@[{EEA}]\begingroup European Environment Agency\nomeqref {2.0}|nompageref}{19}
-\nomenclatureentry{appb@[{ppb}]\begingroup Parts-per-billion\nomeqref {2.0}|nompageref}{20}
-\nomenclatureentry{aPM@[{PM}]\begingroup Particulate matter\nomeqref {2.0}|nompageref}{20}
-\nomenclatureentry{aVSN@[{VSN}]\begingroup Vehicle sensor network\nomeqref {2.0}|nompageref}{21}
-\nomenclatureentry{aCO@[{CO}]\begingroup Carbon monoxide\nomeqref {2.0}|nompageref}{25}
-\nomenclatureentry{aUFP@[{UFP}]\begingroup Ultra-fine particle\nomeqref {2.0}|nompageref}{25}
-\nomenclatureentry{aBC@[{BC}]\begingroup Black carbon\nomeqref {2.0}|nompageref}{25}
-\nomenclatureentry{aRPi@[{RPi}]\begingroup Raspberry Pi\nomeqref {2.0}|nompageref}{25}
-\nomenclatureentry{aSBC@[{SBC}]\begingroup Single-board computer\nomeqref {2.0}|nompageref}{26}
-\nomenclatureentry{aMCU@[{MCU}]\begingroup Microcontroller unit\nomeqref {2.0}|nompageref}{27}
-\nomenclatureentry{aADC@[{ADC}]\begingroup Analog-to-digital converter\nomeqref {2.0}|nompageref}{29}
-\nomenclatureentry{aHAT@[{HAT}]\begingroup Hardware-on-top\nomeqref {2.0}|nompageref}{30}
-\nomenclatureentry{aANN@[{ANN}]\begingroup Artificial neural network\nomeqref {2.0}|nompageref}{32}
-\nomenclatureentry{aGIS@[{GIS}]\begingroup Geographical-information system\nomeqref {2.0}|nompageref}{36}
-\nomenclatureentry{aLUR@[{LUR}]\begingroup Land-use regression\nomeqref {2.0}|nompageref}{36}
-\nomenclatureentry{aAPI@[{API}]\begingroup Application programming interface\nomeqref {2.0}|nompageref}{36}
-\nomenclatureentry{aGPS@[{GPS}]\begingroup Global positioning system\nomeqref {3.0}|nompageref}{42}
-\nomenclatureentry{aGPIO@[{GPIO}]\begingroup General Purpose In/Out\nomeqref {3.0}|nompageref}{43}
-\nomenclatureentry{aVCC@[{VCC}]\begingroup Voltage common collector\nomeqref {3.1}|nompageref}{48}
-\nomenclatureentry{aLED@[{LED}]\begingroup Light emitting diode\nomeqref {3.1}|nompageref}{49}
-\nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hypertext Transfer Protocol\nomeqref {3.1}|nompageref}{52}
-\nomenclatureentry{aFTP@[{FTP}]\begingroup File Transfer Protocol\nomeqref {3.1}|nompageref}{53}
-\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{53}
-\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{53}
-\nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {3.1}|nompageref}{53}
-\nomenclatureentry{aLPO@[{LPO}]\begingroup Low Pulse Occupancy\nomeqref {4.0}|nompageref}{56}
-\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {4.6}|nompageref}{57}
-\nomenclatureentry{aMSB@[{MSB}]\begingroup Most Significant Bit\nomeqref {4.6}|nompageref}{57}
-\nomenclatureentry{appm@[{ppm}]\begingroup Parts-per-million\nomeqref {4.15}|nompageref}{63}
-\nomenclatureentry{aBANES@[{BANES}]\begingroup Bath and North East Somerset Council\nomeqref {5.0}|nompageref}{66}
-\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{71}
+\nomenclatureentry{aWHO@[{WHO}]\begingroup World Health Organisation\nomeqref {1.0}|nompageref}{11}
+\nomenclatureentry{aNO\textsubscript{x}@[{NO\textsubscript{x}}]\begingroup Nitrogen oxides\nomeqref {1.0}|nompageref}{11}
+\nomenclatureentry{aLMIC@[{LMIC}]\begingroup Low and middle-income countries\nomeqref {1.0}|nompageref}{11}
+\nomenclatureentry{aO\textsubscript{3}@[{O\textsubscript{3}}]\begingroup Ozone\nomeqref {1.0}|nompageref}{11}
+\nomenclatureentry{aDEFRA@[{DEFRA}]\begingroup Department for Environmental and Rural Affairs\nomeqref {2.0}|nompageref}{18}
+\nomenclatureentry{aAURN@[{AURN}]\begingroup Automatic Urban and Rural Network\nomeqref {2.0}|nompageref}{18}
+\nomenclatureentry{aDAQI@[{DAQI}]\begingroup Daily Air Quality Index\nomeqref {2.0}|nompageref}{18}
+\nomenclatureentry{aEEA@[{EEA}]\begingroup European Environment Agency\nomeqref {2.0}|nompageref}{18}
+\nomenclatureentry{appb@[{ppb}]\begingroup Parts-per-billion\nomeqref {2.0}|nompageref}{19}
+\nomenclatureentry{aPM@[{PM}]\begingroup Particulate matter\nomeqref {2.0}|nompageref}{19}
+\nomenclatureentry{aVSN@[{VSN}]\begingroup Vehicle sensor network\nomeqref {2.0}|nompageref}{20}
+\nomenclatureentry{aCO@[{CO}]\begingroup Carbon monoxide\nomeqref {2.0}|nompageref}{24}
+\nomenclatureentry{aUFP@[{UFP}]\begingroup Ultra-fine particle\nomeqref {2.0}|nompageref}{24}
+\nomenclatureentry{aBC@[{BC}]\begingroup Black carbon\nomeqref {2.0}|nompageref}{24}
+\nomenclatureentry{aRPi@[{RPi}]\begingroup Raspberry Pi\nomeqref {2.0}|nompageref}{24}
+\nomenclatureentry{aSBC@[{SBC}]\begingroup Single-board computer\nomeqref {2.0}|nompageref}{25}
+\nomenclatureentry{aMCU@[{MCU}]\begingroup Microcontroller unit\nomeqref {2.0}|nompageref}{26}
+\nomenclatureentry{aADC@[{ADC}]\begingroup Analog-to-digital converter\nomeqref {2.0}|nompageref}{28}
+\nomenclatureentry{aHAT@[{HAT}]\begingroup Hardware-on-top\nomeqref {2.0}|nompageref}{29}
+\nomenclatureentry{aANN@[{ANN}]\begingroup Artificial neural network\nomeqref {2.0}|nompageref}{31}
+\nomenclatureentry{aGIS@[{GIS}]\begingroup Geographical-information system\nomeqref {2.0}|nompageref}{35}
+\nomenclatureentry{aLUR@[{LUR}]\begingroup Land-use regression\nomeqref {2.0}|nompageref}{35}
+\nomenclatureentry{aAPI@[{API}]\begingroup Application programming interface\nomeqref {2.0}|nompageref}{35}
+\nomenclatureentry{aGPS@[{GPS}]\begingroup Global positioning system\nomeqref {3.0}|nompageref}{41}
+\nomenclatureentry{aGPIO@[{GPIO}]\begingroup General Purpose In/Out\nomeqref {3.0}|nompageref}{42}
+\nomenclatureentry{aVCC@[{VCC}]\begingroup Voltage common collector\nomeqref {3.1}|nompageref}{47}
+\nomenclatureentry{aLED@[{LED}]\begingroup Light emitting diode\nomeqref {3.1}|nompageref}{48}
+\nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hypertext Transfer Protocol\nomeqref {3.1}|nompageref}{51}
+\nomenclatureentry{aFTP@[{FTP}]\begingroup File Transfer Protocol\nomeqref {3.1}|nompageref}{52}
+\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{52}
+\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{52}
+\nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {3.1}|nompageref}{52}
+\nomenclatureentry{aLPO@[{LPO}]\begingroup Low Pulse Occupancy\nomeqref {4.0}|nompageref}{55}
+\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {4.6}|nompageref}{56}
+\nomenclatureentry{aMSB@[{MSB}]\begingroup Most Significant Bit\nomeqref {4.6}|nompageref}{56}
+\nomenclatureentry{appm@[{ppm}]\begingroup Parts-per-million\nomeqref {4.15}|nompageref}{62}
+\nomenclatureentry{aBANES@[{BANES}]\begingroup Bath and North East Somerset Council\nomeqref {5.0}|nompageref}{65}
+\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{70}

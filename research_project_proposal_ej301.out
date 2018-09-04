@@ -31,24 +31,20 @@
 \BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 31
 \BOOKMARK [1][-]{section.7.2}{Results}{chapter.7}% 32
 \BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 33
-\BOOKMARK [0][-]{chapter.8}{Limitations}{}% 34
-\BOOKMARK [1][-]{section.8.1}{Public preferences}{chapter.8}% 35
-\BOOKMARK [1][-]{section.8.2}{Timing of project}{chapter.8}% 36
-\BOOKMARK [1][-]{section.8.3}{Resource constraints}{chapter.8}% 37
-\BOOKMARK [1][-]{section.8.4}{Equipment breakages}{chapter.8}% 38
-\BOOKMARK [0][-]{chapter.9}{Conclusion}{}% 39
-\BOOKMARK [1][-]{section.9.1}{Conclusions}{chapter.9}% 40
-\BOOKMARK [1][-]{section.9.2}{Future work}{chapter.9}% 41
-\BOOKMARK [1][-]{section.9.3}{Additional application post-project completion}{chapter.9}% 42
-\BOOKMARK [0][-]{figure.caption.80}{Bibliography}{}% 43
-\BOOKMARK [0][-]{chapter*.81}{Appendix}{}% 44
-\BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 45
-\BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 46
-\BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 47
-\BOOKMARK [0][-]{appendix.B}{Outliers}{}% 48
-\BOOKMARK [0][-]{appendix.C}{Code}{}% 49
-\BOOKMARK [1][-]{section.C.1}{Main RPi program}{appendix.C}% 50
-\BOOKMARK [1][-]{section.C.2}{PHP API}{appendix.C}% 51
-\BOOKMARK [0][-]{appendix.D}{Data analysis code}{}% 52
-\BOOKMARK [1][-]{section.D.1}{Data structuring}{appendix.D}% 53
-\BOOKMARK [1][-]{section.D.2}{Learning}{appendix.D}% 54
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 34
+\BOOKMARK [1][-]{section.8.1}{Conclusions}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.2}{Limitations}{chapter.8}% 36
+\BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.4}{Additional application post-project completion}{chapter.8}% 38
+\BOOKMARK [0][-]{figure.caption.80}{Bibliography}{}% 39
+\BOOKMARK [0][-]{chapter*.81}{Appendix}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 41
+\BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 42
+\BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 43
+\BOOKMARK [0][-]{appendix.B}{Outliers}{}% 44
+\BOOKMARK [0][-]{appendix.C}{Code}{}% 45
+\BOOKMARK [1][-]{section.C.1}{Main RPi program}{appendix.C}% 46
+\BOOKMARK [1][-]{section.C.2}{PHP API}{appendix.C}% 47
+\BOOKMARK [0][-]{appendix.D}{Data analysis code}{}% 48
+\BOOKMARK [1][-]{section.D.1}{Data structuring}{appendix.D}% 49
+\BOOKMARK [1][-]{section.D.2}{Learning}{appendix.D}% 50
