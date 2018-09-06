@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{89}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{Available from: }
@@ -471,6 +471,14 @@
 \newblock \emph{\bibinfo{journal}{Pervasive and Mobile Computing}},
   \bibinfo{volume}{16}, pp.\bibinfo{pages}{268--285}.
 
+\bibitem[{Hewitt(1991)}]{hewitt1991spatialvar}
+\bibinfo{author}{Hewitt, C.N.}, \bibinfo{year}{1991}.
+\newblock \bibinfo{title}{Spatial variations in nitrogen dioxide concentrations
+  in an urban area}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment. Part B. Urban
+  Atmosphere}}, \bibinfo{volume}{25}(\bibinfo{number}{3}),
+  pp.\bibinfo{pages}{429 -- 434}.
+
 \bibitem[{Hoang et~al.(2013)Hoang, Strufe, Le, Bui, Pham, Thai, Le and
   Schweizer}]{Hoang2013hanoihexagons}
 \bibinfo{author}{Hoang, D.}, \bibinfo{author}{Strufe, T.}, \bibinfo{author}{Le,
@@ -614,6 +622,20 @@
   distance of air pollution consequences on transportation mode choice}.
 \newblock \emph{\bibinfo{journal}{Transportation Research Part D: Transport and
   Environment}}, \bibinfo{volume}{46}, pp.\bibinfo{pages}{328 -- 338}.
+
+\bibitem[{Mogles et~al.(2017)Mogles, Walker, Ramallo-González, Lee, Natarajan,
+  Padget, Gabe-Thomas, Lovett, Ren, Hyniewska, O'Neill, Hourizi and
+  Coley}]{mogles2017enliten}
+\bibinfo{author}{Mogles, N.}, \bibinfo{author}{Walker, I.},
+  \bibinfo{author}{Ramallo-González, A.P.}, \bibinfo{author}{Lee, J.},
+  \bibinfo{author}{Natarajan, S.}, \bibinfo{author}{Padget, J.},
+  \bibinfo{author}{Gabe-Thomas, E.}, \bibinfo{author}{Lovett, T.},
+  \bibinfo{author}{Ren, G.}, \bibinfo{author}{Hyniewska, S.},
+  \bibinfo{author}{O'Neill, E.}, \bibinfo{author}{Hourizi, R.} and
+  \bibinfo{author}{Coley, D.}, \bibinfo{year}{2017}.
+\newblock \bibinfo{title}{How smart do smart meters need to be?}
+\newblock \emph{\bibinfo{journal}{Building and Environment}},
+  \bibinfo{volume}{125}, pp.\bibinfo{pages}{439 -- 450}.
 
 \bibitem[{{Office for National Statistics}(2011)}]{ons2011census}
 \bibinfo{author}{{Office for National Statistics}}, \bibinfo{year}{2011}.
@@ -818,6 +840,15 @@
 \newblock \bibinfo{address}{Philadelphia}: \bibinfo{institution}{Drexel
   University}, (\bibinfo{number}{ECE-19}).
 
+\bibitem[{Vardoulakis, Gonzalez-Flesca and
+  Fisher(2002)}]{vardoulakis2002streetcanyon}
+\bibinfo{author}{Vardoulakis, S.}, \bibinfo{author}{Gonzalez-Flesca, N.} and
+  \bibinfo{author}{Fisher, B.}, \bibinfo{year}{2002}.
+\newblock \bibinfo{title}{Assessment of traffic-related air pollution in two
+  street canyons in paris: implications for exposure studies}.
+\newblock \emph{\bibinfo{journal}{Atmospheric Environment}},
+  \bibinfo{volume}{36}(\bibinfo{number}{6}), pp.\bibinfo{pages}{1025 -- 1039}.
+
 \bibitem[{Wallace et~al.(2009)Wallace, Corr, Deluca, Kanaroglou and
   McCarry}]{Wallace2009mobilehamilton}
 \bibinfo{author}{Wallace, J.}, \bibinfo{author}{Corr, D.},
@@ -862,6 +893,14 @@
   exposure and burden of disease}}}.
 \newblock \bibinfo{address}{Geneva}: \bibinfo{institution}{World Health
   Organisation}.
+
+\bibitem[{Wilson, Kingham and Sturman(2006)}]{wilson2006intraurbanvar}
+\bibinfo{author}{Wilson, J.G.}, \bibinfo{author}{Kingham, S.} and
+  \bibinfo{author}{Sturman, A.P.}, \bibinfo{year}{2006}.
+\newblock \bibinfo{title}{Intraurban variations of pm10 air pollution in
+  christchurch, new zealand: Implications for epidemiological studies}.
+\newblock \emph{\bibinfo{journal}{Science of The Total Environment}},
+  \bibinfo{volume}{367}(\bibinfo{number}{2}), pp.\bibinfo{pages}{559 -- 572}.
 
 \bibitem[{Wong, Chua and Li(2009)}]{Wong2009envmonitoringtemporal}
 \bibinfo{author}{Wong, K.J.}, \bibinfo{author}{Chua, C.C.} and

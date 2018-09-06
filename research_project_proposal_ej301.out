@@ -19,7 +19,7 @@
 \BOOKMARK [1][-]{section.4.3}{General air quality sensor}{chapter.4}% 19
 \BOOKMARK [1][-]{section.4.4}{Temperature and humidity sensor}{chapter.4}% 20
 \BOOKMARK [1][-]{section.4.5}{Limitations}{chapter.4}% 21
-\BOOKMARK [0][-]{chapter.5}{Bicycle-based monitoring}{}% 22
+\BOOKMARK [0][-]{chapter.5}{Monitoring air pollution in Bath}{}% 22
 \BOOKMARK [1][-]{section.5.1}{Methodology}{chapter.5}% 23
 \BOOKMARK [1][-]{section.5.2}{Results}{chapter.5}% 24
 \BOOKMARK [1][-]{section.5.3}{Discussion}{chapter.5}% 25
@@ -27,7 +27,7 @@
 \BOOKMARK [1][-]{section.6.1}{Methodology}{chapter.6}% 27
 \BOOKMARK [1][-]{section.6.2}{Results}{chapter.6}% 28
 \BOOKMARK [1][-]{section.6.3}{Discussion}{chapter.6}% 29
-\BOOKMARK [0][-]{chapter.7}{Public benefit application}{}% 30
+\BOOKMARK [0][-]{chapter.7}{Pollution-avoidance routing application}{}% 30
 \BOOKMARK [1][-]{section.7.1}{Methodology}{chapter.7}% 31
 \BOOKMARK [1][-]{section.7.2}{Results}{chapter.7}% 32
 \BOOKMARK [1][-]{section.7.3}{Discussion}{chapter.7}% 33
@@ -41,10 +41,12 @@
 \BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 41
 \BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 42
 \BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 43
-\BOOKMARK [0][-]{appendix.B}{Outliers}{}% 44
-\BOOKMARK [0][-]{appendix.C}{Code}{}% 45
-\BOOKMARK [1][-]{section.C.1}{Main RPi program}{appendix.C}% 46
-\BOOKMARK [1][-]{section.C.2}{PHP API}{appendix.C}% 47
-\BOOKMARK [0][-]{appendix.D}{Data analysis code}{}% 48
-\BOOKMARK [1][-]{section.D.1}{Data structuring}{appendix.D}% 49
-\BOOKMARK [1][-]{section.D.2}{Learning}{appendix.D}% 50
+\BOOKMARK [1][-]{section.A.3}{Wi-Fi configuration file}{appendix.A}% 44
+\BOOKMARK [0][-]{appendix.B}{Outliers}{}% 45
+\BOOKMARK [0][-]{appendix.C}{Code}{}% 46
+\BOOKMARK [1][-]{section.C.1}{Main RPi program}{appendix.C}% 47
+\BOOKMARK [1][-]{section.C.2}{PHP API}{appendix.C}% 48
+\BOOKMARK [1][-]{section.C.3}{Web application using R Shiny}{appendix.C}% 49
+\BOOKMARK [0][-]{appendix.D}{Data analysis code}{}% 50
+\BOOKMARK [1][-]{section.D.1}{Data structuring}{appendix.D}% 51
+\BOOKMARK [1][-]{section.D.2}{Learning}{appendix.D}% 52

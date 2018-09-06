@@ -13,9 +13,9 @@
 \nomenclatureentry{aUFP@[{UFP}]\begingroup Ultra-fine particle\nomeqref {2.0}|nompageref}{24}
 \nomenclatureentry{aBC@[{BC}]\begingroup Black carbon\nomeqref {2.0}|nompageref}{24}
 \nomenclatureentry{aRPi@[{RPi}]\begingroup Raspberry Pi\nomeqref {2.0}|nompageref}{24}
-\nomenclatureentry{aSBC@[{SBC}]\begingroup Single-board computer\nomeqref {2.0}|nompageref}{25}
+\nomenclatureentry{aSBC@[{SBC}]\begingroup Single-board computer\nomeqref {2.0}|nompageref}{26}
 \nomenclatureentry{aMCU@[{MCU}]\begingroup Microcontroller unit\nomeqref {2.0}|nompageref}{26}
-\nomenclatureentry{aADC@[{ADC}]\begingroup Analog-to-digital converter\nomeqref {2.0}|nompageref}{28}
+\nomenclatureentry{aADC@[{ADC}]\begingroup Analog-to-digital converter\nomeqref {2.0}|nompageref}{29}
 \nomenclatureentry{aHAT@[{HAT}]\begingroup Hardware-on-top\nomeqref {2.0}|nompageref}{29}
 \nomenclatureentry{aANN@[{ANN}]\begingroup Artificial neural network\nomeqref {2.0}|nompageref}{31}
 \nomenclatureentry{aGIS@[{GIS}]\begingroup Geographical-information system\nomeqref {2.0}|nompageref}{35}
@@ -24,15 +24,15 @@
 \nomenclatureentry{aGPS@[{GPS}]\begingroup Global positioning system\nomeqref {3.0}|nompageref}{41}
 \nomenclatureentry{aGPIO@[{GPIO}]\begingroup General Purpose In/Out\nomeqref {3.0}|nompageref}{42}
 \nomenclatureentry{aVCC@[{VCC}]\begingroup Voltage common collector\nomeqref {3.1}|nompageref}{47}
-\nomenclatureentry{aLED@[{LED}]\begingroup Light emitting diode\nomeqref {3.1}|nompageref}{48}
-\nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hypertext Transfer Protocol\nomeqref {3.1}|nompageref}{51}
-\nomenclatureentry{aFTP@[{FTP}]\begingroup File Transfer Protocol\nomeqref {3.1}|nompageref}{52}
-\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{52}
-\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{52}
-\nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {3.1}|nompageref}{52}
-\nomenclatureentry{aLPO@[{LPO}]\begingroup Low Pulse Occupancy\nomeqref {4.0}|nompageref}{55}
-\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {4.6}|nompageref}{56}
-\nomenclatureentry{aMSB@[{MSB}]\begingroup Most Significant Bit\nomeqref {4.6}|nompageref}{56}
-\nomenclatureentry{appm@[{ppm}]\begingroup Parts-per-million\nomeqref {4.15}|nompageref}{62}
-\nomenclatureentry{aBANES@[{BANES}]\begingroup Bath and North East Somerset Council\nomeqref {5.0}|nompageref}{65}
-\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{70}
+\nomenclatureentry{aLED@[{LED}]\begingroup Light emitting diode\nomeqref {3.1}|nompageref}{47}
+\nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hypertext Transfer Protocol\nomeqref {3.1}|nompageref}{52}
+\nomenclatureentry{aFTP@[{FTP}]\begingroup File Transfer Protocol\nomeqref {3.1}|nompageref}{53}
+\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {3.1}|nompageref}{53}
+\nomenclatureentry{aNTP@[{NTP}]\begingroup Network Time Protocol\nomeqref {3.1}|nompageref}{53}
+\nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {3.1}|nompageref}{53}
+\nomenclatureentry{aLPO@[{LPO}]\begingroup Low Pulse Occupancy\nomeqref {4.0}|nompageref}{57}
+\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial Peripheral Interface\nomeqref {4.6}|nompageref}{58}
+\nomenclatureentry{aMSB@[{MSB}]\begingroup Most Significant Bit\nomeqref {4.6}|nompageref}{58}
+\nomenclatureentry{appm@[{ppm}]\begingroup Parts-per-million\nomeqref {4.15}|nompageref}{64}
+\nomenclatureentry{aBANES@[{BANES}]\begingroup Bath and North East Somerset Council\nomeqref {5.0}|nompageref}{67}
+\nomenclatureentry{aMAD@[{MAD}]\begingroup Median absolute deviation\nomeqref {5.3}|nompageref}{72}
