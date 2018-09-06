@@ -1,54 +1,55 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring \citep {WHO2002ambientmonitoring}\relax }}{17}{figure.caption.5}
-\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform developed by \cite {Elen2013aeroflex}\relax }}{21}{figure.caption.7}
-\contentsline {figure}{\numberline {2-3}{\ignorespaces DAQI for PM\textsubscript {10} \citep {defra2018daqi}.\relax }}{33}{figure.caption.9}
-\contentsline {figure}{\numberline {2-4}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}.\relax }}{34}{figure.caption.10}
-\contentsline {figure}{\numberline {2-5}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}.\relax }}{35}{figure.caption.11}
-\contentsline {figure}{\numberline {2-6}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}.\relax }}{36}{figure.caption.12}
-\contentsline {figure}{\numberline {2-7}{\ignorespaces High resolution raster created by \cite {Hasenfratz2015highresmapsTram}.\relax }}{36}{figure.caption.13}
+\contentsline {figure}{\numberline {2-1}{\ignorespaces Rationale for air quality monitoring}}{7}{figure.caption.5}
+\contentsline {figure}{\numberline {2-2}{\ignorespaces Aeroflex air quality monitoring platform}}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {2-3}{\ignorespaces Temporal pollution change visualisation.}}{16}{figure.caption.8}
+\contentsline {figure}{\numberline {2-4}{\ignorespaces DAQI for PM\textsubscript {10} \citep {defra2018daqi}.\relax }}{17}{figure.caption.9}
+\contentsline {figure}{\numberline {2-5}{\ignorespaces Visual representation of LUR by \cite {Jerrett2005evalmapmodels}.\relax }}{18}{figure.caption.10}
+\contentsline {figure}{\numberline {2-6}{\ignorespaces Heatmap Layer example from the Google API website \citep {google2018heatmap}.\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2-7}{\ignorespaces Heatmap using hexagonal shapes \citep {Hoang2013hanoihexagons}.\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2-8}{\ignorespaces High resolution raster created by \cite {Hasenfratz2015highresmapsTram}.\relax }}{20}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{41}{figure.caption.14}
-\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{46}{figure.caption.17}
-\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{47}{figure.caption.18}
-\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{48}{figure.caption.19}
-\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{50}{figure.caption.21}
-\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{52}{figure.caption.22}
-\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{54}{figure.caption.26}
+\contentsline {figure}{\numberline {3-1}{\ignorespaces Finished device.}}{32}{figure.caption.15}
+\contentsline {figure}{\numberline {3-2}{\ignorespaces Solution to sensor attachment problem.}}{37}{figure.caption.18}
+\contentsline {figure}{\numberline {3-3}{\ignorespaces Soldered protoboard.}}{38}{figure.caption.19}
+\contentsline {figure}{\numberline {3-4}{\ignorespaces Power consumption testing.}}{39}{figure.caption.20}
+\contentsline {figure}{\numberline {3-5}{\ignorespaces Data flow.}}{41}{figure.caption.22}
+\contentsline {figure}{\numberline {3-6}{\ignorespaces Flow diagram of system code.}}{43}{figure.caption.23}
+\contentsline {figure}{\numberline {3-7}{\ignorespaces Web application.}}{45}{figure.caption.27}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{58}{figure.caption.27}
-\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{59}{figure.caption.28}
-\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{60}{figure.caption.29}
-\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{61}{figure.caption.30}
-\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{62}{figure.caption.31}
-\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{63}{figure.caption.32}
-\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{64}{figure.caption.33}
+\contentsline {figure}{\numberline {4-1}{\ignorespaces SPI master-slave design.}}{49}{figure.caption.28}
+\contentsline {figure}{\numberline {4-2}{\ignorespaces MCP3551 output codes.}}{50}{figure.caption.29}
+\contentsline {figure}{\numberline {4-3}{\ignorespaces Circuit diagram for MQ-series sensors.}}{51}{figure.caption.30}
+\contentsline {figure}{\numberline {4-4}{\ignorespaces MikroElektronika potentiometers}}{52}{figure.caption.31}
+\contentsline {figure}{\numberline {4-5}{\ignorespaces Calibration curves.}}{53}{figure.caption.32}
+\contentsline {figure}{\numberline {4-6}{\ignorespaces GPIO/ADC switch.}}{54}{figure.caption.33}
+\contentsline {figure}{\numberline {4-7}{\ignorespaces DHT22 communication protocol.}}{55}{figure.caption.34}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{68}{figure.caption.34}
-\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{68}{figure.caption.35}
-\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{69}{figure.caption.36}
-\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{70}{figure.caption.37}
-\contentsline {figure}{\numberline {5-5}{\ignorespaces Road sections.}}{75}{figure.caption.42}
-\contentsline {figure}{\numberline {5-6}{\ignorespaces Bike position testing.}}{77}{figure.caption.43}
-\contentsline {figure}{\numberline {5-7}{\ignorespaces Sensor measurement histograms and boxplots.}}{79}{figure.caption.46}
-\contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{81}{figure.caption.50}
-\contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{84}{figure.caption.51}
-\contentsline {figure}{\numberline {5-10}{\ignorespaces DAQI pollution maps of the route.}}{85}{figure.caption.52}
-\contentsline {figure}{\numberline {5-11}{\ignorespaces Pollution by day of the week.}}{86}{figure.caption.55}
-\contentsline {figure}{\numberline {5-12}{\ignorespaces Pollution by time of day.}}{87}{figure.caption.57}
-\contentsline {figure}{\numberline {5-13}{\ignorespaces Relationship between speed and sensor measurements.}}{88}{figure.caption.60}
+\contentsline {figure}{\numberline {5-1}{\ignorespaces Elevation raster of Bath.}}{59}{figure.caption.35}
+\contentsline {figure}{\numberline {5-2}{\ignorespaces Cycling route.}}{59}{figure.caption.36}
+\contentsline {figure}{\numberline {5-3}{\ignorespaces Bath Air Quality Management Area.}}{60}{figure.caption.37}
+\contentsline {figure}{\numberline {5-4}{\ignorespaces Device positions on bicycle.}}{61}{figure.caption.38}
+\contentsline {figure}{\numberline {5-5}{\ignorespaces Road sections.}}{66}{figure.caption.43}
+\contentsline {figure}{\numberline {5-6}{\ignorespaces Bike position testing}}{68}{figure.caption.44}
+\contentsline {figure}{\numberline {5-7}{\ignorespaces Sensor measurement histograms and boxplots.}}{70}{figure.caption.47}
+\contentsline {figure}{\numberline {5-8}{\ignorespaces Sensor measurement histograms with cleaned data.}}{73}{figure.caption.51}
+\contentsline {figure}{\numberline {5-9}{\ignorespaces Air quality pollution maps of the route.}}{75}{figure.caption.52}
+\contentsline {figure}{\numberline {5-10}{\ignorespaces DAQI pollution maps of the route.}}{76}{figure.caption.53}
+\contentsline {figure}{\numberline {5-11}{\ignorespaces Pollution by day of the week.}}{77}{figure.caption.56}
+\contentsline {figure}{\numberline {5-12}{\ignorespaces Pollution by time of day.}}{78}{figure.caption.58}
+\contentsline {figure}{\numberline {5-13}{\ignorespaces Relationship between speed and sensor measurements.}}{79}{figure.caption.61}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{98}{figure.caption.66}
-\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{98}{figure.caption.68}
-\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{100}{figure.caption.72}
-\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{101}{figure.caption.74}
-\contentsline {figure}{\numberline {6-5}{\ignorespaces Heatmaps of event pollution.}}{104}{figure.caption.75}
+\contentsline {figure}{\numberline {6-1}{\ignorespaces Analysis of fixed monitoring station locations.}}{89}{figure.caption.67}
+\contentsline {figure}{\numberline {6-2}{\ignorespaces Locus-based route.}}{89}{figure.caption.69}
+\contentsline {figure}{\numberline {6-3}{\ignorespaces Event-based route.}}{91}{figure.caption.73}
+\contentsline {figure}{\numberline {6-4}{\ignorespaces Pollution maps of locus route.}}{92}{figure.caption.75}
+\contentsline {figure}{\numberline {6-5}{\ignorespaces Heatmaps of event pollution.}}{94}{figure.caption.76}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{110}{figure.caption.76}
-\contentsline {figure}{\numberline {7-2}{\ignorespaces Cyclist coverage.}}{113}{figure.caption.77}
-\contentsline {figure}{\numberline {7-3}{\ignorespaces Example routes.}}{114}{figure.caption.79}
+\contentsline {figure}{\numberline {7-1}{\ignorespaces \texttt {osmnx} graph for Bath.}}{100}{figure.caption.77}
+\contentsline {figure}{\numberline {7-2}{\ignorespaces Cyclist coverage.}}{103}{figure.caption.78}
+\contentsline {figure}{\numberline {7-3}{\ignorespaces Example routes.}}{104}{figure.caption.80}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8-1}{\ignorespaces Modified device for Mongolia trip.}}{121}{figure.caption.80}
+\contentsline {figure}{\numberline {8-1}{\ignorespaces Modified device for Mongolia trip.}}{111}{figure.caption.81}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

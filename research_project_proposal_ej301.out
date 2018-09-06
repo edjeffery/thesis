@@ -3,11 +3,11 @@
 \BOOKMARK [1][-]{section.2.1}{Air pollution}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{Measures of air quality}{chapter.2}% 4
 \BOOKMARK [1][-]{section.2.3}{Monitoring urban air quality}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.4}{Comparison of single-board computers}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.5}{Power}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.6}{Use of low-cost sensors}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.7}{Mapping air pollution}{chapter.2}% 9
-\BOOKMARK [1][-]{section.2.8}{Health-optimal route planning}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.4}{Mapping air pollution}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.5}{Health-optimal route planning}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.6}{Comparison of single-board computers}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.7}{Power}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.8}{Use of low-cost sensors}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.9}{Data quality monitoring}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.10}{Summary}{chapter.2}% 12
 \BOOKMARK [0][-]{chapter.3}{System design and implementation}{}% 13
@@ -36,8 +36,8 @@
 \BOOKMARK [1][-]{section.8.2}{Limitations}{chapter.8}% 36
 \BOOKMARK [1][-]{section.8.3}{Future work}{chapter.8}% 37
 \BOOKMARK [1][-]{section.8.4}{Additional application post-project completion}{chapter.8}% 38
-\BOOKMARK [0][-]{figure.caption.80}{Bibliography}{}% 39
-\BOOKMARK [0][-]{chapter*.81}{Appendix}{}% 40
+\BOOKMARK [0][-]{figure.caption.81}{Bibliography}{}% 39
+\BOOKMARK [0][-]{chapter*.82}{Appendix}{}% 40
 \BOOKMARK [0][-]{appendix.A}{Installation instructions}{}% 41
 \BOOKMARK [1][-]{section.A.1}{GPS}{appendix.A}% 42
 \BOOKMARK [1][-]{section.A.2}{NTP}{appendix.A}% 43

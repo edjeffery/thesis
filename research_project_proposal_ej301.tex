@@ -69,31 +69,36 @@
 \bibliographystyle{bath}
 
 % Front matter
-%\title{\vspace{-1cm}AirBike: a low-cost urban cycling air quality monitoring system using Raspberry Pi computers and machine learning}
-\title{\vspace{0cm}A low-cost bicycle-mounted air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
+%\title{\vspace{-1cm}A low-cost bicycle-mounted air quality monitoring system using a Raspberry Pi, with a pollution-avoidance routing application}
+\title{\vspace{0cm}A low-cost portable pollution monitoring system}
 \author{Edward Jeffery}
 \degree{Master of Science}
 \department{Department of Computer Science} \degreemonthyear{October 2018}
 \norestrictions
 \renewcommand{\abstractname}{Abstract}
+
 \begin{document}
+\newgeometry{left = 3.5cm, right = 3.5cm, top = 4cm, bottom = 2cm}
+\pagenumbering{roman}
 \maketitle
 
 \begin{abstract}
-Air pollution is a major health problem, causing millions of deaths each year, as well as many other non-fatal diseases  \citep{WHO2016ambient}. In order for authorities to be able to mitigate air pollution effectively, they need access to high-resolution air quality data. Currently, air quality monitoring in the UK depends on fixed monitoring stations, which offer poor resolution, both spatially and temporally. In this paper, we design and construct an air quality monitoring device that attaches to a bicycle, thus providing a mobile platform for air quality data collection in the city of Bath. We show that it can monitor air quality to a satisfactory level, with the collected data being used to create pollution maps and identify trends in air pollution. We also show the device's improvements in spatial and temporal resolution compared to fixed monitoring stations, as well as its ability to rapidly be deployed to major events for air quality monitoring. Furthermore, we present a novel cost function and routing algorithm that finds `health-optimal' routes, decreasing pollution exposure by 5.08\% on average compared to the shortest routes.
+According to the World Health Organisation, air pollution is a major health problem, causing millions of deaths each year, as well as many other non-fatal diseases. In order for authorities to be able to mitigate air pollution effectively, they need access to high-resolution air quality data. Currently, air quality monitoring in the UK depends on fixed monitoring stations, which offer poor resolution, both spatially and temporally. In this dissertation, we report on the design and construction of an air quality monitoring device that attaches to a bicycle, thus providing a mobile platform for air quality monitoring. This device has been trialled at various sites around the city of Bath in order to collect air pollution data for analysis. We show that the device can monitor air quality to a satisfactory level of accuracy, with the collected data being used to create pollution maps and identify trends in air pollution. We also show the device's improvements in spatial and temporal resolution compared to fixed monitoring stations, as well as its ability to rapidly be deployed to major events for air quality monitoring. Furthermore, we present a novel cost function and routing algorithm that calculates health-optimal routes, decreasing pollution exposure by 5.08\% on average, compared to the shortest routes in the city of Bath.
 \end{abstract}
 
 \renewcommand{\abstractname}{Acknowledgements}
 \begin{abstract}
-I would like to thank my research project supervisor, Dr. Julian Padget, for his guidance and assistance throughout this project and during the course. 
+I would first like to thank my research project supervisor, Dr. Julian Padget, for his guidance and assistance throughout this project and during the course. 
  
 I would also like to thank my parents, David and Melanie Jeffery, and my girlfriend, Isabel Cairns, for their ongoing support throughout the writing of this thesis.
 
-Martin Fullick (Department of Physics) was a great help with the 3D printing and soldering. His knowledge was invaluable.
+Martin Fullick (Department of Physics) was a great help with the soldering and circuit-related issues. His knowledge was invaluable.
 
-Thank you also to my trusty bicycle, which only suffered 3 punctures throughout the whole project, despite the hundreds of potholes that litter Bath's roads.
+Thank you also to my trusty bicycle, which only suffered three punctures throughout the whole project, despite the hundreds of potholes that litter Bath's roads.
 
 \end{abstract}
+
+\restoregeometry
 
 \setcounter{tocdepth}{1}
 \tableofcontents
@@ -106,6 +111,7 @@ Thank you also to my trusty bicycle, which only suffered 3 punctures throughout 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Introduction}
+\pagenumbering{arabic}
 
 The World Health Organisation (WHO) estimates that 90\% of the world's population lives in places that do not comply with the WHO Air Quality Guidelines and 3 million people each year die from breathing polluted air \citep{WHO2016ambient}. Disconcertingly, this is considered a conservative measure by the WHO because it focuses on particulates and excludes health impacts of other pollutants such as nitrogen oxides (NO\textsubscript{x}) and ozone (O\textsubscript{3}). Air pollution is also not just a problem in the most industrialised countries, but is a widespread problem around the world with 87\% of these deaths occurring in low and middle-income countries (LMICs). Besides the aforementioned fatalities, air pollution has a number of other serious consequences, such as cardiorespiratory and cardiovascular disease \citep{pope1995particulate,dockery1993_6cityairpoll,pope2002lungcancercardiomortality}.
 
@@ -126,7 +132,7 @@ However, there are a number of potential problems with building a portable sensi
 
 As a proposed solution to the problems detailed above, this project details the design and creation of a low-cost, portable air quality monitoring device that can be attached to a bicycle and collect measurements whilst the bicycle is moving around the city of Bath. Making the device low-cost is important for air quality monitoring becoming ubiquitous in the future and the device being mobile is also important in order to improve the spatial resolution of the air quality monitoring in comparison to current fixed stations. In addition, the air quality monitoring system as a whole should be robust. The data flow from collection through to display will ideally be smooth and reliable, and data processing and cleaning will form part of this process. 
 
-Our device consists of a Raspberry Pi as the base computer, with the addition of a particulate sensor, ozone sensor, general air quality sensor, and a temperature and humidity sensor. The main data collection period consisted of riding the bicycle-based device around a chosen route over a 3-week period, as well as a locus-based collection around an existing monitoring station and a novel event-based data collection period. In total, approximately 12,000 measurements are collected. Based on these data, the project assesses whether a bicycle-based monitoring device can monitor air pollution to a satisfactory level. In addition, this project tests whether such a device can improve spatial and temporal resolution compared to fixed monitoring stations. Furthermore, the data will be used to generate pollution maps of Bath, which should inform the public about the air quality in their area. Finally, the project will evaluate whether the device can be applied for public benefit, through the creation of alternative routes that expose the user to less pollution.
+Our device consists of a Raspberry Pi as the base computer, with the addition of a particulate sensor, ozone sensor, general air quality sensor, and a temperature and humidity sensor. The main data collection period consisted of riding the bicycle-mounted device around a chosen route over a 3-week period, as well as a locus-based collection around an existing monitoring station and a novel event-based data collection period. In total, approximately 12,000 measurements are collected. Based on these data, the project assesses whether a bicycle-mounted monitoring device can monitor air pollution to a satisfactory level. In addition, this project tests whether such a device can improve spatial and temporal resolution compared to fixed monitoring stations. Furthermore, the data will be used to generate pollution maps of Bath, which should inform the public about the air quality in their area. Finally, the project will evaluate whether the device can be applied for public benefit, through the creation of alternative routes that expose the user to less pollution.
 %In addition, if the device is a success, there is also the possibility of deploying multiple devices so that a larger sample set and greater geographical coverage can be obtained compared to if a singular device was used. 
 
 %\nomenclature{PCB}{Printed circuit board}
@@ -137,11 +143,11 @@ Our device consists of a Raspberry Pi as the base computer, with the addition of
 
 In summary, this paper makes the following contributions:
 \begin{itemize}
-\item We design and create a bicycle-based air quality monitoring device that measures particulates, ozone and general air quality (Chapter \ref{chap: system_design}).
+\item We design and create a bicycle-mounted air quality monitoring device that measures particulates, ozone and general air quality (Chapter \ref{chap: system_design}).
 \item All of the sensors in this project output either analogue or digital raw signals. We design and implement an output conversion and calibration process for each of these sensors in Chapter \ref{chap: calibration}.
-\item We test whether air pollution can be monitored to a satisfactory level using a bicycle-based monitoring device (Chapter \ref{chap:q1}). The results show that this is achievable, with the device demonstrating sensitivity to trends in air pollution, as well as the creation of pollution maps from the data collected by the device. In addition, we also identify the optimal position of the monitoring device on a bicycle.
+\item We test whether air pollution can be monitored to a satisfactory level using a bicycle-mounted monitoring device (Chapter \ref{chap:q1}). The results show that this is achievable, with the device demonstrating sensitivity to trends in air pollution, as well as the creation of pollution maps from the data collected by the device. In addition, we also identify the optimal position of the monitoring device on a bicycle.
 \item Chapter \ref{chap:q2} demonstrates how such a device can improve spatial and temporal resolution compared to fixed monitoring stations. A novel application of the device to conduct event-based monitoring is also demonstrated, with successful identification of the pollution impact of the event.
-\item Since coverage of a large area is infeasible using one cyclist, we calculate in Chapter \ref{chap:q3} that approximately 50 commuting cyclists are needed to generate sufficient coverage for air quality monitoring purposes. We then use simulated data to demonstrate that a person can reduce their pollution exposure by 5.08\% by choosing to take the `health-optimal' route instead of the shortest route. This equates to an increase in life expectancy of 0.08 years if chosen consistently.
+\item Since coverage of a large area is infeasible using one cyclist, we calculate in Chapter \ref{chap:q3} that approximately 50 commuting cyclists are needed to generate sufficient coverage for air quality monitoring purposes. We then use simulated data to demonstrate that a person can reduce their pollution exposure by 5.08\% by choosing to take the `health-optimal' route instead of the shortest route. This equates to an increase in life expectancy of 0.08 years, if chosen consistently.
 \end{itemize}
 
 %In this paper, we present a bicycle-based air quality monitoring device. In Chapter \ref{chap: related_work}, we cover the literature on air pollution and existing air quality monitoring platforms. In Chapter \ref{chap: system_design}, we describe how the device is designed, from both a physical and software standpoint. Chapter \ref{chap: calibration} then details how the raw sensor outputs are read and converted to meaningful readings. Each of the research questions are then answered in turn. Chapter \ref{chap:q1} focuses on answering whether air pollution can be monitored to a satisfactory level using a bicycle-based monitoring device. Chapter \ref{chap:q2} then looks at whether such a device can improve spatial and temporal resolution compared to fixed monitoring stations and Chapter \ref{chap:q3} focuses on how the device can be used for public benefit. Finally, Chapter \ref{limitations} details the limitations and Chapter \ref{conclusion} concludes, with recommendations for future work.
@@ -156,7 +162,7 @@ In addition, Chapter \ref{chap:conclusion} concludes the project and details the
 
 This research project to design and build a low-cost air quality monitoring system covers a wide number of topics. Given the relative infancy of low-cost sensors and low-cost computing, making such a system has only been made possible in recent years and, as such, the literature needs thorough investigation to understand where the current implementations can be improved to make widespread air quality monitoring a more realistic possibility. 
 
-Firstly, the health impacts of air pollution are considered, outlining why being able to monitor air pollution easily is a major concern. The various measures of air quality are then detailed in order to establish an understanding of what are the most important pollutants to measure. Next, previous monitoring devices are listed and the more relevant studies are evaluated to identify where novel research is needed and where improvements on past studies can be made. Potential candidates for the base computer of the proposed air quality monitoring device are then compared. Subsequently, portable power solutions for the device are considered. The specific drawbacks of using low-cost sensors are then detailed, as well as a discussion of techniques in the literature for improving them. Finally, methods for mapping air quality data and monitoring the data quality are analysed. 
+Firstly, the health impacts of air pollution are considered, outlining why being able to monitor air pollution easily is a major concern. The various measures of air quality are then detailed in order to establish an understanding of what are the most important pollutants to measure. Next, previous monitoring devices are listed and the most relevant studies are evaluated to identify where novel research is needed and where improvements on past studies can be made. Potential candidates for the base computer of the proposed air quality monitoring device are then compared. Subsequently, portable power solutions for the device are considered. The specific drawbacks of using low-cost sensors are then detailed, as well as a discussion of techniques in the literature for improving them. Finally, methods for mapping air quality data and monitoring the data quality are analysed. 
 
 \section{Air pollution}
 
@@ -176,7 +182,7 @@ A recent review of studies assessing the long-term link between nitrogen dioxide
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{images/Rationale_for_air_quality_monitoring}
-\caption{Rationale for air quality monitoring \citep{WHO2002ambientmonitoring}}
+\caption[Rationale for air quality monitoring]{Rationale for air quality monitoring \citep{WHO2002ambientmonitoring}}
 \label{rationaleformonitoring}
 \end{figure}
 
@@ -285,12 +291,12 @@ One example of an air quality monitoring device is an Arduino-based device deplo
 
 Other public transport has been used to attach air quality monitoring devices. \cite{Hasenfratz2015highresmapsTram} attached monitoring devices to trams in Zurich, Switzerland, and collected measurements over a two-year period. By using the tram network, they were able to cover a large urban area of 100km\textsuperscript{2} on a regular basis. For the base computer of their device they used a Gumstix, which is similar to a Raspberry Pi.  The device itself stored measurements in a local database and transmitted them in real-time over a cellular network, before then deleting stored readings once receipt was confirmed. Again, the paper highlighted the advantage of this mobile system compared to a static government monitoring station. Furthermore, their novel contribution was to derive a cost function for all street segments of Zurich's road network, which was then incorporated into a route finding algorithm to compute the health-optimal path. This was then compared to the route generated without the inclusion of this cost function and the authors found that taking the health-optimal path led to a 7.1\% reduction in particulate pollution exposure. \cite{Hagemann2014aerotram} also used trams to assess spatial variability of particle number concentrations and NO\textsubscript{x}.
 
-Another study used a device attached to a bicycle, named Aeroflex \citep{Elen2013aeroflex}. The focus was on high adaptability and ease of use since everybody is `able to ride a bike', thus enabling any volunteer member of the public to contribute to air quality monitoring. This ease of use was not only for the bicycle, but also for the software that collected, sent and displayed the data. All of the air quality monitoring equipment was attached to the bicycle (see Figure \ref{aeroflex}), including a robust data transmission system that could provide real time measurements on air quality. The Aeroflex took measurements every second and was ridden around a set route multiple times in order to provide a high spatial resolution and to ensure good temporal resolution. The success of the project was demonstrated by city authorities using it in a number of cities in Belgium, including Antwerp, Ghent and Brussels. Whilst the novel use of a bicycle to monitor air quality is a major advantage of this study, it only focused on measuring particulates, carbon monoxide and black carbon. Out of these, only particulates are part of the indexes used by the UK and the EEA, which questions the device's usefulness in helping the city authorities in monitoring air quality so that air pollution limits are not broken. This identifies a gap in the literature for a bicycle-based monitoring system that measures more of the gases and particulates detailed in Section \ref{airqualitymeasures}.
+Another study used a device attached to a bicycle, named Aeroflex \citep{Elen2013aeroflex}. The focus was on high adaptability and ease of use since everybody is `able to ride a bike', thus enabling any volunteer member of the public to contribute to air quality monitoring. This ease of use was not only for the bicycle, but also for the software that collected, sent and displayed the data. All of the air quality monitoring equipment was attached to the bicycle (see Figure \ref{aeroflex}), including a robust data transmission system that could provide real time measurements on air quality. The Aeroflex took measurements every second and was ridden around a set route multiple times in order to provide a high spatial resolution and to ensure good temporal resolution. The success of the project was demonstrated by city authorities using it in a number of cities in Belgium, including Antwerp, Ghent and Brussels. Whilst the novel use of a bicycle to monitor air quality is a major advantage of this study, it only focused on measuring particulates, carbon monoxide and black carbon. Out of these, only particulates are part of the indexes used by the UK and the EEA, which questions the device's usefulness in helping the city authorities in monitoring air quality so that air pollution limits are not broken. This identifies a gap in the literature for a bicycle-mounted monitoring system that measures more of the gases and particulates detailed in Section \ref{airqualitymeasures}.
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=0.7\textwidth]{images/aeroflex}
-\caption{Aeroflex air quality monitoring platform developed by \cite{Elen2013aeroflex}}
+\caption[Aeroflex air quality monitoring platform]{Aeroflex air quality monitoring platform developed by \cite{Elen2013aeroflex}}
 \label{aeroflex}
 \end{figure}
 
@@ -359,17 +365,105 @@ The apparent advantages of mobile air quality monitoring over static monitoring 
 
 Much of the air quality literature relating to the resolution of measurements focuses on the spatial resolution. However, the temporal resolution is also important as a higher temporal resolution allows one to better understand how the pollution in an area changes over time. \cite{Elen2013aeroflex} mapped a short route in Antwerp, Belgium, with a temporal resolution of 1 hour. Using this high temporal resolution data, the authors found that pollution was highest during the morning rush hour, with concentrations decreasing steadily afterwards. In a different study, \cite{Hasenfratz2015highresmapsTram} managed to generate pollution maps of the city of Zurich with a semi-daily temporal resolution. This demonstrates that the temporal resolution is lower (i.e. less granular) when a larger area is covered. 
 
+\cite{Peters2013cycleruns} use a novel heatmap visualisation to illustrate temporal changes in pollution. An example is displayed in Figure \ref{fig:temporal_viz}. The y-axis is the `run' number (i.e. temporal unit) and the x-axis is the name of the street. This is a useful visualisation as it is easy for the reader to notice pollution changes over time.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.6\textwidth]{images/temporal_viz}
+\caption[Temporal pollution change visualisation.]{Novel visualisation of temporal pollution changes \citep{Peters2013cycleruns}.}
+\label{fig:temporal_viz}
+\end{figure}
+
 Unfortunately, there is often a trade-off between spatial and temporal resolution. Improvements in spatial resolution lead to a reduction in temporal resolution because any given location will only have multiple measurements once the moving device visits that exact location again \citep{Wong2009envmonitoringtemporal}. One solution to this problem is to increase the number of vehicles deployed with the monitoring device attached, which increases the frequency of measurements at any given location. 
+
+
+\section{Mapping air pollution} \label{mappingpollution}
+
+Given the health impact of air pollution detailed in Section \ref{healthimpact}, maps are needed to identify pollution `hot spots', to show changes in pollution over time, to define at-risk groups and to provide better air pollution exposure estimates for epidemiological studies.
+
+\subsection{Colouring}
+
+In the UK, the recommended air quality index is the Daily Air Quality Index (DAQI). For each of the pollutants that are officially monitored in the UK (Section \ref{airqualitymeasures}), the DAQI is indexed 1-10 and is divided into four bands: low, moderate, high and very high. It was designed to inform the public about air quality in a simple and easy to understand way. An example is shown in Figure \ref{fig:daqi_pm10}, which is for PM\textsubscript{10}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=\textwidth]{images/daqi_pm10}
+\caption{DAQI for PM\textsubscript{10} \citep{defra2018daqi}.}
+\label{fig:daqi_pm10}
+\end{figure}
+
+The DAQI levels can be used to colour pollution maps. For example, a PM\textsubscript{10} measurement of 56~$\mu g/m^3$ would be coloured yellow. By doing this, the generated pollution maps are relevant and consistent with the rest of the UK's air quality information.
+
+In addition, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. These colours could also be used to create a gradient scale from red to green for poor to good air quality, respectively.
+
+\subsection{Estimation techniques} \label{estimationtechniques}
+
+As discussed in Section \ref{spatialres}, current air quality monitoring mainly uses fixed monitoring stations. Even in the 1990s, it was noted that air pollution often varies over extremely short distances whilst the air quality data from these fixed stations are often sparse, leading to highly generalised maps and poor estimates \citep{Briggs1997mappingGIS}.
+
+As a result, techniques have been developed to generate estimated air pollution values in areas where no readings have been taken, thus allowing the improvement of air pollution maps by increasing the resolution. Such methods include spatial interpolation, dispersion modelling and regression-based approaches. A specific example of a regression-based approach is land-use regression (LUR), which was first detailed by \cite{Briggs1997mappingGIS} using data from the SAVIAH (Small Area Variations in Air Quality and Health) study. It has become increasingly popular since its introduction \citep{Hoek2008LUR}. This method combines air quality measurements spread over an area with stochastic modelling in order to generate air quality predictions at unsampled locations. The independent variables for the regression are obtained through geographical-information systems (GIS), which contains data on various environmental factors such as traffic volume and the road network. Figure \ref{LURexplanation} visually demonstrates this method. $y$ is the pollution concentration and $x_i$ are the land-use types within the `buffer' (circles). Good performance of the regression maps was achieved, with $r^2$ values ranging from 0.79 to 0.87 across the three mapped locations. However, LUR models are poor at separating out the impact of different pollutants due to the high correlation that can occur between pollutants \citep{Hoek2008LUR} and this type of extrapolation can perform poorly when the study area has significantly different land-use, for example: moving the study area from Bath, which is a small city in the countryside, to London, which is a much bigger and congested city.
+
+\begin{figure}[!tbp]
+\centering
+\includegraphics[width=0.6\textwidth]{images/LURexplanation}
+\caption{Visual representation of LUR by \cite{Jerrett2005evalmapmodels}.}
+\label{LURexplanation}
+\end{figure}
+
+%GIS files are made publicly available from DEFRA for modelling purposes for local air quality management. The relevant file could be incorporated with the data obtained in this project to generate pollution maps of the local area that includes unsampled locations.
+
+\nomenclature{GIS}{Geographical-information system}
+\nomenclature{LUR}{Land-use regression}
+
+\subsection{Mapping visualisations}
+
+A particularly interesting visualisation of geo-located air quality data is a heatmap. Google's API has a built-in Heatmap Layer for client-side rendering of heatmaps, which can be used to visualise data in this way. Figure \ref{heatmap} shows an example from their website. 
+
+\nomenclature{API}{Application programming interface}
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.7\textwidth]{images/googleapi_heatmap_layer}
+\caption{Heatmap Layer example from the Google API website \citep{google2018heatmap}.}
+\label{heatmap}
+\end{figure}
+
+\cite{Devarakonda2013} successfully used this Heatmap Layer for real-time air quality monitoring. Their air quality data was stored in a Google Fusion Table, which is part of their cloud offering and acts like a database, providing seamless integration between the data and Google's visualisation tools. The air quality data is shown neatly on top of the map with the red/green colour scale representing high/low pollution respectively. From this map, hotspots can quickly be linked to specific road layout points. For example, the authors identified a hotspot at an intersection where traffic was merging. This indicates that this method is suitable for identifying troublesome areas of high pollution.
+
+An alternative is to use a custom coloured shape overlay on a map. For instance, \cite{Hoang2013hanoihexagons} used hexagons, shown in Figure \ref{hanoihexagons}. The hexagonal shapes were used instead of the more widely used rectangular shapes because of their visual advantages. Firstly, there is less map ambiguity, and secondly, hexagonal shapes are easier for human vision to interpret since, on the map, there are no distinct horizontal and vertical lines, to which the authors note human vision is especially sensitive. 
+
+\begin{figure}[!tb]
+\centering
+\includegraphics[width=0.7\textwidth]{images/hanoihexagons}
+\caption{Heatmap using hexagonal shapes \citep{Hoang2013hanoihexagons}.}
+\label{hanoihexagons}
+\end{figure}
+
+Another way of visualising air pollution is through the use of a grid of tiles, which is similar to the technique used by \citeauthor{Hoang2013hanoihexagons}, but uses squares instead of hexagons. The underlying map can be discarded and a graph made completely of these tiles. This is known as a raster. This was successfully used by \cite{Hasenfratz2015highresmapsTram} to create high resolution maps of pollution in Zurich. A sample of their map is shown in Figure \ref{fig:raster}.
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[width=0.5\textwidth]{images/raster}
+\caption{High resolution raster created by \cite{Hasenfratz2015highresmapsTram}.}
+\label{fig:raster}
+\end{figure}
+
+\section{Health-optimal route planning}
+
+One potential application of air quality data is in alternative route planning for the public that takes into account pollution levels on different streets. Typically, route planning has focused on finding the shortest route from an origin to a destination. However, recent developments have begun to incorporate other factors. In particular, air pollution has begun to be incorporated into route planning \citep{sharker2014exposureroutes, Hasenfratz2015highresmapsTram}.
+
+\cite{Hasenfratz2015highresmapsTram} use trams in Zurich to generate high-resolution pollution maps, which are then used to identify pollution levels on every street in a given section of the city. They use the product of the pollution level and the length of the road segment to add weights to the roads. These weights are then used by the A* search algorithm to generate lowest air pollution exposure routes. The authors find that travelling along these alternative routes leads to a 7.1\% reduction in air pollution exposure for a 6.4\% increase in route length.
+
+\cite{sharker2014exposureroutes} conducted a similar US-based study. The authors overcame the issue of low spatial resolution data by assigning weights to roads from sparse fixed monitoring stations using two different interpolation methods: (i) Inverse Distance Weighting (IDW), and (ii) Kriging. The authors used Dijkstra's algorithm for their search algorithm. Overall, they found an 11.8\% reduction in pollution exposure at a cost of an 8.6\% increase in route distance by using the alternative routes. They also looked at temporal changes in road weightings and found them to be higher during the daytime, especially around midday. Interestingly, they found travel time to be lower on average for lower exposure routes. This was attributed to travelling more along highways, which have a higher speed limit, in order to avoid congested road segments. Whilst the author did not focus on a specific vehicle type, this finding may not relate well to cyclists because the larger and faster roads are often more dangerous, which may deter cyclists from cycling along them. Furthermore, cyclists cannot cycle along motorways in the UK. 
 
 
 
 \section{Comparison of single-board computers} \label{comparison}
 
-Whilst this section does not intend to provide a comprehensive comparison of single-board computers (SBCs) for use in this project (this would be a significant project itself), it is worth considering the relative advantages and disadvantages of various SBCs.
+Whilst this section does not intend to provide a comprehensive comparison of single-board computers (SBCs) for use in this project (this would be a significant project itself), it is important to consider the relative advantages and disadvantages of various SBCs.
 
 \nomenclature{SBC}{Single-board computer}
 
-The decreasing cost and size of computers over time has created a market for low-cost, single-board computers that are compact, but have significant computing capabilities. There are many different makes of SBCs available, but the most commonly used SBCs in the air quality monitoring literature are compared in this section. Whilst an Arduino is technically a microcontroller unit (MCU), its prevalence in the literature means it should also be included in this comparison.
+The decreasing cost and size of computers over time has created a market for low-cost, SBCs that are compact, but have significant computing capabilities. There are various makes of SBCs available, but the most commonly used SBCs in the air quality monitoring literature are compared in this section. Whilst an Arduino is technically a microcontroller unit (MCU), its prevalence in the literature means it should also be included in this comparison.
 
 \nomenclature{MCU}{Microcontroller unit}
 
@@ -395,7 +489,7 @@ One issue that Raspberry Pis have is that they do not have an onboard clock and 
 
 \subsection{Comparison} \label{sbccomparison}
 
-\begin{table}[!htbp]
+\begin{table}[!tb]
   %\centering
   \footnotesize
   \caption{Comparison of SBCs}
@@ -518,83 +612,6 @@ Since low-cost sensors are sensitive to the air flow, it is important that the s
 
 Alternatively, a mobile device may receive sufficient air flow as the vehicle moves. Unfortunately, a literature search did not discover any research relating to this application. Therefore, this should be researched further.
 
-\section{Mapping air pollution} \label{mappingpollution}
-
-Given the health impact of air pollution detailed in Section \ref{healthimpact}, maps are needed to identify pollution `hot spots', to show changes in pollution over time, to define at-risk groups and to provide better air pollution exposure estimates for epidemiological studies.
-
-\subsection{Colouring}
-
-In the UK, the recommended air quality index is the Daily Air Quality Index (DAQI). For each of the pollutants that are officially monitored in the UK (Section \ref{airqualitymeasures}), the DAQI is indexed 1-10 and is divided into four bands: low, moderate, high and very high. It was designed to inform the public about air quality in a simple and easy to understand way. An example is shown in Figure \ref{fig:daqi_pm10}, which is for PM\textsubscript{10}.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=\textwidth]{images/daqi_pm10}
-\caption{DAQI for PM\textsubscript{10} \citep{defra2018daqi}.}
-\label{fig:daqi_pm10}
-\end{figure}
-
-The DAQI levels can be used to colour pollution maps. For example, a PM\textsubscript{10} measurement of 56~$\mu g/m^3$ would be coloured yellow. By doing this, the generated pollution maps are relevant and consistent with the rest of the UK's air quality information.
-
-In addition, \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality. These colours could also be used to create a gradient scale from red to green for poor to good air quality, respectively.
-
-\subsection{Estimation techniques} \label{estimationtechniques}
-
-As discussed in Section \ref{spatialres}, current air quality monitoring mainly uses fixed monitoring stations. Even in the 1990s, it was noted that air pollution often varies over extremely short distances whilst the air quality data from these fixed stations are often sparse, leading to highly generalised maps and poor estimates \citep{Briggs1997mappingGIS}.
-
-As a result, techniques have been developed to generate estimated air pollution values in areas where no readings have been taken, thus allowing the improvement of air pollution maps by increasing the resolution. Such methods include spatial interpolation, dispersion modelling and regression-based approaches. A specific example of a regression-based approach is land-use regression (LUR), which was first detailed by \cite{Briggs1997mappingGIS} using data from the SAVIAH (Small Area Variations in Air Quality and Health) study. It has become increasingly popular since its introduction \citep{Hoek2008LUR}. This method combines air quality measurements spread over an area with stochastic modelling in order to generate air quality predictions at unsampled locations. The independent variables for the regression are obtained through geographical-information systems (GIS), which contains data on various environmental factors such as traffic volume and the road network. Figure \ref{LURexplanation} visually demonstrates this method. $y$ is the pollution concentration and $x_i$ are the land-use types within the `buffer' (circles). Good performance of the regression maps was achieved, with $r^2$ values ranging from 0.79 to 0.87 across the three mapped locations. However, LUR models are poor at separating out the impact of different pollutants due to the high correlation that can occur between pollutants \citep{Hoek2008LUR} and this type of extrapolation can perform poorly when the study area has significantly different land-use, for example: moving the study area from Bath, which is a small city in the countryside, to London, which is a much bigger and congested city.
-
-\begin{figure}[!htbp]
-\centering
-\includegraphics[width=0.6\textwidth]{images/LURexplanation}
-\caption{Visual representation of LUR by \cite{Jerrett2005evalmapmodels}.}
-\label{LURexplanation}
-\end{figure}
-
-%GIS files are made publicly available from DEFRA for modelling purposes for local air quality management. The relevant file could be incorporated with the data obtained in this project to generate pollution maps of the local area that includes unsampled locations.
-
-\nomenclature{GIS}{Geographical-information system}
-\nomenclature{LUR}{Land-use regression}
-
-\subsection{Mapping visualisations}
-
-A particularly interesting visualisation of geo-located air quality data is a heatmap. Google's API has a built-in Heatmap Layer for client-side rendering of heatmaps, which can be used to visualise data in this way. Figure \ref{heatmap} shows an example from their website. 
-
-\nomenclature{API}{Application programming interface}
-
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=0.7\textwidth]{images/googleapi_heatmap_layer}
-\caption{Heatmap Layer example from the Google API website \citep{google2018heatmap}.}
-\label{heatmap}
-\end{figure}
-
-\cite{Devarakonda2013} successfully used this Heatmap Layer for real-time air quality monitoring. Their air quality data was stored in a Google Fusion Table, which is part of their cloud offering and acts like a database, providing seamless integration between the data and Google's visualisation tools. The air quality data is shown neatly on top of the map with the red/green colour scale representing high/low pollution respectively. From this map, hotspots can quickly be linked to specific road layout points. For example, the authors identified a hotspot at an intersection where traffic was merging. This indicates that this method is suitable for identifying troublesome areas of high pollution.
-
-An alternative is to use a custom coloured shape overlay on a map. For instance, \cite{Hoang2013hanoihexagons} used hexagons, shown in Figure \ref{hanoihexagons}. The hexagonal shapes were used instead of the more widely used rectangular shapes because of their visual advantages. Firstly, there is less map ambiguity, and secondly, hexagonal shapes are easier for human vision to interpret since, on the map, there are no distinct horizontal and vertical lines, to which the authors note human vision is especially sensitive. 
-
-\begin{figure}[!tb]
-\centering
-\includegraphics[width=0.7\textwidth]{images/hanoihexagons}
-\caption{Heatmap using hexagonal shapes \citep{Hoang2013hanoihexagons}.}
-\label{hanoihexagons}
-\end{figure}
-
-Another way of visualising air pollution is through the use of a grid of tiles, which is similar to the technique used by \citeauthor{Hoang2013hanoihexagons}, but uses squares instead of hexagons. The underlying map can be discarded and a graph made completely of these tiles. This is known as a raster. This was successfully used by \cite{Hasenfratz2015highresmapsTram} to create high resolution maps of pollution in Zurich. A sample of their map is shown in Figure \ref{fig:raster}.
-
-\begin{figure}[!htb]
-\centering
-\includegraphics[width=0.5\textwidth]{images/raster}
-\caption{High resolution raster created by \cite{Hasenfratz2015highresmapsTram}.}
-\label{fig:raster}
-\end{figure}
-
-\section{Health-optimal route planning}
-
-One potential application of air quality data is in alternative route planning for the public that takes into account pollution levels on different streets. Typically, route planning has focused on finding the shortest route from an origin to a destination. However, recent developments have begun to incorporate other factors. In particular, air pollution has begun to be incorporated into route planning \citep{sharker2014exposureroutes, Hasenfratz2015highresmapsTram}.
-
-\cite{Hasenfratz2015highresmapsTram} use trams in Zurich to generate high-resolution pollution maps, which are then used to identify pollution levels on every street in a given section of the city. They use the product of the pollution level and the length of the road segment to add weights to the roads. These weights are then used by the A* search algorithm to generate lowest air pollution exposure routes. The authors find that travelling along these alternative routes leads to a 7.1\% reduction in air pollution exposure for a 6.4\% increase in route length.
-
-\cite{sharker2014exposureroutes} conducted a similar US-based study. The authors overcame the issue of low spatial resolution data by assigning weights to roads from sparse fixed monitoring stations using two different interpolation methods: (i) Inverse Distance Weighting (IDW), and (ii) Kriging. The authors used Dijkstra's algorithm for their search algorithm. Overall, they found an 11.8\% reduction in pollution exposure at a cost of an 8.6\% increase in route distance by using the alternative routes. They also looked at temporal changes in road weightings and found them to be higher during the daytime, especially around midday. Interestingly, they found travel time to be lower on average for lower exposure routes. This was attributed to travelling more along highways, which have a higher speed limit, in order to avoid congested road segments. Whilst the author did not focus on a specific vehicle type, this finding may not relate well to cyclists because the larger and faster roads are often more dangerous, which may deter cyclists from cycling along them. Furthermore, cyclists cannot cycle along motorways in the UK. 
 
 \section{Data quality monitoring}
 
@@ -615,12 +632,12 @@ This literature review has identified a number of gaps in the literature that th
 
 \begin{enumerate}
 \item creating an air quality monitoring device that measures a number of the pollutants set out by the UK and EU's air quality guidelines;
-\item whether air quality can be monitored to a satisfactory level using a bicycle-based monitoring device:
+\item whether air quality can be monitored to a satisfactory level using a bicycle-mounted monitoring device:
 %\item whether a number of sensing capabilities can be incorporated into one, sufficiently small device;
 \begin{enumerate}
 	\item mapping air pollution accurately from low-cost sensor data;
 	\item finding the optimal position on a bicycle for an air quality monitoring device;
-	\item assessing the air flow needs of bicycle-based sensors;
+	\item assessing the air flow needs of bicycle-mounted sensors;
 	\item applying outlier detection methods to air quality data;
 \end{enumerate}
 \item whether such a device can improve spatial and temporal resolution in comparison to fixed monitoring stations; and
@@ -751,9 +768,9 @@ A number of different low-cost particulate sensors are considered for this proje
   \centering
   \caption{Comparison of different particulate sensors considered. All of these sensors use a light-scattering technique for detecting particles. The Shinyei PPD42 sensor is the cheapest, with joint-smallest minimum particle detection size.}
   \label{particulatesensors}
-  \begin{tabular}{ l l l l}
+  \begin{tabular}{ l c c S[table-format=2.2]}
   \toprule
-  Sensor & Sensor type & Minimum PM size & Cost (\textsterling) \\ \midrule
+  Sensor & Sensor type & Minimum PM size & {Cost (\textsterling)} \\ \midrule
   Shinyei PPD42NS & Light scattering & PM\textsubscript{1} & 7.75 \\
   Sharp GP2Y & Light scattering & PM\textsubscript{10} & 9.46 \\
   HK-A5 & Light scattering & PM\textsubscript{1} & 37.70 \\ \bottomrule
@@ -762,7 +779,7 @@ A number of different low-cost particulate sensors are considered for this proje
 
 The chosen Shinyei PPD42NS sensor has two output lines, named P1 and P2. P1 is used to measure particles between $1\mu m$ and $10\mu m$, whereas the P2 output is used to measure particles between $2.5\mu m$ and $10\mu m$. In testing, we rarely registered a signal from P2 that differed from P1, which would indicate that the sensor only detects particles with a diameter above $2.5\mu m$. This implies the output from the sensor is classified as PM\textsubscript{10}. This agrees with the findings of \cite{thorpe2017RPimesh}, who found that the sensor responded very poorly to smoke which has an average particle size of between 1 and 2$\mu m$.
 
-The sensitivity of this sensor is a clear drawback if accurate measurements of PM\textsubscript{2.5} are needed. However, we are more interested in creating a working air quality monitoring device and testing the effectiveness of a bicycle-based device, meaning a lower accuracy can be afforded. Moreover, PM\textsubscript{10} is still a governmentally monitored pollutant in the UK (see Table \ref{airqualityguidelines}) and provides a solid measure of air quality. Nonetheless, it is still worth noting this issue for future developments.
+The sensitivity of this sensor is a clear drawback if accurate measurements of PM\textsubscript{2.5} are needed. However, we are more interested in creating a working air quality monitoring device and testing the effectiveness of a bicycle-mounted device, meaning a lower accuracy can be afforded. Moreover, PM\textsubscript{10} is still a governmentally monitored pollutant in the UK (see Table \ref{airqualityguidelines}) and provides a solid measure of air quality. Nonetheless, it is still worth noting this issue for future developments.
 
 \subsection{Ozone sensor}
 
@@ -778,7 +795,7 @@ For an NO\textsubscript{x} sensor, we chose the MikroElektronika `Air Quality Cl
 
 Nonetheless, as previously explained, the modular nature of MikroElektronika's click-board technology means it would be easily replaceable in the future. In fact, towards the end of the project, MikroElektronika released a dedicated NO\textsubscript{2} sensor. This is worth noting for future developments of this air quality monitoring device.
 
-A number of previous studies use the MQ135 sensor for air quality monitoring purposes. \cite{Rahman2017adaptivesensingRPi} used the MQ135 in an Internet-of-Things (IoT) based platform, whilst \cite{anderson2012noxdroid} used it on a bicycle-based air quality monitoring device. In addition, \cite{garnier2017mythorreality} tested the MQ135 and found it to be accurate for monitoring changes and trends in air quality.
+A number of previous studies use the MQ135 sensor for air quality monitoring purposes. \cite{Rahman2017adaptivesensingRPi} used the MQ135 in an Internet-of-Things (IoT) based platform, whilst \cite{anderson2012noxdroid} used it on a bicycle-mounted air quality monitoring device. In addition, \cite{garnier2017mythorreality} tested the MQ135 and found it to be accurate for monitoring changes and trends in air quality.
 
 \subsection{Temperature and humidity sensor}
 
@@ -1076,7 +1093,7 @@ Each data word is made up of 24 bits (3 bytes): 22 bits of conversion data and 2
 \begin{figure}[!htb]
 \centering
 \includegraphics[width=1\textwidth]{images/mcp3551}
-\caption[MCP3551 output codes.]{Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication. [REF]}
+\caption[MCP3551 output codes.]{Summary of output coding data format. This shows example digital output codes for specific analog input voltages when using a typical SPI communication \citep{mq131datasheet}}
 \label{mcp3551}
 \end{figure}
 
@@ -1201,7 +1218,7 @@ It is also worth noting that the data sheets for these sensors indicate that the
 
 Chapters \ref{chap: system_design} and \ref{chap: calibration} detail how the air quality monitoring device, and system as a whole, is constructed and how the sensors are calibrated to output meaningful values. Those chapters collectively describe the process undertaken in creating the final device, providing a product that can now be used to answer our research questions. Consequently, this chapter focuses on the first research question:
 \newline\newline
-\noindent\textit{\textbf{Research Question 1:} Can air pollution be monitored to a satisfactory level using a bicycle-based monitoring device?}
+\noindent\textit{\textbf{Research Question 1:} Can air pollution be monitored to a satisfactory level of accuracy using a bicycle-mounted monitoring device?}
 \newline
 
 Section \ref{meth:q1} details the methodology behind how the device is applied to answer this research question. Each method is described in detail, with our reasoning provided in each case to support our choices. Section \ref{results:q1} then displays the results and analyses the findings.
@@ -1354,7 +1371,7 @@ Secondly, the outlier detection techniques detailed above are also run using mov
 
 \subsection{Pollution mapping} \label{pollution_mapping}
 
-With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, a grid of tiles overlay is placed on top of the map, combining mapping ideas from both \cite{Hoang2013hanoihexagons} and \cite{Hasenfratz2015highresmapsTram}. A $50 \times 50$ grid of tiles will be used to cover an area of $2.7 \times 2.7~km$, which makes each tile $55~m \times 55~m$ in size. Each tile's colour is an aggregation of all values that fall inside its boundaries -- median and maximum aggregations are used for this. We use two colouring schemes: (i) a green-to-red gradient as \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality, and (ii) a DAQI colour scheme \citep{defra2018daqi}.
+With the pollution data collected along the route detailed in Section \ref{route_selection}, we can create pollution maps that show how pollution varies along the route. To achieve this, a grid of tiles overlay is placed on top of the map, combining mapping ideas from both \cite{Hoang2013hanoihexagons} and \cite{Hasenfratz2015highresmapsTram}. A $50 \times 50$ grid of tiles will be used to cover an area of $2.7~km \times 2.7~km$, which makes each tile $55~m \times 55~m$ in size. Each tile's colour is an aggregation of all values that fall inside its boundaries -- median and maximum aggregations are used for this. We use two colouring schemes: (i) a green-to-red gradient as \cite{smallbone2012customerinsight} found that the public prefer a blue or green colour for representing good air quality and red for representing poor air quality, and (ii) a DAQI colour scheme \citep{defra2018daqi}.
 
 \subsection{Identifying patterns} \label{identifying_patterns}
 
@@ -1372,7 +1389,7 @@ In order for this device to meet the requirement of monitoring air quality to a 
 
 \begin{figure}[!tb]
 \centering
-\includegraphics[width=0.6\textwidth]{images/roads}
+\includegraphics[width=0.7\textwidth]{images/roads}
 \caption[Road sections.]{Road sections for the route.}
 \label{fig:roads}
 \end{figure}
@@ -1388,9 +1405,9 @@ In order for this device to meet the requirement of monitoring air quality to a 
 
 In order to test how the air quality monitoring device compares to the fixed monitoring stations, the measurements collected nearby these stations will be compared against the measurements from the corresponding station. For PM\textsubscript{10}, the devices measurements can be compared against those from the Windsor Bridge. Unfortunately, the Guildhall and London Road sites' particulate sensors were broken during the collection period, so no measurements were available. In addition, there are no ozone monitoring sites in Bath, which means no comparison can be conducted. Despite the aforementioned issue that the MQ135 sensor does not only measure NO\textsubscript{x} (it is a multi-purpose sensor), the measurements will still be compared against the monitoring station results. All three of the monitoring stations (Windsor Bridge, London Road and Guildhall) monitor NO\textsubscript{x}, so the measurements from nearby these stations can be compared.
 
-Since the bicycle-based air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, three sections around the monitoring stations have been extracted from the route. These are detailed in Figure \ref{fig:roads} and are labelled as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall. The measurements from within these sections will be compared against the measurements from the fixed stations.
+Since the bicycle-mounted air quality monitoring device is mobile and is travelling around the route, very few of the measurements will be directly next to the monitoring stations themselves. Therefore, three sections around the monitoring stations have been extracted from the route. These are detailed in Figure \ref{fig:roads} and are labelled as follows: WB = Windsor Bridge, LR = London Road, GH = Guildhall. The measurements from within these sections will be compared against the measurements from the fixed stations.
 
-
+\newpage
 \section{Results} \label{results:q1}
 
 Across the data collection period, \num{9877} measurements were collected along the chosen cycling route. In this section, results are presented for assessing whether this device can monitor pollution to a satisfactory level. First, the results for the positioning of the device on the bicycle are shown. Second, the data quality is assessed and any outliers removed. Third, this data is used to create pollution maps of Bath, which are analysed to understand how the pollution level changes along the route. Next, any observable patterns in the measurements are presented and, finally, results demonstrating the robustness of the device are shown. The results are then discussed in Section \ref{disc:q1}.
@@ -1404,7 +1421,7 @@ Overall, the figure shows varying levels of PM\textsubscript{10} across the thre
 \begin{figure}[!tb]
 \centering
 \includegraphics[width=0.7\textwidth]{images/bike_positions_annotated}
-\caption[Bike position testing.]{Bike position testing. The device was attached in 3 different positions on the bike. Positions 1 and 2 have large spikes in their measurements, whereas position 3 is relatively stable.}
+\caption[Bike position testing]{Bike position testing. The device was attached in 3 different positions on the bike. Positions 1 and 2 have large spikes in their measurements, whereas position 3 is relatively stable.}
 \label{fig:bike_positions_pm10}
 \end{figure}
 
@@ -2340,7 +2357,7 @@ R$^{2}$	& 0.02   			& 0.21			& 0.12   	\\
 
 \subsection{Comparison to fixed monitoring stations}
 
-The results from comparing the bicycle-based device's measurements with those from the fixed monitoring stations are mixed. The PM\textsubscript{10} results, which are for the Windsor Bridge location only, show a slightly negative relationship between the two sets of measurements. The device's measurements also have a negative relationship with the Guildhall's NO\textsubscript{x} measurements. On the other hand, the Windsor Bridge and London Road locations show positive relationships for NO\textsubscript{x}, with corresponding correlations of 0.54 and 0.27.
+The results from comparing the bicycle-mounted device's measurements with those from the fixed monitoring stations are mixed. The PM\textsubscript{10} results, which are for the Windsor Bridge location only, show a slightly negative relationship between the two sets of measurements. The device's measurements also have a negative relationship with the Guildhall's NO\textsubscript{x} measurements. On the other hand, the Windsor Bridge and London Road locations show positive relationships for NO\textsubscript{x}, with corresponding correlations of 0.54 and 0.27.
 
 \begin{figure}[!tb]
 	\begin{subfigure}[t]{.5\linewidth}
@@ -2371,7 +2388,7 @@ This section discusses the findings of this chapter in the order in which the re
 
 The results from testing the device in different positions on the bicycle indicate that placing the device under the headtube at the front of the bike is the optimal position. This is because the variation in measurements is lowest, with no extreme peaks. There is clearly variation in the measurements taken in each position, even though no environmental changes occurred during the data collection (temperature and humidity measurements experienced no significant change). This suggests there is a factor affecting the sensor measurements. One suggestion is that this is being caused by particulate matter from the road being discarded into the air by the wheels. This is supported by the fact that the ozone and general air quality measurements were not affected (wheels cannot `throw' gases into the air). The elevation of the device is much below human head height, so these measurements may not correspond to the air quality that humans experience. Therefore, the positioning is important because otherwise the measurements could be artificially inflated. However, this testing was not extensive as doing so would require much more time and could be considered a small project itself. As a result, further testing may be warranted. For example, bicycle mud guards would prevent any particulate matter being thrown up by the wheels, so these could be used to help identify the cause.
 
-There does not appear to be any previous research on this topic, potentially because there are very few bicycle-based air quality monitoring devices. Therefore, there are no other findings to compare these results against.
+There does not appear to be any previous research on this topic, potentially because there are very few bicycle-mounted air quality monitoring devices. Therefore, there are no other findings to compare these results against.
 
 \subsection{Data quality}
 
@@ -2412,7 +2429,7 @@ We also attempted to find a relationship between traffic levels and pollution us
 
 \subsection{Comparison to fixed monitoring stations}
 
-The results from the comparison between fixed monitoring stations and the bicycle-based device are mixed. The problem with this comparison is that it is difficult to compare measurements from a moving device with a stationary point. Consequently, the results from this are not discussed further. Future comparisons should be conducted against a different `ground-truth', for example, collecting measurements from along the same route using an industry-grade sensor.
+The results from the comparison between fixed monitoring stations and the bicycle-mounted device are mixed. The problem with this comparison is that it is difficult to compare measurements from a moving device with a stationary point. Consequently, the results from this are not discussed further. Future comparisons should be conducted against a different `ground-truth', for example, collecting measurements from along the same route using an industry-grade sensor.
 
 \subsection{Robustness}
 
@@ -2430,7 +2447,7 @@ Chapter \ref{chap:q1} showed that this air quality monitoring device can measure
 \textit{\textbf{Research Question 2:} Can such a device improve spatial and temporal resolution of air quality measurements compared to fixed monitoring stations?}
 \newline
 
-Answering this question will help to ascertain whether such bicycle-based devices can replace their more expensive, fixed counterparts. Section \ref{meth:q2} details the methodology behind answering this research question and then Section \ref{results:q2} displays the results and analyses the findings.
+Answering this question will help to ascertain whether such bicycle-mounted devices can replace their more expensive, fixed counterparts. Section \ref{meth:q2} details the methodology behind answering this research question and then Section \ref{results:q2} displays the results and analyses the findings.
 
 \section{Methodology} \label{meth:q2}
 
@@ -2438,7 +2455,7 @@ In order to answer this research question, we firstly need to demonstrate how th
 
 \subsection{Locus around fixed monitoring station} \label{sec:locus}
 
-A fixed monitoring station can only take measurements in exactly one location. Whilst they do typically use high-quality, expensive monitoring equipment that offers higher accuracy and reliability, they have poor spatial resolution. Our bicycle-based air quality monitoring device is portable and so can take measurements at varying locations with ease. To demonstrate this improvement in spatial resolution, we need a suitable location and data collection method. 
+A fixed monitoring station can only take measurements in exactly one location. Whilst they do typically use high-quality, expensive monitoring equipment that offers higher accuracy and reliability, they have poor spatial resolution. Our bicycle-mounted air quality monitoring device is portable and so can take measurements at varying locations with ease. To demonstrate this improvement in spatial resolution, we need a suitable location and data collection method. 
 
 \subsubsection{Location}
 
@@ -2484,7 +2501,7 @@ For the data collection, a circular locus is drawn around the monitoring site wi
 
 \subsubsection{Demonstrating higher spatial resolution}
 
-The collected data is used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements are first plotted as points on a map to demonstrate how a larger area can be monitored. The results from these are detailed in Section \ref{results:q2}. % We then use Kriging/IDW interpolation to generate an even higher resolution pollution map. 
+The collected data is used to create a higher resolution pollution map than can be generated from a single fixed monitoring station. The measurements are plotted as points on a map to demonstrate how a larger area can be monitored. The results from these are detailed in Section \ref{results:q2}. % We then use Kriging/IDW interpolation to generate an even higher resolution pollution map. 
 
 
 \subsection{Event route} \label{sec:event}
@@ -2510,7 +2527,8 @@ To test the event-based capabilities of the device, we collect air quality measu
 
 \subsubsection{Demonstrating higher temporal resolution}
 
-The data provides a pollution level along the route for every 7-minute interval, which can then be used to show how the pollution changes over the whole time period. This more granular picture of air quality over time demonstrates the improved temporal resolution that this device can offer, as well as proving its use in monitoring events whilst maintaining portability. The results of this are shown in Section \ref{results:q2}.
+The data provides a pollution level along the route for every 7-minute interval, which can then be used to show how the pollution changes over the whole time period. We implement a heatmap visualisation technique used by \cite{Peters2013cycleruns}, which provides a pollution gradient at each time interval for the route outside the football stadium. The results of this are shown in Section \ref{results:q2}.
+%This more granular picture of air quality over time demonstrates the improved temporal resolution that this device can offer, as well as proving its use in monitoring events whilst maintaining portability.
 
 \section{Results} \label{results:q2}
 
@@ -2561,7 +2579,7 @@ In this section, we first detail results pertaining to the spatial aspect of thi
     \label{fig:locus_maps}
 \end{figure}
 
-Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. The same outlier detection and removal technique used in Section \ref{results:q1} is used to clean the dataset. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods are run on the dataset as a whole. This led to 300 outliers identified and removed, leaving a clean dataset of 1152 measurements.
+Using the chosen route within the locus around the Guildhall in Bath, \num{1452} measurements were collected on a Friday afternoon. The same outlier detection and removal technique used in Section \ref{results:q1} is used to clean the dataset. Since the data was collected in one afternoon period, the dataset could not be separated into temporal categories for the outlier detection, as was previously done with the route dataset. Instead, the outlier detection methods are run on the dataset as a whole. This led to 300 outliers identified and removed, leaving a clean dataset of \num{1152} measurements.
 
 Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for the three pollutants. Primarily, this figure demonstrates the improved spatial resolution of this device compared to a fixed monitoring station, shown by the larger area covered compared to the single point of the Guildhall site. Moreover, the Guildhall fixed monitoring station can only measure NO\textsubscript{2}, whereas this air quality monitoring device can measure three different pollutants.
 
@@ -2580,7 +2598,6 @@ Figure \ref{fig:locus_maps} displays the pollution maps of the locus route for t
 %\label{fig:guildhall_vs_bike}
 %\end{figure}
 
-\newpage
 
 \subsection{Bath football event}  \label{event_results}
 % Temporal
@@ -2623,17 +2640,23 @@ Furthermore, each vertical column of this graph represents a complete one-way tr
 
 \section{Discussion}
 
+We now discuss the results for Research Question 2. Section \ref{spatial} focuses on the improvements in spatial resolution, whilst Section \ref{temporal} discusses the temporal resolution aspect.
+
+\subsection{Spatial resolution} \label{spatial}
+
 Covering a larger area and improving spatial resolution are only beneficial if the air quality measurements vary across this spatial area. For example, if all of the measurements collected around the Guildhall fixed monitoring station had little variation, then this increase in spatial resolution actually adds no benefit. This is because the fixed monitoring station's measurements apply approximately equally to the surrounding area. Therefore, the maps generated by the locus-based monitoring need to demonstrate that the device can register varying pollution levels over short distances. Previous research has shown that pollution can indeed vary over extremely short distances \citep{hewitt1991spatialvar,wilson2006intraurbanvar}. In particular, `street canyons' can trap pollution on the street whilst behind these buildings the level drops to the background pollution level. We find that pollution does vary over short distances (Figure \ref{fig:locus_maps}), both when using the median and maximum to aggregate measurements within each tile. This implies that the improved spatial resolution found in this project is beneficial as it allows one to better understand how pollution varies across the urban environment. However, there is not a significant difference [TEST STAT] between the median and maximum pollution levels [???]. 
 
-\cite{Elen2013aeroflex} also demonstrated an improved spatial resolution when riding a bicycle-based air quality monitoring device around a section of Antwerp, Belgium. The maps generated by this device demonstrated variations of up to a factor of 10 between measurements on the main road (where the fixed monitoring site was located) and measurements from nearby minor roads. Whilst our device does not register such great variations, their device was built using much more expensive sensors, which likely has greater accuracy. Nonetheless, this supports our finding that the bicycle-based monitoring can improve spatial resolution and that the improved resolution is beneficial.
+\cite{Elen2013aeroflex} also demonstrated an improved spatial resolution when riding a bicycle-mounted air quality monitoring device around a section of Antwerp, Belgium. The maps generated by this device demonstrated variations of up to a factor of 10 between measurements on the main road (where the fixed monitoring site was located) and measurements from nearby minor roads. Whilst our device does not register such great variations, their device was built using much more expensive sensors, which likely has greater accuracy. Nonetheless, this supports our finding that the bicycle-mounted monitoring can improve spatial resolution and that the improved resolution is beneficial.
 
 In addition, it is also interesting to note that the pollution level is lower on the bridge over the river. One potential cause for this could be the greater exposure to the wind. However, without sufficient wind speed and direction data, a causal relationship cannot be established.
+
+\subsection{Temporal resolution} \label{temporal}
 
 A similar argument also applies for temporal resolution: improving the temporal resolution is only beneficial if the air quality measurements vary over time, otherwise a lower temporal resolution is equally as valuable. We find that the device does detect variations in pollution temporally at a temporal resolution of 7 minutes, which implies that the improvement in temporal resolution is beneficial. Moreover, the temporal resolution can be increased further by decreasing the length of the route, up to a maximum resolution of 10 seconds (the timing between measurements by the device). The device could be situated outside of an event and capture air quality measurements at this high resolution.
 
 These findings are also important from a technical standpoint. If the improvement in resolutions was not actually beneficial, then these extra measurements would just be pointlessly filling up the database. On a large enough scale, this could cause performance issues.
 
-Furthermore, the results from the event-based monitoring also demonstrate the capability of the device to monitor air quality at events on an ad-hoc basis. No such application of a portable air quality monitoring device occurs in the literature. Therefore, this novel application is promising and warrants further investigation. There is particular value in this application because fixed monitoring stations are unlikely to be set up for short-term events. This bicycle-based device enables rapid deployment to such events and allows one to understand how an event impacts the local pollution level. For example, local authorities could deploy one of these devices to an event believed to increase traffic (and, therefore, pollution levels), identifying its impact and using this to direct policy.
+Furthermore, the results from the event-based monitoring also demonstrate the capability of the device to monitor air quality at events on an ad-hoc basis. No such application of a portable air quality monitoring device occurs in the literature. Therefore, this novel application is promising and warrants further investigation. There is particular value in this application because fixed monitoring stations are unlikely to be set up for short-term events. This bicycle-mounted device enables rapid deployment to such events and allows one to understand how an event impacts the local pollution level. For example, local authorities could deploy one of these devices to an event believed to increase traffic (and, therefore, pollution levels), identifying its impact and using this to direct policy.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%							Question 3						      	       %%%%%%%%
@@ -3748,19 +3771,19 @@ These findings must be taken with caution, however. Assuming that not only cycli
 
 \chapter{Conclusion} \label{chap:conclusion}
 
-In this chapter, we conclude the project in Section \ref{conclusion}, as well as detailing the limitations of this project (Section \ref{limitations}). We then provide recommendations for future work in Section \ref{future_work}, as well as an additional note on a Mongolian project the device is being used in (Section \ref{mongolian_project}).
+In this chapter, we conclude the project in Section \ref{conclusion}, as well as detailing the limitations of this project (Section \ref{limitations}). We then provide recommendations for future work in Section \ref{future_work}, as well as an additional note on a Mongolian project in which the device is being used (Section \ref{mongolian_project}).
 
 \section{Conclusions} \label{conclusion}
 % Define my contribution to the field
 % In this thesis, X major contributions have been made...
 
-Air pollution is a major problem worldwide and leads to the deaths of millions of people each year \citep{WHO2016ambient}. However, despite the decrease in the cost of computers and the increasing prevalence of low-cost sensors, monitoring solutions remain relatively expensive and are frequently placed in fixed locations, which offer poor spatial resolution. There are currently very few mobile air quality monitoring devices in the literature, particularly using bicycles. Of those that are attached to bicycles, none are low-cost.
+Air pollution is a major problem worldwide and leads to the deaths of millions of people each year \citep{WHO2016ambient}. However, despite the decrease in the cost of computers and the increasing prevalence of low-cost sensors, monitoring solutions remain relatively expensive and are frequently placed in fixed locations, which offer poor spatial resolution. There are currently very few mobile air quality monitoring devices in the literature, particularly using bicycles. Of those that are attached to bicycles, none is low-cost.
 
-We address this problem by designing and constructing a low-cost, bicycle-based air quality monitoring device using low-cost pollution sensors and a Raspberry Pi, along with a GPS module that enables geo-tagging of pollution measurements. Firstly, we show that a bicycle-based monitoring device can measure air pollution to a satisfactory level. The device can accurately detect variations in pollution level and identify trends. For example, we found that the PM\textsubscript{10} level increase at the end of the week and pollution is higher in the evenings. Overall, the average levels of pollution in Bath were found to be `Low' when using the UK's DAQI. We then demonstrate that using such a device can improve both spatial and temporal resolution in comparison the to current fixed monitoring stations in Bath. We create pollution maps with high spatial resolution of $55~m \times 55~m$ around the Bath Guildhall fixed monitoring station, as well as a high temporal resolution of 7 minutes at a Bath City FC football event. Additionally, we discover a novel application of the device to event-based air quality monitoring, which could be particularly beneficial to local authorities in the UK. Finally, we design a novel cost function that incorporates the effect of road gradient on inhalation of air pollution and combine this with Dijkstra's algorithm to generate alternative health-optimal routes. Choosing the health-optimal route instead of the shortest route leads to an average reduction in pollution exposure of 5.08\%, at the cost of a 4.39\% increase in route length. Using a recent study on the health impact of a reduction in PM\textsubscript{10} exposure \citep{Ebenstein2017lifeexpectancy}, our findings equate to an increase in life expectancy of 0.08 years if the health-optimal route is chosen consistently.
+We address this problem by designing and constructing a low-cost, bicycle-mounted air quality monitoring device using low-cost pollution sensors and a Raspberry Pi, along with a GPS module that enables geo-tagging of pollution measurements. Firstly, we show that a bicycle-mounted monitoring device can measure air pollution to a satisfactory level. The device can accurately detect variations in pollution level and the data can be used to identify patterns. For example, we found that the PM\textsubscript{10} level increases at the end of the week and pollution is higher in the evenings. Overall, the average levels of pollution in Bath were found to be `Low' when using the UK's DAQI. In addition, we find that the optimal position for the device is under the headtube at the front of the bicycle. We then demonstrate that using such a device can improve both spatial and temporal resolution in comparison to the current fixed monitoring stations in Bath. We create pollution maps with high spatial resolution of $55~m \times 55~m$ around the Bath Guildhall fixed monitoring station, as well as a high temporal resolution of 7 minutes at a Bath City FC football event. Additionally, we discover a novel application of the device to event-based air quality monitoring, which could be particularly beneficial to local authorities in the UK. Finally, we design a novel cost function that incorporates the effect of road gradient on inhalation of air pollution and combine this with Dijkstra's algorithm to generate alternative health-optimal routes. Choosing the health-optimal route instead of the shortest route leads to an average reduction in pollution exposure of 5.08\%, at the cost of a 4.39\% increase in route length. Using a recent study on the health impact of a reduction in PM\textsubscript{10} exposure \citep{Ebenstein2017lifeexpectancy}, our findings equate to an increase in life expectancy of 0.08 years if the health-optimal route is chosen consistently.
 
 The global issue of air pollution is only going to increase in prevalence in the future and so having a ubiquitous monitoring system is imperative. We believe that the device created in this project provides a good first prototype for such a device. The benefits of a mobile monitoring device are numerous and a sufficient collection of such devices will enable detailed, widespread air quality monitoring on a scale that has previously been impossible due to cost and operational constraints.
 
-However, the usefulness of the device partly depends on the degree to which public preferences can be changed. Only a fraction of the public cycle and a major concern of commuters is journey time. Therefore, if preferences towards cycling and attitudes on air pollution are not changed, it is unlikely that sufficient coverage can be achieved. One solution to this problem is to build more cycle paths to increase the use of bicycles and to provide education on the effects of pollution. In addition, applications using air quality data should make use of outcome framing to ensure the public change their behaviour \citep{mir2016framing}.
+However, the usefulness of the device partly depends on the degree to which public preferences can be changed. Only a fraction of the public cycle and a major concern of commuters is journey time. Therefore, if preferences towards cycling and attitudes on air pollution are not changed, it is unlikely that sufficient coverage can be achieved. One solution to this problem is to build more cycle paths to increase the use of bicycles and to provide education on the effects of pollution. In addition, applications using air quality data should make use of outcome framing to ensure that the public change their behaviour \citep{mir2016framing}.
 
 \section{Limitations} \label{limitations}
 

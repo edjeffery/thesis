@@ -1,4 +1,4 @@
-\begin{thebibliography}{89}
+\begin{thebibliography}{90}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \providecommand{\urlprefix}{Available from: }
@@ -470,6 +470,12 @@
   using mobile sensor nodes}}.
 \newblock \emph{\bibinfo{journal}{Pervasive and Mobile Computing}},
   \bibinfo{volume}{16}, pp.\bibinfo{pages}{268--285}.
+
+\bibitem[{{Henan Hanwei Electronics}(2015)}]{mq131datasheet}
+\bibinfo{author}{{Henan Hanwei Electronics}}, \bibinfo{year}{2015}.
+\newblock \emph{\bibinfo{title}{{MQ131 Semiconductor Sensor for Ozone}}}.
+\newblock \bibinfo{address}{Zhengzhou, China}: \bibinfo{institution}{Henan
+  Hanwei Electronics Co., Ltd}.
 
 \bibitem[{Hewitt(1991)}]{hewitt1991spatialvar}
 \bibinfo{author}{Hewitt, C.N.}, \bibinfo{year}{1991}.
